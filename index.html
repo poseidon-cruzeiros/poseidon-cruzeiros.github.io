@@ -398,6 +398,46 @@
     position: fixed; inset: 0; z-index: 99;
   }
   .nav-overlay.active { display: block; }
+
+  /* ── BADGE EM BREVE ── */
+  .badge-soon {
+    display: inline-block;
+    font-size: 0.58rem;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 999px;
+    background: rgba(240,192,64,0.18);
+    color: #fce08a;
+    border: 1px solid rgba(240,192,64,0.28);
+    vertical-align: middle;
+    margin-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── LINKS EXTERNOS INTRO ── */
+  .links-intro {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 3px solid var(--teal);
+    border-radius: var(--radius);
+    padding: 0.9rem 1.2rem;
+    margin: 2rem 0 0.5rem;
+  }
+  .links-intro-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .links-intro-text { display: flex; flex-direction: column; gap: 2px; }
+  .links-intro-title { font-size: 0.92rem; font-weight: 500; color: var(--white); }
+  .links-intro-desc  { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ── COMPANHIAS PLACEHOLDER ── */
+  .dropdown a.disabled {
+    opacity: 0.55;
+    pointer-events: none;
+    cursor: default;
+  }
 </style>
 </head>
 <body>
@@ -431,181 +471,80 @@
 
   <ul class="nav-links" id="navLinks">
 
-    <li class="nav-item" data-menu="rastreamento">
+    <li class="nav-item" data-menu="companhias">
       <button class="nav-btn">
-        🛰️ Rastreamento <span class="chevron">▼</span>
+        🚢 Companhias <span class="chevron">▼</span>
       </button>
       <div class="dropdown">
-        <a href="https://www.marinetraffic.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">📡</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">MarineTraffic</span>
-            <span class="dropdown-desc">Rastreamento em tempo real mundial</span>
-          </span>
-        </a>
-        <a href="https://www.vesseltracker.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🗺️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">VesselTracker</span>
-            <span class="dropdown-desc">Posição e rota em tempo real</span>
-          </span>
-        </a>
-        <a href="https://www.shipfinder.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🔍</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">ShipFinder</span>
-            <span class="dropdown-desc">Histórico de rotas por navio</span>
-          </span>
-        </a>
-        <a href="https://www.cruisingearth.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🌍</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">CruisingEarth</span>
-            <span class="dropdown-desc">Visualização 3D do globo ao vivo</span>
-          </span>
-        </a>
-      </div>
-    </li>
-
-    <li class="nav-item" data-menu="mapas">
-      <button class="nav-btn">
-        🏗️ Mapas dos Navios <span class="chevron">▼</span>
-      </button>
-      <div class="dropdown">
-        <a href="https://www.cruisedeckplans.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🗂️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">CruiseDeckPlans</span>
-            <span class="dropdown-desc">Plantas detalhadas de centenas de navios</span>
-          </span>
-        </a>
-        <a href="https://www.cruisecritic.com/deck-plans" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🛳️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Cruise Critic Decks</span>
-            <span class="dropdown-desc">Deck plans com avaliações de cabines</span>
-          </span>
-        </a>
-        <a href="https://www.royalcaribbean.com/cruise-ships" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">👑</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Royal Caribbean</span>
-            <span class="dropdown-desc">Modelos 3D oficiais da frota Royal</span>
-          </span>
-        </a>
-        <a href="https://www.msccruises.com/cruise-ships" target="_blank" rel="noopener">
+        <a href="#" class="disabled">
           <span class="dropdown-emoji">🇮🇹</span>
           <span class="dropdown-text">
-            <span class="dropdown-title">MSC Cruzeiros</span>
-            <span class="dropdown-desc">Tours virtuais pela frota MSC</span>
+            <span class="dropdown-title">Costa Cruzeiros <span class="badge-soon">em breve</span></span>
+            <span class="dropdown-desc">Costa Diadema, Fascinosa e mais</span>
           </span>
         </a>
-      </div>
-    </li>
-
-    <li class="nav-item" data-menu="cameras">
-      <button class="nav-btn">
-        📷 Câmeras ao Vivo <span class="chevron">▼</span>
-      </button>
-      <div class="dropdown">
-        <a href="https://www.earthcam.com/cams/cruiseport/" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">📸</span>
+        <a href="#" class="disabled">
+          <span class="dropdown-emoji">👑</span>
           <span class="dropdown-text">
-            <span class="dropdown-title">EarthCam — Portos</span>
-            <span class="dropdown-desc">Câmeras nos portos dos EUA</span>
+            <span class="dropdown-title">Royal Caribbean <span class="badge-soon">em breve</span></span>
+            <span class="dropdown-desc">Oasis, Wonder, Adventure e mais</span>
           </span>
         </a>
-        <a href="https://www.skylinewebcams.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🎥</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Skyline Webcams</span>
-            <span class="dropdown-desc">Portos europeus — Veneza e Mediterrâneo</span>
-          </span>
-        </a>
-        <a href="https://www.portofmiami.com" target="_blank" rel="noopener">
+        <a href="#" class="disabled">
           <span class="dropdown-emoji">🌊</span>
           <span class="dropdown-text">
-            <span class="dropdown-title">Port of Miami</span>
-            <span class="dropdown-desc">O porto mais movimentado do mundo</span>
+            <span class="dropdown-title">MSC Cruzeiros <span class="badge-soon">em breve</span></span>
+            <span class="dropdown-desc">MSC Seashore, Grandiosa e mais</span>
           </span>
         </a>
-        <a href="https://www.portodesantos.com.br" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🇧🇷</span>
+        <a href="#" class="disabled">
+          <span class="dropdown-emoji">🇳🇴</span>
           <span class="dropdown-text">
-            <span class="dropdown-title">Porto de Santos</span>
-            <span class="dropdown-desc">Principal porto de cruzeiros do Brasil</span>
+            <span class="dropdown-title">Norwegian <span class="badge-soon">em breve</span></span>
+            <span class="dropdown-desc">Norwegian Bliss, Joy e mais</span>
           </span>
         </a>
       </div>
     </li>
 
-    <li class="nav-item" data-menu="noticias">
+    <li class="nav-item" data-menu="links-externos">
       <button class="nav-btn">
-        📰 Notícias <span class="chevron">▼</span>
+        🔗 Links Externos <span class="chevron">▼</span>
       </button>
       <div class="dropdown">
-        <a href="https://www.cruiseindustrynews.com" target="_blank" rel="noopener">
+        <a href="#sec-rastreamento">
+          <span class="dropdown-emoji">🛰️</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">Rastreamento de Navios</span>
+            <span class="dropdown-desc">MarineTraffic, VesselTracker e mais</span>
+          </span>
+        </a>
+        <a href="#sec-mapas">
+          <span class="dropdown-emoji">🏗️</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">Mapas dos Navios</span>
+            <span class="dropdown-desc">CruiseDeckPlans e plantas de decks</span>
+          </span>
+        </a>
+        <a href="#sec-cameras">
+          <span class="dropdown-emoji">📷</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">Câmeras ao Vivo</span>
+            <span class="dropdown-desc">Portos ao redor do mundo</span>
+          </span>
+        </a>
+        <a href="#sec-noticias">
           <span class="dropdown-emoji">📰</span>
           <span class="dropdown-text">
-            <span class="dropdown-title">Cruise Industry News</span>
-            <span class="dropdown-desc">Novos navios, rotas e tendências</span>
+            <span class="dropdown-title">Notícias</span>
+            <span class="dropdown-desc">Cruise Critic, Seatrade e mais</span>
           </span>
         </a>
-        <a href="https://www.cruisecritic.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">⭐</span>
+        <a href="#sec-ferramentas">
+          <span class="dropdown-emoji">🧰</span>
           <span class="dropdown-text">
-            <span class="dropdown-title">Cruise Critic</span>
-            <span class="dropdown-desc">Avaliações, fóruns e guias</span>
-          </span>
-        </a>
-        <a href="https://www.seatrade-cruise.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🏆</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Seatrade Cruise</span>
-            <span class="dropdown-desc">Publicação líder do setor global</span>
-          </span>
-        </a>
-        <a href="https://www.dicruise.com.br" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🇧🇷</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">DiCruise Brasil</span>
-            <span class="dropdown-desc">Portal brasileiro especializado</span>
-          </span>
-        </a>
-      </div>
-    </li>
-
-    <li class="nav-item" data-menu="ferramentas">
-      <button class="nav-btn">
-        🧰 Ferramentas <span class="chevron">▼</span>
-      </button>
-      <div class="dropdown">
-        <a href="https://www.cruisemapper.com" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">🧭</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">CruiseMapper</span>
-            <span class="dropdown-desc">Agenda de chegadas e partidas</span>
-          </span>
-        </a>
-        <a href="https://www.portalis.com.br" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">📋</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Portalis Brasil</span>
-            <span class="dropdown-desc">Navios nos portos brasileiros</span>
-          </span>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/List_of_largest_cruise_ships" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">📊</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Maiores Navios</span>
-            <span class="dropdown-desc">Lista com especificações técnicas</span>
-          </span>
-        </a>
-        <a href="https://www.youtube.com/@cruisefever" target="_blank" rel="noopener">
-          <span class="dropdown-emoji">▶️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Cruise Fever YT</span>
-            <span class="dropdown-desc">Tours e dicas no YouTube</span>
+            <span class="dropdown-title">Ferramentas</span>
+            <span class="dropdown-desc">CruiseMapper, Portalis e mais</span>
           </span>
         </a>
       </div>
@@ -628,43 +567,20 @@
   </div>
 
   <div class="mobile-section">
-    <div class="mobile-section-title">🛰️ Rastreamento de Navios</div>
-    <a href="https://www.marinetraffic.com" target="_blank" rel="noopener"><span>📡</span> MarineTraffic</a>
-    <a href="https://www.vesseltracker.com" target="_blank" rel="noopener"><span>🗺️</span> VesselTracker</a>
-    <a href="https://www.shipfinder.com" target="_blank" rel="noopener"><span>🔍</span> ShipFinder</a>
-    <a href="https://www.cruisingearth.com" target="_blank" rel="noopener"><span>🌍</span> CruisingEarth</a>
+    <div class="mobile-section-title">🚢 Companhias</div>
+    <a href="#"><span>🇮🇹</span> Costa Cruzeiros <span class="badge-soon">em breve</span></a>
+    <a href="#"><span>👑</span> Royal Caribbean <span class="badge-soon">em breve</span></a>
+    <a href="#"><span>🌊</span> MSC Cruzeiros <span class="badge-soon">em breve</span></a>
+    <a href="#"><span>🇳🇴</span> Norwegian <span class="badge-soon">em breve</span></a>
   </div>
 
   <div class="mobile-section">
-    <div class="mobile-section-title">🏗️ Mapas dos Navios</div>
-    <a href="https://www.cruisedeckplans.com" target="_blank" rel="noopener"><span>🗂️</span> CruiseDeckPlans</a>
-    <a href="https://www.cruisecritic.com/deck-plans" target="_blank" rel="noopener"><span>🛳️</span> Cruise Critic Decks</a>
-    <a href="https://www.royalcaribbean.com/cruise-ships" target="_blank" rel="noopener"><span>👑</span> Royal Caribbean</a>
-    <a href="https://www.msccruises.com/cruise-ships" target="_blank" rel="noopener"><span>🇮🇹</span> MSC Cruzeiros</a>
-  </div>
-
-  <div class="mobile-section">
-    <div class="mobile-section-title">📷 Câmeras ao Vivo</div>
-    <a href="https://www.earthcam.com/cams/cruiseport/" target="_blank" rel="noopener"><span>📸</span> EarthCam — Portos</a>
-    <a href="https://www.skylinewebcams.com" target="_blank" rel="noopener"><span>🎥</span> Skyline Webcams</a>
-    <a href="https://www.portofmiami.com" target="_blank" rel="noopener"><span>🌊</span> Port of Miami</a>
-    <a href="https://www.portodesantos.com.br" target="_blank" rel="noopener"><span>🇧🇷</span> Porto de Santos</a>
-  </div>
-
-  <div class="mobile-section">
-    <div class="mobile-section-title">📰 Notícias</div>
-    <a href="https://www.cruiseindustrynews.com" target="_blank" rel="noopener"><span>📰</span> Cruise Industry News</a>
-    <a href="https://www.cruisecritic.com" target="_blank" rel="noopener"><span>⭐</span> Cruise Critic</a>
-    <a href="https://www.seatrade-cruise.com" target="_blank" rel="noopener"><span>🏆</span> Seatrade Cruise</a>
-    <a href="https://www.dicruise.com.br" target="_blank" rel="noopener"><span>🇧🇷</span> DiCruise Brasil</a>
-  </div>
-
-  <div class="mobile-section">
-    <div class="mobile-section-title">🧰 Ferramentas</div>
-    <a href="https://www.cruisemapper.com" target="_blank" rel="noopener"><span>🧭</span> CruiseMapper</a>
-    <a href="https://www.portalis.com.br" target="_blank" rel="noopener"><span>📋</span> Portalis Brasil</a>
-    <a href="https://en.wikipedia.org/wiki/List_of_largest_cruise_ships" target="_blank" rel="noopener"><span>📊</span> Maiores Navios</a>
-    <a href="https://www.youtube.com/@cruisefever" target="_blank" rel="noopener"><span>▶️</span> Cruise Fever YT</a>
+    <div class="mobile-section-title">🔗 Links Externos</div>
+    <a href="#sec-rastreamento"><span>🛰️</span> Rastreamento de Navios</a>
+    <a href="#sec-mapas"><span>🏗️</span> Mapas dos Navios</a>
+    <a href="#sec-cameras"><span>📷</span> Câmeras ao Vivo</a>
+    <a href="#sec-noticias"><span>📰</span> Notícias</a>
+    <a href="#sec-ferramentas"><span>🧰</span> Ferramentas</a>
   </div>
 </div>
 
@@ -674,8 +590,16 @@
   <header>
     <span class="logo-icon">🔱</span>
     <h1>Poseidon Cruzeiros</h1>
-    <p>Seu portal de links essenciais para o mundo dos cruzeiros</p>
+    <p>Seu portal de referência sobre navios, companhias e cruzeiros</p>
   </header>
+
+  <div class="links-intro">
+    <span class="links-intro-icon">🔗</span>
+    <div class="links-intro-text">
+      <span class="links-intro-title">Links Externos</span>
+      <span class="links-intro-desc">Recursos e ferramentas de terceiros selecionados para entusiastas de cruzeiros</span>
+    </div>
+  </div>
 
   <div class="section-label" id="sec-rastreamento">🛰️ Rastreamento de Navios</div>
   <div class="cards">

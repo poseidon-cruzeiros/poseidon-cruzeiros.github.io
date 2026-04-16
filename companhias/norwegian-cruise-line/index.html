@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MSC Cruzeiros — Poseidon Cruzeiros</title>
+<title>Norwegian Cruise Line — Poseidon Cruzeiros</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,8 +22,8 @@
     --radius:       14px;
     --radius-sm:    8px;
     --nav-height:   60px;
-    --msc-blue:     #003087;
-    --msc-gold:     #c9a84c;
+    --ncl-blue:     #002A5C;
+    --ncl-red:      #C8102E;
   }
 
   html { scroll-behavior: smooth; }
@@ -107,7 +107,6 @@
     transition: background 0.15s, color 0.15s;
   }
   .dropdown a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
-  .dropdown a.disabled { opacity: 0.55; pointer-events: none; }
   .dropdown a.active-company { background: rgba(26,188,156,0.08); }
   .dropdown-emoji { font-size: 1rem; line-height: 1.4; flex-shrink: 0; }
   .dropdown-text { display: flex; flex-direction: column; gap: 1px; }
@@ -183,7 +182,7 @@
   }
   .company-logo {
     width: 72px; height: 72px; border-radius: var(--radius);
-    background: linear-gradient(135deg, var(--msc-blue), #1a3a8a);
+    background: linear-gradient(135deg, var(--ncl-blue), #003DA5);
     border: 1px solid rgba(255,255,255,0.15);
     display: flex; align-items: center; justify-content: center;
     font-size: 1.1rem; font-weight: 900; flex-shrink: 0;
@@ -254,17 +253,15 @@
   .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
   .ship-tag { font-size: 0.65rem; font-weight: 500; padding: 2px 7px; border-radius: 999px; }
   .tag-flagship { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
-  .tag-lng     { background: rgba(26,188,100,0.15); color: #8af0c0; border: 1px solid rgba(26,188,100,0.25); }
-  .tag-pilot   { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.3); }
-  .tag-soon    { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
   .tag-new     { background: rgba(33,150,196,0.15); color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
+  .tag-soon    { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
+  .tag-prima   { background: rgba(200,16,46,0.15); color: #f9a8b5; border: 1px solid rgba(200,16,46,0.3); }
 
   .ship-card-footer {
     margin-top: auto; padding-top: 8px;
     border-top: 1px solid rgba(255,255,255,0.07);
     font-size: 0.75rem;
   }
-  .ship-link-hint { color: var(--teal); display: flex; align-items: center; gap: 4px; }
   .ship-soon-hint { color: var(--text-muted); }
 
   footer {
@@ -314,14 +311,13 @@
             <span class="dropdown-desc">Costa Diadema, Smeralda e mais</span>
           </span>
         </a>
-        <a href="/companhias/msc-cruzeiros/" class="active-company">
+        <a href="/companhias/msc-cruzeiros/">
           <span class="dropdown-emoji">🌊</span>
           <span class="dropdown-text">
             <span class="dropdown-title">MSC Cruzeiros</span>
             <span class="dropdown-desc">World Europa, Grandiosa e mais</span>
           </span>
         </a>
-        <div class="dropdown-divider"></div>
         <div class="dropdown-divider"></div>
         <a href="/companhias/royal-caribbean/">
           <span class="dropdown-emoji">👑</span>
@@ -330,7 +326,7 @@
             <span class="dropdown-desc">Icon, Oasis, Wonder e mais</span>
           </span>
         </a>
-        <a href="/companhias/norwegian-cruise-line/">
+        <a href="/companhias/norwegian-cruise-line/" class="active-company">
           <span class="dropdown-emoji">🇳🇴</span>
           <span class="dropdown-text">
             <span class="dropdown-title">Norwegian Cruise Line</span>
@@ -382,365 +378,334 @@
     <span class="breadcrumb-sep">›</span>
     <a href="#">Companhias</a>
     <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">MSC Cruzeiros</span>
+    <span class="breadcrumb-current">Norwegian Cruise Line</span>
   </nav>
 
   <div class="company-header">
-    <div class="company-logo">MSC</div>
+    <div class="company-logo">NCL</div>
     <div class="company-info">
-      <div class="company-name">MSC Cruzeiros</div>
+      <div class="company-name">Norwegian Cruise Line</div>
       <p class="company-desc">
-        Fundada em 1987 em Genebra, a MSC Cruzeiros é a maior companhia de cruzeiros de capital privado do mundo e a segunda maior em número de passageiros. Parte do grupo MSC — Mediterranean Shipping Company —, a empresa cresceu de forma acelerada nas últimas duas décadas e hoje opera uma das frotas mais modernas do planeta, com forte presença no Brasil.
+        Fundada em 1966 em Oslo, a Norwegian Cruise Line (NCL) foi pioneira no conceito de "Freestyle Cruising" — cruzeiros sem horários rígidos de refeição ou traje formal obrigatório. Parte do Norwegian Cruise Line Holdings, opera uma frota moderna com destaque para os navios da classe Breakaway Plus e a mais recente classe Prima, além de ser a única companhia a operar cruzeiros domésticos no Havaí.
       </p>
       <div class="company-stats">
-        <div class="stat"><span class="stat-value">1987</span><span class="stat-label">Fundação</span></div>
-        <div class="stat"><span class="stat-value">Genebra</span><span class="stat-label">Sede</span></div>
-        <div class="stat"><span class="stat-value">21</span><span class="stat-label">Navios ativos</span></div>
-        <div class="stat"><span class="stat-value">MSC Group</span><span class="stat-label">Grupo</span></div>
+        <div class="stat"><span class="stat-value">1966</span><span class="stat-label">Fundação</span></div>
+        <div class="stat"><span class="stat-value">Miami</span><span class="stat-label">Sede</span></div>
+        <div class="stat"><span class="stat-value">19</span><span class="stat-label">Navios ativos</span></div>
+        <div class="stat"><span class="stat-value">NCLH</span><span class="stat-label">Grupo</span></div>
       </div>
     </div>
   </div>
 
-  <div class="section-label">🛳️ Frota MSC Cruzeiros</div>
+  <div class="section-label">🛳️ Frota Norwegian Cruise Line</div>
 
   <div class="ships-grid">
 
-    <!-- MSC World Europa — Flagship -->
-    <a class="ship-card flagship" href="/companhias/msc-cruzeiros/msc-world-europa/">
+    <!-- Norwegian Viva — Flagship -->
+    <div class="ship-card soon flagship">
       <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC World Europa</div>
-      <div class="ship-year">Em serviço desde 2022</div>
+      <div class="ship-name">Norwegian Viva</div>
+      <div class="ship-year">Em serviço desde 2023</div>
       <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">215.863 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">6.762</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">142.500 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.099</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-flagship">Flagship</span>
-        <span class="ship-tag tag-lng">GNL</span>
+        <span class="ship-tag tag-prima">Classe Prima</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-pilot">Detalhes disponíveis</span>
+        <span class="ship-tag tag-soon">Em breve</span>
       </div>
-      <div class="ship-card-footer"><span style="color:var(--teal);font-weight:600;font-size:.82rem;">Ver página completa →</span></div>
-    </a>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
 
-    <!-- MSC Virtuosa -->
-    <a class="ship-card" href="/companhias/msc-cruzeiros/msc-virtuosa/">
+    <!-- Norwegian Prima -->
+    <div class="ship-card soon">
       <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Virtuosa</div>
-      <div class="ship-year">Em serviço desde 2021</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">181.541 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">6.334</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">331 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-pilot">Detalhes disponíveis</span>
-      </div>
-      <div class="ship-card-footer"><span style="color:var(--teal);font-weight:600;font-size:.82rem;">Ver página completa →</span></div>
-    </a>
-
-    <!-- MSC Grandiosa -->
-    <a class="ship-card" href="/companhias/msc-cruzeiros/msc-grandiosa/">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Grandiosa</div>
-      <div class="ship-year">Em serviço desde 2019</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">181.541 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">6.334</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">331 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-pilot">Detalhes disponíveis</span>
-      </div>
-      <div class="ship-card-footer"><span style="color:var(--teal);font-weight:600;font-size:.82rem;">Ver página completa →</span></div>
-    </a>
-
-    <!-- MSC Seascape -->
-    <a class="ship-card" href="/companhias/msc-cruzeiros/msc-seascape/">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Seascape</div>
+      <div class="ship-name">Norwegian Prima</div>
       <div class="ship-year">Em serviço desde 2022</div>
       <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">169.400 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">5.877</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">339 m</span></div>
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">142.500 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.099</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-prima">Classe Prima</span>
+        <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Encore -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Encore</div>
+      <div class="ship-year">Em serviço desde 2019</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">169.116 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.998</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Bliss -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Bliss</div>
+      <div class="ship-year">Em serviço desde 2018</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">168.028 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.004</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Joy -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Joy</div>
+      <div class="ship-year">Em serviço desde 2017</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">167.725 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.804</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Escape -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Escape</div>
+      <div class="ship-year">Em serviço desde 2015</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">164.600 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.266</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">326 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Getaway -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Getaway</div>
+      <div class="ship-year">Em serviço desde 2014</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">145.655 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.998</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">324 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Breakaway -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Breakaway</div>
+      <div class="ship-year">Em serviço desde 2013</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">144.017 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.969</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">324 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Epic -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Epic</div>
+      <div class="ship-year">Em serviço desde 2010</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">155.873 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.100</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">329 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Gem -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Gem</div>
+      <div class="ship-year">Em serviço desde 2007</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">93.530 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.394</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Pearl -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Pearl</div>
+      <div class="ship-year">Em serviço desde 2006</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">93.502 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.394</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Jade -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Jade</div>
+      <div class="ship-year">Em serviço desde 2006</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">93.558 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.402</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Pride of America -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Pride of America</div>
+      <div class="ship-year">Em serviço desde 2005</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">80.439 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.186</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">281 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Dawn -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Dawn</div>
+      <div class="ship-year">Em serviço desde 2002</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">92.250 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.340</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Star -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Star</div>
+      <div class="ship-year">Em serviço desde 2001</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">91.740 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.348</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Sun -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Sun</div>
+      <div class="ship-year">Em serviço desde 2001</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">78.309 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">1.936</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">259 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Sky -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Sky</div>
+      <div class="ship-year">Em serviço desde 1999</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">77.104 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.002</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">259 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Spirit -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Spirit</div>
+      <div class="ship-year">Em serviço desde 1998</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">75.338 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.018</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">268 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-soon">Em breve</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
+    </div>
+
+    <!-- Norwegian Aqua — Em breve -->
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Norwegian Aqua</div>
+      <div class="ship-year">Previsto para 2025</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">~156.300 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.571</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">~322 m</span></div>
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-pilot">Detalhes disponíveis</span>
-      </div>
-      <div class="ship-card-footer"><span style="color:var(--teal);font-weight:600;font-size:.82rem;">Ver página completa →</span></div>
-    </a>
-
-    <!-- MSC Seashore -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Seashore</div>
-      <div class="ship-year">Em serviço desde 2021</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">169.400 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">5.877</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">339 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Bellissima -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Bellissima</div>
-      <div class="ship-year">Em serviço desde 2019</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">171.598 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">5.655</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">315 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Meraviglia -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Meraviglia</div>
-      <div class="ship-year">Em serviço desde 2017</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">171.598 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">5.655</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">315 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Seaview -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Seaview</div>
-      <div class="ship-year">Em serviço desde 2018</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">153.516 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">5.179</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">323 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Seaside -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Seaside</div>
-      <div class="ship-year">Em serviço desde 2017</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">153.516 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">5.179</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">323 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Preziosa -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Preziosa</div>
-      <div class="ship-year">Em serviço desde 2013</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">139.072 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.345</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Divina -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Divina</div>
-      <div class="ship-year">Em serviço desde 2012</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">139.072 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.345</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Splendida -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Splendida</div>
-      <div class="ship-year">Em serviço desde 2009</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">137.936 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.274</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Fantasia -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Fantasia</div>
-      <div class="ship-year">Em serviço desde 2008</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">137.936 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.274</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Magnifica -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Magnifica</div>
-      <div class="ship-year">Em serviço desde 2010</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">95.128 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.223</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Poesia -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Poesia</div>
-      <div class="ship-year">Em serviço desde 2008</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">92.409 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.013</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Orchestra -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Orchestra</div>
-      <div class="ship-year">Em serviço desde 2007</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">92.409 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.013</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Musica -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Musica</div>
-      <div class="ship-year">Em serviço desde 2006</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">92.409 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.013</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Opera -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Opera</div>
-      <div class="ship-year">Em serviço desde 2004</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">59.058 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.055</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">251 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Lirica -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Lirica</div>
-      <div class="ship-year">Em serviço desde 2003</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">59.058 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.055</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">251 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Armonia -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Armonia</div>
-      <div class="ship-year">Em serviço desde 2001</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">58.600 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.087</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">251 m</span></div>
-      </div>
-      <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
-      </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
-
-    <!-- MSC Sinfonia -->
-    <div class="ship-card soon">
-      <span class="ship-icon">🛳️</span>
-      <div class="ship-name">MSC Sinfonia</div>
-      <div class="ship-year">Em serviço desde 2002</div>
-      <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">58.600 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.087</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">251 m</span></div>
-      </div>
-      <div class="ship-tags">
         <span class="ship-tag tag-soon">Em breve</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>

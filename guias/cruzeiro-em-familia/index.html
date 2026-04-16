@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../shared/header.css" />
+  <script src="../../shared/header.js" defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px; --radius-sm:8px; --nav-height:60px; }
@@ -22,45 +24,6 @@
     body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
     .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
     .waves-bg svg { width:100%; height:100%; }
-    nav { position:sticky; top:0; z-index:100; width:100%; height:var(--nav-height); background:rgba(6,21,39,0.85); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; padding:0 1.5rem; gap:1rem; }
-    .nav-brand { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--white); font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; white-space:nowrap; flex-shrink:0; }
-    .nav-brand span { font-size:1.3rem; }
-    .nav-links { display:flex; align-items:center; gap:2px; list-style:none; flex:1; justify-content:center; }
-    .nav-item { position:relative; }
-    .nav-btn { background:none; border:none; color:rgba(255,255,255,0.7); font-family:'DM Sans',sans-serif; font-size:0.83rem; font-weight:500; padding:0.45rem 0.8rem; border-radius:var(--radius-sm); cursor:pointer; display:flex; align-items:center; gap:5px; transition:color 0.15s,background 0.15s; white-space:nowrap; text-decoration:none; }
-    .nav-btn:hover, .nav-item.open .nav-btn { color:var(--white); background:rgba(255,255,255,0.08); }
-    .nav-btn.active { color:var(--teal-light); background:rgba(26,188,156,0.12); }
-    .nav-btn .chevron { font-size:0.6rem; opacity:0.6; transition:transform 0.2s; display:inline-block; }
-    .nav-item.open .nav-btn .chevron { transform:rotate(180deg); }
-    .dropdown { position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(-6px); min-width:260px; background:#0d2d4a; border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:6px; box-shadow:0 16px 48px rgba(0,0,0,0.5); opacity:0; pointer-events:none; transition:opacity 0.18s,transform 0.18s; }
-    .nav-item.open .dropdown { opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
-    .dropdown a { display:flex; align-items:flex-start; gap:10px; padding:0.55rem 0.75rem; border-radius:var(--radius-sm); text-decoration:none; color:rgba(255,255,255,0.8); transition:background 0.15s,color 0.15s; }
-    .dropdown a:hover { background:rgba(255,255,255,0.08); color:var(--white); }
-    .dropdown-emoji { font-size:1rem; line-height:1.4; flex-shrink:0; }
-    .dropdown-text { display:flex; flex-direction:column; gap:1px; }
-    .dropdown-title { font-size:0.84rem; font-weight:500; }
-    .dropdown-desc { font-size:0.73rem; color:var(--text-muted); line-height:1.4; }
-    .dropdown-divider { height:1px; background:rgba(255,255,255,0.07); margin:4px 6px; }
-    .nav-search { position:relative; flex-shrink:0; }
-    .nav-search input { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:0.4rem 2.2rem 0.4rem 1rem; color:var(--white); font-size:0.82rem; font-family:'DM Sans',sans-serif; outline:none; width:160px; transition:border-color 0.2s,background 0.2s,width 0.3s; }
-    .nav-search input::placeholder { color:rgba(255,255,255,0.35); }
-    .nav-search input:focus { border-color:var(--teal); background:rgba(255,255,255,0.12); width:220px; }
-    .nav-search .s-icon { position:absolute; right:0.7rem; top:50%; transform:translateY(-50%); font-size:0.85rem; opacity:0.45; pointer-events:none; }
-    .hamburger { display:none; background:none; border:none; color:var(--white); font-size:1.4rem; cursor:pointer; padding:4px; }
-    .mobile-menu { display:none; position:fixed; top:var(--nav-height); left:0; right:0; bottom:0; background:#061527; z-index:99; overflow-y:auto; padding:1rem; }
-    .mobile-menu.open { display:block; }
-    .mobile-section { margin-bottom:1.2rem; }
-    .mobile-section-title { font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); padding:0.4rem 0.5rem 0.5rem; border-bottom:1px solid rgba(255,255,255,0.07); margin-bottom:4px; }
-    .mobile-menu a { display:flex; align-items:center; gap:10px; padding:0.6rem 0.5rem; text-decoration:none; color:rgba(255,255,255,0.8); border-radius:var(--radius-sm); font-size:0.88rem; transition:background 0.15s; }
-    .mobile-menu a:hover { background:rgba(255,255,255,0.07); color:var(--white); }
-    .mobile-search { margin-bottom:1.2rem; }
-    .mobile-search input { width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:0.6rem 1rem; color:var(--white); font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; }
-    .mobile-search input::placeholder { color:rgba(255,255,255,0.35); }
-    .nav-overlay { display:none; position:fixed; inset:0; z-index:99; }
-    .nav-overlay.active { display:block; }
-    footer { text-align:center; padding:2rem 1rem 1rem; font-size:0.78rem; color:rgba(255,255,255,0.25); letter-spacing:0.04em; }
-    @media (max-width:700px) { .nav-links,.nav-search { display:none; } .hamburger { display:block; } }
-
     /* GUIDE STYLES */
     .page { position:relative; z-index:1; max-width:800px; margin:0 auto; padding:0 1.25rem 4rem; }
     .guide-hero { position:relative; z-index:1; text-align:center; padding:3rem 1.25rem 2rem; }
@@ -126,44 +89,7 @@
   </svg>
 </div>
 
-<div class="nav-overlay" id="navOverlay"></div>
-<nav>
-  <a class="nav-brand" href="/"><span>🔱</span> Poseidon Cruzeiros</a>
-  <ul class="nav-links" id="navLinks">
-    <li class="nav-item" data-menu="companhias">
-      <button class="nav-btn">🚢 Companhias <span class="chevron">▼</span></button>
-      <div class="dropdown">
-        <a href="/companhias/costa-cruzeiros/"><span class="dropdown-emoji">🇮🇹</span><span class="dropdown-text"><span class="dropdown-title">Costa Cruzeiros</span><span class="dropdown-desc">Costa Diadema, Smeralda e mais</span></span></a>
-        <a href="/companhias/msc-cruzeiros/"><span class="dropdown-emoji">🌊</span><span class="dropdown-text"><span class="dropdown-title">MSC Cruzeiros</span><span class="dropdown-desc">World Europa, Grandiosa e mais</span></span></a>
-        <div class="dropdown-divider"></div>
-        <a href="/companhias/royal-caribbean/"><span class="dropdown-emoji">👑</span><span class="dropdown-text"><span class="dropdown-title">Royal Caribbean</span><span class="dropdown-desc">Icon, Oasis, Wonder e mais</span></span></a>
-        <a href="/companhias/norwegian-cruise-line/"><span class="dropdown-emoji">🇳🇴</span><span class="dropdown-text"><span class="dropdown-title">Norwegian Cruise Line</span><span class="dropdown-desc">Norwegian Prima, Bliss, Joy e mais</span></span></a>
-      </div>
-    </li>
-    <li class="nav-item" data-menu="guias">
-      <button class="nav-btn active">📚 Guias <span class="chevron">▼</span></button>
-      <div class="dropdown">
-        <a href="/guias/primeiro-cruzeiro/"><span class="dropdown-emoji">🌊</span><span class="dropdown-text"><span class="dropdown-title">Primeiro Cruzeiro</span><span class="dropdown-desc">Tudo que você precisa saber</span></span></a>
-        <a href="/guias/quanto-custa/"><span class="dropdown-emoji">💰</span><span class="dropdown-text"><span class="dropdown-title">Quanto Custa um Cruzeiro</span><span class="dropdown-desc">Passagem, extras e gorjetas</span></span></a>
-        <a href="/guias/como-escolher-cabine/"><span class="dropdown-emoji">🛏️</span><span class="dropdown-text"><span class="dropdown-title">Como Escolher a Cabine</span><span class="dropdown-desc">Interior, varanda, suíte e mais</span></span></a>
-        <a href="/guias/cruzeiros-brasil/"><span class="dropdown-emoji">🇧🇷</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiros no Brasil</span><span class="dropdown-desc">Santos, Salvador, Rio e temporadas</span></span></a>
-        <div class="dropdown-divider"></div>
-        <a href="/guias/cruzeiro-em-familia/"><span class="dropdown-emoji">👨‍👩‍👧‍👦</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro em Família</span><span class="dropdown-desc">Dicas para viajar com crianças</span></span></a>
-        <a href="/guias/cruzeiro-para-casais/"><span class="dropdown-emoji">💑</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro para Casais</span><span class="dropdown-desc">Lua de mel e experiências românticas</span></span></a>
-        <a href="/guias/cruzeiro-solo/"><span class="dropdown-emoji">🧳</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro Solo</span><span class="dropdown-desc">Viajando sozinho no mar</span></span></a>
-        <div class="dropdown-divider"></div>
-        <a href="/guias/"><span class="dropdown-emoji">📚</span><span class="dropdown-text"><span class="dropdown-title">Todos os Guias</span><span class="dropdown-desc">Ver lista completa</span></span></a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-btn" href="/glossario/" style="text-decoration:none;">📖 Glossário</a>
-    </li>
-  </ul>
-  <div class="nav-search"><input type="text" id="navSearchInput" placeholder="Buscar…" /><span class="s-icon">🔍</span></div>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-search"><input type="text" placeholder="Buscar…" /></div>
+<div id="site-header"></div>
   <div class="mobile-section">
     <div class="mobile-section-title">🚢 Companhias</div>
     <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
@@ -392,16 +318,5 @@
   <p>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos em português</p>
 </footer>
 
-<script>
-const navItems=document.querySelectorAll('.nav-item[data-menu]');
-const overlay=document.getElementById('navOverlay');
-function closeAll(){navItems.forEach(i=>i.classList.remove('open'));overlay.classList.remove('active');}
-navItems.forEach(item=>{const btn=item.querySelector('.nav-btn');if(!btn)return;btn.addEventListener('click',(e)=>{e.stopPropagation();const isOpen=item.classList.contains('open');closeAll();if(!isOpen){item.classList.add('open');overlay.classList.add('active');}});});
-overlay.addEventListener('click',closeAll);
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
-const hamburger=document.getElementById('hamburgerBtn');
-const mobileMenu=document.getElementById('mobileMenu');
-hamburger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');hamburger.textContent=open?'✕':'☰';});
-</script>
 </body>
 </html>

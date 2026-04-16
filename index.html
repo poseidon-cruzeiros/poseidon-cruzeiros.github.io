@@ -59,20 +59,13 @@
     pointer-events: none;
   }
 
-  /* ── WAVES ── */
-  .waves-bg {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 0;
-    height: 200px; overflow: hidden; pointer-events: none;
-  }
-  .waves-bg svg { width: 100%; height: 100%; }
-
   /* ── LAYOUT ── */
   .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
 
-  /* ── HEADER ── */
+  /* ── HERO ── */
   header {
     text-align: center;
-    padding: 3rem 1rem 2rem;
+    padding: 3rem 1rem 2.5rem;
   }
   .logo-icon {
     font-size: 3rem;
@@ -103,21 +96,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* ── LINKS INTRO ── */
-  .links-intro {
-    display: flex; align-items: center; gap: 14px;
-    background: rgba(240,192,64,0.08);
-    border: 1px solid rgba(240,192,64,0.2);
-    border-radius: var(--radius);
-    padding: 0.9rem 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .links-intro-icon { font-size: 1.5rem; }
-  .links-intro-text { display: flex; flex-direction: column; gap: 2px; }
-  .links-intro-title { font-size: 0.88rem; font-weight: 500; color: var(--gold); }
-  .links-intro-desc  { font-size: 0.78rem; color: var(--text-muted); }
-
-  /* ── SECTION TITLE ── */
+  /* ── SECTION LABEL ── */
   .section-label {
     display: flex; align-items: center; gap: 10px;
     font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
@@ -132,13 +111,184 @@
     background: linear-gradient(to right, rgba(26,188,156,0.4), transparent);
   }
 
-  /* ── CARDS GRID ── */
+  /* ── COMPANY CARDS (2×2) ── */
+  .company-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .company-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.3rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+  }
+  .company-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(26,188,156,0.45);
+    transform: translateY(-3px);
+  }
+  .company-card__emoji {
+    font-size: 2.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .company-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .company-card__name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .company-card__ships {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+  .company-card__tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-top: 2px;
+    background: rgba(26,188,156,0.15);
+    color: var(--teal-light);
+    border: 1px solid rgba(26,188,156,0.25);
+  }
+
+  /* ── GUIDE CARDS ── */
+  .guide-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .guide-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+  }
+  .guide-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(240,192,64,0.4);
+    transform: translateY(-3px);
+  }
+  .guide-card__emoji { font-size: 1.6rem; line-height: 1; }
+  .guide-card__title {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .guide-card__desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .guide-card__tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-top: 2px;
+    background: rgba(240,192,64,0.12);
+    color: #fce08a;
+    border: 1px solid rgba(240,192,64,0.22);
+  }
+
+  /* ── GLOSSARY BANNER ── */
+  .glossary-banner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: linear-gradient(135deg, rgba(33,150,196,0.12) 0%, rgba(26,188,156,0.08) 100%);
+    border: 1px solid rgba(33,150,196,0.25);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .glossary-banner:hover {
+    background: linear-gradient(135deg, rgba(33,150,196,0.2) 0%, rgba(26,188,156,0.14) 100%);
+    border-color: rgba(33,150,196,0.45);
+    transform: translateY(-2px);
+  }
+  .glossary-banner__icon { font-size: 2.5rem; flex-shrink: 0; }
+  .glossary-banner__text { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .glossary-banner__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .glossary-banner__desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .glossary-banner__cta {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--teal-light);
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(26,188,156,0.4);
+    border-radius: 999px;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .glossary-banner:hover .glossary-banner__cta {
+    background: rgba(26,188,156,0.15);
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin: 3rem 0 0;
+  }
+
+  /* ── EXTERNAL LINKS INTRO ── */
+  .links-intro {
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(240,192,64,0.08);
+    border: 1px solid rgba(240,192,64,0.2);
+    border-radius: var(--radius);
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .links-intro-icon { font-size: 1.5rem; }
+  .links-intro-text { display: flex; flex-direction: column; gap: 2px; }
+  .links-intro-title { font-size: 0.88rem; font-weight: 500; color: var(--gold); }
+  .links-intro-desc  { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ── EXTERNAL LINK CARDS ── */
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 12px;
   }
-
   .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -170,7 +320,6 @@
   .tag-video { background: rgba(232,90,144,0.15); color: #f9afd0; border: 1px solid rgba(232,90,144,0.25); }
   .tag-news  { background: rgba(160,120,240,0.15); color: #d0b8ff; border: 1px solid rgba(160,120,240,0.25); }
   .tag-brasil{ background: rgba(26,188,100,0.15); color: #8af0c0; border: 1px solid rgba(26,188,100,0.25); }
-
   .card.hidden { display: none; }
 
   /* ── SUGGEST ── */
@@ -200,7 +349,10 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 700px) {
+    .company-cards { grid-template-columns: 1fr; }
     .cards { grid-template-columns: 1fr 1fr; }
+    .glossary-banner { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .glossary-banner__cta { align-self: flex-start; }
   }
 </style>
 </head>
@@ -235,6 +387,104 @@
     <h1>Poseidon Cruzeiros</h1>
     <p>Seu portal de referência sobre navios, companhias e cruzeiros</p>
   </header>
+
+  <!-- ══ COMPANHIAS ══ -->
+  <div class="section-label">🚢 Companhias</div>
+  <div class="company-cards">
+    <a class="company-card" href="./companhias/costa-cruzeiros/">
+      <span class="company-card__emoji">🇮🇹</span>
+      <div class="company-card__info">
+        <span class="company-card__name">Costa Cruzeiros</span>
+        <span class="company-card__ships">12 navios · Mediterrâneo, Caribe e mais</span>
+        <span class="company-card__tag">Ver frota</span>
+      </div>
+    </a>
+    <a class="company-card" href="./companhias/msc-cruzeiros/">
+      <span class="company-card__emoji">🌊</span>
+      <div class="company-card__info">
+        <span class="company-card__name">MSC Cruzeiros</span>
+        <span class="company-card__ships">World Europa, Grandiosa e mais</span>
+        <span class="company-card__tag">Ver frota</span>
+      </div>
+    </a>
+    <a class="company-card" href="./companhias/royal-caribbean/">
+      <span class="company-card__emoji">👑</span>
+      <div class="company-card__info">
+        <span class="company-card__name">Royal Caribbean</span>
+        <span class="company-card__ships">Icon, Oasis, Wonder e mais</span>
+        <span class="company-card__tag">Ver frota</span>
+      </div>
+    </a>
+    <a class="company-card" href="./companhias/norwegian-cruise-line/">
+      <span class="company-card__emoji">🇳🇴</span>
+      <div class="company-card__info">
+        <span class="company-card__name">Norwegian Cruise Line</span>
+        <span class="company-card__ships">Prima, Bliss, Joy e mais</span>
+        <span class="company-card__tag">Ver frota</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ══ GUIAS ══ -->
+  <div class="section-label">📚 Guias</div>
+  <div class="guide-cards">
+    <a class="guide-card" href="./guias/primeiro-cruzeiro/">
+      <span class="guide-card__emoji">🚀</span>
+      <div class="guide-card__title">Primeiro Cruzeiro</div>
+      <div class="guide-card__desc">Tudo que você precisa saber antes de embarcar pela primeira vez.</div>
+      <span class="guide-card__tag">Iniciante</span>
+    </a>
+    <a class="guide-card" href="./guias/quanto-custa/">
+      <span class="guide-card__emoji">💰</span>
+      <div class="guide-card__title">Quanto Custa um Cruzeiro</div>
+      <div class="guide-card__desc">Custos reais: passagem, gorjetas, bebidas, excursões e extras.</div>
+      <span class="guide-card__tag">Planejamento</span>
+    </a>
+    <a class="guide-card" href="./guias/como-escolher-cabine/">
+      <span class="guide-card__emoji">🛏️</span>
+      <div class="guide-card__title">Como Escolher a Cabine</div>
+      <div class="guide-card__desc">Interior, varanda, suíte — qual tipo de cabine é ideal para você?</div>
+      <span class="guide-card__tag">Cabines</span>
+    </a>
+    <a class="guide-card" href="./guias/cruzeiros-brasil/">
+      <span class="guide-card__emoji">🇧🇷</span>
+      <div class="guide-card__title">Cruzeiros pelo Brasil</div>
+      <div class="guide-card__desc">Roteiros saindo de Santos, Rio de Janeiro e Itajaí.</div>
+      <span class="guide-card__tag">Brasil</span>
+    </a>
+    <a class="guide-card" href="./guias/cruzeiro-em-familia/">
+      <span class="guide-card__emoji">👨‍👩‍👧‍👦</span>
+      <div class="guide-card__title">Cruzeiro em Família</div>
+      <div class="guide-card__desc">Dicas para viajar com crianças e adolescentes no mar.</div>
+      <span class="guide-card__tag">Família</span>
+    </a>
+    <a class="guide-card" href="./guias/cruzeiro-para-casais/">
+      <span class="guide-card__emoji">❤️</span>
+      <div class="guide-card__title">Cruzeiro para Casais</div>
+      <div class="guide-card__desc">Lua de mel e viagens românticas: como aproveitar ao máximo.</div>
+      <span class="guide-card__tag">Casais</span>
+    </a>
+    <a class="guide-card" href="./guias/cruzeiro-solo/">
+      <span class="guide-card__emoji">🧳</span>
+      <div class="guide-card__title">Cruzeiro Solo</div>
+      <div class="guide-card__desc">Viajar sozinho: cabines studio, suplemento solo e dicas sociais.</div>
+      <span class="guide-card__tag">Solo</span>
+    </a>
+  </div>
+
+  <!-- ══ GLOSSÁRIO ══ -->
+  <div class="section-label">📖 Glossário</div>
+  <a class="glossary-banner" href="./glossario/">
+    <span class="glossary-banner__icon">📖</span>
+    <div class="glossary-banner__text">
+      <span class="glossary-banner__title">Glossário de Cruzeiros</span>
+      <span class="glossary-banner__desc">50 termos essenciais explicados em português — de proa a popa, de cabine interior a suíte, de knots a tonnage.</span>
+    </div>
+    <span class="glossary-banner__cta">Ver glossário →</span>
+  </a>
+
+  <!-- ══ LINKS EXTERNOS ══ -->
+  <hr class="section-divider" />
 
   <div class="links-intro">
     <span class="links-intro-icon">🔗</span>

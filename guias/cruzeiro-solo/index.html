@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruzeiro Solo — Guia para Viajantes Solitários — Poseidon Cruzeiros</title>
+  <meta name="description" content="Cruzeiro solo: cabines estúdio, suplemento solo, como socializar a bordo, os melhores navios para viajantes solitários e dicas para aproveitar ao máximo." />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+  <link rel="canonical" href="https://poseidon-cruzeiros.github.io/guias/cruzeiro-solo/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Poseidon Cruzeiros" />
+  <meta property="og:title" content="Cruzeiro Solo — Guia para Viajantes Solitários — Poseidon Cruzeiros" />
+  <meta property="og:description" content="Cruzeiro solo: cabines estúdio, suplemento solo, como socializar a bordo, os melhores navios para viajantes solitários e dicas para aproveitar ao máximo." />
+  <meta property="og:url" content="https://poseidon-cruzeiros.github.io/guias/cruzeiro-solo/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cruzeiro Solo — Guia para Viajantes Solitários — Poseidon Cruzeiros" />
+  <meta name="twitter:description" content="Cruzeiro solo: cabines estúdio, suplemento solo, como socializar a bordo, os melhores navios para viajantes solitários e dicas para aproveitar ao máximo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px; --radius-sm:8px; --nav-height:60px; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    nav { position:sticky; top:0; z-index:100; width:100%; height:var(--nav-height); background:rgba(6,21,39,0.85); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; padding:0 1.5rem; gap:1rem; }
+    .nav-brand { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--white); font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; white-space:nowrap; flex-shrink:0; }
+    .nav-brand span { font-size:1.3rem; }
+    .nav-links { display:flex; align-items:center; gap:2px; list-style:none; flex:1; justify-content:center; }
+    .nav-item { position:relative; }
+    .nav-btn { background:none; border:none; color:rgba(255,255,255,0.7); font-family:'DM Sans',sans-serif; font-size:0.83rem; font-weight:500; padding:0.45rem 0.8rem; border-radius:var(--radius-sm); cursor:pointer; display:flex; align-items:center; gap:5px; transition:color 0.15s,background 0.15s; white-space:nowrap; text-decoration:none; }
+    .nav-btn:hover, .nav-item.open .nav-btn { color:var(--white); background:rgba(255,255,255,0.08); }
+    .nav-btn.active { color:var(--teal-light); background:rgba(26,188,156,0.12); }
+    .nav-btn .chevron { font-size:0.6rem; opacity:0.6; transition:transform 0.2s; display:inline-block; }
+    .nav-item.open .nav-btn .chevron { transform:rotate(180deg); }
+    .dropdown { position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(-6px); min-width:260px; background:#0d2d4a; border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:6px; box-shadow:0 16px 48px rgba(0,0,0,0.5); opacity:0; pointer-events:none; transition:opacity 0.18s,transform 0.18s; }
+    .nav-item.open .dropdown { opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dropdown a { display:flex; align-items:flex-start; gap:10px; padding:0.55rem 0.75rem; border-radius:var(--radius-sm); text-decoration:none; color:rgba(255,255,255,0.8); transition:background 0.15s,color 0.15s; }
+    .dropdown a:hover { background:rgba(255,255,255,0.08); color:var(--white); }
+    .dropdown-emoji { font-size:1rem; line-height:1.4; flex-shrink:0; }
+    .dropdown-text { display:flex; flex-direction:column; gap:1px; }
+    .dropdown-title { font-size:0.84rem; font-weight:500; }
+    .dropdown-desc { font-size:0.73rem; color:var(--text-muted); line-height:1.4; }
+    .dropdown-divider { height:1px; background:rgba(255,255,255,0.07); margin:4px 6px; }
+    .nav-search { position:relative; flex-shrink:0; }
+    .nav-search input { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:0.4rem 2.2rem 0.4rem 1rem; color:var(--white); font-size:0.82rem; font-family:'DM Sans',sans-serif; outline:none; width:160px; transition:border-color 0.2s,background 0.2s,width 0.3s; }
+    .nav-search input::placeholder { color:rgba(255,255,255,0.35); }
+    .nav-search input:focus { border-color:var(--teal); background:rgba(255,255,255,0.12); width:220px; }
+    .nav-search .s-icon { position:absolute; right:0.7rem; top:50%; transform:translateY(-50%); font-size:0.85rem; opacity:0.45; pointer-events:none; }
+    .hamburger { display:none; background:none; border:none; color:var(--white); font-size:1.4rem; cursor:pointer; padding:4px; }
+    .mobile-menu { display:none; position:fixed; top:var(--nav-height); left:0; right:0; bottom:0; background:#061527; z-index:99; overflow-y:auto; padding:1rem; }
+    .mobile-menu.open { display:block; }
+    .mobile-section { margin-bottom:1.2rem; }
+    .mobile-section-title { font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); padding:0.4rem 0.5rem 0.5rem; border-bottom:1px solid rgba(255,255,255,0.07); margin-bottom:4px; }
+    .mobile-menu a { display:flex; align-items:center; gap:10px; padding:0.6rem 0.5rem; text-decoration:none; color:rgba(255,255,255,0.8); border-radius:var(--radius-sm); font-size:0.88rem; transition:background 0.15s; }
+    .mobile-menu a:hover { background:rgba(255,255,255,0.07); color:var(--white); }
+    .mobile-search { margin-bottom:1.2rem; }
+    .mobile-search input { width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:0.6rem 1rem; color:var(--white); font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; }
+    .mobile-search input::placeholder { color:rgba(255,255,255,0.35); }
+    .nav-overlay { display:none; position:fixed; inset:0; z-index:99; }
+    .nav-overlay.active { display:block; }
+    footer { text-align:center; padding:2rem 1rem 1rem; font-size:0.78rem; color:rgba(255,255,255,0.25); letter-spacing:0.04em; }
+    @media (max-width:700px) { .nav-links,.nav-search { display:none; } .hamburger { display:block; } }
+
+    /* GUIDE STYLES */
+    .page { position:relative; z-index:1; max-width:800px; margin:0 auto; padding:0 1.25rem 4rem; }
+    .guide-hero { position:relative; z-index:1; text-align:center; padding:3rem 1.25rem 2rem; }
+    .guide-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; }
+    .guide-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .guide-breadcrumb a:hover { text-decoration:underline; }
+    .guide-emoji { font-size:3rem; display:block; margin-bottom:0.75rem; filter:drop-shadow(0 0 20px rgba(26,188,156,0.5)); animation:float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .guide-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,5vw,2.6rem); font-weight:700; letter-spacing:-1px; background:linear-gradient(135deg,#fff 30%,var(--teal-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.75rem; }
+    .guide-subtitle { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto 1rem; line-height:1.6; }
+    .guide-meta { display:flex; gap:1.5rem; justify-content:center; font-size:0.8rem; color:var(--text-muted); flex-wrap:wrap; }
+    .guide-toc { position:relative; z-index:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-left:3px solid var(--teal); border-radius:var(--radius); padding:1.25rem 1.5rem; margin:0 0 2rem; }
+    .guide-toc-title { font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); margin-bottom:0.75rem; }
+    .guide-toc-list { padding-left:1.2rem; display:flex; flex-direction:column; gap:0.4rem; }
+    .guide-toc-list a { color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.88rem; transition:color 0.15s; }
+    .guide-toc-list a:hover { color:var(--teal-light); }
+    .guide-section { position:relative; z-index:1; margin-bottom:2.5rem; scroll-margin-top:calc(var(--nav-height) + 16px); }
+    .guide-section h2 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--white); margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .guide-section h3 { font-size:1.05rem; font-weight:600; color:var(--teal-light); margin:1.25rem 0 0.5rem; }
+    .guide-section p { color:rgba(255,255,255,0.8); line-height:1.75; margin-bottom:0.9rem; font-size:0.95rem; }
+    .guide-section ul, .guide-section ol { padding-left:1.4rem; color:rgba(255,255,255,0.8); line-height:1.75; font-size:0.95rem; margin-bottom:0.9rem; display:flex; flex-direction:column; gap:0.35rem; }
+    .tip-box { background:rgba(26,188,156,0.1); border:1px solid rgba(26,188,156,0.25); border-left:3px solid var(--teal); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .tip-box strong { color:var(--teal-light); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .tip-box p { margin:0; font-size:0.9rem; }
+    .warn-box { background:rgba(240,192,64,0.1); border:1px solid rgba(240,192,64,0.25); border-left:3px solid var(--gold); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .warn-box strong { color:#fce08a; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .warn-box p { margin:0; font-size:0.9rem; }
+    .info-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; margin:1.25rem 0; }
+    .info-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem; }
+    .info-card-emoji { font-size:1.5rem; margin-bottom:0.5rem; display:block; }
+    .info-card h4 { font-size:0.9rem; font-weight:600; color:var(--white); margin-bottom:0.4rem; }
+    .info-card p { font-size:0.8rem; color:var(--text-muted); margin:0; line-height:1.5; }
+    .price-table { width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:0.88rem; }
+    .price-table th { background:rgba(26,188,156,0.15); color:var(--teal-light); font-weight:600; padding:0.7rem 1rem; text-align:left; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .price-table td { padding:0.65rem 1rem; border-bottom:1px solid rgba(255,255,255,0.06); color:rgba(255,255,255,0.8); }
+    .price-table tr:last-child td { border-bottom:none; }
+    .price-table .tag-sim { color:var(--teal-light); font-weight:600; }
+    .price-table .tag-nao { color:#f9afd0; }
+    .guide-nav-bottom { display:flex; gap:12px; margin-top:3rem; flex-wrap:wrap; }
+    .guide-nav-btn { flex:1; min-width:200px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem 1.25rem; text-decoration:none; color:var(--white); transition:background 0.2s,border-color 0.2s; }
+    .guide-nav-btn:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); }
+    .guide-nav-btn span { display:block; font-size:0.72rem; color:var(--text-muted); margin-bottom:3px; }
+    .guide-nav-btn strong { font-size:0.9rem; }
+    @media (max-width:600px) { .info-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav>
+  <a class="nav-brand" href="/"><span>🔱</span> Poseidon Cruzeiros</a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-item" data-menu="companhias">
+      <button class="nav-btn">🚢 Companhias <span class="chevron">▼</span></button>
+      <div class="dropdown">
+        <a href="/companhias/costa-cruzeiros/"><span class="dropdown-emoji">🇮🇹</span><span class="dropdown-text"><span class="dropdown-title">Costa Cruzeiros</span><span class="dropdown-desc">Costa Diadema, Smeralda e mais</span></span></a>
+        <a href="/companhias/msc-cruzeiros/"><span class="dropdown-emoji">🌊</span><span class="dropdown-text"><span class="dropdown-title">MSC Cruzeiros</span><span class="dropdown-desc">World Europa, Grandiosa e mais</span></span></a>
+        <div class="dropdown-divider"></div>
+        <a href="/companhias/royal-caribbean/"><span class="dropdown-emoji">👑</span><span class="dropdown-text"><span class="dropdown-title">Royal Caribbean</span><span class="dropdown-desc">Icon, Oasis, Wonder e mais</span></span></a>
+        <a href="/companhias/norwegian-cruise-line/"><span class="dropdown-emoji">🇳🇴</span><span class="dropdown-text"><span class="dropdown-title">Norwegian Cruise Line</span><span class="dropdown-desc">Norwegian Prima, Bliss, Joy e mais</span></span></a>
+      </div>
+    </li>
+    <li class="nav-item" data-menu="guias">
+      <button class="nav-btn active">📚 Guias <span class="chevron">▼</span></button>
+      <div class="dropdown">
+        <a href="/guias/primeiro-cruzeiro/"><span class="dropdown-emoji">🌊</span><span class="dropdown-text"><span class="dropdown-title">Primeiro Cruzeiro</span><span class="dropdown-desc">Tudo que você precisa saber</span></span></a>
+        <a href="/guias/quanto-custa/"><span class="dropdown-emoji">💰</span><span class="dropdown-text"><span class="dropdown-title">Quanto Custa um Cruzeiro</span><span class="dropdown-desc">Passagem, extras e gorjetas</span></span></a>
+        <a href="/guias/como-escolher-cabine/"><span class="dropdown-emoji">🛏️</span><span class="dropdown-text"><span class="dropdown-title">Como Escolher a Cabine</span><span class="dropdown-desc">Interior, varanda, suíte e mais</span></span></a>
+        <a href="/guias/cruzeiros-brasil/"><span class="dropdown-emoji">🇧🇷</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiros no Brasil</span><span class="dropdown-desc">Santos, Salvador, Rio e temporadas</span></span></a>
+        <div class="dropdown-divider"></div>
+        <a href="/guias/cruzeiro-em-familia/"><span class="dropdown-emoji">👨‍👩‍👧‍👦</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro em Família</span><span class="dropdown-desc">Dicas para viajar com crianças</span></span></a>
+        <a href="/guias/cruzeiro-para-casais/"><span class="dropdown-emoji">💑</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro para Casais</span><span class="dropdown-desc">Lua de mel e experiências românticas</span></span></a>
+        <a href="/guias/cruzeiro-solo/"><span class="dropdown-emoji">🧳</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro Solo</span><span class="dropdown-desc">Viajando sozinho no mar</span></span></a>
+        <div class="dropdown-divider"></div>
+        <a href="/guias/"><span class="dropdown-emoji">📚</span><span class="dropdown-text"><span class="dropdown-title">Todos os Guias</span><span class="dropdown-desc">Ver lista completa</span></span></a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-btn" href="/glossario/" style="text-decoration:none;">📖 Glossário</a>
+    </li>
+  </ul>
+  <div class="nav-search"><input type="text" id="navSearchInput" placeholder="Buscar…" /><span class="s-icon">🔍</span></div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-search"><input type="text" placeholder="Buscar…" /></div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">🚢 Companhias</div>
+    <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
+    <a href="/companhias/msc-cruzeiros/"><span>🌊</span> MSC Cruzeiros</a>
+    <a href="/companhias/royal-caribbean/"><span>👑</span> Royal Caribbean</a>
+    <a href="/companhias/norwegian-cruise-line/"><span>🇳🇴</span> Norwegian Cruise Line</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📚 Guias</div>
+    <a href="/guias/primeiro-cruzeiro/"><span>🌊</span> Primeiro Cruzeiro</a>
+    <a href="/guias/quanto-custa/"><span>💰</span> Quanto Custa</a>
+    <a href="/guias/como-escolher-cabine/"><span>🛏️</span> Como Escolher a Cabine</a>
+    <a href="/guias/cruzeiros-brasil/"><span>🇧🇷</span> Cruzeiros no Brasil</a>
+    <a href="/guias/cruzeiro-em-familia/"><span>👨‍👩‍👧‍👦</span> Cruzeiro em Família</a>
+    <a href="/guias/cruzeiro-para-casais/"><span>💑</span> Cruzeiro para Casais</a>
+    <a href="/guias/cruzeiro-solo/"><span>🧳</span> Cruzeiro Solo</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📖 Conteúdo</div>
+    <a href="/glossario/"><span>📖</span> Glossário</a>
+  </div>
+</div>
+
+<header class="guide-hero">
+  <div class="guide-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › <a href="/guias/">Guias</a> › Cruzeiro Solo</div>
+  <span class="guide-emoji">🧳</span>
+  <h1>Cruzeiro Solo</h1>
+  <p class="guide-subtitle">Liberdade total, novas amizades e o mundo inteiro pela proa — o cruzeiro é uma das melhores opções para quem viaja sozinho</p>
+  <div class="guide-meta">
+    <span>📅 Atualizado em abril de 2026</span>
+    <span>⏱️ Leitura: 11 min</span>
+  </div>
+</header>
+
+<div class="page">
+
+  <nav class="guide-toc">
+    <div class="guide-toc-title">📋 Neste guia</div>
+    <ol class="guide-toc-list">
+      <li><a href="#sec-porque">Por que cruzeiro é ótimo para viajantes solo</a></li>
+      <li><a href="#sec-suplemento">O suplemento solo — o que é e como evitar</a></li>
+      <li><a href="#sec-cabines">Cabines estúdio e opções para solo</a></li>
+      <li><a href="#sec-socializar">Como socializar a bordo</a></li>
+      <li><a href="#sec-seguranca">Segurança viajando sozinho</a></li>
+      <li><a href="#sec-companhias">Melhores companhias para solo travelers</a></li>
+      <li><a href="#sec-dicas">Dicas práticas para o cruzeiro solo</a></li>
+    </ol>
+  </nav>
+
+  <section class="guide-section" id="sec-porque">
+    <h2>Por que cruzeiro é ótimo para viajantes solo</h2>
+    <p>Viajar sozinho de cruzeiro é uma experiência que combina o melhor dos dois mundos: a independência total de quem viaja solo com a segurança e conforto de um hotel flutuante. Diferente de viagens terrestres onde o viajante solo precisa gerenciar hospedagem, transporte e refeições em cada destino, no cruzeiro tudo está resolvido — o que libera energia para o que realmente importa: explorar e conhecer pessoas.</p>
+    <p>A comunidade de solo travelers em cruzeiros cresce a cada ano. As companhias perceberam isso e passaram a oferecer estruturas específicas para quem viaja sozinho, tornando a experiência cada vez mais acessível e acolhedora.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-card-emoji">🗺️</span>
+        <h4>Múltiplos destinos</h4>
+        <p>Acorde em uma cidade diferente todos os dias, sem ter que fazer check-in em vários hotéis.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🔒</span>
+        <h4>Segurança total</h4>
+        <p>O navio é um ambiente controlado e seguro, ideal para quem viaja sozinho pela primeira vez.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">👥</span>
+        <h4>Fácil socialização</h4>
+        <p>A estrutura do navio facilita encontrar companhia: mesas compartilhadas, atividades em grupo e lounges sociais.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🍽️</span>
+        <h4>Sem mesa para um</h4>
+        <p>No restaurante principal, a mesa é compartilhada — nunca haverá o constrangimento de jantar sozinho.</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 Perfil do solo traveler de cruzeiro</strong>
+      <p>Os viajantes solo em cruzeiros são dos mais variados perfis: aposentados que descobriram a liberdade de viajar após a vida profissional, profissionais que precisam de uma pausa, recém-divorciados explorando nova fase, jovens aventureiros e pessoas que simplesmente preferem o próprio ritmo. Você estará em boa companhia.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-suplemento">
+    <h2>O suplemento solo — o que é e como evitar</h2>
+    <p>O maior obstáculo histórico para viajantes solo em cruzeiros é o chamado <strong>suplemento solo</strong> (ou "single supplement"). Como as cabines são projetadas para duas pessoas, quando ocupadas por apenas uma, as companhias cobram entre 50% e 100% adicional sobre o valor da passagem para compensar a receita perdida.</p>
+    <p>Na prática, isso significa que um viajante solo pode pagar até o dobro do que pagaria metade de uma cabine dupla. Por décadas, isso foi uma barreira real para quem queria viajar sozinho.</p>
+
+    <h3>Como evitar ou reduzir o suplemento</h3>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Estratégia</th>
+          <th>Funciona?</th>
+          <th>Observação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cabines estúdio</td>
+          <td class="tag-sim">✓ Sim</td>
+          <td>Sem suplemento, projetadas para um</td>
+        </tr>
+        <tr>
+          <td>Programa de match de cabine</td>
+          <td class="tag-sim">✓ Sim</td>
+          <td>A companhia encontra outro solo para dividir</td>
+        </tr>
+        <tr>
+          <td>Promoções especiais solo</td>
+          <td class="tag-sim">✓ Às vezes</td>
+          <td>Companhias oferecem periodicamente 0% suplemento</td>
+        </tr>
+        <tr>
+          <td>Reserva de última hora</td>
+          <td class="tag-sim">✓ Às vezes</td>
+          <td>Navios com cabines vazias reduzem o custo</td>
+        </tr>
+        <tr>
+          <td>Cabines interiores menores</td>
+          <td class="tag-nao">Parcial</td>
+          <td>Suplemento menor, mas ainda existe</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">
+      <strong>⚠️ Fique atento às promoções</strong>
+      <p>A Norwegian Cruise Line e a MSC Cruzeiros realizam periodicamente promoções com isenção do suplemento solo. Assine as newsletters das companhias ou acompanhe agências especializadas para ser avisado dessas oportunidades.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-cabines">
+    <h2>Cabines estúdio e opções para solo</h2>
+    <p>A revolução para viajantes solo aconteceu quando a Norwegian Cruise Line lançou, a bordo do Norwegian Epic em 2010, as primeiras <strong>cabines estúdio</strong> — quartos projetados especificamente para uma pessoa, sem suplemento. O conceito pegou e hoje diversas companhias oferecem essa categoria.</p>
+
+    <h3>O que é uma cabine estúdio</h3>
+    <p>São cabines menores (geralmente entre 10m² e 15m²) localizadas em um corredor ou área específica do navio, sem suplemento solo. O design é inteligente e aproveita cada centímetro: cama de casal ou solteiro, banheiro compacto mas funcional, mesa de trabalho e TV. Muitas incluem acesso a um lounge exclusivo para hóspedes solo, onde é fácil socializar.</p>
+
+    <h3>Navios com cabines estúdio</h3>
+    <ul>
+      <li><strong>Norwegian Cruise Line</strong> — pioneira, oferece em vários navios com Studio Lounge exclusivo</li>
+      <li><strong>Royal Caribbean</strong> — Studio cabins em alguns navios de maior porte</li>
+      <li><strong>MSC Cruzeiros</strong> — cabines solo disponíveis em navios selecionados</li>
+      <li><strong>Virgin Voyages</strong> — toda a linha é pensada para adultos, incluindo solos</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>💡 Studio Lounge</strong>
+      <p>Nos navios Norwegian com cabines estúdio, o Studio Lounge é um espaço exclusivo para hóspedes solo — com bar, TV de tela grande e sofás confortáveis. É o ponto de encontro natural para quem quer conhecer outros viajantes solo, e muitas amizades duradouras começam ali.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-socializar">
+    <h2>Como socializar a bordo</h2>
+    <p>Um dos maiores medos de quem considera viajar solo de cruzeiro é a solidão. Na prática, é quase impossível se sentir sozinho a bordo de um navio — a estrutura social do cruzeiro é naturalmente propícia para encontrar companhia.</p>
+
+    <h3>Mesa compartilhada no restaurante</h3>
+    <p>No restaurante principal, as mesas são compartilhadas entre grupos de 6 a 10 pessoas. Se você escolher o "open seating" (horário livre), estará sempre sentando com pessoas diferentes — uma oportunidade incrível de conhecer gente nova a cada jantar. Peça ao maître para ser colocado em mesa compartilhada.</p>
+
+    <h3>Atividades em grupo</h3>
+    <p>Quase todas as atividades do navio são em grupo: aulas de dança, torneios de trivia, degustação de vinhos, workshops de culinária, excursões em terra. Participar de pelo menos uma atividade por dia é a forma mais natural de conhecer pessoas com interesses em comum.</p>
+
+    <h3>Eventos para solo travelers</h3>
+    <p>Muitas companhias realizam <strong>Meet & Mingle</strong> ou eventos similares especificamente para viajantes solo, geralmente no primeiro ou segundo dia de viagem. Pergunte à recepção ou confira o programa diário (Daily Program) sobre eventos para solos.</p>
+
+    <h3>Bares e lounges</h3>
+    <p>O bar do navio é o ponto social por excelência. Sentar no balcão — em vez de uma mesa isolada — é o gesto universal de "estou aberto para conversa". Os bartenders, em geral experientes e multilíngues, são ótimos pontes de apresentação entre passageiros.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-card-emoji">🎯</span>
+        <h4>Trivia & Jogos</h4>
+        <p>Torneios de perguntas e jogos de deck são perfeitos para conhecer pessoas de forma descontraída.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">💃</span>
+        <h4>Aulas de Dança</h4>
+        <p>Salsa, tango, forró — as aulas a bordo são ótimas para socializar e aprender algo novo.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🏊</span>
+        <h4>Piscina & Deck</h4>
+        <p>Uma espreguiçadeira ao lado de desconhecidos rapidamente vira uma conversa sobre os destinos.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🧘</span>
+        <h4>Aulas de Yoga</h4>
+        <p>Atividades de bem-estar no convés reúnem pessoas com mentalidade parecida — ótimo ponto de encontro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-seguranca">
+    <h2>Segurança viajando sozinho</h2>
+    <p>O cruzeiro é considerado um dos ambientes mais seguros para viajantes solo, especialmente para mulheres. O navio é um espaço controlado com segurança 24 horas, câmeras, sistema de cartão de embarque e tripulação treinada para lidar com qualquer situação.</p>
+
+    <h3>A bordo</h3>
+    <ul>
+      <li>O cartão de bordo registra todas as entradas e saídas do navio — a companhia sempre sabe quem está a bordo</li>
+      <li>Câmeras de segurança cobrem todas as áreas comuns</li>
+      <li>O pessoal de segurança está disponível 24 horas em pontos estratégicos</li>
+      <li>As cabines têm fechadura eletrônica — somente você e a camareira têm acesso</li>
+    </ul>
+
+    <h3>Nas escalas</h3>
+    <p>Em terra, as precauções são as mesmas de qualquer viagem solo. Algumas dicas específicas para escalas de cruzeiro:</p>
+    <ul>
+      <li>Prefira excursões organizadas pelo próprio navio para destinos menos conhecidos</li>
+      <li>Anote o nome do navio, o número do cais e o horário do "All Aboard" antes de sair</li>
+      <li>Mantenha uma foto do seu passaporte no celular</li>
+      <li>Em portos movimentados, use o mapa offline do Google Maps (baixe antes de embarcar)</li>
+      <li>Informe alguém de confiança em terra sobre seu itinerário</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>💡 Regra de ouro</strong>
+      <p>Nunca perca o horário do "All Aboard". Se isso acontecer, você será responsável por alcançar o navio no próximo porto de escala — incluindo voos, hospedagem e todos os custos. Coloque um alarme com 2 horas de antecedência.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-companhias">
+    <h2>Melhores companhias para solo travelers</h2>
+
+    <h3>Norwegian Cruise Line — a melhor opção</h3>
+    <p>A <a href="/companhias/norwegian-cruise-line/" style="color:var(--teal)">Norwegian Cruise Line</a> é unanimidade entre solo travelers. Foi pioneira nas cabines estúdio sem suplemento, tem o Studio Lounge exclusivo e realiza regularmente promoções com suplemento zero. O conceito Freestyle Cruising — sem horários fixos — também combina perfeitamente com o estilo de vida do viajante solo.</p>
+
+    <h3>Royal Caribbean</h3>
+    <p>A <a href="/companhias/royal-caribbean/" style="color:var(--teal)">Royal Caribbean</a> tem navios enormes com programações variadas — o que facilita encontrar pessoas com interesses similares. O programa Crown & Anchor permite acumular pontos mesmo viajando solo, e alguns navios oferecem cabines menores com preço mais acessível para quem viaja sozinho.</p>
+
+    <h3>MSC Cruzeiros</h3>
+    <p>A <a href="/companhias/msc-cruzeiros/" style="color:var(--teal)">MSC Cruzeiros</a> tem uma base de passageiros europeia diversificada — ótima para quem quer conhecer pessoas de diferentes culturas. O programa de fidelidade MSC Voyagers Club acumula status que eventualmente traz benefícios como upgrades e embarque prioritário.</p>
+
+    <h3>Costa Cruzeiros</h3>
+    <p>A <a href="/companhias/costa-cruzeiros/" style="color:var(--teal)">Costa Cruzeiros</a> opera principalmente no Mediterrâneo, com itinerários curtos (7 noites) que são perfeitos para quem está fazendo o primeiro cruzeiro solo. A atmosfera italiana e a diversidade de passageiros cria um ambiente social animado e acolhedor.</p>
+  </section>
+
+  <section class="guide-section" id="sec-dicas">
+    <h2>Dicas práticas para o cruzeiro solo</h2>
+
+    <h3>Escolha o jantar em horário compartilhado</h3>
+    <p>Ao reservar, opte pelo "Traditional Dining" com horário fixo. Você será alocado na mesma mesa com os mesmos companheiros todos os noites — o que facilita muito a construção de amizades ao longo da viagem. Em poucos dias, essa mesa vira um ponto de encontro esperado.</p>
+
+    <h3>Participe de pelo menos uma excursão em grupo</h3>
+    <p>As excursões organizadas pelo navio reúnem passageiros com interesses similares. É comum ir sozinho e voltar com novos amigos de viagem — e às vezes essas amizades continuam por anos após o cruzeiro.</p>
+
+    <h3>Seja o primeiro a se apresentar</h3>
+    <p>A barreira da timidez existe dos dois lados. Se você se apresentar primeiro e mostrar abertura para conversa, descobrirá que a maioria das pessoas — especialmente outras que também viajam sozinhas — responde muito bem. Um simples "de onde você é?" abre muitas portas a bordo.</p>
+
+    <h3>Use as redes sociais antes de embarcar</h3>
+    <p>Existe uma comunidade vibrante de solo travelers online. Grupos no Facebook dedicados ao seu cruzeiro específico permitem conhecer companheiros de viagem antes mesmo de embarcar. Muitos organizam encontros a bordo no primeiro dia.</p>
+
+    <h3>Aproveite o tempo sozinho sem culpa</h3>
+    <p>Viajar solo não significa estar sempre em grupo. Uma das maiores vantagens do cruzeiro solo é a liberdade absoluta de ritmo: acordar quando quiser, passar um dia inteiro lendo na espreguiçadeira, ir e vir das excursões no seu tempo. Não há necessidade de negociar com ninguém. Isso é um luxo raro — aproveite.</p>
+
+    <div class="warn-box">
+      <strong>⚠️ Cuidado com o isolamento excessivo</strong>
+      <p>Alguns solo travelers, especialmente os mais introvertidos, acabam se fechando demais na cabine. Reserve ao menos um momento social por dia — um jantar compartilhado, uma atividade em grupo. O equilíbrio entre solitude e companhia é o segredo de um cruzeiro solo bem aproveitado.</p>
+    </div>
+  </section>
+
+  <div class="guide-nav-bottom">
+    <a class="guide-nav-btn" href="/guias/cruzeiro-para-casais/">
+      <span>← Guia anterior</span>
+      <strong>💑 Cruzeiro para Casais</strong>
+    </a>
+    <a class="guide-nav-btn" href="/guias/">
+      <span>Ver todos →</span>
+      <strong>📚 Todos os Guias</strong>
+    </a>
+  </div>
+
+  <footer>🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios</footer>
+
+</div>
+
+<script>
+const navItems=document.querySelectorAll('.nav-item[data-menu]');
+const overlay=document.getElementById('navOverlay');
+function closeAll(){navItems.forEach(i=>i.classList.remove('open'));overlay.classList.remove('active');}
+navItems.forEach(item=>{const btn=item.querySelector('.nav-btn');if(!btn)return;btn.addEventListener('click',(e)=>{e.stopPropagation();const isOpen=item.classList.contains('open');closeAll();if(!isOpen){item.classList.add('open');overlay.classList.add('active');}});});
+overlay.addEventListener('click',closeAll);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
+const hamburger=document.getElementById('hamburgerBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');hamburger.textContent=open?'✕':'☰';});
+</script>
+</body>
+</html>

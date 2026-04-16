@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruzeiro para Casais — Lua de Mel e Experiências Românticas — Poseidon Cruzeiros</title>
+  <meta name="description" content="Cruzeiro para casais: os melhores navios e destinos para lua de mel, jantar romântico, spas, suítes e experiências exclusivas a dois no mar." />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+  <link rel="canonical" href="https://poseidon-cruzeiros.github.io/guias/cruzeiro-para-casais/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Poseidon Cruzeiros" />
+  <meta property="og:title" content="Cruzeiro para Casais — Lua de Mel e Experiências Românticas — Poseidon Cruzeiros" />
+  <meta property="og:description" content="Cruzeiro para casais: os melhores navios e destinos para lua de mel, jantar romântico, spas, suítes e experiências exclusivas a dois no mar." />
+  <meta property="og:url" content="https://poseidon-cruzeiros.github.io/guias/cruzeiro-para-casais/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cruzeiro para Casais — Lua de Mel e Experiências Românticas — Poseidon Cruzeiros" />
+  <meta name="twitter:description" content="Cruzeiro para casais: os melhores navios e destinos para lua de mel, jantar romântico, spas, suítes e experiências exclusivas a dois no mar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px; --radius-sm:8px; --nav-height:60px; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    nav { position:sticky; top:0; z-index:100; width:100%; height:var(--nav-height); background:rgba(6,21,39,0.85); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; padding:0 1.5rem; gap:1rem; }
+    .nav-brand { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--white); font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; white-space:nowrap; flex-shrink:0; }
+    .nav-brand span { font-size:1.3rem; }
+    .nav-links { display:flex; align-items:center; gap:2px; list-style:none; flex:1; justify-content:center; }
+    .nav-item { position:relative; }
+    .nav-btn { background:none; border:none; color:rgba(255,255,255,0.7); font-family:'DM Sans',sans-serif; font-size:0.83rem; font-weight:500; padding:0.45rem 0.8rem; border-radius:var(--radius-sm); cursor:pointer; display:flex; align-items:center; gap:5px; transition:color 0.15s,background 0.15s; white-space:nowrap; text-decoration:none; }
+    .nav-btn:hover, .nav-item.open .nav-btn { color:var(--white); background:rgba(255,255,255,0.08); }
+    .nav-btn.active { color:var(--teal-light); background:rgba(26,188,156,0.12); }
+    .nav-btn .chevron { font-size:0.6rem; opacity:0.6; transition:transform 0.2s; display:inline-block; }
+    .nav-item.open .nav-btn .chevron { transform:rotate(180deg); }
+    .dropdown { position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(-6px); min-width:260px; background:#0d2d4a; border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:6px; box-shadow:0 16px 48px rgba(0,0,0,0.5); opacity:0; pointer-events:none; transition:opacity 0.18s,transform 0.18s; }
+    .nav-item.open .dropdown { opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dropdown a { display:flex; align-items:flex-start; gap:10px; padding:0.55rem 0.75rem; border-radius:var(--radius-sm); text-decoration:none; color:rgba(255,255,255,0.8); transition:background 0.15s,color 0.15s; }
+    .dropdown a:hover { background:rgba(255,255,255,0.08); color:var(--white); }
+    .dropdown-emoji { font-size:1rem; line-height:1.4; flex-shrink:0; }
+    .dropdown-text { display:flex; flex-direction:column; gap:1px; }
+    .dropdown-title { font-size:0.84rem; font-weight:500; }
+    .dropdown-desc { font-size:0.73rem; color:var(--text-muted); line-height:1.4; }
+    .dropdown-divider { height:1px; background:rgba(255,255,255,0.07); margin:4px 6px; }
+    .nav-search { position:relative; flex-shrink:0; }
+    .nav-search input { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:0.4rem 2.2rem 0.4rem 1rem; color:var(--white); font-size:0.82rem; font-family:'DM Sans',sans-serif; outline:none; width:160px; transition:border-color 0.2s,background 0.2s,width 0.3s; }
+    .nav-search input::placeholder { color:rgba(255,255,255,0.35); }
+    .nav-search input:focus { border-color:var(--teal); background:rgba(255,255,255,0.12); width:220px; }
+    .nav-search .s-icon { position:absolute; right:0.7rem; top:50%; transform:translateY(-50%); font-size:0.85rem; opacity:0.45; pointer-events:none; }
+    .hamburger { display:none; background:none; border:none; color:var(--white); font-size:1.4rem; cursor:pointer; padding:4px; }
+    .mobile-menu { display:none; position:fixed; top:var(--nav-height); left:0; right:0; bottom:0; background:#061527; z-index:99; overflow-y:auto; padding:1rem; }
+    .mobile-menu.open { display:block; }
+    .mobile-section { margin-bottom:1.2rem; }
+    .mobile-section-title { font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); padding:0.4rem 0.5rem 0.5rem; border-bottom:1px solid rgba(255,255,255,0.07); margin-bottom:4px; }
+    .mobile-menu a { display:flex; align-items:center; gap:10px; padding:0.6rem 0.5rem; text-decoration:none; color:rgba(255,255,255,0.8); border-radius:var(--radius-sm); font-size:0.88rem; transition:background 0.15s; }
+    .mobile-menu a:hover { background:rgba(255,255,255,0.07); color:var(--white); }
+    .mobile-search { margin-bottom:1.2rem; }
+    .mobile-search input { width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:0.6rem 1rem; color:var(--white); font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; }
+    .mobile-search input::placeholder { color:rgba(255,255,255,0.35); }
+    .nav-overlay { display:none; position:fixed; inset:0; z-index:99; }
+    .nav-overlay.active { display:block; }
+    footer { text-align:center; padding:2rem 1rem 1rem; font-size:0.78rem; color:rgba(255,255,255,0.25); letter-spacing:0.04em; }
+    @media (max-width:700px) { .nav-links,.nav-search { display:none; } .hamburger { display:block; } }
+
+    /* GUIDE STYLES */
+    .page { position:relative; z-index:1; max-width:800px; margin:0 auto; padding:0 1.25rem 4rem; }
+    .guide-hero { position:relative; z-index:1; text-align:center; padding:3rem 1.25rem 2rem; }
+    .guide-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; }
+    .guide-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .guide-breadcrumb a:hover { text-decoration:underline; }
+    .guide-emoji { font-size:3rem; display:block; margin-bottom:0.75rem; filter:drop-shadow(0 0 20px rgba(232,90,144,0.5)); animation:float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .guide-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,5vw,2.6rem); font-weight:700; letter-spacing:-1px; background:linear-gradient(135deg,#fff 30%,var(--teal-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.75rem; }
+    .guide-subtitle { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto 1rem; line-height:1.6; }
+    .guide-meta { display:flex; gap:1.5rem; justify-content:center; font-size:0.8rem; color:var(--text-muted); flex-wrap:wrap; }
+    .guide-toc { position:relative; z-index:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-left:3px solid var(--teal); border-radius:var(--radius); padding:1.25rem 1.5rem; margin:0 0 2rem; }
+    .guide-toc-title { font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); margin-bottom:0.75rem; }
+    .guide-toc-list { padding-left:1.2rem; display:flex; flex-direction:column; gap:0.4rem; }
+    .guide-toc-list a { color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.88rem; transition:color 0.15s; }
+    .guide-toc-list a:hover { color:var(--teal-light); }
+    .guide-section { position:relative; z-index:1; margin-bottom:2.5rem; scroll-margin-top:calc(var(--nav-height) + 16px); }
+    .guide-section h2 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--white); margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .guide-section h3 { font-size:1.05rem; font-weight:600; color:var(--teal-light); margin:1.25rem 0 0.5rem; }
+    .guide-section p { color:rgba(255,255,255,0.8); line-height:1.75; margin-bottom:0.9rem; font-size:0.95rem; }
+    .guide-section ul, .guide-section ol { padding-left:1.4rem; color:rgba(255,255,255,0.8); line-height:1.75; font-size:0.95rem; margin-bottom:0.9rem; display:flex; flex-direction:column; gap:0.35rem; }
+    .tip-box { background:rgba(26,188,156,0.1); border:1px solid rgba(26,188,156,0.25); border-left:3px solid var(--teal); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .tip-box strong { color:var(--teal-light); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .tip-box p { margin:0; font-size:0.9rem; }
+    .warn-box { background:rgba(240,192,64,0.1); border:1px solid rgba(240,192,64,0.25); border-left:3px solid var(--gold); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .warn-box strong { color:#fce08a; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .warn-box p { margin:0; font-size:0.9rem; }
+    .romance-box { background:rgba(232,90,144,0.1); border:1px solid rgba(232,90,144,0.25); border-left:3px solid #e85a90; border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .romance-box strong { color:#f9afd0; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .romance-box p { margin:0; font-size:0.9rem; }
+    .info-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; margin:1.25rem 0; }
+    .info-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem; }
+    .info-card-emoji { font-size:1.5rem; margin-bottom:0.5rem; display:block; }
+    .info-card h4 { font-size:0.9rem; font-weight:600; color:var(--white); margin-bottom:0.4rem; }
+    .info-card p { font-size:0.8rem; color:var(--text-muted); margin:0; line-height:1.5; }
+    .dest-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; margin:1.25rem 0; }
+    .dest-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1.1rem; }
+    .dest-card-header { display:flex; align-items:center; gap:10px; margin-bottom:0.5rem; }
+    .dest-card-emoji { font-size:1.4rem; }
+    .dest-card h4 { font-size:0.95rem; font-weight:600; color:var(--white); }
+    .dest-card p { font-size:0.82rem; color:var(--text-muted); line-height:1.5; margin:0; }
+    .dest-card .dest-tag { display:inline-block; font-size:0.68rem; font-weight:600; padding:2px 8px; border-radius:999px; background:rgba(232,90,144,0.15); color:#f9afd0; border:1px solid rgba(232,90,144,0.25); margin-top:0.5rem; }
+    .guide-nav-bottom { display:flex; gap:12px; margin-top:3rem; flex-wrap:wrap; }
+    .guide-nav-btn { flex:1; min-width:200px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem 1.25rem; text-decoration:none; color:var(--white); transition:background 0.2s,border-color 0.2s; }
+    .guide-nav-btn:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); }
+    .guide-nav-btn span { display:block; font-size:0.72rem; color:var(--text-muted); margin-bottom:3px; }
+    .guide-nav-btn strong { font-size:0.9rem; }
+    @media (max-width:600px) { .info-grid,.dest-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav>
+  <a class="nav-brand" href="/"><span>🔱</span> Poseidon Cruzeiros</a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-item" data-menu="companhias">
+      <button class="nav-btn">🚢 Companhias <span class="chevron">▼</span></button>
+      <div class="dropdown">
+        <a href="/companhias/costa-cruzeiros/"><span class="dropdown-emoji">🇮🇹</span><span class="dropdown-text"><span class="dropdown-title">Costa Cruzeiros</span><span class="dropdown-desc">Costa Diadema, Smeralda e mais</span></span></a>
+        <a href="/companhias/msc-cruzeiros/"><span class="dropdown-emoji">🌊</span><span class="dropdown-text"><span class="dropdown-title">MSC Cruzeiros</span><span class="dropdown-desc">World Europa, Grandiosa e mais</span></span></a>
+        <div class="dropdown-divider"></div>
+        <a href="/companhias/royal-caribbean/"><span class="dropdown-emoji">👑</span><span class="dropdown-text"><span class="dropdown-title">Royal Caribbean</span><span class="dropdown-desc">Icon, Oasis, Wonder e mais</span></span></a>
+        <a href="/companhias/norwegian-cruise-line/"><span class="dropdown-emoji">🇳🇴</span><span class="dropdown-text"><span class="dropdown-title">Norwegian Cruise Line</span><span class="dropdown-desc">Norwegian Prima, Bliss, Joy e mais</span></span></a>
+      </div>
+    </li>
+    <li class="nav-item" data-menu="guias">
+      <button class="nav-btn active">📚 Guias <span class="chevron">▼</span></button>
+      <div class="dropdown">
+        <a href="/guias/primeiro-cruzeiro/"><span class="dropdown-emoji">🌊</span><span class="dropdown-text"><span class="dropdown-title">Primeiro Cruzeiro</span><span class="dropdown-desc">Tudo que você precisa saber</span></span></a>
+        <a href="/guias/quanto-custa/"><span class="dropdown-emoji">💰</span><span class="dropdown-text"><span class="dropdown-title">Quanto Custa um Cruzeiro</span><span class="dropdown-desc">Passagem, extras e gorjetas</span></span></a>
+        <a href="/guias/como-escolher-cabine/"><span class="dropdown-emoji">🛏️</span><span class="dropdown-text"><span class="dropdown-title">Como Escolher a Cabine</span><span class="dropdown-desc">Interior, varanda, suíte e mais</span></span></a>
+        <a href="/guias/cruzeiros-brasil/"><span class="dropdown-emoji">🇧🇷</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiros no Brasil</span><span class="dropdown-desc">Santos, Salvador, Rio e temporadas</span></span></a>
+        <div class="dropdown-divider"></div>
+        <a href="/guias/cruzeiro-em-familia/"><span class="dropdown-emoji">👨‍👩‍👧‍👦</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro em Família</span><span class="dropdown-desc">Dicas para viajar com crianças</span></span></a>
+        <a href="/guias/cruzeiro-para-casais/"><span class="dropdown-emoji">💑</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro para Casais</span><span class="dropdown-desc">Lua de mel e experiências românticas</span></span></a>
+        <a href="/guias/cruzeiro-solo/"><span class="dropdown-emoji">🧳</span><span class="dropdown-text"><span class="dropdown-title">Cruzeiro Solo</span><span class="dropdown-desc">Viajando sozinho no mar</span></span></a>
+        <div class="dropdown-divider"></div>
+        <a href="/guias/"><span class="dropdown-emoji">📚</span><span class="dropdown-text"><span class="dropdown-title">Todos os Guias</span><span class="dropdown-desc">Ver lista completa</span></span></a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-btn" href="/glossario/" style="text-decoration:none;">📖 Glossário</a>
+    </li>
+  </ul>
+  <div class="nav-search"><input type="text" id="navSearchInput" placeholder="Buscar…" /><span class="s-icon">🔍</span></div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-search"><input type="text" placeholder="Buscar…" /></div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">🚢 Companhias</div>
+    <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
+    <a href="/companhias/msc-cruzeiros/"><span>🌊</span> MSC Cruzeiros</a>
+    <a href="/companhias/royal-caribbean/"><span>👑</span> Royal Caribbean</a>
+    <a href="/companhias/norwegian-cruise-line/"><span>🇳🇴</span> Norwegian Cruise Line</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📚 Guias</div>
+    <a href="/guias/primeiro-cruzeiro/"><span>🌊</span> Primeiro Cruzeiro</a>
+    <a href="/guias/quanto-custa/"><span>💰</span> Quanto Custa</a>
+    <a href="/guias/como-escolher-cabine/"><span>🛏️</span> Como Escolher a Cabine</a>
+    <a href="/guias/cruzeiros-brasil/"><span>🇧🇷</span> Cruzeiros no Brasil</a>
+    <a href="/guias/cruzeiro-em-familia/"><span>👨‍👩‍👧‍👦</span> Cruzeiro em Família</a>
+    <a href="/guias/cruzeiro-para-casais/"><span>💑</span> Cruzeiro para Casais</a>
+    <a href="/guias/cruzeiro-solo/"><span>🧳</span> Cruzeiro Solo</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📖 Conteúdo</div>
+    <a href="/glossario/"><span>📖</span> Glossário</a>
+  </div>
+</div>
+
+<header class="guide-hero">
+  <div class="guide-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › <a href="/guias/">Guias</a> › Cruzeiro para Casais</div>
+  <span class="guide-emoji">💑</span>
+  <h1>Cruzeiro para Casais</h1>
+  <p class="guide-subtitle">Lua de mel, aniversário ou simplesmente uma fuga a dois — descubra por que o cruzeiro é a viagem mais completa para casais</p>
+  <div class="guide-meta">
+    <span>📅 Atualizado em abril de 2026</span>
+    <span>⏱️ Leitura: 12 min</span>
+  </div>
+</header>
+
+<div class="page">
+
+  <nav class="guide-toc">
+    <div class="guide-toc-title">📋 Neste guia</div>
+    <ol class="guide-toc-list">
+      <li><a href="#sec-porque">Por que cruzeiro é perfeito para casais</a></li>
+      <li><a href="#sec-destinos">Os melhores destinos românticos</a></li>
+      <li><a href="#sec-cabines">Cabines e suítes para casais</a></li>
+      <li><a href="#sec-bordo">Experiências românticas a bordo</a></li>
+      <li><a href="#sec-lua-de-mel">Lua de mel em cruzeiro</a></li>
+      <li><a href="#sec-navios">Melhores navios para casais</a></li>
+      <li><a href="#sec-dicas">Dicas para tornar a viagem inesquecível</a></li>
+    </ol>
+  </nav>
+
+  <section class="guide-section" id="sec-porque">
+    <h2>Por que cruzeiro é perfeito para casais</h2>
+    <p>Poucas experiências de viagem combinam tão bem o relaxamento, a aventura e o romance quanto um cruzeiro a dois. A bordo, vocês têm tudo que precisam sem ter que se preocupar com logística: o navio leva até os destinos enquanto dormem, as refeições são servidas a qualquer hora e o entretenimento está sempre disponível.</p>
+    <p>Diferente de viagens convencionais onde boa parte do tempo é gasta em translados e check-ins, no cruzeiro a mala é desfeita uma única vez. Você acorda em uma cidade diferente todos os dias, com um lar confortável — o navio — esperando quando voltar das explorações.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-card-emoji">🌅</span>
+        <h4>Pôr do sol no mar</h4>
+        <p>Assistir ao pôr do sol no oceano, na varanda da cabine, é uma das experiências mais românticas de um cruzeiro.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🍽️</span>
+        <h4>Jantares especiais</h4>
+        <p>Restaurantes de especialidade com menus degustação, atmosfera íntima e serviço personalizado para duas pessoas.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">💆</span>
+        <h4>Spa a dois</h4>
+        <p>Cabines de tratamento duplo, piscinas termais e rituais de spa pensados especialmente para casais.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🏝️</span>
+        <h4>Destinos deslumbrantes</h4>
+        <p>Mediterrâneo, Caribe, Noruega — cada escala oferece cenários perfeitos para momentos únicos a dois.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-destinos">
+    <h2>Os melhores destinos românticos</h2>
+    <p>A escolha do destino é fundamental para um cruzeiro romântico. Alguns itinerários foram feitos sob medida para casais, com paisagens de tirar o fôlego, portos charmosos e atmosferas únicas.</p>
+
+    <div class="dest-grid">
+      <div class="dest-card">
+        <div class="dest-card-header"><span class="dest-card-emoji">🏛️</span><h4>Mediterrâneo</h4></div>
+        <p>Santorini, Dubrovnik, Cinque Terre, Costa Amalfitana — cenários icônicos que parecem pintados para casais apaixonados.</p>
+        <span class="dest-tag">✨ Mais romântico</span>
+      </div>
+      <div class="dest-card">
+        <div class="dest-card-header"><span class="dest-card-emoji">🌺</span><h4>Caribe</h4></div>
+        <p>Praias de areias brancas, mar turquesa, ilhas paradisíacas. Perfeito para casais que buscam sol, relaxamento e mergulho.</p>
+        <span class="dest-tag">🌞 Mais relaxante</span>
+      </div>
+      <div class="dest-card">
+        <div class="dest-card-header"><span class="dest-card-emoji">🏔️</span><h4>Fiords da Noruega</h4></div>
+        <p>Paisagens épicas, aurora boreal no inverno e sol da meia-noite no verão. Uma experiência única e inesquecível.</p>
+        <span class="dest-tag">🌌 Mais único</span>
+      </div>
+      <div class="dest-card">
+        <div class="dest-card-header"><span class="dest-card-emoji">🗼</span><h4>Mar Báltico</h4></div>
+        <p>São Petersburgo, Estocolmo, Copenhague, Tallinn — cidades históricas e elegantes para casais que amam cultura.</p>
+        <span class="dest-tag">🎭 Mais cultural</span>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 Dica de temporada</strong>
+      <p>Para o Mediterrâneo, prefira maio/junho ou setembro/outubro: menos turistas, clima agradável e preços mais acessíveis que julho/agosto.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-cabines">
+    <h2>Cabines e suítes para casais</h2>
+    <p>A escolha da cabine é decisiva para um cruzeiro romântico. Para casais, a varanda própria transforma completamente a experiência — ter um espaço privativo para tomar café observando o mar ou brindar ao pôr do sol não tem preço.</p>
+
+    <h3>Cabine com Varanda</h3>
+    <p>A opção mais popular entre casais. A varanda privativa permite momentos íntimos a qualquer hora do dia, seja tomando café de manhã com vista para o porto ou jantando com serviço de quarto enquanto o navio navega. O espaço é compacto mas bem aproveitado, com cama de casal e casa de banho completa.</p>
+
+    <h3>Suíte Junior</h3>
+    <p>Um salto significativo em espaço e conforto. Com sala separada, varanda maior e banheiro com banheira de imersão em muitos navios, é o equilíbrio perfeito entre custo e experiência premium. Muitas incluem serviço de mordomo e acesso prioritário ao embarque.</p>
+
+    <h3>Suíte Grand ou Sky</h3>
+    <p>O máximo em romance e privacidade. Algumas suítes de topo têm varanda com jacuzzi privativo, sala de jantar separada, quarto com vista panorâmica e mordomos disponíveis 24 horas. Em navios como o MSC World Europa e os navios Royal Caribbean, chegam a ter mais de 100m² de espaço.</p>
+
+    <div class="romance-box">
+      <strong>💕 Para lua de mel</strong>
+      <p>Informe à companhia com antecedência que é lua de mel. A maioria oferece surpresas gratuitas na cabine: pétalas de rosa, champanhe, sobremesa especial e decoração romântica — tudo sem custo adicional se solicitado no momento da reserva.</p>
+    </div>
+
+    <h3>Dica de localização</h3>
+    <p>Para casais que enjoam facilmente, escolha cabines no meio do navio (midship) e em conveses intermediários — esses locais sofrem menos balanço e movimento. Cabines na popa têm vibrações dos motores mas oferecem vistas espetaculares da esteira de água.</p>
+  </section>
+
+  <section class="guide-section" id="sec-bordo">
+    <h2>Experiências românticas a bordo</h2>
+    <p>Os navios modernos oferecem muito além do que a maioria das pessoas imagina para casais. Com planejamento, cada dia a bordo pode ser memorável.</p>
+
+    <h3>🍷 Jantares de especialidade</h3>
+    <p>Reservar um restaurante de especialidade — italiano fino, steakhouse, japonês com chefs sushimen — é um dos programas mais apreciados por casais. O ambiente é mais íntimo que o restaurante principal, o serviço mais personalizado e a experiência gastronômica muito mais elaborada. Reserve com antecedência, pois lotam rapidamente.</p>
+
+    <h3>💆 Spa para dois</h3>
+    <p>Praticamente todos os cruzeiros de médio e grande porte têm spas completos com cabines de tratamento duplo. Pacotes para casais incluem massagens sincronizadas, envoltórios corporais e acesso às áreas termais com piscinas aquecidas, saunas e banhos de vapor. Uma tarde no spa é investimento certo para qualquer casal.</p>
+
+    <h3>🌙 Jantar privativo na varanda</h3>
+    <p>Muitas companhias oferecem serviço de jantar romântico na varanda mediante reserva — mesa decorada, menu especial, sommelier e serviço discreto. É uma das experiências mais procuradas em cruzeiros de lua de mel e aniversário.</p>
+
+    <h3>🥂 Wine tasting e degustações</h3>
+    <p>A maioria dos navios oferece eventos pagos de degustação de vinhos, whiskies, chocolates e outros produtos gourmet. São atividades descontraídas, ótimas para casais que apreciam gastronomia e novas experiências.</p>
+
+    <div class="tip-box">
+      <strong>💡 Noites de gala</strong>
+      <p>Todos os cruzeiros têm 1 ou 2 noites de gala (formal nights) onde os passageiros se produzem para o jantar. É uma oportunidade incrível para casais: vestido e smoking, fotos profissionais a bordo e um jantar especial no restaurante principal.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-lua-de-mel">
+    <h2>Lua de mel em cruzeiro</h2>
+    <p>O cruzeiro é uma das opções mais escolhidas para lua de mel no mundo — e por boas razões. A combinação de conforto, variedade de destinos, experiências gastronômicas e momentos privados cria a base perfeita para começar uma vida a dois.</p>
+
+    <h3>Como informar à companhia</h3>
+    <p>Ao fazer a reserva, informe que é lua de mel. A maioria das companhias tem departamentos específicos para isso e preparará surpresas na cabine: pétalas de rosa na cama, champanhe gelado, bolo de boas-vindas ou decoração especial. Esse serviço geralmente é gratuito — basta pedir.</p>
+
+    <h3>Pacotes de lua de mel</h3>
+    <p>Companhias como MSC Cruzeiros, Royal Caribbean e Costa oferecem pacotes de lua de mel com créditos de bordo, bottle service de champanhe diário, tratamentos no spa e até upgrades de cabine. Vale comparar o que cada companhia oferece antes de reservar.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-card-emoji">🌹</span>
+        <h4>Decoração na cabine</h4>
+        <p>Pétalas, velas, balões e mensagem personalizada. Solicite com antecedência pelo serviço de concierge.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🍾</span>
+        <h4>Champanhe de boas-vindas</h4>
+        <p>Uma garrafa esperando ao chegarem à cabine. Algumas companhias incluem no pacote de lua de mel.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">📸</span>
+        <h4>Sessão de fotos</h4>
+        <p>Fotógrafos profissionais a bordo oferecem sessões em diferentes cenários do navio e durante as escalas.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-card-emoji">🛁</span>
+        <h4>Banho romântico</h4>
+        <p>O mordomo da suíte pode preparar um banho com espuma, pétalas e velas mediante solicitação prévia.</p>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <strong>⚠️ Atenção ao timing</strong>
+      <p>Cruzeiros de lua de mel funcionam melhor quando reservados com pelo menos 6 meses de antecedência. Cabines com varanda e suítes esgotam rapidamente, especialmente nas temporadas de alta demanda.</p>
+    </div>
+  </section>
+
+  <section class="guide-section" id="sec-navios">
+    <h2>Melhores navios para casais</h2>
+    <p>Nem todo navio é igualmente adequado para casais. Os melhores combinam atmosfera sofisticada, restaurantes românticos, spas completos e cabines com varanda em boa proporção.</p>
+
+    <h3>MSC Cruzeiros</h3>
+    <p>A <a href="/companhias/msc-cruzeiros/" style="color:var(--teal)">MSC Cruzeiros</a> tem navios com atmosfera europeia refinada, ideal para casais. O <a href="/companhias/msc-cruzeiros/msc-world-europa/" style="color:var(--teal)">MSC World Europa</a> possui a MSC Yacht Club — uma área exclusiva dentro do navio com restaurante privativo, piscina reservada e mordomos dedicados, perfeita para casais que querem o máximo em privacidade.</p>
+
+    <h3>Royal Caribbean</h3>
+    <p>Os navios da <a href="/companhias/royal-caribbean/" style="color:var(--teal)">Royal Caribbean</a> têm restaurantes de especialidade premiados, spas extensos e experiências únicas como jantares em andares panorâmicos. O Wonderland (restaurante temático) é especialmente memorável para casais aventureiros.</p>
+
+    <h3>Costa Cruzeiros</h3>
+    <p>A <a href="/companhias/costa-cruzeiros/" style="color:var(--teal)">Costa Cruzeiros</a> opera principalmente no Mediterrâneo — o destino mais romântico do mundo para cruzeiros. Navios como o <a href="/companhias/costa-cruzeiros/costa-smeralda/" style="color:var(--teal)">Costa Smeralda</a> e o <a href="/companhias/costa-cruzeiros/costa-toscana/" style="color:var(--teal)">Costa Toscana</a> combinam design italiano sofisticado com itinerários pelas costas mais belas da Europa.</p>
+  </section>
+
+  <section class="guide-section" id="sec-dicas">
+    <h2>Dicas para tornar a viagem inesquecível</h2>
+
+    <h3>Reserve com antecedência as experiências especiais</h3>
+    <p>Restaurantes de especialidade, spa, excursões românticas e sessões de fotos lotam rapidamente. Reserve com antecedência — muitas companhias permitem reservar atividades online antes do embarque, às vezes com desconto.</p>
+
+    <h3>Desconecte-se (pelo menos um pouco)</h3>
+    <p>Resista à tentação de ficar conectado o tempo todo. O pacote de internet a bordo é caro e o objetivo do cruzeiro é exatamente estar presente nos momentos a dois. Combine um horário fixo para checar o celular e aproveite o resto do dia sem distrações digitais.</p>
+
+    <h3>Aproveite os dias de mar</h3>
+    <p>Dias sem escalas são subestimados por iniciantes, mas casais experientes sabem que são os melhores: o navio está mais tranquilo, o spa tem horários disponíveis e há tempo para desfrutar da piscina e das refeições sem pressa.</p>
+
+    <h3>Surpreenda o parceiro a bordo</h3>
+    <p>Planeje uma surpresa discreta com a ajuda do concierge: flores na cabine antes do jantar, uma garrafa do vinho preferido do parceiro, uma nota escrita à mão entregue durante uma excursão. Pequenos gestos têm impacto enorme no ambiente do navio.</p>
+
+    <div class="romance-box">
+      <strong>💕 Experiência garantida</strong>
+      <p>Assistir ao nascer do sol juntos no convés de proa, com o mar à frente e o navio navegando em silêncio, é uma das experiências mais poderosas que um casal pode ter. Combine acordar cedo pelo menos uma manhã — vale cada segundo de sono sacrificado.</p>
+    </div>
+  </section>
+
+  <div class="guide-nav-bottom">
+    <a class="guide-nav-btn" href="/guias/cruzeiro-em-familia/">
+      <span>← Guia anterior</span>
+      <strong>👨‍👩‍👧‍👦 Cruzeiro em Família</strong>
+    </a>
+    <a class="guide-nav-btn" href="/guias/cruzeiro-solo/">
+      <span>Próximo guia →</span>
+      <strong>🧳 Cruzeiro Solo</strong>
+    </a>
+  </div>
+
+  <footer>🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios</footer>
+
+</div>
+
+<script>
+const navItems=document.querySelectorAll('.nav-item[data-menu]');
+const overlay=document.getElementById('navOverlay');
+function closeAll(){navItems.forEach(i=>i.classList.remove('open'));overlay.classList.remove('active');}
+navItems.forEach(item=>{const btn=item.querySelector('.nav-btn');if(!btn)return;btn.addEventListener('click',(e)=>{e.stopPropagation();const isOpen=item.classList.contains('open');closeAll();if(!isOpen){item.classList.add('open');overlay.classList.add('active');}});});
+overlay.addEventListener('click',closeAll);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
+const hamburger=document.getElementById('hamburgerBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');hamburger.textContent=open?'✕':'☰';});
+</script>
+</body>
+</html>

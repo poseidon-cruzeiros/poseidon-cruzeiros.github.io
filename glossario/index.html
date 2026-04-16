@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Glossário de Cruzeiros — Poseidon Cruzeiros</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #0a2342;
+    --ocean-mid:    #1a4a7a;
+    --ocean-bright: #2196c4;
+    --teal:         #1abc9c;
+    --teal-light:   #a8f0de;
+    --gold:         #f0c040;
+    --sand:         #fef8ed;
+    --white:        #ffffff;
+    --text-muted:   #8ba4be;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(26,188,156,0.2) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+
+  /* ── WAVES ── */
+  .waves-bg {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 0;
+    height: 200px; overflow: hidden; pointer-events: none;
+  }
+  .waves-bg svg { width: 100%; height: 100%; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    width: 100%; height: var(--nav-height);
+    background: rgba(6,21,39,0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 1.5rem; gap: 1rem;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .nav-brand span { font-size: 1.3rem; }
+  .nav-links {
+    display: flex; align-items: center; gap: 2px;
+    list-style: none; flex: 1; justify-content: center;
+  }
+  .nav-item { position: relative; }
+  .nav-btn {
+    background: none; border: none;
+    color: rgba(255,255,255,0.7);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.83rem; font-weight: 500;
+    padding: 0.45rem 0.8rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex; align-items: center; gap: 5px;
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .nav-btn:hover,
+  .nav-item.open .nav-btn {
+    color: var(--white);
+    background: rgba(255,255,255,0.08);
+  }
+  .nav-btn.active {
+    color: var(--teal-light);
+    background: rgba(26,188,156,0.12);
+  }
+  .nav-btn .chevron {
+    font-size: 0.6rem; opacity: 0.6;
+    transition: transform 0.2s; display: inline-block;
+  }
+  .nav-item.open .nav-btn .chevron { transform: rotate(180deg); }
+
+  /* ── DROPDOWN ── */
+  .dropdown {
+    position: absolute; top: calc(100% + 8px); left: 50%;
+    transform: translateX(-50%);
+    min-width: 240px;
+    background: #0d2d4a;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 6px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+    opacity: 0; pointer-events: none;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.18s, transform 0.18s;
+  }
+  .nav-item.open .dropdown {
+    opacity: 1; pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .dropdown a {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 0.55rem 0.75rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none; color: rgba(255,255,255,0.8);
+    transition: background 0.15s, color 0.15s;
+  }
+  .dropdown a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+  .dropdown-emoji { font-size: 1rem; line-height: 1.4; flex-shrink: 0; }
+  .dropdown-text { display: flex; flex-direction: column; gap: 1px; }
+  .dropdown-title { font-size: 0.84rem; font-weight: 500; }
+  .dropdown-desc  { font-size: 0.73rem; color: var(--text-muted); line-height: 1.4; }
+  .dropdown-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 4px 6px; }
+
+  /* ── NAV SEARCH ── */
+  .nav-search { position: relative; flex-shrink: 0; }
+  .nav-search input {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+    padding: 0.4rem 2.2rem 0.4rem 1rem;
+    color: var(--white);
+    font-size: 0.82rem; font-family: 'DM Sans', sans-serif;
+    outline: none; width: 160px;
+    transition: border-color 0.2s, background 0.2s, width 0.3s;
+  }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.35); }
+  .nav-search input:focus {
+    border-color: var(--teal);
+    background: rgba(255,255,255,0.12);
+    width: 220px;
+  }
+  .nav-search .s-icon {
+    position: absolute; right: 0.7rem; top: 50%; transform: translateY(-50%);
+    font-size: 0.85rem; opacity: 0.45; pointer-events: none;
+  }
+
+  /* ── HAMBURGER ── */
+  .hamburger {
+    display: none; background: none; border: none;
+    color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px;
+  }
+
+  /* ── MOBILE DRAWER ── */
+  .mobile-menu {
+    display: none; position: fixed;
+    top: var(--nav-height); left: 0; right: 0; bottom: 0;
+    background: #061527; z-index: 99; overflow-y: auto; padding: 1rem;
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-section { margin-bottom: 1.2rem; }
+  .mobile-section-title {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    padding: 0.4rem 0.5rem 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 4px;
+  }
+  .mobile-menu a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 0.6rem 0.5rem; text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    border-radius: var(--radius-sm); font-size: 0.88rem;
+    transition: background 0.15s;
+  }
+  .mobile-menu a:hover { background: rgba(255,255,255,0.07); color: var(--white); }
+  .mobile-search { margin-bottom: 1.2rem; }
+  .mobile-search input {
+    width: 100%; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px; padding: 0.6rem 1rem;
+    color: var(--white); font-size: 0.9rem;
+    font-family: 'DM Sans', sans-serif; outline: none;
+  }
+  .mobile-search input::placeholder { color: rgba(255,255,255,0.35); }
+  .mobile-search input:focus { border-color: var(--teal); }
+
+  /* ── LAYOUT ── */
+  .page { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  /* ── HEADER ── */
+  header { text-align: center; padding: 3rem 1rem 2rem; }
+  .logo-icon {
+    font-size: 3rem; display: block; margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 24px rgba(26,188,156,0.6));
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700; letter-spacing: -1px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    color: var(--text-muted); font-size: 1rem;
+    font-weight: 300; letter-spacing: 0.02em;
+  }
+
+  /* ── SEARCH BAR ── */
+  .glossary-search-wrap {
+    position: relative; max-width: 480px; margin: 1.5rem auto 0;
+  }
+  .glossary-search-wrap input {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+    padding: 0.75rem 3rem 0.75rem 1.4rem;
+    color: var(--white);
+    font-size: 0.95rem; font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .glossary-search-wrap input::placeholder { color: rgba(255,255,255,0.35); }
+  .glossary-search-wrap input:focus {
+    border-color: var(--teal);
+    background: rgba(255,255,255,0.1);
+  }
+  .glossary-search-wrap .s-icon {
+    position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%);
+    font-size: 1rem; opacity: 0.4; pointer-events: none;
+  }
+
+  /* ── CATEGORY TABS ── */
+  .cat-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    justify-content: center; margin: 2rem 0 0.5rem;
+  }
+  .cat-tab {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    font-size: 0.82rem; font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex; align-items: center; gap: 6px;
+    text-decoration: none;
+  }
+  .cat-tab:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    border-color: rgba(255,255,255,0.25);
+  }
+  .cat-tab.active {
+    background: rgba(26,188,156,0.18);
+    border-color: rgba(26,188,156,0.5);
+    color: var(--teal-light);
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: flex; gap: 1.5rem; justify-content: center;
+    margin: 1.5rem 0 0;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat-num {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--teal-light);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-top: 3px; display: block;
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2.5rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(26,188,156,0.4), transparent);
+  }
+
+  /* ── TERMS GRID ── */
+  .terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  /* ── TERM CARD ── */
+  .term-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.15rem;
+    display: flex; flex-direction: column; gap: 6px;
+    backdrop-filter: blur(6px);
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .term-card:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(26,188,156,0.35);
+    transform: translateY(-2px);
+  }
+  .term-card.hidden { display: none; }
+
+  .term-header {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 8px;
+  }
+  .term-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--white); line-height: 1.3;
+  }
+  .term-tag {
+    font-size: 0.65rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px;
+    white-space: nowrap; flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .tag-partes   { background: rgba(33,150,196,0.2);  color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
+  .tag-cabines  { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
+  .tag-nav      { background: rgba(160,120,240,0.15);color: #d0b8ff; border: 1px solid rgba(160,120,240,0.25); }
+  .tag-operacao { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
+  .tag-servicos { background: rgba(232,90,144,0.15); color: #f9afd0; border: 1px solid rgba(232,90,144,0.25); }
+
+  .term-en {
+    font-size: 0.75rem; color: var(--text-muted);
+    font-style: italic; margin-bottom: 2px;
+  }
+  .term-def {
+    font-size: 0.85rem; color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+  }
+
+  /* ── NO RESULTS ── */
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .no-results.visible { display: block; }
+
+  /* ── OVERLAY ── */
+  .nav-overlay {
+    display: none; position: fixed; inset: 0; z-index: 99;
+  }
+  .nav-overlay.active { display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    .nav-links, .nav-search { display: none; }
+    .hamburger { display: block; }
+    .terms-grid { grid-template-columns: 1fr; }
+    .stats-bar { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d"
+        values="
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;
+          M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"
+        dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<!-- ══ NAV OVERLAY ══ -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-brand" href="/">
+    <span>🔱</span> Poseidon Cruzeiros
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+
+    <li class="nav-item" data-menu="companhias">
+      <button class="nav-btn">
+        🚢 Companhias <span class="chevron">▼</span>
+      </button>
+      <div class="dropdown">
+        <a href="/companhias/costa-cruzeiros/">
+          <span class="dropdown-emoji">🇮🇹</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">Costa Cruzeiros</span>
+            <span class="dropdown-desc">Costa Diadema, Smeralda e mais</span>
+          </span>
+        </a>
+        <a href="/companhias/msc-cruzeiros/">
+          <span class="dropdown-emoji">🌊</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">MSC Cruzeiros</span>
+            <span class="dropdown-desc">World Europa, Grandiosa e mais</span>
+          </span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="/companhias/royal-caribbean/">
+          <span class="dropdown-emoji">👑</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">Royal Caribbean</span>
+            <span class="dropdown-desc">Icon, Oasis, Wonder e mais</span>
+          </span>
+        </a>
+        <a href="/companhias/norwegian-cruise-line/">
+          <span class="dropdown-emoji">🇳🇴</span>
+          <span class="dropdown-text">
+            <span class="dropdown-title">Norwegian Cruise Line</span>
+            <span class="dropdown-desc">Norwegian Prima, Bliss, Joy e mais</span>
+          </span>
+        </a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-btn active" href="/glossario/">
+        📖 Glossário
+      </a>
+    </li>
+
+  </ul>
+
+  <div class="nav-search">
+    <input type="text" id="navSearchInput" placeholder="Buscar…" />
+    <span class="s-icon">🔍</span>
+  </div>
+
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-search">
+    <input type="text" id="mobileSearchInput" placeholder="Buscar termo…" />
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">🚢 Companhias</div>
+    <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
+    <a href="/companhias/msc-cruzeiros/"><span>🌊</span> MSC Cruzeiros</a>
+    <a href="/companhias/royal-caribbean/"><span>👑</span> Royal Caribbean</a>
+    <a href="/companhias/norwegian-cruise-line/"><span>🇳🇴</span> Norwegian Cruise Line</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📖 Conteúdo</div>
+    <a href="/glossario/"><span>📖</span> Glossário de Cruzeiros</a>
+  </div>
+</div>
+
+<!-- ══ PAGE ══ -->
+<div class="page">
+
+  <header>
+    <span class="logo-icon">📖</span>
+    <h1>Glossário de Cruzeiros</h1>
+    <p>50 termos essenciais para entender o mundo dos cruzeiros marítimos</p>
+
+    <div class="glossary-search-wrap">
+      <input type="text" id="glossarySearch" placeholder="Buscar termo… ex: calado, suíte, knots" />
+      <span class="s-icon">🔍</span>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-num">50</span>
+        <span class="stat-label">Termos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Categorias</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="visibleCount">50</span>
+        <span class="stat-label">Visíveis</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── CATEGORY TABS ── -->
+  <div class="cat-tabs">
+    <a class="cat-tab active" href="#" data-filter="all">🌐 Todos</a>
+    <a class="cat-tab" href="#sec-partes" data-filter="partes">⚓ Partes do Navio</a>
+    <a class="cat-tab" href="#sec-cabines" data-filter="cabines">🛏️ Cabines</a>
+    <a class="cat-tab" href="#sec-nav" data-filter="nav">🧭 Navegação</a>
+    <a class="cat-tab" href="#sec-operacao" data-filter="operacao">🚢 Operação</a>
+    <a class="cat-tab" href="#sec-servicos" data-filter="servicos">💳 Serviços</a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CATEGORIA 1 — PARTES DO NAVIO
+  ══════════════════════════════════════ -->
+  <div class="section-label" id="sec-partes">⚓ Partes do Navio</div>
+  <div class="terms-grid">
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Proa</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Bow</div>
+      <div class="term-def">Parte dianteira do navio, que aponta para a direção de navegação. É a extremidade frontal do casco, projetada para cortar as águas com menor resistência.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Popa</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Stern</div>
+      <div class="term-def">Parte traseira do navio, oposta à proa. Geralmente abriga o leme, os propulsores e, em cruzeiros modernos, as varandas mais amplas com vista para o mar aberto.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Bombordo</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Port side</div>
+      <div class="term-def">Lado esquerdo do navio quando se olha em direção à proa. Identificado pela luz de navegação vermelha. Memorize: "Bombordo = Borda esquerda".</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Estibordo</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Starboard</div>
+      <div class="term-def">Lado direito do navio quando se olha em direção à proa. Identificado pela luz de navegação verde. A escolha do lado da cabine influencia as paisagens vistas durante a rota.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Convés</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Deck</div>
+      <div class="term-def">Cada andar horizontal do navio. Os cruzeiros modernos possuem de 14 a 22 conveses, numerados de baixo para cima. Os conveses superiores abrigam piscinas, restaurantes e atividades ao ar livre.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Casco</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Hull</div>
+      <div class="term-def">Estrutura principal do navio que fica submersa ou na linha d'água. Separa o interior do navio do ambiente marinho e garante a flutuabilidade. Navios modernos usam duplo casco por segurança.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Amurada</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Bulwark</div>
+      <div class="term-def">Prolongamento lateral do convés acima da borda do navio, funcionando como guarda-corpo. Protege passageiros e tripulação de cair ao mar e impede que ondas invadam o convés.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Antepara</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Bulkhead</div>
+      <div class="term-def">Parede divisória vertical interna do navio, geralmente de aço. As anteparas estanques são elementos de segurança fundamentais: isolam compartimentos em caso de alagamento.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Convés Lido</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Lido Deck</div>
+      <div class="term-def">Convés externo principal, geralmente no topo ou próximo ao topo do navio, onde ficam as piscinas, bares ao ar livre, espreguiçadeiras e buffets informais. É o centro social do cruzeiro.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Tombadilho</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Poop deck</div>
+      <div class="term-def">Convés elevado na extremidade traseira (popa) do navio. Historicamente usado para a cabine do comandante; em cruzeiros modernos, costuma abrigar áreas de lazer com vista para a esteira de água deixada pelo navio.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Pranchada</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Gangway</div>
+      <div class="term-def">Passarela articulada usada para o embarque e desembarque de passageiros entre o navio e o cais. Pode ser posicionada em diferentes conveses dependendo da estrutura do porto.</div>
+    </div>
+
+    <div class="term-card" data-cat="partes">
+      <div class="term-header">
+        <span class="term-name">Funileiro</span>
+        <span class="term-tag tag-partes">Estrutura</span>
+      </div>
+      <div class="term-en">Funnel / Smokestack</div>
+      <div class="term-def">Chaminé do navio por onde saem os gases dos motores. Em cruzeiros modernos, o funileiro é muitas vezes um elemento de design icônico, pintado com as cores e logomarca da companhia.</div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CATEGORIA 2 — CABINES E ACOMODAÇÕES
+  ══════════════════════════════════════ -->
+  <div class="section-label" id="sec-cabines">🛏️ Cabines e Acomodações</div>
+  <div class="terms-grid">
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Cabine Interior</span>
+        <span class="term-tag tag-cabines">Cabine</span>
+      </div>
+      <div class="term-en">Interior Cabin</div>
+      <div class="term-def">Cabine sem janelas ou vigia, localizada no interior do navio, longe das bordas. É a categoria mais econômica e costuma ser totalmente escura quando as luzes são apagadas — ideal para quem dorme muito.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Cabine Oceanview</span>
+        <span class="term-tag tag-cabines">Cabine</span>
+      </div>
+      <div class="term-en">Ocean View / Sea View</div>
+      <div class="term-def">Cabine com janela ou vigia (ojo de buey) voltada para o mar, mas sem varanda de acesso. Permite entrada de luz natural e vista para o exterior, sendo uma opção intermediária em preço.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Cabine com Varanda</span>
+        <span class="term-tag tag-cabines">Cabine</span>
+      </div>
+      <div class="term-en">Balcony Cabin</div>
+      <div class="term-def">Cabine com área externa privativa, permitindo ao hóspede desfrutar do ar marinho, paisagens costeiras e pôr do sol sem sair do quarto. Uma das categorias mais populares em cruzeiros modernos.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Suíte</span>
+        <span class="term-tag tag-cabines">Cabine</span>
+      </div>
+      <div class="term-en">Suite</div>
+      <div class="term-def">Categoria superior de acomodação, com espaço ampliado, decoração premium, varanda maior e serviços exclusivos como mordomo (butler), acesso a áreas VIP e embarque prioritário.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Cabine-Estúdio</span>
+        <span class="term-tag tag-cabines">Cabine</span>
+      </div>
+      <div class="term-en">Studio Cabin</div>
+      <div class="term-def">Cabine compacta projetada para uma única pessoa, evitando o suplemento cobrado quando viajantes solo ocupam cabines duplas. Popularizada pela Norwegian Cruise Line em seus navios.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Berço</span>
+        <span class="term-tag tag-cabines">Cabine</span>
+      </div>
+      <div class="term-en">Berth / Pullman bed</div>
+      <div class="term-def">Cama retrátil fixada na parede, que pode ser dobrada durante o dia para liberar espaço. Usada para acomodar terceiros ou quartos passageiros em cabines menores, como beliches abatíveis.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Butler</span>
+        <span class="term-tag tag-cabines">Serviço</span>
+      </div>
+      <div class="term-en">Butler</div>
+      <div class="term-def">Mordomo particular exclusivo para hóspedes de suítes premium. Responsável por serviço de quarto 24h, arrumação personalizada, reservas de restaurantes, preparação de banhos e outras demandas especiais.</div>
+    </div>
+
+    <div class="term-card" data-cat="cabines">
+      <div class="term-header">
+        <span class="term-name">Crédito de Bordo</span>
+        <span class="term-tag tag-cabines">Benefício</span>
+      </div>
+      <div class="term-en">Onboard Credit (OBC)</div>
+      <div class="term-def">Valor em crédito disponibilizado no cartão de bordo para uso em serviços como spa, excursões, bebidas e lojas. Pode ser concedido como cortesia pela companhia, agência de viagens ou por promoções.</div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CATEGORIA 3 — NAVEGAÇÃO E TÉCNICA
+  ══════════════════════════════════════ -->
+  <div class="section-label" id="sec-nav">🧭 Navegação e Técnica</div>
+  <div class="terms-grid">
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Tonelagem Bruta</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Gross Tonnage (GT)</div>
+      <div class="term-def">Medida do volume interno total de um navio em metros cúbicos, não do seu peso. É o principal indicador do tamanho de um cruzeiro. O maior do mundo, o Icon of the Seas, tem 250.800 GT.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Nós</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Knots</div>
+      <div class="term-def">Unidade de velocidade náutica equivalente a 1,852 km/h. Um cruzeiro navega tipicamente entre 20 e 24 nós em velocidade de cruzeiro. A velocidade máxima de alguns navios ultrapassa 30 nós.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Calado</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Draft</div>
+      <div class="term-def">Profundidade mínima de água necessária para que o navio navegue com segurança — a distância entre a linha d'água e o ponto mais baixo do casco. Determina quais portos um cruzeiro pode acessar.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Eslora</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Length Overall (LOA)</div>
+      <div class="term-def">Comprimento total do navio, medido da proa à popa. Os maiores cruzeiros do mundo têm esloras superiores a 360 metros — comprimento equivalente a quase quatro campos de futebol.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Boca</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Beam</div>
+      <div class="term-def">Largura máxima do navio. Em navios Panamax, a boca era limitada a 32,3 metros para passar pelo Canal do Panamá. Cruzeiros modernos (post-Panamax) chegam a 65 metros de boca.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Propulsão Azimutal</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Azipod / Azimuth Thruster</div>
+      <div class="term-def">Sistema de propulsão rotativo de 360° que elimina a necessidade de leme separado. Permite ao navio manobrar com muito mais precisão e navegar de lado, facilitando atracações em espaços apertados.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">GNL / LNG</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Liquefied Natural Gas</div>
+      <div class="term-def">Gás Natural Liquefeito — combustível mais limpo usado nos navios mais modernos. Reduz emissões de CO₂ em até 20% e elimina quase totalmente enxofre e partículas. MSC World Europa e Costa Smeralda usam LNG.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Duplo Casco</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Double Hull</div>
+      <div class="term-def">Construção com duas camadas de aço no casco, criando um espaço vazio entre elas. Em caso de colisão ou encalhe, a camada externa absorve o impacto protegendo o interior do navio — obrigatório por normas internacionais.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Sistemas de Estabilização</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Stabilizers</div>
+      <div class="term-def">Aletas retráteis instaladas abaixo da linha d'água que reduzem a oscilação lateral (balanço) do navio. Em cruzeiros modernos, também há tanques de estabilização por líquido para conforto dos passageiros.</div>
+    </div>
+
+    <div class="term-card" data-cat="nav">
+      <div class="term-header">
+        <span class="term-name">Propulsores de Proa</span>
+        <span class="term-tag tag-nav">Técnico</span>
+      </div>
+      <div class="term-en">Bow Thrusters</div>
+      <div class="term-def">Hélices laterais instalados na proa (e às vezes na popa) dentro de túneis transversais no casco. Permitem ao navio se mover lateralmente sem a ajuda de rebocadores ao atracar em portos.</div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CATEGORIA 4 — OPERAÇÃO E EMBARQUE
+  ══════════════════════════════════════ -->
+  <div class="section-label" id="sec-operacao">🚢 Operação e Embarque</div>
+  <div class="terms-grid">
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Homeport</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">Home Port</div>
+      <div class="term-def">Porto base de um navio de cruzeiro, de onde partem e retornam os itinerários regulares. É o ponto de embarque e desembarque principal da temporada. Ex: Miami para Royal Caribbean, Civitavecchia para Costa.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Porto de Escala</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">Port of Call</div>
+      <div class="term-def">Porto intermediário visitado pelo navio durante o itinerário, onde os passageiros desembarcam para explorar a cidade por algumas horas antes do navio seguir viagem. O navio não faz embarque/desembarque definitivo nestes portos.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Muster Drill</span>
+        <span class="term-tag tag-operacao">Segurança</span>
+      </div>
+      <div class="term-en">Safety Drill / Muster Drill</div>
+      <div class="term-def">Exercício obrigatório de segurança realizado antes ou logo após a partida. Todos os passageiros são instruídos sobre o uso de coletes salva-vidas e os procedimentos de evacuação de emergência. Exigido pela IMO.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Reposicionamento</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">Repositioning Cruise</div>
+      <div class="term-def">Travessia de um navio de uma região para outra ao mudar de temporada — ex: do Mediterrâneo para o Caribe no outono. Costuma ter preços atrativos por incluir muitos dias em alto mar sem escalas.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Tendering</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">Tender service</div>
+      <div class="term-def">Procedimento de transporte de passageiros do navio ancorado ao largo até o porto em pequenas embarcações (tenders). Necessário quando o calado do cruzeiro é maior que a profundidade do porto ou quando não há cais disponível.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Shore Excursion</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">Shore Excursion</div>
+      <div class="term-def">Passeio organizado pela companhia ou por operadores locais durante a escala em um porto. Pode incluir visitas a monumentos, tours gastronômicos, mergulho, trilhas, ou transfers para aeroportos.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Dia de Mar</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">Sea Day</div>
+      <div class="term-def">Dia de navegação sem parada em nenhum porto. Muito apreciado por quem deseja desfrutar plenamente das instalações do navio: shows, piscinas, restaurantes e spas sem pressa de desembarcar.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">All Aboard</span>
+        <span class="term-tag tag-operacao">Operação</span>
+      </div>
+      <div class="term-en">All Aboard</div>
+      <div class="term-def">Horário limite para todos os passageiros retornarem ao navio antes da partida de um porto de escala. Passageiros que perdem este horário são responsáveis por alcançar o navio no próximo porto às suas custas.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Muster Station</span>
+        <span class="term-tag tag-operacao">Segurança</span>
+      </div>
+      <div class="term-en">Assembly Station</div>
+      <div class="term-def">Ponto de reunião pré-designado para cada cabine em caso de emergência. Indicado no cartão de bordo e identificado por letras e símbolos no navio. Passageiros devem conhecer seu ponto antes da partida.</div>
+    </div>
+
+    <div class="term-card" data-cat="operacao">
+      <div class="term-header">
+        <span class="term-name">Capitão de Convés</span>
+        <span class="term-tag tag-operacao">Tripulação</span>
+      </div>
+      <div class="term-en">Deck Officer</div>
+      <div class="term-def">Oficial responsável pelas operações de navegação, manutenção dos conveses e segurança a bordo. Trabalha em turnos de 4 ou 6 horas na ponte de comando supervisionando a rota e condições do mar.</div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CATEGORIA 5 — SERVIÇOS E TARIFAS
+  ══════════════════════════════════════ -->
+  <div class="section-label" id="sec-servicos">💳 Serviços e Tarifas</div>
+  <div class="terms-grid">
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">All Inclusive</span>
+        <span class="term-tag tag-servicos">Tarifa</span>
+      </div>
+      <div class="term-en">All Inclusive</div>
+      <div class="term-def">Pacote que inclui refeições, bebidas (alcoólicas e não alcoólicas), entretenimento e gorjetas no preço da passagem. Oferece previsibilidade de gastos, sem surpresas na conta ao desembarcar.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Gorjeta Automática</span>
+        <span class="term-tag tag-servicos">Tarifa</span>
+      </div>
+      <div class="term-en">Gratuity / Service Charge</div>
+      <div class="term-def">Taxa diária cobrada automaticamente no cartão de bordo para remunerar a tripulação de serviço (camareiros, garçons, stewarts). Varia entre US$ 15 e US$ 25 por pessoa/dia dependendo da companhia e categoria da cabine.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Pacote de Bebidas</span>
+        <span class="term-tag tag-servicos">Serviço</span>
+      </div>
+      <div class="term-en">Beverage Package / Drinks Package</div>
+      <div class="term-def">Pacote pré-pago que dá direito a um número ilimitado (ou limitado) de bebidas alcoólicas e não alcoólicas por um valor fixo diário. Pode ser vantajoso para quem consome mais de 4–5 drinks por dia.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Pacote de Internet</span>
+        <span class="term-tag tag-servicos">Serviço</span>
+      </div>
+      <div class="term-en">Wi-Fi Package</div>
+      <div class="term-def">Acesso pago à internet via satélite a bordo do navio. Pode ser contratado por minutos, dias ou por toda a viagem. A velocidade varia conforme a localização geográfica do navio e o plano contratado.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Taxa Portuária</span>
+        <span class="term-tag tag-servicos">Tarifa</span>
+      </div>
+      <div class="term-en">Port Tax / Port Fees</div>
+      <div class="term-def">Taxas cobradas pelos portos de escala e embarcação, geralmente adicionadas ao valor da passagem. Cobrem custos de uso do terminal, serviços de pilotagem e outras tarifas governamentais locais.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Upgrade de Cabine</span>
+        <span class="term-tag tag-servicos">Serviço</span>
+      </div>
+      <div class="term-en">Cabin Upgrade</div>
+      <div class="term-def">Mudança para uma categoria de cabine superior à originalmente reservada. Pode ser solicitado pelo passageiro por um valor adicional, oferecido gratuitamente pela companhia como cortesia, ou concedido via programa de fidelidade.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Programa de Fidelidade</span>
+        <span class="term-tag tag-servicos">Benefício</span>
+      </div>
+      <div class="term-en">Loyalty Program / Crown & Anchor</div>
+      <div class="term-def">Programa de pontos e status das companhias para passageiros recorrentes. Cada cruzeiro adiciona pontos que evoluem o nível do membro, desbloqueando benefícios como embarque prioritário, descontos e acesso a lounges exclusivos.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Cartão de Bordo</span>
+        <span class="term-tag tag-servicos">Serviço</span>
+      </div>
+      <div class="term-en">Seapass / Shipboard Account</div>
+      <div class="term-def">Cartão eletrônico entregue no embarque que serve como chave da cabine, meio de pagamento a bordo e identificação do passageiro. Todas as compras são registradas neste cartão e liquidadas no desembarque.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Restaurante de Especialidade</span>
+        <span class="term-tag tag-servicos">Serviço</span>
+      </div>
+      <div class="term-en">Specialty Restaurant</div>
+      <div class="term-def">Restaurante temático a bordo com culinária diferenciada (italiana, japonesa, steakhouse, etc.) e serviço à la carte. Cobra taxa adicional por pessoa (cover charge), separada da diária do cruzeiro.</div>
+    </div>
+
+    <div class="term-card" data-cat="servicos">
+      <div class="term-header">
+        <span class="term-name">Spa Termal</span>
+        <span class="term-tag tag-servicos">Serviço</span>
+      </div>
+      <div class="term-en">Thermal Suite / Thalassotherapy</div>
+      <div class="term-def">Área de relaxamento no spa com piscinas de hidromassagem, saunas, banhos de vapor, duchas de experiência e espreguiçadeiras aquecidas. O acesso pode ser incluído no cruzeiro ou cobrado por sessão ou diária.</div>
+    </div>
+
+  </div>
+
+  <!-- ── NO RESULTS ── -->
+  <div class="no-results" id="noResults">
+    Nenhum termo encontrado para "<span id="searchTerm"></span>". Tente outra busca.
+  </div>
+
+  <footer>
+    🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios
+  </footer>
+
+</div>
+
+<script>
+  // ── NAV DROPDOWN ──
+  const navItems = document.querySelectorAll('.nav-item[data-menu]');
+  const overlay = document.getElementById('navOverlay');
+
+  function closeAll() {
+    navItems.forEach(i => i.classList.remove('open'));
+    overlay.classList.remove('active');
+  }
+
+  navItems.forEach(item => {
+    const btn = item.querySelector('.nav-btn');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = item.classList.contains('open');
+      closeAll();
+      if (!isOpen) {
+        item.classList.add('open');
+        overlay.classList.add('active');
+      }
+    });
+  });
+
+  overlay.addEventListener('click', closeAll);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+
+  // ── HAMBURGER ──
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.textContent = open ? '✕' : '☰';
+  });
+
+  // ── SEARCH + FILTER ──
+  const cards = document.querySelectorAll('.term-card');
+  const noResults = document.getElementById('noResults');
+  const visibleCount = document.getElementById('visibleCount');
+
+  function filterTerms(query, cat) {
+    const q = query.toLowerCase().trim();
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matchCat = cat === 'all' || card.dataset.cat === cat;
+      const matchQuery = q === '' || card.innerText.toLowerCase().includes(q);
+      const show = matchCat && matchQuery;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    visibleCount.textContent = visible;
+    document.getElementById('searchTerm').textContent = q;
+    noResults.classList.toggle('visible', visible === 0 && q !== '');
+  }
+
+  let activeCat = 'all';
+  let activeQuery = '';
+
+  // Category tabs
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeCat = tab.dataset.filter;
+
+      // If filtering by category, scroll to that section
+      if (activeCat !== 'all') {
+        const sectionMap = {
+          partes: 'sec-partes',
+          cabines: 'sec-cabines',
+          nav: 'sec-nav',
+          operacao: 'sec-operacao',
+          servicos: 'sec-servicos'
+        };
+        const el = document.getElementById(sectionMap[activeCat]);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      filterTerms(activeQuery, activeCat);
+    });
+  });
+
+  // Main glossary search
+  document.getElementById('glossarySearch').addEventListener('input', function() {
+    activeQuery = this.value;
+    filterTerms(activeQuery, activeCat);
+    // Sync nav search
+    document.getElementById('navSearchInput').value = this.value;
+  });
+
+  // Nav search (sync)
+  document.getElementById('navSearchInput').addEventListener('input', function() {
+    activeQuery = this.value;
+    filterTerms(activeQuery, activeCat);
+    document.getElementById('glossarySearch').value = this.value;
+  });
+
+  // Mobile search (sync)
+  document.getElementById('mobileSearchInput').addEventListener('input', function() {
+    activeQuery = this.value;
+    filterTerms(activeQuery, activeCat);
+    document.getElementById('glossarySearch').value = this.value;
+  });
+</script>
+
+</body>
+</html>

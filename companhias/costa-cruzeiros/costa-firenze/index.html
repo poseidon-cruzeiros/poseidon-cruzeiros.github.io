@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Costa Firenze — Costa Cruzeiros — Poseidon Cruzeiros</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../../shared/header.css" />
+<script src="../../../shared/header.js" defer></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -484,114 +486,8 @@
 </div>
 
 <!-- ══ NAV ══ -->
-<div class="nav-overlay" id="navOverlay"></div>
-<nav>
-  <a class="nav-brand" href="/">
-    <span>🔱</span> Poseidon Cruzeiros
-  </a>
-  <ul class="nav-links" id="navLinks">
-    <li class="nav-item" data-menu="companhias">
-      <button class="nav-btn">🚢 Companhias <span class="chevron">▼</span></button>
-      <div class="dropdown">
-        <a href="/companhias/costa-cruzeiros/">
-          <span class="dropdown-emoji">🇮🇹</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Costa Cruzeiros</span>
-            <span class="dropdown-desc">Costa Diadema, Smeralda e mais</span>
-          </span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="disabled">
-          <span class="dropdown-emoji">👑</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Royal Caribbean <span class="badge-soon">em breve</span></span>
-            <span class="dropdown-desc">Oasis, Wonder, Adventure e mais</span>
-          </span>
-        </a>
-        <a href="#" class="disabled">
-          <span class="dropdown-emoji">🌊</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">MSC Cruzeiros <span class="badge-soon">em breve</span></span>
-            <span class="dropdown-desc">MSC Seashore, Grandiosa e mais</span>
-          </span>
-        </a>
-        <a href="#" class="disabled">
-          <span class="dropdown-emoji">🇳🇴</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Norwegian <span class="badge-soon">em breve</span></span>
-            <span class="dropdown-desc">Norwegian Bliss, Joy e mais</span>
-          </span>
-        </a>
-      </div>
-    </li>
-    <li class="nav-item" data-menu="links-externos">
-      <button class="nav-btn">🔗 Links Externos <span class="chevron">▼</span></button>
-      <div class="dropdown">
-        <a href="/#sec-rastreamento">
-          <span class="dropdown-emoji">🛰️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Rastreamento de Navios</span>
-            <span class="dropdown-desc">MarineTraffic, VesselTracker e mais</span>
-          </span>
-        </a>
-        <a href="/#sec-mapas">
-          <span class="dropdown-emoji">🏗️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Mapas dos Navios</span>
-            <span class="dropdown-desc">CruiseDeckPlans e plantas de decks</span>
-          </span>
-        </a>
-        <a href="/#sec-cameras">
-          <span class="dropdown-emoji">📷</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Câmeras ao Vivo</span>
-            <span class="dropdown-desc">Portos ao redor do mundo</span>
-          </span>
-        </a>
-        <a href="/#sec-noticias">
-          <span class="dropdown-emoji">📰</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Notícias</span>
-            <span class="dropdown-desc">Cruise Critic, Seatrade e mais</span>
-          </span>
-        </a>
-        <a href="/#sec-ferramentas">
-          <span class="dropdown-emoji">🧰</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Ferramentas</span>
-            <span class="dropdown-desc">CruiseMapper, Portalis e mais</span>
-          </span>
-        </a>
-      </div>
-    </li>
-  </ul>
-  <div class="nav-search">
-    <input type="text" placeholder="Buscar navio…" />
-    <span class="s-icon">🔍</span>
-  </div>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
-</nav>
+<div id="site-header"></div>
 
-<!-- ══ MOBILE MENU ══ -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-section">
-    <div class="mobile-section-title">🚢 Companhias</div>
-    <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
-    <a href="#"><span>👑</span> Royal Caribbean <span class="badge-soon">em breve</span></a>
-    <a href="#"><span>🌊</span> MSC Cruzeiros <span class="badge-soon">em breve</span></a>
-    <a href="#"><span>🇳🇴</span> Norwegian <span class="badge-soon">em breve</span></a>
-  </div>
-  <div class="mobile-section">
-    <div class="mobile-section-title">🔗 Links Externos</div>
-    <a href="/#sec-rastreamento"><span>🛰️</span> Rastreamento de Navios</a>
-    <a href="/#sec-mapas"><span>🏗️</span> Mapas dos Navios</a>
-    <a href="/#sec-cameras"><span>📷</span> Câmeras ao Vivo</a>
-    <a href="/#sec-noticias"><span>📰</span> Notícias</a>
-    <a href="/#sec-ferramentas"><span>🧰</span> Ferramentas</a>
-  </div>
-</div>
-
-<!-- ══ PAGE CONTENT ══ -->
 <div class="page">
 
   <!-- Breadcrumb -->
@@ -1014,33 +910,7 @@
 </div>
 
 <script>
-  // ── DROPDOWN ──
-  const items = document.querySelectorAll('.nav-item');
-  const overlay = document.getElementById('navOverlay');
-  function closeAll() {
-    items.forEach(i => i.classList.remove('open'));
-    overlay.classList.remove('active');
-  }
-  items.forEach(item => {
-    item.querySelector('.nav-btn').addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = item.classList.contains('open');
-      closeAll();
-      if (!isOpen) { item.classList.add('open'); overlay.classList.add('active'); }
-    });
-  });
-  overlay.addEventListener('click', closeAll);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
-
-  // ── HAMBURGER ──
-  const hamburger = document.getElementById('hamburgerBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.textContent = open ? '✕' : '☰';
-  });
-
-  // ── ACTIVE TAB ON SCROLL ──
+  // ── DROPDOWN ──// ── ACTIVE TAB ON SCROLL ──
   const tabs = document.querySelectorAll('.section-tab');
   const sections = ['sec-historia','sec-ficha','sec-decks','sec-rastreamento','sec-links'];
   window.addEventListener('scroll', () => {

@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
+  <link rel="stylesheet" href="../../../shared/header.css" />
+<script src="../../../shared/header.js" defer></script>
+<style>
     :root {
       --ocean-deep: #0a2342;
       --ocean-mid: #0d2d4f;
@@ -198,35 +200,7 @@
 </head>
 <body>
 
-<!-- ── NAVEGAÇÃO ── -->
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="/"><span>Poseidon</span> Cruzeiros</a>
-    <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Início</a>
-      <div class="nav-dropdown">
-        <button>🚢 Companhias ▾</button>
-        <div class="dropdown-menu">
-          <a href="/companhias/costa-cruzeiros/">Costa Cruzeiros</a>
-          <a href="/companhias/msc-cruzeiros/">MSC Cruzeiros</a>
-          <hr class="dropdown-divider" />
-          <a class="disabled" href="#">Royal Caribbean</a>
-          <a class="disabled" href="#">Norwegian</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button>🔗 Links Externos ▾</button>
-        <div class="dropdown-menu">
-          <a href="https://www.marinetraffic.com" target="_blank" rel="noopener">MarineTraffic</a>
-          <a href="https://www.cruisedeckplans.com" target="_blank" rel="noopener">CruiseDecksPlans</a>
-          <a href="https://www.cruisemapper.com" target="_blank" rel="noopener">CruiseMapper</a>
-          <a href="https://www.vesseltracker.com" target="_blank" rel="noopener">VesselTracker</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+<div id="site-header"></div>
 
 <!-- ── BREADCRUMB ── -->
 <div class="breadcrumb">

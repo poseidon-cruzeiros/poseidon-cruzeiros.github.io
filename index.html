@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Poseidon Cruzeiros</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./shared/header.css" />
+<script src="./shared/header.js" defer></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -462,136 +464,8 @@
 </div>
 
 <!-- ══ NAV ══ -->
-<div class="nav-overlay" id="navOverlay"></div>
+<div id="site-header"></div>
 
-<nav>
-  <a class="nav-brand" href="#">
-    <span>🔱</span> Poseidon Cruzeiros
-  </a>
-
-  <ul class="nav-links" id="navLinks">
-
-    <li class="nav-item" data-menu="companhias">
-      <button class="nav-btn">
-        🚢 Companhias <span class="chevron">▼</span>
-      </button>
-      <div class="dropdown">
-        <a href="/companhias/costa-cruzeiros/">
-          <span class="dropdown-emoji">🇮🇹</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Costa Cruzeiros</span>
-            <span class="dropdown-desc">Costa Diadema, Smeralda e mais</span>
-          </span>
-        </a>
-        <a href="/companhias/msc-cruzeiros/">
-          <span class="dropdown-emoji">🌊</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">MSC Cruzeiros</span>
-            <span class="dropdown-desc">World Europa, Grandiosa e mais</span>
-          </span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="/companhias/royal-caribbean/">
-          <span class="dropdown-emoji">👑</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Royal Caribbean</span>
-            <span class="dropdown-desc">Icon, Oasis, Wonder e mais</span>
-          </span>
-        </a>
-        <a href="/companhias/norwegian-cruise-line/">
-          <span class="dropdown-emoji">🇳🇴</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Norwegian Cruise Line</span>
-            <span class="dropdown-desc">Norwegian Prima, Bliss, Joy e mais</span>
-          </span>
-        </a>
-      </div>
-    </li>
-
-    <li class="nav-item" data-menu="links-externos">
-      <button class="nav-btn">
-        🔗 Links Externos <span class="chevron">▼</span>
-      </button>
-      <div class="dropdown">
-        <a href="#sec-rastreamento">
-          <span class="dropdown-emoji">🛰️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Rastreamento de Navios</span>
-            <span class="dropdown-desc">MarineTraffic, VesselTracker e mais</span>
-          </span>
-        </a>
-        <a href="#sec-mapas">
-          <span class="dropdown-emoji">🏗️</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Mapas dos Navios</span>
-            <span class="dropdown-desc">CruiseDeckPlans e plantas de decks</span>
-          </span>
-        </a>
-        <a href="#sec-cameras">
-          <span class="dropdown-emoji">📷</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Câmeras ao Vivo</span>
-            <span class="dropdown-desc">Portos ao redor do mundo</span>
-          </span>
-        </a>
-        <a href="#sec-noticias">
-          <span class="dropdown-emoji">📰</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Notícias</span>
-            <span class="dropdown-desc">Cruise Critic, Seatrade e mais</span>
-          </span>
-        </a>
-        <a href="#sec-ferramentas">
-          <span class="dropdown-emoji">🧰</span>
-          <span class="dropdown-text">
-            <span class="dropdown-title">Ferramentas</span>
-            <span class="dropdown-desc">CruiseMapper, Portalis e mais</span>
-          </span>
-        </a>
-      </div>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-btn" href="/glossario/" style="text-decoration:none;">
-        📖 Glossário
-      </a>
-    </li>
-
-  </ul>
-
-  <div class="nav-search">
-    <input type="text" id="searchInput" placeholder="Buscar…" />
-    <span class="s-icon">🔍</span>
-  </div>
-
-  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
-</nav>
-
-<!-- ══ MOBILE MENU ══ -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-search">
-    <input type="text" id="mobileSearch" placeholder="Buscar recurso, navio, porto…" />
-  </div>
-
-  <div class="mobile-section">
-    <div class="mobile-section-title">🚢 Companhias</div>
-    <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
-    <a href="/companhias/msc-cruzeiros/"><span>🌊</span> MSC Cruzeiros</a>
-    <a href="/companhias/royal-caribbean/"><span>👑</span> Royal Caribbean</a>
-    <a href="/companhias/norwegian-cruise-line/"><span>🇳🇴</span> Norwegian Cruise Line</a>
-  </div>
-
-  <div class="mobile-section">
-    <div class="mobile-section-title">🔗 Links Externos</div>
-    <a href="#sec-rastreamento"><span>🛰️</span> Rastreamento de Navios</a>
-    <a href="#sec-mapas"><span>🏗️</span> Mapas dos Navios</a>
-    <a href="#sec-cameras"><span>📷</span> Câmeras ao Vivo</a>
-    <a href="#sec-noticias"><span>📰</span> Notícias</a>
-    <a href="#sec-ferramentas"><span>🧰</span> Ferramentas</a>
-  </div>
-</div>
-
-<!-- ══ PAGE CONTENT ══ -->
 <div class="page">
 
   <header>
@@ -761,55 +635,35 @@
 </div>
 
 <script>
-  // ── DROPDOWN ──
-  const items = document.querySelectorAll('.nav-item');
-  const overlay = document.getElementById('navOverlay');
-
-  function closeAll() {
-    items.forEach(i => i.classList.remove('open'));
-    overlay.classList.remove('active');
-  }
-
-  items.forEach(item => {
-    const btn = item.querySelector('.nav-btn');
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = item.classList.contains('open');
-      closeAll();
-      if (!isOpen) {
-        item.classList.add('open');
-        overlay.classList.add('active');
-      }
-    });
-  });
-
-  overlay.addEventListener('click', closeAll);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
-
-  // ── HAMBURGER ──
-  const hamburger = document.getElementById('hamburgerBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.textContent = open ? '✕' : '☰';
-  });
-
-  // ── SEARCH (desktop + mobile sync) ──
   function filterCards(q) {
     document.querySelectorAll('.card').forEach(card => {
       card.classList.toggle('hidden', q !== '' && !card.innerText.toLowerCase().includes(q));
     });
   }
 
-  document.getElementById('searchInput').addEventListener('input', function() {
-    filterCards(this.value.toLowerCase().trim());
-    document.getElementById('mobileSearch').value = this.value;
-  });
-  document.getElementById('mobileSearch').addEventListener('input', function() {
-    filterCards(this.value.toLowerCase().trim());
-    document.getElementById('searchInput').value = this.value;
-  });
-</script>
+  function bindHeaderSearch() {
+    const desktopSearch = document.getElementById('searchInput');
+    const mobileSearch = document.getElementById('mobileSearch');
 
+    if (!desktopSearch || !mobileSearch || desktopSearch.dataset.bound === 'true') {
+      return;
+    }
+
+    desktopSearch.dataset.bound = 'true';
+    mobileSearch.dataset.bound = 'true';
+
+    desktopSearch.addEventListener('input', function() {
+      filterCards(this.value.toLowerCase().trim());
+      mobileSearch.value = this.value;
+    });
+
+    mobileSearch.addEventListener('input', function() {
+      filterCards(this.value.toLowerCase().trim());
+      desktopSearch.value = this.value;
+    });
+  }
+
+  window.addEventListener('site-header-ready', bindHeaderSearch);
+</script>
 </body>
 </html>

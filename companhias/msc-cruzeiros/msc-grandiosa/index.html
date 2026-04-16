@@ -19,7 +19,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
+  <link rel="stylesheet" href="../../../shared/header.css" />
+<script src="../../../shared/header.js" defer></script>
+<style>
     :root {
       --ocean-deep: #0a2342;
       --ocean-mid: #0d2d4f;
@@ -43,46 +45,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
 
-    /* ── NAV ── */
-    nav {
-      position: sticky; top: 0; z-index: 1000;
-      background: rgba(10,35,66,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 2rem;
-    }
-    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 2rem; height: 64px; }
-    .nav-logo { text-decoration: none; display: flex; align-items: center; gap: .5rem; font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); white-space: nowrap; }
-    .nav-logo span { color: var(--teal); }
-    .nav-links { display: flex; align-items: center; gap: .25rem; margin-left: auto; }
-    .nav-links a, .nav-dropdown > button {
-      color: rgba(255,255,255,0.85); text-decoration: none; font-size: .9rem; font-weight: 500;
-      padding: .45rem .85rem; border-radius: 6px; transition: background .2s, color .2s;
-      background: none; border: none; cursor: pointer; font-family: inherit;
-    }
-    .nav-links a:hover, .nav-dropdown > button:hover { background: rgba(255,255,255,0.10); color: var(--white); }
-    .nav-dropdown { position: relative; }
-    .dropdown-menu {
-      display: none; position: absolute; top: calc(100% + 8px); left: 0;
-      background: var(--ocean-deep); border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 10px; min-width: 220px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      padding: .5rem; z-index: 999;
-    }
-    .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { display: block; }
-    .dropdown-menu a {
-      display: block; color: rgba(255,255,255,0.85); text-decoration: none;
-      padding: .55rem 1rem; border-radius: 6px; font-size: .875rem; transition: background .15s;
-    }
-    .dropdown-menu a:hover { background: rgba(255,255,255,0.10); color: var(--white); }
-    .dropdown-menu a.disabled { opacity: .45; pointer-events: none; }
-    .dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: .35rem 0; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: .4rem; color: var(--white); font-size: 1.5rem; margin-left: auto; }
-    @media(max-width:768px){
-      .nav-links { display: none; flex-direction: column; align-items: stretch; position: absolute; top: 64px; left: 0; right: 0; background: var(--ocean-deep); padding: 1rem; gap: .25rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-      .nav-links.open { display: flex; }
-      .hamburger { display: block; }
-      .dropdown-menu { position: static; box-shadow: none; border: none; background: rgba(255,255,255,0.05); margin-top: .25rem; }
-    }
+
 
     /* ── BREADCRUMB ── */
     .breadcrumb { background: var(--ocean-deep); padding: .75rem 2rem; }
@@ -209,35 +172,7 @@
 </head>
 <body>
 
-<!-- ── NAVEGAÇÃO ── -->
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="/"><span>Poseidon</span> Cruzeiros</a>
-    <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Início</a>
-      <div class="nav-dropdown">
-        <button>🚢 Companhias ▾</button>
-        <div class="dropdown-menu">
-          <a href="/companhias/costa-cruzeiros/">Costa Cruzeiros</a>
-          <a href="/companhias/msc-cruzeiros/">MSC Cruzeiros</a>
-          <hr class="dropdown-divider" />
-          <a class="disabled" href="#">Royal Caribbean</a>
-          <a class="disabled" href="#">Norwegian</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button>🔗 Links Externos ▾</button>
-        <div class="dropdown-menu">
-          <a href="https://www.marinetraffic.com" target="_blank" rel="noopener">MarineTraffic</a>
-          <a href="https://www.cruisedeckplans.com" target="_blank" rel="noopener">CruiseDecksPlans</a>
-          <a href="https://www.cruisemapper.com" target="_blank" rel="noopener">CruiseMapper</a>
-          <a href="https://www.vesseltracker.com" target="_blank" rel="noopener">VesselTracker</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+<div id="site-header"></div>
 
 <!-- ── BREADCRUMB ── -->
 <div class="breadcrumb">

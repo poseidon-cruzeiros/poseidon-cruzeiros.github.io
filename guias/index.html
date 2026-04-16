@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guias de Cruzeiros — Poseidon Cruzeiros</title>
+  <meta name="description" content="Guias completos sobre cruzeiros em português: primeiro cruzeiro, quanto custa, como escolher cabine, cruzeiros no Brasil, em família, para casais e solo." />
+  <link rel="canonical" href="https://poseidon-cruzeiros.github.io/guias/" />
+  <meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+  <meta property="og:title" content="Guias de Cruzeiros — Poseidon Cruzeiros" />
+  <meta property="og:description" content="Guias completos sobre cruzeiros em português: primeiro cruzeiro, quanto custa, como escolher cabine, cruzeiros no Brasil, em família, para casais e solo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poseidon-cruzeiros.github.io/guias/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/header.css" />
+  <script src="../shared/header.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px; --radius-sm:8px; --nav-height:60px; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    /* PAGE SPECIFIC */
+    .page { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 1.25rem 4rem; }
+    .hub-hero { position:relative; z-index:1; text-align:center; padding:3.5rem 1.25rem 2.5rem; }
+    .hub-hero-emoji { font-size:3.5rem; display:block; margin-bottom:0.75rem; filter:drop-shadow(0 0 20px rgba(26,188,156,0.5)); animation:float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .hub-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); font-weight:700; letter-spacing:-1px; background:linear-gradient(135deg,#fff 30%,var(--teal-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.75rem; }
+    .hub-hero p { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto; line-height:1.6; }
+    .hub-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1.5rem; }
+    .hub-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .hub-breadcrumb a:hover { text-decoration:underline; }
+    .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2.5rem 0 1.25rem; }
+    .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
+    .guides-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; margin-bottom:2rem; }
+    .guide-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:1.5rem; text-decoration:none; color:var(--white); display:flex; flex-direction:column; gap:0.75rem; transition:background 0.2s,border-color 0.2s,transform 0.2s; }
+    .guide-card:hover { background:rgba(255,255,255,0.09); border-color:rgba(26,188,156,0.35); transform:translateY(-2px); }
+    .guide-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:0.5rem; }
+    .guide-card-emoji { font-size:2rem; line-height:1; }
+    .guide-card-tag { font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:3px 8px; border-radius:999px; border:1px solid; white-space:nowrap; }
+    .tag-basico { color:var(--teal-light); border-color:rgba(26,188,156,0.4); background:rgba(26,188,156,0.1); }
+    .tag-planejamento { color:var(--gold); border-color:rgba(240,192,64,0.4); background:rgba(240,192,64,0.1); }
+    .tag-destinos { color:#a78bfa; border-color:rgba(167,139,250,0.4); background:rgba(167,139,250,0.1); }
+    .tag-perfis { color:#f9a8d4; border-color:rgba(249,168,212,0.4); background:rgba(249,168,212,0.1); }
+    .guide-card h2 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--white); margin:0; }
+    .guide-card p { font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin:0; flex:1; }
+    .guide-card-cta { font-size:0.8rem; color:var(--teal); font-weight:500; display:flex; align-items:center; gap:4px; margin-top:auto; }
+    .guide-card:hover .guide-card-cta { color:var(--teal-light); }
+    .featured-card { grid-column: 1 / -1; background:linear-gradient(135deg,rgba(26,188,156,0.12) 0%,rgba(33,150,196,0.08) 100%); border-color:rgba(26,188,156,0.3); display:grid; grid-template-columns:auto 1fr; gap:1.5rem; align-items:center; }
+    .featured-card .guide-card-emoji { font-size:3rem; }
+    .featured-card h2 { font-size:1.4rem; }
+    @media (max-width:600px) { .featured-card { grid-template-columns:1fr; } .guides-grid { grid-template-columns:1fr; } }
+    .intro-text { position:relative; z-index:1; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:1.5rem 2rem; margin-bottom:2rem; max-width:800px; margin-left:auto; margin-right:auto; }
+    .intro-text p { color:rgba(255,255,255,0.75); line-height:1.75; font-size:0.95rem; margin:0; }
+  </style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">🚢 Companhias</div>
+    <a href="/companhias/costa-cruzeiros/"><span>🇮🇹</span> Costa Cruzeiros</a>
+    <a href="/companhias/msc-cruzeiros/"><span>🌊</span> MSC Cruzeiros</a>
+    <a href="/companhias/royal-caribbean/"><span>👑</span> Royal Caribbean</a>
+    <a href="/companhias/norwegian-cruise-line/"><span>🇳🇴</span> Norwegian Cruise Line</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📚 Guias</div>
+    <a href="/guias/primeiro-cruzeiro/"><span>🌊</span> Primeiro Cruzeiro</a>
+    <a href="/guias/quanto-custa/"><span>💰</span> Quanto Custa</a>
+    <a href="/guias/como-escolher-cabine/"><span>🛏️</span> Como Escolher a Cabine</a>
+    <a href="/guias/cruzeiros-brasil/"><span>🇧🇷</span> Cruzeiros no Brasil</a>
+    <a href="/guias/cruzeiro-em-familia/"><span>👨‍👩‍👧‍👦</span> Cruzeiro em Família</a>
+    <a href="/guias/cruzeiro-para-casais/"><span>💑</span> Cruzeiro para Casais</a>
+    <a href="/guias/cruzeiro-solo/"><span>🧳</span> Cruzeiro Solo</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-title">📖 Conteúdo</div>
+    <a href="/glossario/"><span>📖</span> Glossário</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hub-hero">
+  <div class="hub-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › Guias</div>
+  <span class="hub-hero-emoji">📚</span>
+  <h1>Guias de Cruzeiros</h1>
+  <p>Tudo que você precisa saber antes de embarcar — do planejamento ao desembarque</p>
+</div>
+
+<main class="page">
+
+  <div class="intro-text">
+    <p>Seja você um viajante de primeira viagem ou um cruzeirista experiente, nossos guias cobrem todos os aspectos da vida a bordo. Encontre respostas sobre custos reais, tipos de cabine, destinos brasileiros, viagens em família, para casais e solo. Conteúdo em português brasileiro, atualizado e sem jargões.</p>
+  </div>
+
+  <!-- ESSENCIAIS -->
+  <div class="section-label">Guias Essenciais</div>
+  <div class="guides-grid">
+
+    <!-- Destaque: Primeiro Cruzeiro -->
+    <a href="/guias/primeiro-cruzeiro/" class="guide-card featured-card">
+      <div class="guide-card-emoji">🌊</div>
+      <div>
+        <div class="guide-card-top" style="margin-bottom:0.5rem;">
+          <h2>Guia do Primeiro Cruzeiro</h2>
+          <span class="guide-card-tag tag-basico">Essencial</span>
+        </div>
+        <p>Tudo que você precisa saber antes do seu primeiro embarque: o que esperar, o que levar na mala, como funciona o embarque, a rotina a bordo e os erros mais comuns de quem vai pela primeira vez. O guia mais completo para iniciantes.</p>
+        <div class="guide-card-cta">Ler guia completo →</div>
+      </div>
+    </a>
+
+    <a href="/guias/quanto-custa/" class="guide-card">
+      <div class="guide-card-top">
+        <span class="guide-card-emoji">💰</span>
+        <span class="guide-card-tag tag-planejamento">Planejamento</span>
+      </div>
+      <h2>Quanto Custa um Cruzeiro</h2>
+      <p>Passagem, gorjetas automáticas, pacotes de bebidas, excursões, internet e outros extras. Descubra o custo real de um cruzeiro para planejar sem surpresas no cartão.</p>
+      <div class="guide-card-cta">Ler guia →</div>
+    </a>
+
+    <a href="/guias/como-escolher-cabine/" class="guide-card">
+      <div class="guide-card-top">
+        <span class="guide-card-emoji">🛏️</span>
+        <span class="guide-card-tag tag-planejamento">Planejamento</span>
+      </div>
+      <h2>Como Escolher a Cabine</h2>
+      <p>Interior, oceanview, varanda ou suíte? Cada tipo tem suas vantagens. Entenda as diferenças, a localização ideal no navio e como garantir a melhor cabine para o seu perfil.</p>
+      <div class="guide-card-cta">Ler guia →</div>
+    </a>
+
+  </div>
+
+  <!-- DESTINOS -->
+  <div class="section-label">Destinos</div>
+  <div class="guides-grid">
+
+    <a href="/guias/cruzeiros-brasil/" class="guide-card">
+      <div class="guide-card-top">
+        <span class="guide-card-emoji">🇧🇷</span>
+        <span class="guide-card-tag tag-destinos">Destinos</span>
+      </div>
+      <h2>Cruzeiros Saindo do Brasil</h2>
+      <p>Portos de Santos, Rio de Janeiro, Salvador e Itajaí. Temporada brasileira de novembro a março, principais destinos, companhias que operam e como reservar com antecedência.</p>
+      <div class="guide-card-cta">Ler guia →</div>
+    </a>
+
+  </div>
+
+  <!-- POR PERFIL -->
+  <div class="section-label">Por Perfil de Viajante</div>
+  <div class="guides-grid">
+
+    <a href="/guias/cruzeiro-em-familia/" class="guide-card">
+      <div class="guide-card-top">
+        <span class="guide-card-emoji">👨‍👩‍👧‍👦</span>
+        <span class="guide-card-tag tag-perfis">Família</span>
+      </div>
+      <h2>Cruzeiro em Família</h2>
+      <p>Clubes kids, programação infantil, cabines família e dicas para viajar com filhos de qualquer idade. Como escolher o navio certo e garantir que toda a família se divirta.</p>
+      <div class="guide-card-cta">Ler guia →</div>
+    </a>
+
+    <a href="/guias/cruzeiro-para-casais/" class="guide-card">
+      <div class="guide-card-top">
+        <span class="guide-card-emoji">💑</span>
+        <span class="guide-card-tag tag-perfis">Casais</span>
+      </div>
+      <h2>Cruzeiro para Casais</h2>
+      <p>Os melhores navios e destinos para lua de mel e viagens românticas. Jantares exclusivos, spas, suítes com varanda privativa e experiências inesquecíveis a dois.</p>
+      <div class="guide-card-cta">Ler guia →</div>
+    </a>
+
+    <a href="/guias/cruzeiro-solo/" class="guide-card">
+      <div class="guide-card-top">
+        <span class="guide-card-emoji">🧳</span>
+        <span class="guide-card-tag tag-perfis">Solo</span>
+      </div>
+      <h2>Cruzeiro Solo</h2>
+      <p>Suplemento solo, cabines estúdio, como socializar a bordo e os melhores navios para viajantes solitários. Tudo para aproveitar um cruzeiro viajando sozinho.</p>
+      <div class="guide-card-cta">Ler guia →</div>
+    </a>
+
+  </div>
+
+  <!-- ESPAÇO PARA NOVOS GUIAS — adicione novos <a class="guide-card"> aqui, dentro de um .guides-grid -->
+  <!-- FUTURE GUIDES PLACEHOLDER: adicione novas seções ou cards abaixo desta linha -->
+
+</main>
+
+<footer>
+  <p>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos em português</p>
+</footer>
+
+</body>
+</html>

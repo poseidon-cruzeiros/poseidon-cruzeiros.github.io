@@ -151,11 +151,17 @@
   .spec-value { color: rgba(255,255,255,0.85); font-weight: 500; }
   .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
   .ship-tag { font-size: 0.65rem; font-weight: 500; padding: 2px 7px; border-radius: 999px; }
-  .tag-flagship { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
-  .tag-new      { background: rgba(33,150,196,0.15); color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
-  .tag-soon     { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
-  .tag-wish     { background: rgba(201,146,42,0.15); color: #f0c87a; border: 1px solid rgba(201,146,42,0.3); }
-
+  .tag-flagship       { background: rgba(240,192,64,0.18); color: #fce08a; border: 1px solid rgba(240,192,64,0.34); }
+  .tag-new            { background: rgba(33,150,196,0.18); color: #90d4f0; border: 1px solid rgba(33,150,196,0.34); }
+  .tag-class-triton   { background: rgba(201,146,42,0.18); color: #f0c87a; border: 1px solid rgba(201,146,42,0.34); }
+  .tag-class-dream    { background: rgba(93,173,226,0.17); color: #b8dcf5; border: 1px solid rgba(93,173,226,0.32); }
+  .tag-class-magic    { background: rgba(155,89,182,0.17); color: #ddb8ef; border: 1px solid rgba(155,89,182,0.32); }
+  .tag-family         { background: rgba(255,159,67,0.16); color: #ffd0a3; border: 1px solid rgba(255,159,67,0.30); }
+  .tag-broadway       { background: rgba(245,176,65,0.16); color: #f8d79a; border: 1px solid rgba(245,176,65,0.30); }
+  .tag-aquaduck       { background: rgba(69,179,224,0.16); color: #bce9fb; border: 1px solid rgba(69,179,224,0.30); }
+  .tag-classic        { background: rgba(139,164,190,0.16); color: #c3d3e2; border: 1px solid rgba(139,164,190,0.28); }
+  .tag-caribbean      { background: rgba(26,188,156,0.14); color: #a8f0de; border: 1px solid rgba(26,188,156,0.28); }
+  .tag-alaska         { background: rgba(174,214,241,0.16); color: #d6efff; border: 1px solid rgba(174,214,241,0.30); }
   .ship-card-footer {
     margin-top: auto; padding-top: 8px;
     border-top: 1px solid rgba(255,255,255,0.07);
@@ -247,9 +253,8 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-flagship">Mais novo</span>
-        <span class="ship-tag tag-wish">Classe Triton</span>
+        <span class="ship-tag tag-class-triton">Classe Triton</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -265,9 +270,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">341 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-wish">Classe Triton</span>
+        <span class="ship-tag tag-class-triton">Classe Triton</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -283,7 +288,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">340 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-dream">Classe Dream</span>
+        <span class="ship-tag tag-aquaduck">AquaDuck</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -299,7 +306,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">340 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-dream">Classe Dream</span>
+        <span class="ship-tag tag-aquaduck">AquaDuck</span>
+        <span class="ship-tag tag-broadway">Shows</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -315,7 +324,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-magic">Classe Magic</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-alaska">Alaska</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -331,7 +342,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-magic">Classe Magic</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>

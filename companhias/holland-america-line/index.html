@@ -140,6 +140,16 @@
     backdrop-filter: blur(6px);
   }
   .ship-card.flagship { border-color: rgba(240,192,64,0.3); background: rgba(240,192,64,0.04); opacity: 0.9; }
+  .ship-card[href] {
+    cursor: pointer;
+    opacity: 1;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .ship-card[href]:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(244,121,32,0.42);
+    transform: translateY(-2px);
+  }
 
   .ship-icon { font-size: 1.8rem; line-height: 1; }
   .ship-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.2; }
@@ -239,7 +249,7 @@
   <div class="ships-grid">
 
     <!-- Rotterdam -->
-    <div class="ship-card flagship">
+    <a class="ship-card flagship" href="rotterdam/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Rotterdam</div>
       <div class="ship-year">Em serviço desde 2021</div>
@@ -253,8 +263,8 @@
         <span class="ship-tag tag-class-pinnacle">Classe Pinnacle</span>
         <span class="ship-tag tag-music">Music Walk</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Nieuw Statendam -->
     <div class="ship-card">

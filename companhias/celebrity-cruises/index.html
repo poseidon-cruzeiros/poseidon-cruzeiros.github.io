@@ -150,10 +150,18 @@
   .spec-value { color: rgba(255,255,255,0.85); font-weight: 500; }
   .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
   .ship-tag { font-size: 0.65rem; font-weight: 500; padding: 2px 7px; border-radius: 999px; }
-  .tag-flagship { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
-  .tag-new      { background: rgba(33,150,196,0.15); color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
-  .tag-soon     { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
-  .tag-edge     { background: rgba(184,151,60,0.15); color: #f0d890; border: 1px solid rgba(184,151,60,0.3); }
+  .tag-flagship        { background: rgba(240,192,64,0.18); color: #fce08a; border: 1px solid rgba(240,192,64,0.34); }
+  .tag-new             { background: rgba(33,150,196,0.18); color: #90d4f0; border: 1px solid rgba(33,150,196,0.34); }
+  .tag-class-edge      { background: rgba(184,151,60,0.18); color: #f0d890; border: 1px solid rgba(184,151,60,0.34); }
+  .tag-class-solstice  { background: rgba(93,173,226,0.17); color: #b8dcf5; border: 1px solid rgba(93,173,226,0.32); }
+  .tag-class-millennium { background: rgba(155,89,182,0.17); color: #ddb8ef; border: 1px solid rgba(155,89,182,0.32); }
+  .tag-magic-carpet    { background: rgba(215,189,226,0.16); color: #ead7f2; border: 1px solid rgba(215,189,226,0.30); }
+  .tag-retreat         { background: rgba(26,188,156,0.16); color: #a8f0de; border: 1px solid rgba(26,188,156,0.30); }
+  .tag-resort          { background: rgba(255,159,67,0.16); color: #ffd0a3; border: 1px solid rgba(255,159,67,0.30); }
+  .tag-caribbean       { background: rgba(26,188,156,0.14); color: #a8f0de; border: 1px solid rgba(26,188,156,0.28); }
+  .tag-europe          { background: rgba(52,152,219,0.16); color: #aedcff; border: 1px solid rgba(52,152,219,0.30); }
+  .tag-classic         { background: rgba(139,164,190,0.16); color: #c3d3e2; border: 1px solid rgba(139,164,190,0.28); }
+  .tag-intimate        { background: rgba(162,217,206,0.16); color: #c3f5eb; border: 1px solid rgba(162,217,206,0.30); }
 
   .ship-card-footer {
     margin-top: auto; padding-top: 8px;
@@ -246,9 +254,8 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-flagship">Mais novo</span>
-        <span class="ship-tag tag-edge">Classe Edge</span>
-        <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-edge">Classe Edge</span>
+        <span class="ship-tag tag-resort">Resort Deck</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -264,9 +271,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">326 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-edge">Classe Edge</span>
+        <span class="ship-tag tag-class-edge">Classe Edge</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-magic-carpet">Magic Carpet</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -282,8 +289,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">306 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-edge">Classe Edge</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-edge">Classe Edge</span>
+        <span class="ship-tag tag-magic-carpet">Magic Carpet</span>
+        <span class="ship-tag tag-europe">Europa</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -299,8 +307,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">306 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-edge">Classe Edge</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-edge">Classe Edge</span>
+        <span class="ship-tag tag-magic-carpet">Magic Carpet</span>
+        <span class="ship-tag tag-classic">Pioneiro</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -316,7 +325,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">315 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-solstice">Classe Solstice</span>
+        <span class="ship-tag tag-retreat">The Retreat</span>
+        <span class="ship-tag tag-europe">Europa</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -332,7 +343,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">319 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-solstice">Classe Solstice</span>
+        <span class="ship-tag tag-retreat">The Retreat</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -348,7 +361,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">315 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-solstice">Classe Solstice</span>
+        <span class="ship-tag tag-retreat">The Retreat</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -364,7 +379,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-millennium">Classe Millennium</span>
+        <span class="ship-tag tag-intimate">Intimista</span>
+        <span class="ship-tag tag-classic">Clássico</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>

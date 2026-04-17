@@ -150,10 +150,18 @@
   .spec-value { color: rgba(255,255,255,0.85); font-weight: 500; }
   .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
   .ship-tag { font-size: 0.65rem; font-weight: 500; padding: 2px 7px; border-radius: 999px; }
-  .tag-flagship { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
-  .tag-new      { background: rgba(33,150,196,0.15); color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
-  .tag-soon     { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
-  .tag-excel    { background: rgba(227,24,55,0.15); color: #f9a8b5; border: 1px solid rgba(227,24,55,0.3); }
+  .tag-flagship      { background: rgba(240,192,64,0.18); color: #fce08a; border: 1px solid rgba(240,192,64,0.34); }
+  .tag-new           { background: rgba(33,150,196,0.18); color: #90d4f0; border: 1px solid rgba(33,150,196,0.34); }
+  .tag-class-excel   { background: rgba(227,24,55,0.17); color: #f9a8b5; border: 1px solid rgba(227,24,55,0.32); }
+  .tag-class-vista   { background: rgba(46,204,113,0.16); color: #a9efc5; border: 1px solid rgba(46,204,113,0.30); }
+  .tag-class-sunshine { background: rgba(241,196,15,0.16); color: #f6dc72; border: 1px solid rgba(241,196,15,0.30); }
+  .tag-class-spirit  { background: rgba(155,89,182,0.17); color: #ddb8ef; border: 1px solid rgba(155,89,182,0.32); }
+  .tag-bolt          { background: rgba(255,111,97,0.16); color: #ffb8ad; border: 1px solid rgba(255,111,97,0.30); }
+  .tag-caribbean     { background: rgba(26,188,156,0.14); color: #a8f0de; border: 1px solid rgba(26,188,156,0.28); }
+  .tag-italian       { background: rgba(52,152,219,0.16); color: #aedcff; border: 1px solid rgba(52,152,219,0.30); }
+  .tag-family        { background: rgba(255,159,67,0.16); color: #ffd0a3; border: 1px solid rgba(255,159,67,0.30); }
+  .tag-refit         { background: rgba(139,164,190,0.16); color: #c3d3e2; border: 1px solid rgba(139,164,190,0.28); }
+  .tag-alaska        { background: rgba(174,214,241,0.16); color: #d6efff; border: 1px solid rgba(174,214,241,0.30); }
 
   .ship-card-footer {
     margin-top: auto; padding-top: 8px;
@@ -246,8 +254,8 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-flagship">Flagship</span>
-        <span class="ship-tag tag-excel">Classe Excel</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-excel">Classe Excel</span>
+        <span class="ship-tag tag-bolt">Bolt</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -263,9 +271,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">344 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-excel">Classe Excel</span>
+        <span class="ship-tag tag-class-excel">Classe Excel</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -281,9 +289,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">344 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-excel">Classe Excel</span>
+        <span class="ship-tag tag-class-excel">Classe Excel</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-bolt">Bolt</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -299,8 +307,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">323 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class-vista">Classe Vista</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-italian">Italian Style</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -316,7 +325,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-vista">Classe Vista</span>
+        <span class="ship-tag tag-family">Família</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -332,7 +343,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-vista">Classe Vista</span>
+        <span class="ship-tag tag-family">Família</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -348,7 +361,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-vista">Classe Vista</span>
+        <span class="ship-tag tag-family">Família</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -364,7 +379,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-sunshine">Classe Sunshine</span>
+        <span class="ship-tag tag-refit">Reformado</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -380,7 +397,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">293 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-spirit">Classe Spirit</span>
+        <span class="ship-tag tag-alaska">Alaska</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -396,7 +415,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">293 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-spirit">Classe Spirit</span>
+        <span class="ship-tag tag-alaska">Alaska</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>

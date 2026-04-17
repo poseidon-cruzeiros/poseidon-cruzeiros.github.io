@@ -178,6 +178,42 @@
     border: 1px solid rgba(26,188,156,0.25);
   }
 
+  /* ── SHIPYARD CARDS ── */
+  .yard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .yard-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+  }
+  .yard-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(26,188,156,0.45);
+    transform: translateY(-3px);
+  }
+  .yard-card.soon { opacity: 0.5; pointer-events: none; }
+  .yard-card__header { display: flex; align-items: center; gap: 8px; }
+  .yard-card__flag { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+  .yard-card__name { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--white); line-height: 1.2; }
+  .yard-card__loc { font-size: 0.7rem; color: var(--text-muted); }
+  .yard-card__ships { font-size: 0.72rem; color: var(--text-muted); }
+  .yard-card__tag {
+    display: inline-block; align-self: flex-start;
+    font-size: 0.62rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px;
+  }
+  .yard-tag-active { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
+  .yard-tag-soon   { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
+
   /* ── GUIDE CARDS ── */
   .guide-cards {
     display: grid;
@@ -360,6 +396,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 700px) {
     .company-cards { grid-template-columns: 1fr; }
+    .yard-cards { grid-template-columns: 1fr 1fr; }
     .cards { grid-template-columns: 1fr 1fr; }
     .glossary-banner { flex-direction: column; align-items: flex-start; gap: 12px; }
     .glossary-banner__cta { align-self: flex-start; }
@@ -481,6 +518,65 @@
         <span class="company-card__tag">Em breve</span>
       </div>
     </a>
+  </div>
+
+  <!-- ══ ESTALEIROS ══ -->
+  <div class="section-label">🏗️ Estaleiros</div>
+  <div class="yard-cards">
+    <a class="yard-card" href="./estaleiros/fincantieri/">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇮🇹</span>
+        <span class="yard-card__name">Fincantieri</span>
+      </div>
+      <div class="yard-card__loc">Monfalcone, Itália</div>
+      <div class="yard-card__ships">100+ navios · Costa, Norwegian, MSC e mais</div>
+      <span class="yard-card__tag yard-tag-active">Ver estaleiro</span>
+    </a>
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇫🇮</span>
+        <span class="yard-card__name">Meyer Turku</span>
+      </div>
+      <div class="yard-card__loc">Turku, Finlândia</div>
+      <div class="yard-card__ships">60+ navios · Royal Caribbean, Viking</div>
+      <span class="yard-card__tag yard-tag-soon">Em breve</span>
+    </div>
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇫🇷</span>
+        <span class="yard-card__name">Chantiers de l'Atlantique</span>
+      </div>
+      <div class="yard-card__loc">Saint-Nazaire, França</div>
+      <div class="yard-card__ships">50+ navios · MSC, Royal, Celebrity</div>
+      <span class="yard-card__tag yard-tag-soon">Em breve</span>
+    </div>
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇩🇪</span>
+        <span class="yard-card__name">Meyer Werft</span>
+      </div>
+      <div class="yard-card__loc">Papenburg, Alemanha</div>
+      <div class="yard-card__ships">50+ navios · Norwegian, Disney, AIDA</div>
+      <span class="yard-card__tag yard-tag-soon">Em breve</span>
+    </div>
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇬🇧</span>
+        <span class="yard-card__name">Harland &amp; Wolff</span>
+      </div>
+      <div class="yard-card__loc">Belfast, Reino Unido</div>
+      <div class="yard-card__ships">Histórico · RMS Titanic</div>
+      <span class="yard-card__tag yard-tag-soon">Em breve</span>
+    </div>
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇩🇪</span>
+        <span class="yard-card__name">Blohm + Voss</span>
+      </div>
+      <div class="yard-card__loc">Hamburgo, Alemanha</div>
+      <div class="yard-card__ships">Histórico · HAPAG-Lloyd</div>
+      <span class="yard-card__tag yard-tag-soon">Em breve</span>
+    </div>
   </div>
 
   <!-- ══ GUIAS ══ -->

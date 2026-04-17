@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estaleiros de Cruzeiros | Poseidon Cruzeiros</title>
+<meta name="description" content="Os principais estaleiros construtores de navios de cruzeiro do mundo: Fincantieri, Meyer Turku, Chantiers de l'Atlantique, Meyer Werft e mais." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+<link rel="canonical" href="https://poseidon-cruzeiros.github.io/estaleiros/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Estaleiros de Cruzeiros | Poseidon Cruzeiros" />
+<meta property="og:description" content="Os principais estaleiros construtores de navios de cruzeiro do mundo." />
+<meta property="og:url" content="https://poseidon-cruzeiros.github.io/estaleiros/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/header.css" />
+<script src="../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #0a2342;
+    --ocean-mid:    #1a4a7a;
+    --ocean-bright: #2196c4;
+    --teal:         #1abc9c;
+    --teal-light:   #a8f0de;
+    --gold:         #f0c040;
+    --white:        #ffffff;
+    --text-muted:   #8ba4be;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --nav-height:   60px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(26,188,156,0.18) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  /* breadcrumb */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+  }
+  .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: rgba(255,255,255,0.2); }
+
+  /* hero */
+  .hero {
+    padding: 2.5rem 0 2rem;
+    display: flex; align-items: flex-start; gap: 1.5rem;
+  }
+  .hero-icon { font-size: 3rem; line-height: 1; flex-shrink: 0; margin-top: 4px; }
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1.2; margin-bottom: 0.5rem;
+  }
+  .hero-text p { color: var(--text-muted); font-size: 0.95rem; font-weight: 300; line-height: 1.65; max-width: 600px; }
+
+  /* section label */
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2.5rem 0 1rem;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(26,188,156,0.4), transparent);
+  }
+
+  /* grid */
+  .yard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  /* cards */
+  .yard-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.2rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 10px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+  }
+  .yard-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(26,188,156,0.45);
+    transform: translateY(-3px);
+  }
+  .yard-card.soon {
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .yard-card.historical {
+    opacity: 0.65;
+  }
+  .yard-card__header { display: flex; align-items: center; gap: 10px; }
+  .yard-card__flag { font-size: 1.8rem; line-height: 1; flex-shrink: 0; }
+  .yard-card__name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem; font-weight: 700; color: var(--white); line-height: 1.25;
+  }
+  .yard-card__location { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
+  .yard-card__stats {
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .yard-stat {
+    font-size: 0.72rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+    padding: 2px 8px;
+  }
+  .yard-stat.highlight { color: var(--teal-light); border-color: rgba(26,188,156,0.2); background: rgba(26,188,156,0.08); }
+  .yard-card__tag {
+    display: inline-block; align-self: flex-start;
+    font-size: 0.65rem; font-weight: 600;
+    padding: 3px 10px; border-radius: 999px;
+  }
+  .tag-active { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
+  .tag-soon   { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
+  .tag-hist   { background: rgba(240,192,64,0.1); color: #fce08a; border: 1px solid rgba(240,192,64,0.2); }
+
+  /* info box */
+  .info-box {
+    background: rgba(33,150,196,0.08);
+    border: 1px solid rgba(33,150,196,0.2);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
+    margin-top: 1.5rem;
+  }
+  .info-box strong { color: var(--white); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25); letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .yard-grid { grid-template-columns: 1fr 1fr; }
+    .hero { flex-direction: column; gap: 1rem; }
+  }
+  @media (max-width: 480px) {
+    .yard-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Estaleiros</span>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-icon">🏗️</span>
+    <div class="hero-text">
+      <h1>Estaleiros de Cruzeiros</h1>
+      <p>Os grandes construtores navais responsáveis pelos maiores e mais sofisticados navios de cruzeiro do mundo. Conheça a história, os estaleiros e os navios que saíram de cada doca.</p>
+    </div>
+  </div>
+
+  <div class="section-label">⚓ Estaleiros Ativos</div>
+  <div class="yard-grid">
+
+    <a class="yard-card" href="/estaleiros/fincantieri/">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇮🇹</span>
+        <div>
+          <div class="yard-card__name">Fincantieri</div>
+          <div class="yard-card__location">Monfalcone, Itália</div>
+        </div>
+      </div>
+      <div class="yard-card__stats">
+        <span class="yard-stat highlight">100+ navios</span>
+        <span class="yard-stat">Maior do mundo</span>
+      </div>
+      <span class="yard-card__tag tag-active">Ver estaleiro</span>
+    </a>
+
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇫🇮</span>
+        <div>
+          <div class="yard-card__name">Meyer Turku</div>
+          <div class="yard-card__location">Turku, Finlândia</div>
+        </div>
+      </div>
+      <div class="yard-card__stats">
+        <span class="yard-stat">60+ navios</span>
+        <span class="yard-stat">Grupo Meyer</span>
+      </div>
+      <span class="yard-card__tag tag-soon">Em breve</span>
+    </div>
+
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇫🇷</span>
+        <div>
+          <div class="yard-card__name">Chantiers de l'Atlantique</div>
+          <div class="yard-card__location">Saint-Nazaire, França</div>
+        </div>
+      </div>
+      <div class="yard-card__stats">
+        <span class="yard-stat">50+ navios</span>
+        <span class="yard-stat">Queen Mary 2</span>
+      </div>
+      <span class="yard-card__tag tag-soon">Em breve</span>
+    </div>
+
+    <div class="yard-card soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇩🇪</span>
+        <div>
+          <div class="yard-card__name">Meyer Werft</div>
+          <div class="yard-card__location">Papenburg, Alemanha</div>
+        </div>
+      </div>
+      <div class="yard-card__stats">
+        <span class="yard-stat">50+ navios</span>
+        <span class="yard-stat">Grupo Meyer</span>
+      </div>
+      <span class="yard-card__tag tag-soon">Em breve</span>
+    </div>
+
+  </div>
+
+  <div class="section-label">🏛️ Estaleiros Históricos</div>
+  <div class="yard-grid">
+
+    <div class="yard-card historical soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇬🇧</span>
+        <div>
+          <div class="yard-card__name">Harland & Wolff</div>
+          <div class="yard-card__location">Belfast, Reino Unido</div>
+        </div>
+      </div>
+      <div class="yard-card__stats">
+        <span class="yard-stat">RMS Titanic</span>
+        <span class="yard-stat">Est. 1861</span>
+      </div>
+      <span class="yard-card__tag tag-hist">Histórico</span>
+    </div>
+
+    <div class="yard-card historical soon">
+      <div class="yard-card__header">
+        <span class="yard-card__flag">🇩🇪</span>
+        <div>
+          <div class="yard-card__name">Blohm + Voss</div>
+          <div class="yard-card__location">Hamburgo, Alemanha</div>
+        </div>
+      </div>
+      <div class="yard-card__stats">
+        <span class="yard-stat">HAPAG-Lloyd</span>
+        <span class="yard-stat">Est. 1877</span>
+      </div>
+      <span class="yard-card__tag tag-hist">Histórico</span>
+    </div>
+
+  </div>
+
+  <div class="info-box">
+    <strong>Sobre esta seção:</strong> listamos aqui os estaleiros responsáveis pela construção dos navios de cruzeiro modernos. Um mesmo navio pode ter sido encomendado por uma companhia e construído em um país completamente diferente — é comum que companhias italianas como a Costa construam seus navios na própria Itália, enquanto a Royal Caribbean comissiona embarcações na Finlândia ou na França.
+  </div>
+
+  <footer>
+    🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios
+  </footer>
+
+</div>
+</body>
+</html>

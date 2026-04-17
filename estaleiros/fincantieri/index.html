@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fincantieri — Estaleiro | Poseidon Cruzeiros</title>
+<meta name="description" content="Fincantieri: o maior construtor de navios de cruzeiro do mundo. Conheça a história do estaleiro italiano e todos os navios que construiu para Costa, Norwegian, MSC, Princess e mais." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+<link rel="canonical" href="https://poseidon-cruzeiros.github.io/estaleiros/fincantieri/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Fincantieri — Estaleiro | Poseidon Cruzeiros" />
+<meta property="og:description" content="O maior construtor de navios de cruzeiro do mundo — histórico, instalações e frota completa." />
+<meta property="og:url" content="https://poseidon-cruzeiros.github.io/estaleiros/fincantieri/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #0a2342;
+    --teal:         #1abc9c;
+    --teal-light:   #a8f0de;
+    --gold:         #f0c040;
+    --white:        #ffffff;
+    --text-muted:   #8ba4be;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(26,188,156,0.15) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  /* breadcrumb */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+  }
+  .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: rgba(255,255,255,0.2); }
+
+  /* hero */
+  .hero {
+    padding: 2.5rem 0 2rem;
+    display: flex; align-items: flex-start; gap: 1.5rem;
+  }
+  .hero-flag { font-size: 3.5rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1.2; margin-bottom: 0.4rem;
+  }
+  .hero-text .hero-sub {
+    font-size: 0.92rem; color: var(--text-muted); font-weight: 300;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 0.8rem;
+  }
+  .hero-text .hero-sub span { display: flex; align-items: center; gap: 4px; }
+  .hero-text .hero-desc {
+    color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; max-width: 640px;
+  }
+
+  /* stats */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 0 0 2.5rem;
+  }
+  .stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    display: flex; flex-direction: column; gap: 4px;
+    backdrop-filter: blur(6px);
+  }
+  .stat-card__value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700;
+    color: var(--teal-light); line-height: 1;
+  }
+  .stat-card__label { font-size: 0.72rem; color: var(--text-muted); font-weight: 400; }
+
+  /* section label */
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2.5rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(26,188,156,0.4), transparent);
+  }
+
+  /* company block */
+  .company-block { margin-bottom: 2rem; }
+  .company-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 0.6rem;
+  }
+  .company-header__flag { font-size: 1.2rem; }
+  .company-header__name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+  }
+  .company-header__count {
+    font-size: 0.72rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px; padding: 1px 8px;
+  }
+  .company-header__link {
+    font-size: 0.72rem; color: var(--teal-light); text-decoration: none;
+    border: 1px solid rgba(26,188,156,0.25);
+    border-radius: 999px; padding: 1px 8px;
+    transition: background 0.15s;
+  }
+  .company-header__link:hover { background: rgba(26,188,156,0.12); }
+
+  /* table */
+  .ships-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .ships-table thead th {
+    text-align: left;
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .ships-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.15s;
+  }
+  .ships-table tbody tr:last-child { border-bottom: none; }
+  .ships-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+  .ships-table td { padding: 0.55rem 0.75rem; vertical-align: middle; }
+  .col-name { font-weight: 500; color: var(--white); }
+  .col-name a { color: var(--teal-light); text-decoration: none; }
+  .col-name a:hover { text-decoration: underline; }
+  .col-year { color: var(--text-muted); white-space: nowrap; }
+  .col-class { color: var(--text-muted); font-size: 0.78rem; }
+  .col-gt { color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-flag { text-align: center; }
+  .flag-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px;
+    font-size: 0.7rem;
+    background: rgba(26,188,156,0.12);
+    border: 1px solid rgba(26,188,156,0.25);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+  .flag-link:hover { background: rgba(26,188,156,0.25); }
+  .flag-none {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px;
+    color: rgba(255,255,255,0.15); font-size: 0.7rem;
+  }
+
+  /* tag flagship */
+  .tag-flagship {
+    display: inline-block;
+    font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px;
+    background: rgba(240,192,64,0.12); color: #fce08a;
+    border: 1px solid rgba(240,192,64,0.22); vertical-align: middle;
+  }
+
+  /* info/note */
+  .table-note {
+    font-size: 0.74rem; color: var(--text-muted);
+    padding: 0.6rem 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  }
+
+  /* table wrapper */
+  .table-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+  }
+
+  /* about section */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 0;
+  }
+  .about-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem;
+    backdrop-filter: blur(6px);
+  }
+  .about-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem; font-weight: 700;
+    color: var(--white); margin-bottom: 0.6rem;
+  }
+  .about-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* links */
+  .ext-links {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .ext-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; color: var(--teal-light);
+    border: 1px solid rgba(26,188,156,0.3);
+    border-radius: 999px; padding: 0.4rem 1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .ext-link:hover { background: rgba(26,188,156,0.1); }
+
+  footer {
+    text-align: center; margin-top: 3rem;
+    padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25); letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; }
+    .hero { flex-direction: column; gap: 1rem; }
+    .ships-table .col-class { display: none; }
+  }
+  @media (max-width: 480px) {
+    .ships-table .col-gt { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/estaleiros/">Estaleiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Fincantieri</span>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-flag">🇮🇹</span>
+    <div class="hero-text">
+      <h1>Fincantieri</h1>
+      <div class="hero-sub">
+        <span>📍 Monfalcone, Itália</span>
+        <span>·</span>
+        <span>🏭 Fundado em 1959</span>
+        <span>·</span>
+        <span>⚓ Ativo</span>
+      </div>
+      <p class="hero-desc">O maior construtor de navios de cruzeiro do mundo. Com mais de 100 navios entregues desde os anos 1990, a Fincantieri é responsável pela frota da Costa, Norwegian, MSC e Princess, entre outras. Seu principal estaleiro de cruzeiros fica em Monfalcone, no nordeste da Itália.</p>
+    </div>
+  </div>
+
+  <!-- stats -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-card__value">100+</div>
+      <div class="stat-card__label">Navios de cruzeiro entregues</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">1959</div>
+      <div class="stat-card__label">Ano de fundação</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">215.863</div>
+      <div class="stat-card__label">GT — MSC World Europa (maior)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">8</div>
+      <div class="stat-card__label">Estaleiros no grupo</div>
+    </div>
+  </div>
+
+  <!-- navios -->
+  <div class="section-label">🚢 Navios Construídos</div>
+
+  <!-- Costa Cruzeiros -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇮🇹</span>
+      <span class="company-header__name">Costa Cruzeiros</span>
+      <span class="company-header__count">12 navios</span>
+      <a class="company-header__link" href="/companhias/costa-cruzeiros/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Costa Smeralda <span class="tag-flagship">Flagship</span></td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Costa Smeralda</td>
+            <td class="col-gt">185.010</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-smeralda/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Toscana</td>
+            <td class="col-year">2021</td>
+            <td class="col-class">Costa Smeralda</td>
+            <td class="col-gt">135.225</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-toscana/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Firenze</td>
+            <td class="col-year">2020</td>
+            <td class="col-class">Costa Firenze</td>
+            <td class="col-gt">135.225</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-firenze/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Venezia</td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Costa Firenze</td>
+            <td class="col-gt">135.225</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-venezia/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Diadema</td>
+            <td class="col-year">2014</td>
+            <td class="col-class">Costa Diadema</td>
+            <td class="col-gt">132.500</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-diadema/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Fascinosa</td>
+            <td class="col-year">2012</td>
+            <td class="col-class">Costa Fascinosa</td>
+            <td class="col-gt">113.216</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-fascinosa/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Favolosa</td>
+            <td class="col-year">2011</td>
+            <td class="col-class">Costa Fascinosa</td>
+            <td class="col-gt">113.216</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-favolosa/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Pacifica</td>
+            <td class="col-year">2009</td>
+            <td class="col-class">Costa Pacifica</td>
+            <td class="col-gt">114.500</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-pacifica/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Luminosa</td>
+            <td class="col-year">2009</td>
+            <td class="col-class">Costa Luminosa</td>
+            <td class="col-gt">92.600</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-luminosa/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Deliziosa</td>
+            <td class="col-year">2010</td>
+            <td class="col-class">Costa Luminosa</td>
+            <td class="col-gt">92.600</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-deliziosa/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Fortuna</td>
+            <td class="col-year">2003</td>
+            <td class="col-class">Destiny</td>
+            <td class="col-gt">102.587</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-fortuna/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Magica</td>
+            <td class="col-year">2004</td>
+            <td class="col-class">Destiny</td>
+            <td class="col-gt">102.587</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-magica/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Norwegian -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇳🇴</span>
+      <span class="company-header__name">Norwegian Cruise Line</span>
+      <span class="company-header__count">9 navios</span>
+      <a class="company-header__link" href="/companhias/norwegian-cruise-line/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Norwegian Viva <span class="tag-flagship">Flagship</span></td>
+            <td class="col-year">2023</td>
+            <td class="col-class">Prima</td>
+            <td class="col-gt">142.500</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Prima</td>
+            <td class="col-year">2022</td>
+            <td class="col-class">Prima</td>
+            <td class="col-gt">142.500</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Encore</td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Breakaway Plus</td>
+            <td class="col-gt">169.145</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Bliss</td>
+            <td class="col-year">2018</td>
+            <td class="col-class">Breakaway Plus</td>
+            <td class="col-gt">168.028</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Joy</td>
+            <td class="col-year">2017</td>
+            <td class="col-class">Breakaway Plus</td>
+            <td class="col-gt">167.725</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Escape</td>
+            <td class="col-year">2015</td>
+            <td class="col-class">Breakaway Plus</td>
+            <td class="col-gt">164.600</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Getaway</td>
+            <td class="col-year">2014</td>
+            <td class="col-class">Breakaway</td>
+            <td class="col-gt">145.655</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Breakaway</td>
+            <td class="col-year">2013</td>
+            <td class="col-class">Breakaway</td>
+            <td class="col-gt">144.017</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Norwegian Epic</td>
+            <td class="col-year">2010</td>
+            <td class="col-class">Epic</td>
+            <td class="col-gt">155.873</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MSC -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🌊</span>
+      <span class="company-header__name">MSC Cruzeiros</span>
+      <span class="company-header__count">2 navios (seleção)</span>
+      <a class="company-header__link" href="/companhias/msc-cruzeiros/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">MSC Seascape</td>
+            <td class="col-year">2022</td>
+            <td class="col-class">Seashore</td>
+            <td class="col-gt">169.400</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/msc-cruzeiros/msc-seascape/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Seashore</td>
+            <td class="col-year">2021</td>
+            <td class="col-class">Seashore</td>
+            <td class="col-gt">169.400</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/msc-cruzeiros/msc-seashore/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">A MSC divide suas encomendas entre Fincantieri e Chantiers de l'Atlantique. As demais classes MSC serão adicionadas conforme as páginas dos estaleiros correspondentes forem publicadas.</div>
+    </div>
+  </div>
+
+  <!-- Princess -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">👑</span>
+      <span class="company-header__name">Princess Cruises</span>
+      <span class="company-header__count">6 navios</span>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Discovery Princess</td>
+            <td class="col-year">2022</td>
+            <td class="col-class">Royal</td>
+            <td class="col-gt">145.281</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Enchanted Princess</td>
+            <td class="col-year">2020</td>
+            <td class="col-class">Royal</td>
+            <td class="col-gt">145.281</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Sky Princess</td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Royal</td>
+            <td class="col-gt">145.281</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Majestic Princess</td>
+            <td class="col-year">2017</td>
+            <td class="col-class">Royal</td>
+            <td class="col-gt">143.700</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Regal Princess</td>
+            <td class="col-year">2014</td>
+            <td class="col-class">Royal</td>
+            <td class="col-gt">141.000</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Royal Princess</td>
+            <td class="col-year">2013</td>
+            <td class="col-class">Royal</td>
+            <td class="col-gt">141.000</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Holland America -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🌷</span>
+      <span class="company-header__name">Holland America Line</span>
+      <span class="company-header__count">2 navios</span>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Nieuw Statendam</td>
+            <td class="col-year">2018</td>
+            <td class="col-class">Pinnacle</td>
+            <td class="col-gt">99.836</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Koningsdam</td>
+            <td class="col-year">2016</td>
+            <td class="col-class">Pinnacle</td>
+            <td class="col-gt">99.836</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- sobre o estaleiro -->
+  <div class="section-label">🏭 Sobre o Estaleiro</div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>História</h3>
+      <p>A Fincantieri foi fundada em 1959 como empresa pública italiana, herdeira de estaleiros com origens no século XIX. Ao longo das décadas, consolidou estaleiros espalhados pela costa italiana e se especializou em navios de passageiros de grande porte. Hoje é de capital aberto e opera globalmente.</p>
+    </div>
+    <div class="about-card">
+      <h3>Instalações</h3>
+      <p>O principal estaleiro para navios de cruzeiro fica em <strong>Monfalcone</strong>, próximo a Trieste. O grupo opera outras unidades em Marghera (Veneza), Sestri Ponente (Gênova), Castellammare di Stabia, Ancona e Palermo. No exterior, possui estaleiros nos EUA, Romênia e Noruega.</p>
+    </div>
+    <div class="about-card">
+      <h3>Clientes</h3>
+      <p>A Fincantieri atende os maiores grupos de cruzeiros do mundo: Carnival Corporation (Costa, Princess, Holland America, Carnival), Norwegian Cruise Line Holdings e MSC. Também constrói navios de luxo para Viking Ocean e Seabourn.</p>
+    </div>
+    <div class="about-card">
+      <h3>Recordes e destaques</h3>
+      <p>Entregou o <strong>MSC World Europa</strong> (215.863 GT), um dos maiores cruzeiros já construídos. É responsável pela classe Norwegian Breakaway Plus, com quatro navios acima de 164.000 GT. Mantém carteira de pedidos que garante entregas por vários anos à frente.</p>
+    </div>
+  </div>
+
+  <div class="ext-links">
+    <a class="ext-link" href="https://www.fincantieri.com" target="_blank" rel="noopener noreferrer">🌐 Site oficial</a>
+    <a class="ext-link" href="https://en.wikipedia.org/wiki/Fincantieri" target="_blank" rel="noopener noreferrer">📖 Wikipedia</a>
+  </div>
+
+  <footer>
+    🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios
+  </footer>
+
+</div>
+</body>
+</html>

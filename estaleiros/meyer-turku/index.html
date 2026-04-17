@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meyer Turku — Estaleiro | Poseidon Cruzeiros</title>
+<meta name="description" content="Meyer Turku: o estaleiro finlandês que construiu os maiores navios do mundo — Voyager, Oasis e Icon of the Seas. Conheça a história e todos os navios saídos de Turku." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+<link rel="canonical" href="https://poseidon-cruzeiros.github.io/estaleiros/meyer-turku/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Meyer Turku — Estaleiro | Poseidon Cruzeiros" />
+<meta property="og:description" content="O estaleiro finlandês que bateu o recorde de maior navio do mundo quatro vezes consecutivas." />
+<meta property="og:url" content="https://poseidon-cruzeiros.github.io/estaleiros/meyer-turku/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #0a2342;
+    --teal:         #1abc9c;
+    --teal-light:   #a8f0de;
+    --gold:         #f0c040;
+    --white:        #ffffff;
+    --text-muted:   #8ba4be;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(26,188,156,0.15) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+  }
+  .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: rgba(255,255,255,0.2); }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+    display: flex; align-items: flex-start; gap: 1.5rem;
+  }
+  .hero-flag { font-size: 3.5rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1.2; margin-bottom: 0.4rem;
+  }
+  .hero-sub {
+    font-size: 0.92rem; color: var(--text-muted); font-weight: 300;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 0.8rem;
+  }
+  .hero-desc { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; max-width: 640px; }
+
+  .stats-row {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    margin: 0 0 2.5rem;
+  }
+  .stat-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm); padding: 1rem;
+    display: flex; flex-direction: column; gap: 4px;
+    backdrop-filter: blur(6px);
+  }
+  .stat-card__value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700; color: var(--teal-light); line-height: 1;
+  }
+  .stat-card__label { font-size: 0.72rem; color: var(--text-muted); }
+
+  /* record badge */
+  .record-banner {
+    display: flex; align-items: center; gap: 14px;
+    background: linear-gradient(135deg, rgba(240,192,64,0.1) 0%, rgba(240,192,64,0.05) 100%);
+    border: 1px solid rgba(240,192,64,0.25);
+    border-radius: var(--radius); padding: 1rem 1.3rem;
+    margin-bottom: 2rem;
+  }
+  .record-banner__icon { font-size: 1.8rem; flex-shrink: 0; }
+  .record-banner__text { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+  .record-banner__text strong { color: #fce08a; }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2.5rem 0 1rem;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(26,188,156,0.4), transparent);
+  }
+
+  .company-block { margin-bottom: 2rem; }
+  .company-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 0.6rem;
+  }
+  .company-header__flag { font-size: 1.2rem; }
+  .company-header__name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+  }
+  .company-header__count {
+    font-size: 0.72rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px; padding: 1px 8px;
+  }
+  .company-header__link {
+    font-size: 0.72rem; color: var(--teal-light); text-decoration: none;
+    border: 1px solid rgba(26,188,156,0.25); border-radius: 999px; padding: 1px 8px;
+    transition: background 0.15s;
+  }
+  .company-header__link:hover { background: rgba(26,188,156,0.12); }
+
+  .table-wrap {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(6px);
+  }
+  .ships-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .ships-table thead th {
+    text-align: left; font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+    padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .ships-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.15s;
+  }
+  .ships-table tbody tr:last-child { border-bottom: none; }
+  .ships-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+  .ships-table td { padding: 0.55rem 0.75rem; vertical-align: middle; }
+  .col-name { font-weight: 500; color: var(--white); }
+  .col-name a { color: var(--teal-light); text-decoration: none; }
+  .col-name a:hover { text-decoration: underline; }
+  .col-year, .col-gt { color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-class { color: var(--text-muted); font-size: 0.78rem; }
+  .col-flag { text-align: center; }
+  .flag-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; font-size: 0.7rem;
+    background: rgba(26,188,156,0.12); border: 1px solid rgba(26,188,156,0.25);
+    border-radius: 999px; text-decoration: none; transition: background 0.15s;
+  }
+  .flag-link:hover { background: rgba(26,188,156,0.25); }
+  .flag-none {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; color: rgba(255,255,255,0.15); font-size: 0.7rem;
+  }
+  .tag-flagship {
+    display: inline-block; font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px;
+    background: rgba(240,192,64,0.12); color: #fce08a;
+    border: 1px solid rgba(240,192,64,0.22); vertical-align: middle;
+  }
+  .tag-record {
+    display: inline-block; font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px;
+    background: rgba(240,192,64,0.18); color: #fce08a;
+    border: 1px solid rgba(240,192,64,0.35); vertical-align: middle;
+  }
+  .tag-lng {
+    display: inline-block; font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px;
+    background: rgba(26,188,156,0.15); color: var(--teal-light);
+    border: 1px solid rgba(26,188,156,0.3); vertical-align: middle;
+  }
+  .table-note {
+    font-size: 0.74rem; color: var(--text-muted);
+    padding: 0.6rem 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0;
+  }
+  .about-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 1.2rem 1.3rem; backdrop-filter: blur(6px);
+  }
+  .about-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700;
+    color: var(--white); margin-bottom: 0.6rem;
+  }
+  .about-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  .ext-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
+  .ext-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; color: var(--teal-light);
+    border: 1px solid rgba(26,188,156,0.3); border-radius: 999px; padding: 0.4rem 1rem;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .ext-link:hover { background: rgba(26,188,156,0.1); }
+
+  footer {
+    text-align: center; margin-top: 3rem; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25); letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; }
+    .hero { flex-direction: column; gap: 1rem; }
+    .ships-table .col-class { display: none; }
+  }
+  @media (max-width: 480px) {
+    .ships-table .col-gt { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/estaleiros/">Estaleiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Meyer Turku</span>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-flag">🇫🇮</span>
+    <div class="hero-text">
+      <h1>Meyer Turku</h1>
+      <div class="hero-sub">
+        <span>📍 Turku, Finlândia</span>
+        <span>·</span>
+        <span>🏭 Desde 1737</span>
+        <span>·</span>
+        <span>⚓ Ativo</span>
+        <span>·</span>
+        <span>🔗 Grupo Meyer Werft</span>
+      </div>
+      <p class="hero-desc">O estaleiro finlandês que bateu o recorde de maior navio do mundo quatro vezes seguidas. De Turku saíram o Voyager of the Seas (1999), o Freedom of the Seas (2006), o Oasis of the Seas (2009) e o Icon of the Seas (2024) — cada um o maior cruzeiro de sua época. Adquirido pela família Meyer em 2014, opera em conjunto com o Meyer Werft da Alemanha.</p>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-card__value">60+</div>
+      <div class="stat-card__label">Navios de cruzeiro entregues</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">1737</div>
+      <div class="stat-card__label">Tradição naval em Turku</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">248.663</div>
+      <div class="stat-card__label">GT — Icon of the Seas (maior)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">4×</div>
+      <div class="stat-card__label">Recordes "maior navio do mundo"</div>
+    </div>
+  </div>
+
+  <div class="record-banner">
+    <span class="record-banner__icon">🏆</span>
+    <div class="record-banner__text">
+      <strong>Sequência histórica de recordes:</strong> Voyager of the Seas (1999) → Freedom of the Seas (2006) → Oasis of the Seas (2009) → Icon of the Seas (2024). Nenhum outro estaleiro do mundo deteve o título de "maior navio do mundo" quatro vezes de forma consecutiva.
+    </div>
+  </div>
+
+  <div class="section-label">🚢 Navios Construídos</div>
+
+  <!-- Royal Caribbean -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">👑</span>
+      <span class="company-header__name">Royal Caribbean</span>
+      <span class="company-header__count">11 navios</span>
+      <a class="company-header__link" href="/companhias/royal-caribbean/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">
+              Icon of the Seas
+              <span class="tag-flagship">Flagship</span>
+              <span class="tag-record">Recorde mundial</span>
+            </td>
+            <td class="col-year">2024</td>
+            <td class="col-class">Icon</td>
+            <td class="col-gt">248.663</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/icon-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Oasis of the Seas <span class="tag-record">Recorde mundial</span></td>
+            <td class="col-year">2009</td>
+            <td class="col-class">Oasis</td>
+            <td class="col-gt">225.282</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/oasis-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Allure of the Seas</td>
+            <td class="col-year">2010</td>
+            <td class="col-class">Oasis</td>
+            <td class="col-gt">225.282</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/allure-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Freedom of the Seas <span class="tag-record">Recorde mundial</span></td>
+            <td class="col-year">2006</td>
+            <td class="col-class">Freedom</td>
+            <td class="col-gt">156.271</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/freedom-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Liberty of the Seas</td>
+            <td class="col-year">2007</td>
+            <td class="col-class">Freedom</td>
+            <td class="col-gt">155.889</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/liberty-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Independence of the Seas</td>
+            <td class="col-year">2008</td>
+            <td class="col-class">Freedom</td>
+            <td class="col-gt">155.889</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/independence-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Voyager of the Seas <span class="tag-record">Recorde mundial</span></td>
+            <td class="col-year">1999</td>
+            <td class="col-class">Voyager</td>
+            <td class="col-gt">138.194</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/voyager-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Explorer of the Seas</td>
+            <td class="col-year">2000</td>
+            <td class="col-class">Voyager</td>
+            <td class="col-gt">138.194</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/explorer-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Adventure of the Seas</td>
+            <td class="col-year">2001</td>
+            <td class="col-class">Voyager</td>
+            <td class="col-gt">137.276</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/adventure-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Navigator of the Seas</td>
+            <td class="col-year">2002</td>
+            <td class="col-class">Voyager</td>
+            <td class="col-gt">139.570</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/navigator-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mariner of the Seas</td>
+            <td class="col-year">2003</td>
+            <td class="col-class">Voyager</td>
+            <td class="col-gt">139.863</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/mariner-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">Os demais navios Royal Caribbean (classes Quantum, Radiance, Harmony, Symphony, Wonder) foram construídos em outros estaleiros — Meyer Werft e Chantiers de l'Atlantique.</div>
+    </div>
+  </div>
+
+  <!-- Costa Cruzeiros -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇮🇹</span>
+      <span class="company-header__name">Costa Cruzeiros</span>
+      <span class="company-header__count">2 navios</span>
+      <a class="company-header__link" href="/companhias/costa-cruzeiros/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Costa Smeralda <span class="tag-lng">LNG</span></td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Excellence</td>
+            <td class="col-gt">185.010</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-smeralda/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Costa Toscana <span class="tag-lng">LNG</span></td>
+            <td class="col-year">2021</td>
+            <td class="col-class">Excellence</td>
+            <td class="col-gt">183.900</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/costa-cruzeiros/costa-toscana/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">A Meyer Turku é pioneira em propulsão LNG para cruzeiros. Costa Smeralda e Costa Toscana foram os primeiros navios da Costa a usar GNL como combustível — daí a escolha do estaleiro finlandês.</div>
+    </div>
+  </div>
+
+  <!-- Carnival Cruise Line -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🎉</span>
+      <span class="company-header__name">Carnival Cruise Line</span>
+      <span class="company-header__count">2 navios</span>
+      <a class="company-header__link" href="/companhias/carnival-cruise-line/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Mardi Gras <span class="tag-flagship">Flagship</span> <span class="tag-lng">LNG</span></td>
+            <td class="col-year">2020</td>
+            <td class="col-class">Excel</td>
+            <td class="col-gt">181.808</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/carnival-cruise-line/mardi-gras/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Carnival Celebration <span class="tag-lng">LNG</span></td>
+            <td class="col-year">2022</td>
+            <td class="col-class">Excel</td>
+            <td class="col-gt">183.900</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/carnival-cruise-line/carnival-celebration/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TUI Cruises -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇩🇪</span>
+      <span class="company-header__name">TUI Cruises</span>
+      <span class="company-header__count">7 navios</span>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr>
+            <th>Navio</th>
+            <th>Ano</th>
+            <th class="col-class">Classe</th>
+            <th>GT</th>
+            <th style="text-align:center">No site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Mein Schiff 7</td>
+            <td class="col-year">2024</td>
+            <td class="col-class">Mein Schiff 1</td>
+            <td class="col-gt">111.500</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mein Schiff 2</td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Mein Schiff 1</td>
+            <td class="col-gt">111.500</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mein Schiff 1</td>
+            <td class="col-year">2018</td>
+            <td class="col-class">Mein Schiff 1</td>
+            <td class="col-gt">111.500</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mein Schiff 6</td>
+            <td class="col-year">2017</td>
+            <td class="col-class">Mein Schiff 3</td>
+            <td class="col-gt">98.811</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mein Schiff 5</td>
+            <td class="col-year">2016</td>
+            <td class="col-class">Mein Schiff 3</td>
+            <td class="col-gt">98.785</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mein Schiff 4</td>
+            <td class="col-year">2015</td>
+            <td class="col-class">Mein Schiff 3</td>
+            <td class="col-gt">99.526</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Mein Schiff 3</td>
+            <td class="col-year">2014</td>
+            <td class="col-class">Mein Schiff 3</td>
+            <td class="col-gt">99.526</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- sobre o estaleiro -->
+  <div class="section-label">🏭 Sobre o Estaleiro</div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>História</h3>
+      <p>A tradição naval em Turku remonta a 1737. O estaleiro moderno em Perno foi construído a partir de 1975. Passou por Wärtsilä, Masa-Yards, Kvaerner, Aker e STX antes de ser adquirido pela família Meyer em 2014 — a mesma que comanda o Meyer Werft na Alemanha. Ao longo de sua história, mais de 1.300 navios foram construídos nas docas de Turku.</p>
+    </div>
+    <div class="about-card">
+      <h3>Instalações</h3>
+      <p>O estaleiro fica no bairro de Perno, em Turku. A doca seca tem 365 metros de comprimento e a grua principal suporta 1.200 toneladas. O local ocupa 144 hectares e emprega cerca de 2.400 pessoas diretamente, com mais de 15.000 quando incluídos os fornecedores e subcontratados.</p>
+    </div>
+    <div class="about-card">
+      <h3>Pioneirismo em LNG</h3>
+      <p>Meyer Turku construiu em 2013 o <strong>Viking Grace</strong>, primeiro ferry de grande porte a usar GNL (gás natural liquefeito) como combustível. Desde então tornou-se referência em propulsão LNG para cruzeiros — Costa Smeralda, Costa Toscana, Mardi Gras e Carnival Celebration são todos navios LNG saídos de Turku.</p>
+    </div>
+    <div class="about-card">
+      <h3>Grupo Meyer</h3>
+      <p>A Meyer Turku faz parte do mesmo grupo familiar que opera o <strong>Meyer Werft</strong> em Papenburg, Alemanha. As duas unidades são complementares: enquanto Turku foca nos maiores navios do mundo (Oasis e Icon class), Papenburg entrega navios de médio porte para Norwegian, Celebrity e AIDA. Juntos, os dois estaleiros dominam cerca de 30% do mercado global de cruzeiros.</p>
+    </div>
+  </div>
+
+  <div class="ext-links">
+    <a class="ext-link" href="https://www.meyerturku.fi" target="_blank" rel="noopener noreferrer">🌐 Site oficial</a>
+    <a class="ext-link" href="https://en.wikipedia.org/wiki/Meyer_Turku" target="_blank" rel="noopener noreferrer">📖 Wikipedia</a>
+  </div>
+
+  <footer>
+    🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios
+  </footer>
+
+</div>
+</body>
+</html>

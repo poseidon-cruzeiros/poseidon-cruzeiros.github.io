@@ -154,11 +154,29 @@
   .spec-value { color: rgba(255,255,255,0.85); font-weight: 500; }
   .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
   .ship-tag { font-size: 0.65rem; font-weight: 500; padding: 2px 7px; border-radius: 999px; }
-  .tag-flagship { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
-  .tag-new     { background: rgba(33,150,196,0.15); color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
-  .tag-soon    { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
-  .tag-prima   { background: rgba(200,16,46,0.15); color: #f9a8b5; border: 1px solid rgba(200,16,46,0.3); }
-
+  .tag-flagship             { background: rgba(240,192,64,0.18); color: #fce08a; border: 1px solid rgba(240,192,64,0.34); }
+  .tag-new                  { background: rgba(33,150,196,0.18); color: #90d4f0; border: 1px solid rgba(33,150,196,0.34); }
+  .tag-class-prima          { background: rgba(200,16,46,0.18); color: #f9a8b5; border: 1px solid rgba(200,16,46,0.34); }
+  .tag-class-prima-plus     { background: rgba(255,99,132,0.17); color: #ffb4c5; border: 1px solid rgba(255,99,132,0.32); }
+  .tag-class-breakaway-plus { background: rgba(26,188,156,0.18); color: #9ff0dc; border: 1px solid rgba(26,188,156,0.34); }
+  .tag-class-breakaway      { background: rgba(93,173,226,0.17); color: #b8dcf5; border: 1px solid rgba(93,173,226,0.32); }
+  .tag-class-epic           { background: rgba(155,89,182,0.17); color: #ddb8ef; border: 1px solid rgba(155,89,182,0.32); }
+  .tag-class-jewel          { background: rgba(46,204,113,0.16); color: #a9efc3; border: 1px solid rgba(46,204,113,0.30); }
+  .tag-class-dawn           { background: rgba(255,205,86,0.17); color: #ffe59b; border: 1px solid rgba(255,205,86,0.30); }
+  .tag-class-sun            { background: rgba(149,165,166,0.18); color: #d7e0e1; border: 1px solid rgba(149,165,166,0.30); }
+  .tag-class-spirit         { background: rgba(250,177,160,0.16); color: #ffd0c6; border: 1px solid rgba(250,177,160,0.30); }
+  .tag-hawaii               { background: rgba(64,224,208,0.15); color: #a9fff4; border: 1px solid rgba(64,224,208,0.30); }
+  .tag-race-track           { background: rgba(245,176,65,0.16); color: #f8d79a; border: 1px solid rgba(245,176,65,0.30); }
+  .tag-haven                { background: rgba(215,189,226,0.16); color: #ead7f2; border: 1px solid rgba(215,189,226,0.30); }
+  .tag-family               { background: rgba(255,159,67,0.16); color: #ffd0a3; border: 1px solid rgba(255,159,67,0.30); }
+  .tag-classic              { background: rgba(139,164,190,0.16); color: #c3d3e2; border: 1px solid rgba(139,164,190,0.28); }
+  .tag-freestyle            { background: rgba(162,217,206,0.16); color: #c3f5eb; border: 1px solid rgba(162,217,206,0.30); }
+  .tag-alaska               { background: rgba(174,214,241,0.16); color: #d6efff; border: 1px solid rgba(174,214,241,0.30); }
+  .tag-caribbean            { background: rgba(26,188,156,0.14); color: #a8f0de; border: 1px solid rgba(26,188,156,0.28); }
+  .tag-mediterranean        { background: rgba(52,152,219,0.16); color: #aad8f6; border: 1px solid rgba(52,152,219,0.30); }
+  .tag-destinations         { background: rgba(178,186,187,0.16); color: #e0e5e6; border: 1px solid rgba(178,186,187,0.30); }
+  .tag-open-air             { background: rgba(72,201,176,0.16); color: #b7f4e8; border: 1px solid rgba(72,201,176,0.30); }
+  .tag-aqua                 { background: rgba(69,179,224,0.16); color: #bce9fb; border: 1px solid rgba(69,179,224,0.30); }
   .ship-card-footer {
     margin-top: auto; padding-top: 8px;
     border-top: 1px solid rgba(255,255,255,0.07);
@@ -229,7 +247,7 @@
 
   <div class="ships-grid">
 
-    <!-- Norwegian Viva — Flagship -->
+    <!-- Norwegian Viva — Carro-chefe -->
     <div class="ship-card soon flagship">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Norwegian Viva</div>
@@ -240,10 +258,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-flagship">Flagship</span>
-        <span class="ship-tag tag-prima">Classe Prima</span>
+        <span class="ship-tag tag-flagship">Carro-chefe</span>
+        <span class="ship-tag tag-class-prima">Classe Prima</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -259,9 +276,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-prima">Classe Prima</span>
+        <span class="ship-tag tag-class-prima">Classe Prima</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-open-air">Ocean Boulevard</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -277,7 +294,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-breakaway-plus">Breakaway Plus</span>
+        <span class="ship-tag tag-race-track">Kart</span>
+        <span class="ship-tag tag-alaska">Alaska</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -293,7 +312,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-breakaway-plus">Breakaway Plus</span>
+        <span class="ship-tag tag-race-track">Kart</span>
+        <span class="ship-tag tag-alaska">Alaska</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -309,7 +330,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">333 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-breakaway-plus">Breakaway Plus</span>
+        <span class="ship-tag tag-race-track">Kart</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -325,7 +348,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">326 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-breakaway-plus">Breakaway Plus</span>
+        <span class="ship-tag tag-haven">The Haven</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -341,7 +366,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">324 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-breakaway">Classe Breakaway</span>
+        <span class="ship-tag tag-freestyle">Freestyle</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -357,7 +384,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">324 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-breakaway">Classe Breakaway</span>
+        <span class="ship-tag tag-freestyle">Freestyle</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -373,7 +402,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">329 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-epic">Classe Epic</span>
+        <span class="ship-tag tag-haven">The Haven</span>
+        <span class="ship-tag tag-mediterranean">Mediterrâneo</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -389,7 +420,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-jewel">Classe Jewel</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-destinations">Destinos</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -405,7 +438,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-jewel">Classe Jewel</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -421,7 +456,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-jewel">Classe Jewel</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-mediterranean">Mediterrâneo</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -437,7 +474,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">281 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-hawaii">Havaí</span>
+        <span class="ship-tag tag-destinations">Roteiro único</span>
+        <span class="ship-tag tag-classic">Clássico</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -453,7 +492,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-dawn">Classe Dawn</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-destinations">Destinos</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -469,7 +510,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-dawn">Classe Dawn</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-destinations">Destinos</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -485,7 +528,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">259 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-sun">Classe Sun</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -501,7 +546,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">259 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-sun">Classe Sun</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-caribbean">Caribe</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -517,7 +564,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">268 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-class-spirit">Classe Spirit</span>
+        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-destinations">Destinos</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>
@@ -533,8 +582,9 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">~322 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class-prima-plus">Classe Prima Plus</span>
         <span class="ship-tag tag-new">Novo</span>
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-aqua">Aqua Slidecoaster</span>
       </div>
       <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
     </div>

@@ -47,8 +47,9 @@
   .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2rem 0 1rem; }
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
   .ships-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; cursor:default; opacity:0.82; backdrop-filter:blur(6px); }
-  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); opacity:0.92; }
+  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; backdrop-filter:blur(6px); transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .ship-card:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); transform:translateY(-2px); }
+  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); }
   .ship-icon { font-size:1.8rem; line-height:1; }
   .ship-name { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--white); line-height:1.2; }
   .ship-year { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; }
@@ -109,7 +110,7 @@
   <div class="section-label">🛳️ Frota Oceania Cruises</div>
   <div class="ships-grid">
     <!-- Oceania Allura -->
-    <div class="ship-card soon flagship">
+    <a class="ship-card flagship" href="oceania-allura/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Allura</div>
       <div class="ship-year">Em serviço desde 2025</div>
@@ -123,11 +124,11 @@
         <span class="ship-tag tag-class">Classe Allura</span>
         <span class="ship-tag tag-food">Gastronomia</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Vista -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-vista/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Vista</div>
       <div class="ship-year">Em serviço desde 2023</div>
@@ -141,11 +142,11 @@
         <span class="ship-tag tag-food">Gastronomia</span>
         <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Riviera -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-riviera/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Riviera</div>
       <div class="ship-year">Em serviço desde 2012</div>
@@ -159,11 +160,11 @@
         <span class="ship-tag tag-food">Gastronomia</span>
         <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Marina -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-marina/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Marina</div>
       <div class="ship-year">Em serviço desde 2011</div>
@@ -177,11 +178,11 @@
         <span class="ship-tag tag-food">Gastronomia</span>
         <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Sirena -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-sirena/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Sirena</div>
       <div class="ship-year">Em serviço desde 2016</div>
@@ -192,14 +193,14 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Regatta</span>
-        <span class="ship-tag tag-intimate">Íntimo</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-food">Gastronomia</span>
+        <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Nautica -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-nautica/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Nautica</div>
       <div class="ship-year">Em serviço desde 2005</div>
@@ -210,14 +211,14 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Regatta</span>
-        <span class="ship-tag tag-intimate">Íntimo</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-food">Gastronomia</span>
+        <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Insignia -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-insignia/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Insignia</div>
       <div class="ship-year">Em serviço desde 2004</div>
@@ -228,14 +229,14 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Regatta</span>
-        <span class="ship-tag tag-destinations">World Cruise</span>
-        <span class="ship-tag tag-intimate">Íntimo</span>
+        <span class="ship-tag tag-food">Gastronomia</span>
+        <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Oceania Regatta -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="oceania-regatta/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Oceania Regatta</div>
       <div class="ship-year">Em serviço desde 2003</div>
@@ -246,11 +247,11 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Regatta</span>
-        <span class="ship-tag tag-intimate">Íntimo</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-food">Gastronomia</span>
+        <span class="ship-tag tag-premium">Premium</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 </div>

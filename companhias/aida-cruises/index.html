@@ -47,8 +47,9 @@
   .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2rem 0 1rem; }
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
   .ships-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; cursor:default; opacity:0.82; backdrop-filter:blur(6px); }
-  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); opacity:0.92; }
+  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; backdrop-filter:blur(6px); transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .ship-card:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); transform:translateY(-2px); }
+  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); }
   .ship-icon { font-size:1.8rem; line-height:1; }
   .ship-name { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--white); line-height:1.2; }
   .ship-year { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; }
@@ -109,7 +110,7 @@
   <div class="section-label">🛳️ Frota AIDA Cruises</div>
   <div class="ships-grid">
     <!-- AIDAcosma -->
-    <div class="ship-card soon flagship">
+    <a class="ship-card flagship" href="aidacosma/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAcosma</div>
       <div class="ship-year">Em serviço desde 2022</div>
@@ -123,11 +124,11 @@
         <span class="ship-tag tag-class">Classe Helios</span>
         <span class="ship-tag tag-lng">LNG</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAnova -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidanova/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAnova</div>
       <div class="ship-year">Em serviço desde 2018</div>
@@ -139,13 +140,13 @@
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Helios</span>
         <span class="ship-tag tag-lng">LNG</span>
-        <span class="ship-tag tag-family">Família</span>
+        <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAperla -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidaperla/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAperla</div>
       <div class="ship-year">Em serviço desde 2017</div>
@@ -159,11 +160,11 @@
         <span class="ship-tag tag-family">Beach Club</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAprima -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidaprima/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAprima</div>
       <div class="ship-year">Em serviço desde 2016</div>
@@ -177,11 +178,11 @@
         <span class="ship-tag tag-family">Beach Club</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAstella -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidastella/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAstella</div>
       <div class="ship-year">Em serviço desde 2013</div>
@@ -195,11 +196,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAmar -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidamar/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAmar</div>
       <div class="ship-year">Em serviço desde 2012</div>
@@ -213,11 +214,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAsol -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidasol/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAsol</div>
       <div class="ship-year">Em serviço desde 2011</div>
@@ -231,11 +232,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAblu -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidablu/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAblu</div>
       <div class="ship-year">Em serviço desde 2010</div>
@@ -249,11 +250,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAluna -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidaluna/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAluna</div>
       <div class="ship-year">Em serviço desde 2009</div>
@@ -267,11 +268,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAbella -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidabella/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAbella</div>
       <div class="ship-year">Em serviço desde 2008</div>
@@ -285,11 +286,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- AIDAdiva -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aidadiva/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">AIDAdiva</div>
       <div class="ship-year">Em serviço desde 2007</div>
@@ -303,8 +304,8 @@
         <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 </div>

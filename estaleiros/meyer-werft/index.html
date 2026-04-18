@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meyer Werft — Estaleiro | Poseidon Cruzeiros</title>
+<meta name="description" content="Meyer Werft: o estaleiro de Papenburg que construiu navios para Disney, AIDA, Norwegian, Royal Caribbean, Carnival e P&O Cruises." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+<link rel="canonical" href="https://poseidon-cruzeiros.github.io/estaleiros/meyer-werft/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Meyer Werft — Estaleiro | Poseidon Cruzeiros" />
+<meta property="og:description" content="O estaleiro alemão de Papenburg por trás de Disney Wish, AIDAnova, Odyssey of the Seas, Norwegian Gem e outros navios." />
+<meta property="og:url" content="https://poseidon-cruzeiros.github.io/estaleiros/meyer-werft/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ocean-deep: #0a2342;
+    --teal: #1abc9c;
+    --teal-light: #a8f0de;
+    --gold: #f0c040;
+    --white: #ffffff;
+    --text-muted: #8ba4be;
+    --card-bg: rgba(255,255,255,0.06);
+    --card-border: rgba(255,255,255,0.12);
+    --radius: 14px;
+    --radius-sm: 8px;
+    --nav-height: 60px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(26,188,156,0.15) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+  }
+  .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: rgba(255,255,255,0.2); }
+  .hero { padding: 2.5rem 0 2rem; display: flex; align-items: flex-start; gap: 1.5rem; }
+  .hero-flag { font-size: 3.5rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1.2; margin-bottom: 0.4rem;
+  }
+  .hero-sub {
+    font-size: 0.92rem; color: var(--text-muted); font-weight: 300;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 0.8rem;
+  }
+  .hero-desc { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; max-width: 650px; }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 2.5rem; }
+  .stat-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm); padding: 1rem;
+    display: flex; flex-direction: column; gap: 4px; backdrop-filter: blur(6px);
+  }
+  .stat-card__value { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--teal-light); line-height: 1; }
+  .stat-card__label { font-size: 0.72rem; color: var(--text-muted); }
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal); margin: 2.5rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(26,188,156,0.4), transparent); }
+  .company-block { margin-bottom: 2rem; }
+  .company-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.6rem; flex-wrap: wrap; }
+  .company-header__flag { font-size: 1.2rem; }
+  .company-header__name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); }
+  .company-header__count {
+    font-size: 0.72rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px; padding: 1px 8px;
+  }
+  .company-header__link {
+    font-size: 0.72rem; color: var(--teal-light); text-decoration: none;
+    border: 1px solid rgba(26,188,156,0.25); border-radius: 999px; padding: 1px 8px;
+    transition: background 0.15s;
+  }
+  .company-header__link:hover { background: rgba(26,188,156,0.12); }
+  .table-wrap { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(6px); }
+  .ships-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .ships-table thead th {
+    text-align: left; font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+    padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .ships-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.15s; }
+  .ships-table tbody tr:last-child { border-bottom: none; }
+  .ships-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+  .ships-table td { padding: 0.55rem 0.75rem; vertical-align: middle; }
+  .col-name { font-weight: 500; color: var(--white); }
+  .col-name a { color: var(--teal-light); text-decoration: none; }
+  .col-name a:hover { text-decoration: underline; }
+  .col-year, .col-gt { color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-class { color: var(--text-muted); font-size: 0.78rem; }
+  .col-flag { text-align: center; }
+  .flag-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; font-size: 0.7rem;
+    background: rgba(26,188,156,0.12); border: 1px solid rgba(26,188,156,0.25);
+    border-radius: 999px; text-decoration: none; transition: background 0.15s;
+  }
+  .flag-link:hover { background: rgba(26,188,156,0.25); }
+  .flag-none { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; color: rgba(255,255,255,0.15); font-size: 0.7rem; }
+  .tag-lng, .tag-new, .tag-series {
+    display: inline-block; font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px; vertical-align: middle;
+  }
+  .tag-lng { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.3); }
+  .tag-new { background: rgba(33,150,196,0.14); color: #b8e8ff; border: 1px solid rgba(33,150,196,0.28); }
+  .tag-series { background: rgba(240,192,64,0.12); color: #fce08a; border: 1px solid rgba(240,192,64,0.22); }
+  .table-note {
+    font-size: 0.74rem; color: var(--text-muted);
+    padding: 0.6rem 0.75rem; border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .about-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 1.2rem 1.3rem; backdrop-filter: blur(6px);
+  }
+  .about-card h3 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
+  .about-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+  .missing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .missing-card {
+    background: rgba(240,192,64,0.07); border: 1px solid rgba(240,192,64,0.18);
+    border-radius: var(--radius); padding: 1rem 1.15rem;
+  }
+  .missing-card h3 { font-family: 'Playfair Display', serif; font-size: 0.92rem; margin-bottom: 0.45rem; color: #fce08a; }
+  .missing-card p { font-size: 0.8rem; line-height: 1.65; color: var(--text-muted); }
+  .ext-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
+  .ext-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; color: var(--teal-light);
+    border: 1px solid rgba(26,188,156,0.3); border-radius: 999px; padding: 0.4rem 1rem;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .ext-link:hover { background: rgba(26,188,156,0.1); }
+  footer { text-align: center; margin-top: 3rem; padding: 2rem 1rem 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+  @media (max-width: 700px) {
+    .stats-row, .about-grid, .missing-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero { flex-direction: column; gap: 1rem; }
+    .ships-table .col-class { display: none; }
+  }
+  @media (max-width: 520px) {
+    .stats-row, .about-grid, .missing-grid { grid-template-columns: 1fr; }
+    .ships-table .col-gt { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/estaleiros/">Estaleiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Meyer Werft</span>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-flag">🇩🇪</span>
+    <div class="hero-text">
+      <h1>Meyer Werft</h1>
+      <div class="hero-sub">
+        <span>📍 Papenburg, Alemanha</span>
+        <span>·</span>
+        <span>🏭 Desde 1795</span>
+        <span>·</span>
+        <span>⚓ Ativo</span>
+        <span>·</span>
+        <span>🔗 Grupo Meyer</span>
+      </div>
+      <p class="hero-desc">O estaleiro alemão de Papenburg é um dos grandes nomes da construção moderna de navios de cruzeiro. A Meyer Werft construiu classes inteiras para AIDA, Disney, Norwegian e Royal Caribbean, além de grandes navios recentes para P&O, Carnival e Silversea. É o par alemão da Meyer Turku, na Finlândia.</p>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-card__value">1795</div>
+      <div class="stat-card__label">Ano de fundação</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">50+</div>
+      <div class="stat-card__label">Navios de cruzeiro modernos</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">183.900</div>
+      <div class="stat-card__label">GT — AIDAcosma e Arvia</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">2031</div>
+      <div class="stat-card__label">Pedidos Disney no horizonte</div>
+    </div>
+  </div>
+
+  <div class="section-label">🚢 Navios Construídos</div>
+
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">✨</span>
+      <span class="company-header__name">Disney Cruise Line</span>
+      <span class="company-header__count">5 navios atuais</span>
+      <a class="company-header__link" href="/companhias/disney-cruise-line/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead><tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">Disney Destiny <span class="tag-new">Novo</span> <span class="tag-lng">LNG</span></td><td class="col-year">2025</td><td class="col-class">Wish</td><td class="col-gt">140.000</td><td class="col-flag"><a class="flag-link" href="/companhias/disney-cruise-line/disney-destiny/">→</a></td></tr>
+          <tr><td class="col-name">Disney Treasure <span class="tag-lng">LNG</span></td><td class="col-year">2024</td><td class="col-class">Wish</td><td class="col-gt">140.000</td><td class="col-flag"><a class="flag-link" href="/companhias/disney-cruise-line/disney-treasure/">→</a></td></tr>
+          <tr><td class="col-name">Disney Wish <span class="tag-lng">LNG</span></td><td class="col-year">2022</td><td class="col-class">Wish</td><td class="col-gt">140.000</td><td class="col-flag"><a class="flag-link" href="/companhias/disney-cruise-line/disney-wish/">→</a></td></tr>
+          <tr><td class="col-name">Disney Fantasy</td><td class="col-year">2012</td><td class="col-class">Dream</td><td class="col-gt">130.000</td><td class="col-flag"><a class="flag-link" href="/companhias/disney-cruise-line/disney-fantasy/">→</a></td></tr>
+          <tr><td class="col-name">Disney Dream</td><td class="col-year">2011</td><td class="col-class">Dream</td><td class="col-gt">130.000</td><td class="col-flag"><a class="flag-link" href="/companhias/disney-cruise-line/disney-dream/">→</a></td></tr>
+        </tbody>
+      </table>
+      <div class="table-note">Disney Magic e Disney Wonder foram construídos pela Fincantieri. Disney Adventure tem origem no projeto Global Dream/MV Werften, fora de Papenburg.</div>
+    </div>
+  </div>
+
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇩🇪</span>
+      <span class="company-header__name">AIDA Cruises</span>
+      <span class="company-header__count">9 navios</span>
+      <a class="company-header__link" href="/companhias/aida-cruises/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead><tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">AIDAcosma <span class="tag-lng">LNG</span></td><td class="col-year">2021</td><td class="col-class">Helios</td><td class="col-gt">183.900</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidacosma/">→</a></td></tr>
+          <tr><td class="col-name">AIDAnova <span class="tag-lng">LNG</span></td><td class="col-year">2018</td><td class="col-class">Helios</td><td class="col-gt">183.858</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidanova/">→</a></td></tr>
+          <tr><td class="col-name">AIDAstella</td><td class="col-year">2013</td><td class="col-class">Sphinx</td><td class="col-gt">71.304</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidastella/">→</a></td></tr>
+          <tr><td class="col-name">AIDAmar</td><td class="col-year">2012</td><td class="col-class">Sphinx</td><td class="col-gt">71.304</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidamar/">→</a></td></tr>
+          <tr><td class="col-name">AIDAsol</td><td class="col-year">2011</td><td class="col-class">Sphinx</td><td class="col-gt">71.304</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidasol/">→</a></td></tr>
+          <tr><td class="col-name">AIDAblu</td><td class="col-year">2010</td><td class="col-class">Sphinx</td><td class="col-gt">71.304</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidablu/">→</a></td></tr>
+          <tr><td class="col-name">AIDAluna</td><td class="col-year">2009</td><td class="col-class">Sphinx</td><td class="col-gt">69.200</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidaluna/">→</a></td></tr>
+          <tr><td class="col-name">AIDAbella</td><td class="col-year">2008</td><td class="col-class">Sphinx</td><td class="col-gt">69.200</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidabella/">→</a></td></tr>
+          <tr><td class="col-name">AIDAdiva</td><td class="col-year">2007</td><td class="col-class">Sphinx</td><td class="col-gt">69.200</td><td class="col-flag"><a class="flag-link" href="/companhias/aida-cruises/aidadiva/">→</a></td></tr>
+        </tbody>
+      </table>
+      <div class="table-note">AIDAprima e AIDAperla foram construídos pela Mitsubishi Heavy Industries, em Nagasaki.</div>
+    </div>
+  </div>
+
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">👑</span>
+      <span class="company-header__name">Royal Caribbean</span>
+      <span class="company-header__count">9 navios</span>
+      <a class="company-header__link" href="/companhias/royal-caribbean/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead><tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">Odyssey of the Seas</td><td class="col-year">2021</td><td class="col-class">Quantum Ultra</td><td class="col-gt">167.704</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/odyssey-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Spectrum of the Seas</td><td class="col-year">2019</td><td class="col-class">Quantum Ultra</td><td class="col-gt">169.379</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/spectrum-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Ovation of the Seas</td><td class="col-year">2016</td><td class="col-class">Quantum</td><td class="col-gt">168.666</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/ovation-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Anthem of the Seas</td><td class="col-year">2015</td><td class="col-class">Quantum</td><td class="col-gt">168.666</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/anthem-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Quantum of the Seas</td><td class="col-year">2014</td><td class="col-class">Quantum</td><td class="col-gt">168.666</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/quantum-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Jewel of the Seas</td><td class="col-year">2004</td><td class="col-class">Radiance</td><td class="col-gt">90.090</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/jewel-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Serenade of the Seas</td><td class="col-year">2003</td><td class="col-class">Radiance</td><td class="col-gt">90.090</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/serenade-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Brilliance of the Seas</td><td class="col-year">2002</td><td class="col-class">Radiance</td><td class="col-gt">90.090</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/brilliance-of-the-seas/">→</a></td></tr>
+          <tr><td class="col-name">Radiance of the Seas</td><td class="col-year">2001</td><td class="col-class">Radiance</td><td class="col-gt">90.090</td><td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/radiance-of-the-seas/">→</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇳🇴</span>
+      <span class="company-header__name">Norwegian Cruise Line</span>
+      <span class="company-header__count">7 navios</span>
+      <a class="company-header__link" href="/companhias/norwegian-cruise-line/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead><tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">Norwegian Gem</td><td class="col-year">2007</td><td class="col-class">Jewel</td><td class="col-gt">93.530</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-gem/">→</a></td></tr>
+          <tr><td class="col-name">Norwegian Pearl</td><td class="col-year">2006</td><td class="col-class">Jewel</td><td class="col-gt">93.530</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-pearl/">→</a></td></tr>
+          <tr><td class="col-name">Norwegian Jade</td><td class="col-year">2006</td><td class="col-class">Jewel</td><td class="col-gt">93.558</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-jade/">→</a></td></tr>
+          <tr><td class="col-name">Norwegian Jewel</td><td class="col-year">2005</td><td class="col-class">Jewel</td><td class="col-gt">93.502</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-jewel/">→</a></td></tr>
+          <tr><td class="col-name">Norwegian Dawn</td><td class="col-year">2002</td><td class="col-class">Dawn</td><td class="col-gt">92.250</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-dawn/">→</a></td></tr>
+          <tr><td class="col-name">Norwegian Star</td><td class="col-year">2001</td><td class="col-class">Dawn</td><td class="col-gt">91.740</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-star/">→</a></td></tr>
+          <tr><td class="col-name">Norwegian Spirit</td><td class="col-year">1998</td><td class="col-class">Leo</td><td class="col-gt">75.904</td><td class="col-flag"><a class="flag-link" href="/companhias/norwegian-cruise-line/norwegian-spirit/">→</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🎉</span>
+      <span class="company-header__name">Carnival e P&O</span>
+      <span class="company-header__count">3 navios</span>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead><tr><th>Navio</th><th>Ano</th><th class="col-class">Companhia</th><th>GT</th><th style="text-align:center">No site</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">Carnival Jubilee <span class="tag-lng">LNG</span></td><td class="col-year">2023</td><td class="col-class">Carnival</td><td class="col-gt">183.521</td><td class="col-flag"><a class="flag-link" href="/companhias/carnival-cruise-line/carnival-jubilee/">→</a></td></tr>
+          <tr><td class="col-name">Arvia <span class="tag-lng">LNG</span></td><td class="col-year">2022</td><td class="col-class">P&O Cruises</td><td class="col-gt">183.900</td><td class="col-flag"><a class="flag-link" href="/companhias/p-and-o-cruises/arvia/">→</a></td></tr>
+          <tr><td class="col-name">Asuka III</td><td class="col-year">2025</td><td class="col-class">NYK Cruises</td><td class="col-gt">51.950</td><td class="col-flag"><span class="flag-none">—</span></td></tr>
+        </tbody>
+      </table>
+      <div class="table-note">Carnival Festivale e novos navios Disney seguem no livro de encomendas da Meyer Werft para entregas futuras.</div>
+    </div>
+  </div>
+
+  <div class="section-label">🏭 Sobre o Estaleiro</div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>História</h3>
+      <p>A Meyer Werft foi fundada em 1795 em Papenburg, na Baixa Saxônia. A empresa familiar se tornou uma das referências mundiais em navios de cruzeiro, com construção em grandes halls cobertos e navegação final pelo rio Ems até o Mar do Norte.</p>
+    </div>
+    <div class="about-card">
+      <h3>Especialidade</h3>
+      <p>O estaleiro ficou conhecido por navios de médio e grande porte com alto nível de complexidade técnica: classes Sphinx e Helios da AIDA, Wish Class da Disney, Quantum Class da Royal Caribbean e Jewel Class da Norwegian.</p>
+    </div>
+    <div class="about-card">
+      <h3>Grupo Meyer</h3>
+      <p>A Meyer Werft atua junto com a Meyer Turku, na Finlândia. Papenburg concentra muitos navios de companhias como Disney, AIDA, Royal e Norwegian, enquanto Turku se destaca pelos gigantes Icon e Oasis, além de classes LNG da Carnival e Costa.</p>
+    </div>
+    <div class="about-card">
+      <h3>Carteira futura</h3>
+      <p>A Disney encomendou novas unidades à Meyer Werft com entregas planejadas até 2031. A MSC também aparece no horizonte do estaleiro com a plataforma New Frontier, reforçando Papenburg como uma das docas mais disputadas da indústria.</p>
+    </div>
+  </div>
+
+  <div class="section-label">⚠️ Estaleiros relevantes ainda fora do site</div>
+  <div class="missing-grid">
+    <div class="missing-card">
+      <h3>T. Mariotti</h3>
+      <p>Construiu navios de expedição/luxo como Seabourn Venture e Seabourn Pursuit. É importante para cobrir melhor Seabourn e cruzeiros de expedição.</p>
+    </div>
+    <div class="missing-card">
+      <h3>Mitsubishi Heavy Industries</h3>
+      <p>Construiu AIDAprima e AIDAperla em Nagasaki. Vale uma página curta para fechar a lacuna da frota AIDA.</p>
+    </div>
+    <div class="missing-card">
+      <h3>VARD</h3>
+      <p>Grupo ligado à Fincantieri, forte em navios de expedição para marcas como Ponant, Viking Expeditions e outras operações de nicho.</p>
+    </div>
+    <div class="missing-card">
+      <h3>Helsinki Shipyard</h3>
+      <p>Relevante em navios polares e de expedição, especialmente para companhias menores que podemos adicionar no futuro.</p>
+    </div>
+  </div>
+
+  <div class="ext-links">
+    <a class="ext-link" href="https://www.meyerwerft.de" target="_blank" rel="noopener noreferrer">🌐 Site oficial</a>
+    <a class="ext-link" href="https://www.meyerwerft.de/en/ships/index.jsp" target="_blank" rel="noopener noreferrer">🚢 Lista oficial de navios</a>
+  </div>
+
+  <footer>🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios</footer>
+
+</div>
+</body>
+</html>

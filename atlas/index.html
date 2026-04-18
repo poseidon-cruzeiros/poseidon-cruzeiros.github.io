@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Atlas Marítimo | Poseidon Cruzeiros</title>
+<meta name="description" content="Atlas Marítimo — explore rotas, portos e posições de navios de cruzeiro pelo mundo." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+<link rel="canonical" href="https://poseidon-cruzeiros.github.io/atlas/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Atlas Marítimo | Poseidon Cruzeiros" />
+<meta property="og:description" content="Atlas Marítimo — explore rotas, portos e posições de navios de cruzeiro pelo mundo." />
+<meta property="og:url" content="https://poseidon-cruzeiros.github.io/atlas/" />
+<link rel="stylesheet" href="../shared/header.css" />
+<script src="../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root { --nav-height: 60px; }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: #0f1a2e;
+  }
+
+  #atlas-frame {
+    display: block;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    border: none;
+    background: #0f1a2e;
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<iframe
+  id="atlas-frame"
+  src="./app.html"
+  title="Atlas Marítimo"
+  allowfullscreen
+  loading="eager"
+></iframe>
+
+</body>
+</html>

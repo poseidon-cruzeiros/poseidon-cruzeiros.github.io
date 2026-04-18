@@ -47,8 +47,9 @@
   .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2rem 0 1rem; }
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
   .ships-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; cursor:default; opacity:0.82; backdrop-filter:blur(6px); }
-  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); opacity:0.92; }
+  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; backdrop-filter:blur(6px); transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .ship-card:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); transform:translateY(-2px); }
+  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); }
   .ship-icon { font-size:1.8rem; line-height:1; }
   .ship-name { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--white); line-height:1.2; }
   .ship-year { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; }
@@ -109,7 +110,7 @@
   <div class="section-label">🛳️ Frota Regent Seven Seas Cruises</div>
   <div class="ships-grid">
     <!-- Seven Seas Prestige -->
-    <div class="ship-card soon flagship">
+    <a class="ship-card flagship" href="seven-seas-prestige/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Prestige</div>
       <div class="ship-year">Em serviço desde 2026</div>
@@ -119,15 +120,15 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">257 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-soon">Em breve</span>
+        <span class="ship-tag tag-new">Novo</span>
         <span class="ship-tag tag-class">Classe Prestige</span>
         <span class="ship-tag tag-luxury">Ultra-luxo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seven Seas Grandeur -->
-    <div class="ship-card soon flagship">
+    <a class="ship-card flagship" href="seven-seas-grandeur/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Grandeur</div>
       <div class="ship-year">Em serviço desde 2023</div>
@@ -138,14 +139,14 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-class">Classe Explorer</span>
         <span class="ship-tag tag-luxury">Ultra-luxo</span>
-        <span class="ship-tag tag-inclusive">All-inclusive</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seven Seas Splendor -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seven-seas-splendor/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Splendor</div>
       <div class="ship-year">Em serviço desde 2020</div>
@@ -157,13 +158,12 @@
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Explorer</span>
         <span class="ship-tag tag-luxury">Ultra-luxo</span>
-        <span class="ship-tag tag-inclusive">All-inclusive</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seven Seas Explorer -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seven-seas-explorer/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Explorer</div>
       <div class="ship-year">Em serviço desde 2016</div>
@@ -175,13 +175,12 @@
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Explorer</span>
         <span class="ship-tag tag-luxury">Ultra-luxo</span>
-        <span class="ship-tag tag-inclusive">All-inclusive</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seven Seas Voyager -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seven-seas-voyager/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Voyager</div>
       <div class="ship-year">Em serviço desde 2003</div>
@@ -191,15 +190,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">204 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-classic">Clássico</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-class">Classe Voyager</span>
+        <span class="ship-tag tag-luxury">Ultra-luxo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seven Seas Mariner -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seven-seas-mariner/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Mariner</div>
       <div class="ship-year">Em serviço desde 2001</div>
@@ -209,15 +207,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">216 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-classic">Clássico</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-class">Classe Mariner</span>
+        <span class="ship-tag tag-luxury">Ultra-luxo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seven Seas Navigator -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seven-seas-navigator/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seven Seas Navigator</div>
       <div class="ship-year">Em serviço desde 1999</div>
@@ -227,12 +224,11 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">172 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-intimate">Íntimo</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-class">Classe Navigator</span>
+        <span class="ship-tag tag-luxury">Ultra-luxo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 </div>

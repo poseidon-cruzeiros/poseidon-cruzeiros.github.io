@@ -47,8 +47,9 @@
   .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2rem 0 1rem; }
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
   .ships-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; cursor:default; opacity:0.82; backdrop-filter:blur(6px); }
-  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); opacity:0.92; }
+  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; backdrop-filter:blur(6px); transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .ship-card:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); transform:translateY(-2px); }
+  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); }
   .ship-icon { font-size:1.8rem; line-height:1; }
   .ship-name { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--white); line-height:1.2; }
   .ship-year { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; }
@@ -109,7 +110,7 @@
   <div class="section-label">🛳️ Frota P&O Cruises</div>
   <div class="ships-grid">
     <!-- Arvia -->
-    <div class="ship-card soon flagship">
+    <a class="ship-card" href="arvia/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Arvia</div>
       <div class="ship-year">Em serviço desde 2022</div>
@@ -119,15 +120,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">345 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-new">Novo</span>
         <span class="ship-tag tag-class">Classe Excel</span>
         <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Iona -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="iona/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Iona</div>
       <div class="ship-year">Em serviço desde 2021</div>
@@ -138,14 +138,13 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Excel</span>
-        <span class="ship-tag tag-lng">LNG</span>
         <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Britannia -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="britannia/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Britannia</div>
       <div class="ship-year">Em serviço desde 2015</div>
@@ -155,15 +154,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">330 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-flagship">Flagship clássica</span>
+        <span class="ship-tag tag-class">Classe Royal</span>
         <span class="ship-tag tag-family">Família</span>
-        <span class="ship-tag tag-region">Reino Unido</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Azura -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="azura/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Azura</div>
       <div class="ship-year">Em serviço desde 2010</div>
@@ -175,13 +173,12 @@
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Grand</span>
         <span class="ship-tag tag-family">Família</span>
-        <span class="ship-tag tag-region">Mediterrâneo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Ventura -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="ventura/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Ventura</div>
       <div class="ship-year">Em serviço desde 2008</div>
@@ -193,13 +190,12 @@
       <div class="ship-tags">
         <span class="ship-tag tag-class">Classe Grand</span>
         <span class="ship-tag tag-family">Família</span>
-        <span class="ship-tag tag-region">Europa</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Arcadia -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="arcadia/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Arcadia</div>
       <div class="ship-year">Em serviço desde 2005</div>
@@ -209,15 +205,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">285 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-adults">Adults-only</span>
-        <span class="ship-tag tag-destinations">World Cruise</span>
-        <span class="ship-tag tag-classic">Clássico</span>
+        <span class="ship-tag tag-class">Classe Vista</span>
+        <span class="ship-tag tag-family">Clássico</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Aurora -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="aurora/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Aurora</div>
       <div class="ship-year">Em serviço desde 2000</div>
@@ -227,12 +222,11 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">270 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-classic">Clássico</span>
-        <span class="ship-tag tag-intimate">Menor porte</span>
-        <span class="ship-tag tag-region">Reino Unido</span>
+        <span class="ship-tag tag-class">Classe Aurora</span>
+        <span class="ship-tag tag-family">Clássico</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 </div>

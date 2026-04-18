@@ -47,8 +47,9 @@
   .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2rem 0 1rem; }
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
   .ships-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; cursor:default; opacity:0.82; backdrop-filter:blur(6px); }
-  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); opacity:0.92; }
+  .ship-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.2rem 1.1rem; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; backdrop-filter:blur(6px); transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .ship-card:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); transform:translateY(-2px); }
+  .ship-card.flagship { border-color:rgba(240,192,64,0.3); background:rgba(240,192,64,0.04); }
   .ship-icon { font-size:1.8rem; line-height:1; }
   .ship-name { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--white); line-height:1.2; }
   .ship-year { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; }
@@ -109,7 +110,7 @@
   <div class="section-label">🛳️ Frota Seabourn</div>
   <div class="ships-grid">
     <!-- Seabourn Pursuit -->
-    <div class="ship-card soon flagship">
+    <a class="ship-card flagship" href="seabourn-pursuit/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seabourn Pursuit</div>
       <div class="ship-year">Em serviço desde 2023</div>
@@ -120,14 +121,14 @@
       </div>
       <div class="ship-tags">
         <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-class">Classe Expedition</span>
         <span class="ship-tag tag-expedition">Expedição</span>
-        <span class="ship-tag tag-expedition">Polar</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seabourn Venture -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seabourn-venture/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seabourn Venture</div>
       <div class="ship-year">Em serviço desde 2022</div>
@@ -137,15 +138,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">170 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class">Classe Expedition</span>
         <span class="ship-tag tag-expedition">Expedição</span>
-        <span class="ship-tag tag-expedition">Polar</span>
-        <span class="ship-tag tag-expedition">Submarinos</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seabourn Ovation -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seabourn-ovation/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seabourn Ovation</div>
       <div class="ship-year">Em serviço desde 2018</div>
@@ -155,15 +155,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">210 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class">Classe Encore</span>
         <span class="ship-tag tag-luxury">Ultra-luxo</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-food">Gastronomia</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seabourn Encore -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seabourn-encore/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seabourn Encore</div>
       <div class="ship-year">Em serviço desde 2016</div>
@@ -173,15 +172,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">210 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class">Classe Encore</span>
         <span class="ship-tag tag-luxury">Ultra-luxo</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-food">Gastronomia</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seabourn Quest -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seabourn-quest/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seabourn Quest</div>
       <div class="ship-year">Em serviço desde 2011</div>
@@ -191,15 +189,14 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">198 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-classic">Clássico</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-class">Classe Odyssey</span>
+        <span class="ship-tag tag-luxury">Ultra-luxo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Seabourn Sojourn -->
-    <div class="ship-card soon">
+    <a class="ship-card" href="seabourn-sojourn/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Seabourn Sojourn</div>
       <div class="ship-year">Em serviço desde 2010</div>
@@ -209,12 +206,11 @@
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">198 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-classic">Clássico</span>
-        <span class="ship-tag tag-suite">All-suite</span>
-        <span class="ship-tag tag-destinations">Roteiros</span>
+        <span class="ship-tag tag-class">Classe Odyssey</span>
+        <span class="ship-tag tag-luxury">Ultra-luxo</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 </div>

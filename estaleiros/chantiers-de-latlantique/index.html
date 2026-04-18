@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chantiers de l'Atlantique — Estaleiro | Poseidon Cruzeiros</title>
+<meta name="description" content="Chantiers de l'Atlantique: o maior estaleiro da Europa, em Saint-Nazaire (França). Construiu a Queen Mary 2, Harmony of the Seas, Wonder of the Seas, Celebrity Edge e dezenas de navios MSC." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
+<link rel="canonical" href="https://poseidon-cruzeiros.github.io/estaleiros/chantiers-de-latlantique/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Chantiers de l'Atlantique — Estaleiro | Poseidon Cruzeiros" />
+<meta property="og:description" content="O maior estaleiro da Europa — Queen Mary 2, Harmony of the Seas, Wonder of the Seas e muito mais." />
+<meta property="og:url" content="https://poseidon-cruzeiros.github.io/estaleiros/chantiers-de-latlantique/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #0a2342;
+    --teal:         #1abc9c;
+    --teal-light:   #a8f0de;
+    --gold:         #f0c040;
+    --white:        #ffffff;
+    --text-muted:   #8ba4be;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(26,188,156,0.15) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted); padding: 1.2rem 0 0;
+  }
+  .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: rgba(255,255,255,0.2); }
+
+  .hero { padding: 2.5rem 0 2rem; display: flex; align-items: flex-start; gap: 1.5rem; }
+  .hero-flag { font-size: 3.5rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1.2; margin-bottom: 0.4rem;
+  }
+  .hero-sub {
+    font-size: 0.92rem; color: var(--text-muted); font-weight: 300;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 0.8rem;
+  }
+  .hero-desc { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; max-width: 640px; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 2.5rem; }
+  .stat-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm); padding: 1rem;
+    display: flex; flex-direction: column; gap: 4px; backdrop-filter: blur(6px);
+  }
+  .stat-card__value { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--teal-light); line-height: 1; }
+  .stat-card__label { font-size: 0.72rem; color: var(--text-muted); }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal); margin: 2.5rem 0 1rem;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(26,188,156,0.4), transparent); }
+
+  .company-block { margin-bottom: 2rem; }
+  .company-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.6rem; }
+  .company-header__flag { font-size: 1.2rem; }
+  .company-header__name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); }
+  .company-header__count {
+    font-size: 0.72rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px; padding: 1px 8px;
+  }
+  .company-header__link {
+    font-size: 0.72rem; color: var(--teal-light); text-decoration: none;
+    border: 1px solid rgba(26,188,156,0.25); border-radius: 999px; padding: 1px 8px;
+    transition: background 0.15s;
+  }
+  .company-header__link:hover { background: rgba(26,188,156,0.12); }
+
+  .table-wrap {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(6px);
+  }
+  .ships-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .ships-table thead th {
+    text-align: left; font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+    padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .ships-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.15s; }
+  .ships-table tbody tr:last-child { border-bottom: none; }
+  .ships-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+  .ships-table td { padding: 0.55rem 0.75rem; vertical-align: middle; }
+  .col-name { font-weight: 500; color: var(--white); }
+  .col-name a { color: var(--teal-light); text-decoration: none; }
+  .col-name a:hover { text-decoration: underline; }
+  .col-year, .col-gt { color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-class { color: var(--text-muted); font-size: 0.78rem; }
+  .col-flag { text-align: center; }
+  .flag-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; font-size: 0.7rem;
+    background: rgba(26,188,156,0.12); border: 1px solid rgba(26,188,156,0.25);
+    border-radius: 999px; text-decoration: none; transition: background 0.15s;
+  }
+  .flag-link:hover { background: rgba(26,188,156,0.25); }
+  .flag-none { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; color: rgba(255,255,255,0.15); font-size: 0.7rem; }
+  .tag-flagship {
+    display: inline-block; font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px;
+    background: rgba(240,192,64,0.12); color: #fce08a;
+    border: 1px solid rgba(240,192,64,0.22); vertical-align: middle;
+  }
+  .tag-iconic {
+    display: inline-block; font-size: 0.6rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 999px; margin-left: 5px;
+    background: rgba(160,120,240,0.15); color: #d0b8ff;
+    border: 1px solid rgba(160,120,240,0.3); vertical-align: middle;
+  }
+  .table-note {
+    font-size: 0.74rem; color: var(--text-muted); padding: 0.6rem 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02);
+  }
+  .class-header td {
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--teal); padding: 0.4rem 0.75rem 0.2rem;
+    background: rgba(26,188,156,0.05); border-top: 1px solid rgba(26,188,156,0.1);
+  }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .about-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 1.2rem 1.3rem; backdrop-filter: blur(6px);
+  }
+  .about-card h3 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
+  .about-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  .ext-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
+  .ext-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; color: var(--teal-light);
+    border: 1px solid rgba(26,188,156,0.3); border-radius: 999px; padding: 0.4rem 1rem;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .ext-link:hover { background: rgba(26,188,156,0.1); }
+
+  footer { text-align: center; margin-top: 3rem; padding: 2rem 1rem 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+
+  @media (max-width: 700px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; }
+    .hero { flex-direction: column; gap: 1rem; }
+    .ships-table .col-class { display: none; }
+  }
+  @media (max-width: 480px) { .ships-table .col-gt { display: none; } }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/estaleiros/">Estaleiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Chantiers de l'Atlantique</span>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-flag">🇫🇷</span>
+    <div class="hero-text">
+      <h1>Chantiers de l'Atlantique</h1>
+      <div class="hero-sub">
+        <span>📍 Saint-Nazaire, França</span>
+        <span>·</span>
+        <span>🏭 Desde 1861</span>
+        <span>·</span>
+        <span>⚓ Ativo</span>
+        <span>·</span>
+        <span>🇫🇷 Estatal (parcial)</span>
+      </div>
+      <p class="hero-desc">O maior estaleiro da Europa, às margens do rio Loire. Construiu lendas como a Queen Mary 2, a classe Oasis da Royal Caribbean (Harmony, Symphony, Wonder) e toda a Celebrity Edge class. Nacionalizado parcialmente pela França em 2018, mantém carteira de pedidos até 2031 com MSC, Royal Caribbean e Celebrity.</p>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-card__value">50+</div>
+      <div class="stat-card__label">Navios de cruzeiro entregues</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">1861</div>
+      <div class="stat-card__label">Tradição naval em Saint-Nazaire</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">236.473</div>
+      <div class="stat-card__label">GT — Utopia of the Seas (maior)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__value">2031</div>
+      <div class="stat-card__label">Último navio encomendado</div>
+    </div>
+  </div>
+
+  <div class="section-label">🚢 Navios Construídos</div>
+
+  <!-- Royal Caribbean -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">👑</span>
+      <span class="company-header__name">Royal Caribbean</span>
+      <span class="company-header__count">4 navios</span>
+      <a class="company-header__link" href="/companhias/royal-caribbean/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Utopia of the Seas <span class="tag-flagship">Flagship</span></td>
+            <td class="col-year">2024</td>
+            <td class="col-class">Oasis</td>
+            <td class="col-gt">236.473</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Wonder of the Seas</td>
+            <td class="col-year">2022</td>
+            <td class="col-class">Oasis</td>
+            <td class="col-gt">235.600</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/wonder-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Symphony of the Seas</td>
+            <td class="col-year">2018</td>
+            <td class="col-class">Oasis</td>
+            <td class="col-gt">228.081</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/symphony-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Harmony of the Seas</td>
+            <td class="col-year">2016</td>
+            <td class="col-class">Oasis</td>
+            <td class="col-gt">226.963</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/royal-caribbean/harmony-of-the-seas/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">Oasis of the Seas (2009) e Allure of the Seas (2010) foram construídos na Meyer Turku (Finlândia), não em Saint-Nazaire.</div>
+    </div>
+  </div>
+
+  <!-- Celebrity Cruises -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">⭐</span>
+      <span class="company-header__name">Celebrity Cruises</span>
+      <span class="company-header__count">4 navios</span>
+      <a class="company-header__link" href="/companhias/celebrity-cruises/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Celebrity Ascent <span class="tag-flagship">Flagship</span></td>
+            <td class="col-year">2023</td>
+            <td class="col-class">Edge</td>
+            <td class="col-gt">140.600</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/celebrity-cruises/celebrity-ascent/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Celebrity Beyond</td>
+            <td class="col-year">2022</td>
+            <td class="col-class">Edge</td>
+            <td class="col-gt">140.600</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/celebrity-cruises/celebrity-beyond/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Celebrity Apex</td>
+            <td class="col-year">2020</td>
+            <td class="col-class">Edge</td>
+            <td class="col-gt">130.818</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/celebrity-cruises/celebrity-apex/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">Celebrity Edge <span class="tag-iconic">Pioneiro</span></td>
+            <td class="col-year">2018</td>
+            <td class="col-class">Edge</td>
+            <td class="col-gt">130.818</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/celebrity-cruises/celebrity-edge/" title="Ver página">→</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MSC Cruzeiros -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🌊</span>
+      <span class="company-header__name">MSC Cruzeiros</span>
+      <span class="company-header__count">17 navios</span>
+      <a class="company-header__link" href="/companhias/msc-cruzeiros/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr>
+        </thead>
+        <tbody>
+          <tr class="class-header"><td colspan="5">Classe World</td></tr>
+          <tr>
+            <td class="col-name">MSC World Europa <span class="tag-flagship">Flagship</span></td>
+            <td class="col-year">2022</td>
+            <td class="col-class">World</td>
+            <td class="col-gt">215.863</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/msc-cruzeiros/msc-world-europa/" title="Ver página">→</a></td>
+          </tr>
+          <tr class="class-header"><td colspan="5">Classe Meraviglia Plus</td></tr>
+          <tr>
+            <td class="col-name">MSC Virtuosa</td>
+            <td class="col-year">2021</td>
+            <td class="col-class">Meraviglia Plus</td>
+            <td class="col-gt">181.541</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/msc-cruzeiros/msc-virtuosa/" title="Ver página">→</a></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Grandiosa</td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Meraviglia Plus</td>
+            <td class="col-gt">181.541</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/msc-cruzeiros/msc-grandiosa/" title="Ver página">→</a></td>
+          </tr>
+          <tr class="class-header"><td colspan="5">Classe Meraviglia</td></tr>
+          <tr>
+            <td class="col-name">MSC Bellissima</td>
+            <td class="col-year">2019</td>
+            <td class="col-class">Meraviglia</td>
+            <td class="col-gt">171.598</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Meraviglia</td>
+            <td class="col-year">2017</td>
+            <td class="col-class">Meraviglia</td>
+            <td class="col-gt">171.598</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr class="class-header"><td colspan="5">Classe Fantasia</td></tr>
+          <tr>
+            <td class="col-name">MSC Preziosa</td>
+            <td class="col-year">2013</td>
+            <td class="col-class">Fantasia</td>
+            <td class="col-gt">139.072</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Divina</td>
+            <td class="col-year">2012</td>
+            <td class="col-class">Fantasia</td>
+            <td class="col-gt">139.072</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Splendida</td>
+            <td class="col-year">2009</td>
+            <td class="col-class">Fantasia</td>
+            <td class="col-gt">137.936</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Fantasia</td>
+            <td class="col-year">2008</td>
+            <td class="col-class">Fantasia</td>
+            <td class="col-gt">137.936</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr class="class-header"><td colspan="5">Classe Musica</td></tr>
+          <tr>
+            <td class="col-name">MSC Magnifica</td>
+            <td class="col-year">2010</td>
+            <td class="col-class">Musica</td>
+            <td class="col-gt">95.128</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Poesia</td>
+            <td class="col-year">2008</td>
+            <td class="col-class">Musica</td>
+            <td class="col-gt">92.409</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Orchestra</td>
+            <td class="col-year">2007</td>
+            <td class="col-class">Musica</td>
+            <td class="col-gt">92.409</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Musica</td>
+            <td class="col-year">2006</td>
+            <td class="col-class">Musica</td>
+            <td class="col-gt">92.409</td>
+            <td class="col-flag"><a class="flag-link" href="/companhias/msc-cruzeiros/msc-musica/" title="Ver página">→</a></td>
+          </tr>
+          <tr class="class-header"><td colspan="5">Classe Lirica</td></tr>
+          <tr>
+            <td class="col-name">MSC Opera</td>
+            <td class="col-year">2004</td>
+            <td class="col-class">Lirica</td>
+            <td class="col-gt">59.058</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">MSC Lirica</td>
+            <td class="col-year">2003</td>
+            <td class="col-class">Lirica</td>
+            <td class="col-gt">59.058</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">MSC Seashore e MSC Seascape (classe Seashore) foram construídos na Fincantieri, Itália.</div>
+    </div>
+  </div>
+
+  <!-- Cunard -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">⚓</span>
+      <span class="company-header__name">Cunard</span>
+      <span class="company-header__count">1 navio</span>
+      <a class="company-header__link" href="/companhias/cunard/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Queen Mary 2 <span class="tag-iconic">Ícone</span></td>
+            <td class="col-year">2004</td>
+            <td class="col-class">—</td>
+            <td class="col-gt">148.528</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Norwegian -->
+  <div class="company-block">
+    <div class="company-header">
+      <span class="company-header__flag">🇳🇴</span>
+      <span class="company-header__name">Norwegian Cruise Line</span>
+      <span class="company-header__count">1 navio</span>
+      <a class="company-header__link" href="/companhias/norwegian-cruise-line/">Ver companhia →</a>
+    </div>
+    <div class="table-wrap">
+      <table class="ships-table">
+        <thead>
+          <tr><th>Navio</th><th>Ano</th><th class="col-class">Classe</th><th>GT</th><th style="text-align:center">No site</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">Norwegian Epic</td>
+            <td class="col-year">2010</td>
+            <td class="col-class">Epic</td>
+            <td class="col-gt">155.873</td>
+            <td class="col-flag"><span class="flag-none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">Os demais navios Norwegian (classes Breakaway, Breakaway Plus e Prima) foram construídos na Fincantieri, Itália.</div>
+    </div>
+  </div>
+
+  <!-- sobre -->
+  <div class="section-label">🏭 Sobre o Estaleiro</div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>História</h3>
+      <p>A tradição naval em Saint-Nazaire remonta a 1861. O estaleiro moderno "Chantiers de l'Atlantique" foi criado em 1955 pela fusão de dois estaleiros locais. Passou por Aker Yards (norueguês), STX France (coreano) antes de ser renacionalizado parcialmente pela França em 2018, após a falência do grupo STX.</p>
+    </div>
+    <div class="about-card">
+      <h3>Instalações</h3>
+      <p>Localizado às margens do rio Loire, o estaleiro ocupa mais de 3 km de margem fluvial. Possui duas docas secas para construção simultânea de navios gigantes e é o maior estaleiro da Europa ocidental. Os navios precisam descer o Loire até o Oceano Atlântico ao serem lançados.</p>
+    </div>
+    <div class="about-card">
+      <h3>Queen Mary 2</h3>
+      <p>Entregue em 2004, a <strong>Queen Mary 2</strong> foi o projeto mais complexo já realizado pelo estaleiro até então — o maior e mais sofisticado transatlântico construído desde os anos 1950. Com 148.528 GT, ainda é o único navio projetado especificamente para cruzeiros transatlânticos regulares em operação.</p>
+    </div>
+    <div class="about-card">
+      <h3>Carteira atual</h3>
+      <p>O estaleiro tem pedidos firmes que garantem trabalho até <strong>2031</strong>, incluindo novos navios da classe MSC World e da série Celebrity Edge. Com cerca de 5.000 funcionários diretos e 10.000 indiretos, é um dos maiores empregadores da região Loire-Atlantique.</p>
+    </div>
+  </div>
+
+  <div class="ext-links">
+    <a class="ext-link" href="https://www.chantiers-atlantique.com" target="_blank" rel="noopener noreferrer">🌐 Site oficial</a>
+    <a class="ext-link" href="https://en.wikipedia.org/wiki/Chantiers_de_l%27Atlantique" target="_blank" rel="noopener noreferrer">📖 Wikipedia</a>
+  </div>
+
+  <footer>🔱 Poseidon Cruzeiros &nbsp;·&nbsp; Feito com amor para os apaixonados por navios</footer>
+
+</div>
+</body>
+</html>

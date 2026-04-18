@@ -141,6 +141,8 @@
     backdrop-filter: blur(6px);
   }
   .ship-card.flagship { border-color: rgba(240,192,64,0.3); background: rgba(240,192,64,0.04); opacity: 0.9; }
+  .ship-card[href] { cursor: pointer; opacity: 1; transition: background 0.2s, border-color 0.2s, transform 0.15s; }
+  .ship-card[href]:hover { background: rgba(255,255,255,0.1); border-color: rgba(201,146,42,0.42); transform: translateY(-2px); }
 
   .ship-icon { font-size: 1.8rem; line-height: 1; }
   .ship-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.2; }
@@ -153,6 +155,7 @@
   .ship-tag { font-size: 0.65rem; font-weight: 500; padding: 2px 7px; border-radius: 999px; }
   .tag-flagship       { background: rgba(240,192,64,0.18); color: #fce08a; border: 1px solid rgba(240,192,64,0.34); }
   .tag-new            { background: rgba(33,150,196,0.18); color: #90d4f0; border: 1px solid rgba(33,150,196,0.34); }
+  .tag-class-global   { background: rgba(192,25,51,0.18); color: #ffb3c0; border: 1px solid rgba(192,25,51,0.34); }
   .tag-class-triton   { background: rgba(201,146,42,0.18); color: #f0c87a; border: 1px solid rgba(201,146,42,0.34); }
   .tag-class-dream    { background: rgba(93,173,226,0.17); color: #b8dcf5; border: 1px solid rgba(93,173,226,0.32); }
   .tag-class-magic    { background: rgba(155,89,182,0.17); color: #ddb8ef; border: 1px solid rgba(155,89,182,0.32); }
@@ -218,12 +221,12 @@
     <div class="company-info">
       <div class="company-name">Disney Cruise Line</div>
       <p class="company-desc">
-        Fundada em 1995 pela The Walt Disney Company, a Disney Cruise Line é famosa por criar experiências mágicas para toda a família. Com navios que mesclam a nostalgia dos transatlânticos clássicos com entretenimento Disney moderno, oferece shows da Broadway, personagens icônicos, spas exclusivos e a ilha particular Castaway Cay nas Bahamas. O Disney Wish (2022) é o navio mais moderno, o primeiro da nova geração Triton.
+        Fundada em 1995 pela The Walt Disney Company, a Disney Cruise Line é famosa por criar experiências mágicas para toda a família. Com navios que mesclam a nostalgia dos transatlânticos clássicos com entretenimento Disney moderno, oferece shows da Broadway, personagens icônicos, spas exclusivos e a ilha particular Castaway Cay nas Bahamas. O Disney Adventure (2026) é o maior navio da frota, enquanto Disney Destiny, Treasure e Wish representam a nova geração Wish/Triton.
       </p>
       <div class="company-stats">
         <div class="stat"><span class="stat-value">1995</span><span class="stat-label">Fundação</span></div>
         <div class="stat"><span class="stat-value">Celebration</span><span class="stat-label">Sede</span></div>
-        <div class="stat"><span class="stat-value">7</span><span class="stat-label">Navios ativos</span></div>
+        <div class="stat"><span class="stat-value">8</span><span class="stat-label">Navios ativos</span></div>
         <div class="stat"><span class="stat-value">Disney</span><span class="stat-label">Grupo</span></div>
       </div>
     </div>
@@ -241,113 +244,149 @@
 
   <div class="ships-grid">
 
+    <!-- Disney Adventure -->
+    <a class="ship-card flagship" href="disney-adventure/">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Disney Adventure</div>
+      <div class="ship-year">Em serviço desde 2026</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">208.000 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">6.700</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">342 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Maior da frota</span>
+        <span class="ship-tag tag-new">Classe Global</span>
+        <span class="ship-tag tag-family">Família</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
+
+    <!-- Disney Destiny -->
+    <a class="ship-card" href="disney-destiny/">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Disney Destiny</div>
+      <div class="ship-year">Em serviço desde 2025</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">144.000 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.466</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">341 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-class-triton">Classe Wish</span>
+        <span class="ship-tag tag-family">Família</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
+
     <!-- Disney Treasure -->
-    <div class="ship-card flagship">
+    <a class="ship-card" href="disney-treasure/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Disney Treasure</div>
       <div class="ship-year">Em serviço desde 2024</div>
       <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">144.000 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.000</span></div>
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">144.256 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.466</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">341 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-flagship">Mais novo</span>
-        <span class="ship-tag tag-class-triton">Classe Triton</span>
-        <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-new">Aventura</span>
+        <span class="ship-tag tag-class-triton">Classe Wish</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Disney Wish -->
-    <div class="ship-card">
+    <a class="ship-card" href="disney-wish/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Disney Wish</div>
       <div class="ship-year">Em serviço desde 2022</div>
       <div class="ship-specs">
         <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">144.000 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">4.000</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.466</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">341 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-class-triton">Classe Triton</span>
-        <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-class-triton">Classe Wish</span>
+        <span class="ship-tag tag-class-triton">Classe Wish</span>
         <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Disney Fantasy -->
-    <div class="ship-card">
+    <a class="ship-card" href="disney-fantasy/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Disney Fantasy</div>
       <div class="ship-year">Em serviço desde 2012</div>
       <div class="ship-specs">
         <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">129.750 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.500</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.500</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">340 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-class-dream">Classe Dream</span>
         <span class="ship-tag tag-aquaduck">AquaDuck</span>
-        <span class="ship-tag tag-caribbean">Caribe</span>
+        <span class="ship-tag tag-class-dream">Classe Dream</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Disney Dream -->
-    <div class="ship-card">
+    <a class="ship-card" href="disney-dream/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Disney Dream</div>
       <div class="ship-year">Em serviço desde 2011</div>
       <div class="ship-specs">
         <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">129.690 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.500</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.500</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">340 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-class-dream">Classe Dream</span>
         <span class="ship-tag tag-aquaduck">AquaDuck</span>
-        <span class="ship-tag tag-broadway">Shows</span>
+        <span class="ship-tag tag-class-dream">Classe Dream</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Disney Wonder -->
-    <div class="ship-card">
+    <a class="ship-card" href="disney-wonder/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Disney Wonder</div>
       <div class="ship-year">Em serviço desde 1999</div>
       <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">83.338 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">1.754</span></div>
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">84.130 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.456</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-class-magic">Classe Magic</span>
-        <span class="ship-tag tag-classic">Clássico</span>
         <span class="ship-tag tag-alaska">Alaska</span>
+        <span class="ship-tag tag-class-magic">Classe Magic</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Disney Magic -->
-    <div class="ship-card">
+    <a class="ship-card" href="disney-magic/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Disney Magic</div>
       <div class="ship-year">Em serviço desde 1998</div>
       <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">83.338 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">1.754</span></div>
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">83.969 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.456</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-class-magic">Classe Magic</span>
         <span class="ship-tag tag-classic">Clássico</span>
-        <span class="ship-tag tag-caribbean">Caribe</span>
+        <span class="ship-tag tag-class-magic">Classe Magic</span>
+        <span class="ship-tag tag-family">Família</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 

@@ -4,18 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cunard — Poseidon Cruzeiros</title>
-<meta name="description" content="Cunard: a mais icônica companhia de cruzeiros do mundo, fundada em 1839. Frota com Queen Mary 2, Queen Anne e Queen Victoria — transatlânticos de luxo e tradição britânica." />
+<meta name="description" content="Cunard: a mais icônica companhia de cruzeiros do mundo, fundada em 1839. Frota com Queen Mary 2, Queen Anne, Queen Elizabeth e Queen Victoria — transatlânticos de luxo e tradição britânica." />
 <meta name="robots" content="index, follow" />
 <meta name="google-site-verification" content="a0k77jwX88nKmR_i7Ej8dsRo-HoADTNv_1BIwHd4c3w" />
 <link rel="canonical" href="https://poseidon-cruzeiros.github.io/companhias/cunard/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Poseidon Cruzeiros" />
 <meta property="og:title" content="Cunard — Poseidon Cruzeiros" />
-<meta property="og:description" content="Cunard: a mais icônica companhia de cruzeiros do mundo, fundada em 1839. Queen Mary 2, Queen Anne e Queen Victoria — luxo e tradição britânica." />
+<meta property="og:description" content="Cunard: a mais icônica companhia de cruzeiros do mundo, fundada em 1839. Queen Mary 2, Queen Anne, Queen Elizabeth e Queen Victoria — luxo e tradição britânica." />
 <meta property="og:url" content="https://poseidon-cruzeiros.github.io/companhias/cunard/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Cunard — Poseidon Cruzeiros" />
-<meta name="twitter:description" content="Cunard: fundada em 1839, com Queen Mary 2, Queen Anne e Queen Victoria." />
+<meta name="twitter:description" content="Cunard: fundada em 1839, com Queen Mary 2, Queen Anne, Queen Elizabeth e Queen Victoria." />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../../shared/header.css" />
 <script src="../../shared/header.js" defer></script>
@@ -140,6 +140,8 @@
     backdrop-filter: blur(6px);
   }
   .ship-card.flagship { border-color: rgba(200,169,81,0.4); background: rgba(200,169,81,0.05); opacity: 0.95; }
+  .ship-card[href] { cursor: pointer; opacity: 1; transition: background 0.2s, border-color 0.2s, transform 0.15s; }
+  .ship-card[href]:hover { background: rgba(255,255,255,0.1); border-color: rgba(200,169,81,0.42); transform: translateY(-2px); }
 
   .ship-icon { font-size: 1.8rem; line-height: 1; }
   .ship-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.2; }
@@ -226,12 +228,12 @@
     <div class="company-info">
       <div class="company-name">Cunard</div>
       <p class="company-desc">
-        Fundada em 1839 em Liverpool pelo canadense Samuel Cunard, a Cunard é a companhia de navegação mais antiga e icônica do mundo. Pioneira no transporte transatlântico regular, a linha operou lendas como RMS Titanic-rival Mauretania, Queen Mary e QE2. Hoje parte da Carnival Corporation, mantém a tradição britânica de elegância com 3 navios — destacando-se a Queen Mary 2, a única verdadeira transatlântica em operação comercial regular, fazendo a travessia Nova York–Southampton.
+        Fundada em 1839 em Liverpool pelo canadense Samuel Cunard, a Cunard é a companhia de navegação mais antiga e icônica do mundo. Pioneira no transporte transatlântico regular, a linha operou lendas como RMS Titanic-rival Mauretania, Queen Mary e QE2. Hoje parte da Carnival Corporation, mantém a tradição britânica de elegância com 4 navios — destacando-se a Queen Mary 2, a única verdadeira transatlântica em operação comercial regular, fazendo a travessia Nova York–Southampton.
       </p>
       <div class="company-stats">
         <div class="stat"><span class="stat-value">1839</span><span class="stat-label">Fundação</span></div>
         <div class="stat"><span class="stat-value">Southampton</span><span class="stat-label">Sede</span></div>
-        <div class="stat"><span class="stat-value">3</span><span class="stat-label">Navios ativos</span></div>
+        <div class="stat"><span class="stat-value">4</span><span class="stat-label">Navios ativos</span></div>
         <div class="stat"><span class="stat-value">CCL</span><span class="stat-label">Grupo</span></div>
       </div>
     </div>
@@ -250,58 +252,76 @@
   <div class="ships-grid">
 
     <!-- Queen Anne -->
-    <div class="ship-card flagship">
+    <a class="ship-card flagship" href="queen-anne/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Queen Anne</div>
       <div class="ship-year">Em serviço desde 2024</div>
       <div class="ship-specs">
-        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">113.000 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.000</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">322 m</span></div>
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">114.188 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">3.353</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">323 m</span></div>
       </div>
       <div class="ship-tags">
-        <span class="ship-tag tag-flagship">Mais novo</span>
+        <span class="ship-tag tag-class-queen-anne">Mais novo</span>
         <span class="ship-tag tag-class-queen-anne">Classe Queen Anne</span>
-        <span class="ship-tag tag-new">Novo</span>
+        <span class="ship-tag tag-grill">Grill Suites</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Queen Mary 2 -->
-    <div class="ship-card flagship">
+    <a class="ship-card flagship" href="queen-mary-2/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Queen Mary 2</div>
       <div class="ship-year">Em serviço desde 2004</div>
       <div class="ship-specs">
         <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">149.215 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.691</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.695</span></div>
         <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">345 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class-ocean-liner">Carro-chefe</span>
         <span class="ship-tag tag-class-ocean-liner">Ocean Liner</span>
         <span class="ship-tag tag-transatlantic">Transatlântica</span>
-        <span class="ship-tag tag-flagship">Carro-chefe</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
+
+    <!-- Queen Elizabeth -->
+    <a class="ship-card" href="queen-elizabeth/">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Queen Elizabeth</div>
+      <div class="ship-year">Em serviço desde 2010</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">90.901 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.503</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">293 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-class-vista">Elegância clássica</span>
+        <span class="ship-tag tag-class-vista">Classe Vista</span>
+        <span class="ship-tag tag-grill">Grill Suites</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
     <!-- Queen Victoria -->
-    <div class="ship-card">
+    <a class="ship-card" href="queen-victoria/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Queen Victoria</div>
       <div class="ship-year">Em serviço desde 2007</div>
       <div class="ship-specs">
         <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">90.049 GT</span></div>
-        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.014</span></div>
-        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">294 m</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">2.489</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">293 m</span></div>
       </div>
       <div class="ship-tags">
+        <span class="ship-tag tag-class-vista">Grill Suites</span>
         <span class="ship-tag tag-class-vista">Classe Vista</span>
         <span class="ship-tag tag-grill">Grill Suites</span>
-        <span class="ship-tag tag-elegance">Elegância clássica</span>
       </div>
-      <div class="ship-card-footer"><span class="ship-soon-hint">Página em construção</span></div>
-    </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Ver ficha completa</span></div>
+    </a>
 
   </div>
 

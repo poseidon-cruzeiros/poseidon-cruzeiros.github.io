@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://poseidon-cruzeiros.github.io/sitemap.xml
+Sitemap: https://poseidoncruzeiros.com.br/sitemap.xml

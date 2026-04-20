@@ -20,6 +20,18 @@
 
   :root { --nav-height: 60px; }
 
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   html, body {
     height: 100%;
     overflow: hidden;
@@ -38,6 +50,7 @@
 <body>
 
 <div id="site-header"></div>
+<h1 class="sr-only">Atlas Marítimo</h1>
 
 <iframe
   id="atlas-frame"

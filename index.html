@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
@@ -150,10 +150,21 @@
     border-color: var(--card-border);
     transform: none;
   }
-  .company-card__emoji {
-    font-size: 2.2rem;
-    line-height: 1;
+  .company-card__logo {
+    width: 2.2rem;
+    height: 2.2rem;
     flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,0.92);
+    border-radius: 8px;
+    padding: 5px;
+  }
+  .company-card__logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
   }
   .company-card__info {
     display: flex;
@@ -444,7 +455,7 @@
   <div class="section-label">🚢 Companhias</div>
   <div class="company-cards">
     <a class="company-card" href="./companhias/costa-cruzeiros/">
-      <span class="company-card__emoji">🇮🇹</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/costa-cruzeiros.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Costa Cruzeiros</span>
         <span class="company-card__ships">12 navios · Mediterrâneo, Caribe e mais</span>
@@ -452,7 +463,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/msc-cruzeiros/">
-      <span class="company-card__emoji">🌊</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/msc-cruzeiros.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">MSC Cruzeiros</span>
         <span class="company-card__ships">23 navios · World America, Euribia e mais</span>
@@ -460,7 +471,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/royal-caribbean/">
-      <span class="company-card__emoji">👑</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/royal-caribbean.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Royal Caribbean</span>
         <span class="company-card__ships">29 navios · Star, Icon, Utopia e mais</span>
@@ -468,7 +479,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/norwegian-cruise-line/">
-      <span class="company-card__emoji">🇳🇴</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/norwegian-cruise-line.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Norwegian Cruise Line</span>
         <span class="company-card__ships">21 navios · Luna, Aqua, Viva e mais</span>
@@ -476,7 +487,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/carnival-cruise-line/">
-      <span class="company-card__emoji">🎉</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/carnival-cruise-line.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Carnival Cruise Line</span>
         <span class="company-card__ships">29 navios · Mardi Gras, Jubilee e mais</span>
@@ -484,7 +495,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/celebrity-cruises/">
-      <span class="company-card__emoji">⭐</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/celebrity-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Celebrity Cruises</span>
         <span class="company-card__ships">15 navios · Xcel, Ascent e mais</span>
@@ -492,7 +503,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/princess-cruises/">
-      <span class="company-card__emoji">👑</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/princess-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Princess Cruises</span>
         <span class="company-card__ships">Sun Princess, Royal Princess e mais</span>
@@ -500,7 +511,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/holland-america-line/">
-      <span class="company-card__emoji">🌷</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/holland-america-line.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Holland America Line</span>
         <span class="company-card__ships">Rotterdam, Koningsdam e mais</span>
@@ -508,7 +519,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/disney-cruise-line/">
-      <span class="company-card__emoji">🏰</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/disney-cruise-line.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Disney Cruise Line</span>
         <span class="company-card__ships">Wish, Treasure, Dream e mais</span>
@@ -516,7 +527,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/cunard/">
-      <span class="company-card__emoji">⚓</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/cunard.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Cunard</span>
         <span class="company-card__ships">Queen Mary 2, Queen Anne e mais</span>
@@ -524,7 +535,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/virgin-voyages/">
-      <span class="company-card__emoji">🚢</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/virgin-voyages.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Virgin Voyages</span>
         <span class="company-card__ships">4 navios · Brilliant, Resilient e mais</span>
@@ -532,7 +543,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/oceania-cruises/">
-      <span class="company-card__emoji">🍽️</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/oceania-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Oceania Cruises</span>
         <span class="company-card__ships">8 navios · Allura, Vista e mais</span>
@@ -540,7 +551,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/aida-cruises/">
-      <span class="company-card__emoji">🇩🇪</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/aida-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">AIDA Cruises</span>
         <span class="company-card__ships">11 navios · Cosma, Nova e mais</span>
@@ -548,7 +559,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/p-and-o-cruises/">
-      <span class="company-card__emoji">🇬🇧</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/p-and-o-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">P&amp;O Cruises</span>
         <span class="company-card__ships">7 navios · Arvia, Iona e mais</span>
@@ -556,7 +567,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/tui-cruises/">
-      <span class="company-card__emoji">⚓</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/tui-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">TUI Cruises</span>
         <span class="company-card__ships">8 ativos + Flow · Relax, Mein Schiff 7 e mais</span>
@@ -564,7 +575,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/regent-seven-seas-cruises/">
-      <span class="company-card__emoji">💎</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/regent-seven-seas-cruises.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Regent Seven Seas Cruises</span>
         <span class="company-card__ships">6 ativos + Prestige · Grandeur e mais</span>
@@ -572,7 +583,7 @@
       </div>
     </a>
     <a class="company-card" href="./companhias/seabourn/">
-      <span class="company-card__emoji">🧭</span>
+      <span class="company-card__logo"><img src="./shared/company-logos/seabourn.png" alt="" loading="lazy"></span>
       <div class="company-card__info">
         <span class="company-card__name">Seabourn</span>
         <span class="company-card__ships">6 navios · Pursuit, Venture e mais</span>

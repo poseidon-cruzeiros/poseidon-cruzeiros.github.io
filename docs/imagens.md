@@ -244,6 +244,12 @@ Padrao recomendado:
 - quando houver 1 imagem principal, o credito pode ficar logo abaixo da imagem
 - quando houver varias imagens na pagina, preferir uma secao final chamada `Creditos das imagens`
 
+Para a legenda publica visivel ao leitor:
+- ela deve descrever a imagem de forma editorial e natural
+- evitar observacoes internas de implementacao ou layout
+- preferir formato simples como `Nome do navio, local e data quando relevante`
+- manter o credito e a licenca em trecho separado da legenda principal
+
 Evitar:
 - poluir o layout com creditos longos em excesso no meio do conteudo
 

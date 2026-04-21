@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Historia dos Cruzeiros — De transporte a resort flutuante — Poseidon Cruzeiros</title>
+<meta name="description" content="Entenda a historia dos cruzeiros: como nasceram, quando eram transporte, quando o luxo entrou em cena e em que momento o navio virou destino de ferias em si." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/curiosidades/historia-dos-cruzeiros/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Historia dos Cruzeiros — De transporte a resort flutuante" />
+<meta property="og:description" content="Do transporte regular dos ocean liners aos megaresorts modernos: uma linha do tempo completa da evolucao dos cruzeiros." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/curiosidades/historia-dos-cruzeiros/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Historia dos Cruzeiros — De transporte a resort flutuante" />
+<meta name="twitter:description" content="Como os cruzeiros deixaram de ser transporte e passaram a vender ferias, entretenimento e o navio como destino." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c;
+    --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be;
+    --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px;
+    --radius-sm:8px; --nav-height:60px; --heritage:#d8a4b8; --mist:#dbeaff;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white);
+    min-height:100vh; overflow-x:hidden;
+  }
+  body::before {
+    content:''; position:fixed; inset:0; z-index:0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.28) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 82% 100%, rgba(240,192,64,0.14) 0%, transparent 60%),
+      radial-gradient(ellipse 45% 30% at 12% 88%, rgba(216,164,184,0.12) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events:none;
+  }
+  .waves-bg { position: fixed; bottom: 0; left: 0; right: 0; z-index: 0; height: 200px; overflow: hidden; pointer-events: none; }
+  .waves-bg svg { width: 100%; height: 100%; }
+  .page { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; padding: 0 1.25rem 5rem; }
+  .breadcrumb { display:flex; align-items:center; gap:6px; font-size:0.78rem; color:var(--text-muted); padding:1.2rem 0 0; flex-wrap:wrap; }
+  .breadcrumb a { color:var(--text-muted); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--teal-light); }
+  .breadcrumb-sep { opacity:0.4; }
+  .breadcrumb-current { color:rgba(255,255,255,0.75); }
+  .hero { padding:2rem 0 1.5rem; border-bottom:1px solid rgba(255,255,255,0.07); }
+  .hero-top { display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; }
+  .hero-label { font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.45rem; }
+  .hero-name {
+    font-family:'Playfair Display',serif; font-size:clamp(2rem,6vw,3.35rem); font-weight:700;
+    letter-spacing:-1px; line-height:1.08; margin-bottom:0.75rem;
+    background:linear-gradient(135deg,#fff 25%,var(--mist) 60%,#fce7a7 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .hero-subtitle { font-size:0.94rem; color:var(--text-muted); line-height:1.78; max-width:660px; }
+  .hero-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .action-btn {
+    display:inline-flex; align-items:center; gap:6px; padding:0.5rem 1rem; border-radius:999px;
+    font-size:0.82rem; font-weight:500; text-decoration:none; transition:all 0.2s;
+  }
+  .action-btn-primary { background:var(--gold); color:#081624; }
+  .action-btn-primary:hover { background:#f8d877; }
+  .action-btn-outline { background:transparent; color:rgba(255,255,255,0.78); border:1px solid rgba(255,255,255,0.2); }
+  .action-btn-outline:hover { background:rgba(255,255,255,0.08); color:var(--white); }
+  .stats-bar {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px;
+    background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.07);
+    border-radius:var(--radius); overflow:hidden; margin:1.5rem 0;
+  }
+  .stat-item { background:rgba(255,255,255,0.03); padding:1rem 1.05rem; display:flex; flex-direction:column; gap:4px; }
+  .stat-val { font-size:1.08rem; font-weight:600; color:var(--white); line-height:1; }
+  .stat-lbl { font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; }
+  .section-tabs { display:flex; gap:4px; margin:0.55rem 0 2rem; border-bottom:1px solid rgba(255,255,255,0.08); overflow-x:auto; }
+  .section-tab {
+    display:inline-flex; align-items:center; gap:5px; padding:0.55rem 1rem; font-size:0.82rem; font-weight:500;
+    color:var(--text-muted); text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap; margin-bottom:-1px;
+  }
+  .section-tab:hover { color:var(--white); }
+  .section-tab.active { color:var(--gold); border-bottom-color:var(--gold); }
+  .section-label {
+    display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--gold); margin:2.6rem 0 1.2rem; scroll-margin-top:calc(var(--nav-height) + 16px);
+  }
+  .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right, rgba(240,192,64,0.4), transparent); }
+  .story-text { font-size:0.93rem; line-height:1.88; color:rgba(255,255,255,0.82); display:flex; flex-direction:column; gap:1rem; max-width:820px; }
+  .story-highlight {
+    background:rgba(240,192,64,0.08); border-left:3px solid var(--gold); border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+    padding:0.95rem 1.1rem; font-size:0.9rem; color:rgba(255,255,255,0.86); font-style:italic;
+  }
+  .timeline-grid, .cards-grid, .sources-grid {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px;
+  }
+  .timeline-card, .fact-card, .source-card {
+    background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius);
+    padding:1rem 1.05rem; display:flex; flex-direction:column; gap:0.55rem;
+  }
+  .timeline-card:hover, .source-card:hover { background:rgba(255,255,255,0.08); border-color:rgba(240,192,64,0.28); }
+  .source-card { text-decoration:none; color:inherit; transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .source-card:hover { transform:translateY(-2px); }
+  .timeline-year { font-size:0.74rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#fce08a; }
+  .timeline-card h3, .fact-card h3, .source-card h3 { font-size:0.94rem; color:var(--white); line-height:1.35; }
+  .timeline-card p, .fact-card p, .source-card p { font-size:0.8rem; line-height:1.68; color:var(--text-muted); }
+  .fact-card-accent { border-color:rgba(26,188,156,0.24); background:linear-gradient(135deg, rgba(26,188,156,0.12), rgba(255,255,255,0.04)); }
+  .fact-card-gold { border-color:rgba(240,192,64,0.24); background:linear-gradient(135deg, rgba(240,192,64,0.1), rgba(255,255,255,0.04)); }
+  .split-grid { display:grid; grid-template-columns:1.2fr 0.8fr; gap:16px; align-items:start; }
+  .bullet-panel {
+    background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1rem 1.1rem;
+  }
+  .bullet-panel h3 { font-size:0.95rem; margin-bottom:0.85rem; color:var(--white); }
+  .bullet-panel ul { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
+  .bullet-panel li { font-size:0.82rem; line-height:1.65; color:var(--text-muted); padding-left:1rem; position:relative; }
+  .bullet-panel li::before { content:'•'; position:absolute; left:0; color:var(--gold); }
+  .sources-note { margin-top:0.85rem; font-size:0.74rem; line-height:1.65; color:rgba(255,255,255,0.45); }
+  .sources-note a { color:#fce08a; }
+  footer { text-align:center; padding:3rem 1rem 1rem; font-size:0.78rem; color:rgba(255,255,255,0.25); letter-spacing:0.04em; }
+  @media (max-width: 860px) { .split-grid { grid-template-columns:1fr; } }
+  @media (max-width: 700px) {
+    .hero-top { flex-direction:column; }
+    .stats-bar { grid-template-columns:repeat(2,1fr); }
+    .timeline-grid, .cards-grid, .sources-grid { grid-template-columns:1fr; }
+    .section-tab { padding:0.5rem 0.7rem; font-size:0.78rem; }
+  }
+</style>
+</head>
+<body>
+<div class="waves-bg"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0c040" stop-opacity="0.08"/><stop offset="100%" stop-color="#f0c040" stop-opacity="0"/></linearGradient></defs><path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"><animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/></path></svg></div>
+<div id="site-header"></div>
+
+<div class="page">
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a><span class="breadcrumb-sep">›</span>
+    <a href="/curiosidades/">Curiosidades</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Historia dos cruzeiros</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-top">
+      <div>
+        <div class="hero-label">Especial historico • Linha do tempo</div>
+        <h1 class="hero-name">Historia dos Cruzeiros</h1>
+        <p class="hero-subtitle">A industria de cruzeiros nao nasceu como ferias em alto-mar. Ela surgiu no universo dos navios de linha, do correio e do transporte transatlantico, incorporou o luxo aos poucos e so mais tarde transformou o proprio navio em destino. Este artigo conta essa virada inteira.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="action-btn action-btn-primary" href="/curiosidades/">⚓ Ver hub</a>
+        <a class="action-btn action-btn-outline" href="/curiosidades/titanic/">🚢 Ler especial do Titanic</a>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item"><span class="stat-val">1844</span><span class="stat-lbl">Primeiros bilhetes de lazer</span></div>
+      <div class="stat-item"><span class="stat-val">1900</span><span class="stat-lbl">1º navio feito para cruzeiro</span></div>
+      <div class="stat-item"><span class="stat-val">1960–70</span><span class="stat-lbl">Virada para ferias</span></div>
+      <div class="stat-item"><span class="stat-val">1987</span><span class="stat-lbl">Era do megaship</span></div>
+    </div>
+  </div>
+
+  <div class="section-tabs">
+    <a class="section-tab active" href="#sec-comeco">🧭 Como comecou</a>
+    <a class="section-tab" href="#sec-luxo">✨ Quando o luxo entrou</a>
+    <a class="section-tab" href="#sec-ferias">🌴 Quando virou ferias</a>
+    <a class="section-tab" href="#sec-destino">🏝️ Navio como destino</a>
+    <a class="section-tab" href="#sec-entusiastas">🔎 Curiosidades</a>
+    <a class="section-tab" href="#sec-fontes">🔗 Fontes</a>
+  </div>
+
+  <div class="section-label" id="sec-comeco">🧭 Como os cruzeiros comecaram</div>
+  <div class="story-text">
+    <p>No inicio, viajar de navio era uma necessidade. Os grandes navios de linha, os chamados <em>ocean liners</em>, operavam em rotas regulares para levar correio, carga e passageiros entre portos marcados em calendario. A palavra-chave era transporte, nao turismo.</p>
+    <p>Companhias como a Cunard, desde 1840, consolidaram esse modelo de servico regular no Atlantico Norte. O passageiro embarcava para chegar a outro continente, especialmente numa era em que ainda nao existia aviacao comercial de massa.</p>
+    <p>Ao mesmo tempo, o embrião do cruzeiro de lazer comecou a aparecer quando empresas perceberam que navios ociosos em certas temporadas poderiam ser vendidos como experiencia. Segundo a Britannica, os primeiros bilhetes de lazer da P&amp;O foram vendidos em 1844 para uma viagem de Londres ao Mediterraneo. Ou seja: a ideia de navegar “por prazer” nasceu dentro de uma industria ainda focada em transporte.</p>
+    <div class="story-highlight">Em resumo: o cruzeiro nasceu dentro do mundo do transporte maritimo regular. Primeiro vieram os liners; depois, quase como um desdobramento comercial, surgiu a viagem vendida pelo prazer da travessia.</div>
+  </div>
+
+  <div class="section-label">📜 Linha do tempo essencial</div>
+  <div class="timeline-grid">
+    <div class="timeline-card">
+      <div class="timeline-year">1840</div>
+      <h3>Cunard e o modelo de linha regular</h3>
+      <p>Os liners passam a operar com horario, rota e funcao de transporte definidos. O mar e, acima de tudo, infraestrutura.</p>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">1844</div>
+      <h3>P&amp;O vende os primeiros bilhetes de lazer</h3>
+      <p>Uma viagem pelo Mediterraneo mostra que o navio tambem podia ser experiencia, nao apenas deslocamento.</p>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">1900</div>
+      <h3>Prinzessin Victoria Luise</h3>
+      <p>Considerado o primeiro navio construido especificamente para cruzeiros de lazer, com foco total em passageiros de alto padrao.</p>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">1960–70</div>
+      <h3>Aviacao muda o jogo</h3>
+      <p>Com o aviao tomando o papel do transporte transatlantico, as empresas maritimas precisam reinventar o negocio como ferias.</p>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">1980s</div>
+      <h3>Popularizacao de massa</h3>
+      <p>Programas como <em>The Love Boat</em> e navios maiores ajudam a vender o cruzeiro como sonho acessivel.</p>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">1987+</div>
+      <h3>Megaships e resort flutuante</h3>
+      <p>Com o Sovereign of the Seas, a experiencia a bordo se torna o centro do produto.</p>
+    </div>
+  </div>
+
+  <div class="section-label" id="sec-luxo">✨ Quando a ideia de luxo entrou em cena</div>
+  <div class="split-grid">
+    <div class="story-text" style="max-width:none;">
+      <p>O luxo entrou antes mesmo do cruzeiro moderno. Nos grandes liners do fim do seculo XIX e inicio do XX, as companhias perceberam que a competicao por passageiros ricos passava por cabine melhor, gastronomia, saloes elegantes e uma experiencia que lembrasse um grande hotel europeu.</p>
+      <p>Foi nessa fase que surgiram os liners mais iconicos, incluindo os da Cunard, White Star Line e outras companhias transatlanticas. Neles, o luxo ainda era acoplado ao transporte. O navio precisava levar gente de um continente a outro, mas fazia isso com crescente sofisticacao para atrair a elite.</p>
+      <p>A grande virada conceitual veio quando Albert Ballin, da Hamburg-America Line, ajudou a empurrar a ideia de navio pensado para passeio. A Britannica destaca o <em>Prinzessin Victoria Luise</em>, lancado em 1900, como o primeiro navio construido exclusivamente para cruzeiro de lazer. Ali, o luxo deixou de ser “beneficio do transporte” e virou o proprio produto.</p>
+    </div>
+    <div class="bullet-panel">
+      <h3>O que marcava esse luxo inicial</h3>
+      <ul>
+        <li>Grandes salas de jantar e saloes sociais inspirados em hoteis e palacios europeus.</li>
+        <li>Cabines mais amplas, promenades, bibliotecas, fumoirs e servico refinado.</li>
+        <li>Separacao clara por classes, com a primeira classe concentrando o glamour.</li>
+        <li>Arquitetura interna usada como propaganda de prestigio nacional e empresarial.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-label" id="sec-ferias">🌴 Quando o foco passou a ser ferias</div>
+  <div class="story-text">
+    <p>Durante muito tempo, mesmo com elementos de luxo, o navio ainda era principalmente um meio de chegar a algum lugar. Isso so mudou de verdade no pos-guerra e, sobretudo, a partir da expansao da aviacao comercial nas decadas de 1950 e 1960.</p>
+    <p>Quando voar cruzando o Atlantico ficou mais rapido e mais viavel, os ocean liners perderam sua funcao central de transporte de massa. Foi nesse momento que a industria maritima precisou se reinventar: se o aviao ganhava na velocidade, o navio precisaria vencer na experiencia.</p>
+    <div class="story-highlight">A partir dos anos 1960 e 1970, o cruzeiro deixa de ser uma alternativa lenta ao aviao e passa a ser vendido como ferias organizadas, com lazer, comida, entretenimento e varias escalas em uma unica viagem.</div>
+    <p>Segundo a Britannica, empresas que hoje definem o setor nasceram justamente nesse novo ciclo: Princess Cruises em 1965, Norwegian Cruise Line em 1966, Royal Caribbean em 1968, MSC em 1970 e Carnival em 1972. Esse movimento mostra com clareza quando o produto deixa de ser “travessia” e passa a ser “vacation package”.</p>
+  </div>
+
+  <div class="section-label" id="sec-destino">🏝️ Quando o navio virou destino em si</div>
+  <div class="cards-grid">
+    <div class="fact-card fact-card-accent">
+      <h3>Primeiro passo: entretenimento forte</h3>
+      <p>Conforme o foco comercial mudou, os navios ganharam bares, shows, piscinas, cassinos e uma agenda que fazia o passageiro querer estar a bordo, nao apenas esperar o porto seguinte.</p>
+    </div>
+    <div class="fact-card fact-card-gold">
+      <h3>Segundo passo: produto para classe media</h3>
+      <p>Nas decadas de 1970 e 1980, o cruzeiro foi se tornando mais acessivel. O navio passou a ser vendido como uma forma pratica de tirar ferias com tudo concentrado em um unico lugar.</p>
+    </div>
+    <div class="fact-card">
+      <h3>Terceiro passo: cultura pop</h3>
+      <p><em>The Love Boat</em> ajudou a popularizar o imaginario romantico e divertido do cruzeiro nos anos 1980, aproximando o setor de um publico muito maior.</p>
+    </div>
+    <div class="fact-card fact-card-gold">
+      <h3>Quarto passo: megaships</h3>
+      <p>Com o <em>Sovereign of the Seas</em>, em 1987, a industria ganhou um modelo novo: o resort flutuante de grande escala, com varias opcoes de restaurantes, bares, piscinas, spa e entretenimento.</p>
+    </div>
+  </div>
+
+  <div class="story-text" style="margin-top:1rem;">
+    <p>Daí em diante, o navio deixa definitivamente de ser apenas um suporte logistico e passa a ser uma plataforma de experiencias. Em muitos itinerarios modernos, o proprio navio vende tanto quanto o destino: surf simulator, parque aquatico, bairro tematico, boulevard interno, gastronomia assinada, areas familia, areas adult-only e muito mais.</p>
+    <p>Esse e o ponto em que o setor passa a operar com uma logica muito proxima da hotelaria e do entretenimento. O porto continua importante, claro, mas a identidade do navio vira marca. O passageiro nao escolhe apenas “um roteiro”; escolhe “aquele navio”.</p>
+  </div>
+
+  <div class="section-label" id="sec-entusiastas">🔎 Pontos que deixam essa historia ainda mais interessante</div>
+  <div class="cards-grid">
+    <div class="fact-card">
+      <h3>Os cruzeiros nasceram dentro do inverno fraco dos liners</h3>
+      <p>Uma parte da ideia de vender viagens de lazer veio da necessidade de ocupar navios fora das temporadas mais fortes das rotas regulares.</p>
+    </div>
+    <div class="fact-card">
+      <h3>Luxo e transporte coexistiram por decadas</h3>
+      <p>Antes do cruzeiro moderno, o luxo nao eliminava a funcao pratica. Ele servia para tornar a travessia mais prestigiosa e desejada.</p>
+    </div>
+    <div class="fact-card">
+      <h3>Os liners e os cruzeiros nao sao exatamente a mesma coisa</h3>
+      <p>O liner e pensado para servico regular e mar aberto em rotas previsiveis; o cruzeiro moderno e desenhado para lazer, atmosfera social e vida a bordo.</p>
+    </div>
+    <div class="fact-card">
+      <h3>O turismo ganhou do transporte, nao o contrario</h3>
+      <p>O setor atual existe justamente porque o navio perdeu a batalha da velocidade para o aviao e venceu a batalha da experiencia.</p>
+    </div>
+    <div class="fact-card fact-card-accent">
+      <h3>O navio como destino e uma construcao relativamente recente</h3>
+      <p>Essa ideia se consolida de verdade do fim do seculo XX em diante, quando as companhias passam a investir em atracoes internas como diferencial principal.</p>
+    </div>
+    <div class="fact-card fact-card-gold">
+      <h3>Hoje existe um retorno parcial da nostalgia dos liners</h3>
+      <p>Algumas marcas ainda exploram simbolos classicos de travessia, gala, promenade e elegancia historica para conectar passado e presente.</p>
+    </div>
+  </div>
+
+  <div class="section-label">🧠 Sintese para o entusiasta</div>
+  <div class="story-text">
+    <p>Se a gente resumir tudo em uma frase, a historia dos cruzeiros e a historia de uma inversao de funcao: primeiro o navio existia para transportar pessoas e, de bonus, oferecia conforto; hoje ele existe para oferecer experiencia e, de bonus, tambem leva voce a varios destinos.</p>
+    <p>Essa mudanca nao aconteceu de uma vez. Ela passou pelos liners de linha regular, pela introducao gradual do luxo, pelos primeiros cruzeiros vendidos como passeio, pela criacao dos navios dedicados ao lazer, pela pressao da aviacao comercial e, por fim, pela consolidacao do resort flutuante.</p>
+  </div>
+
+  <div class="section-label" id="sec-fontes">🔗 Fontes e leituras</div>
+  <div class="sources-grid">
+    <a class="source-card" href="https://www.britannica.com/technology/ocean-liner" target="_blank" rel="noopener">
+      <h3>Britannica — Ocean liner</h3>
+      <p>Contexto dos navios de linha, servico regular, auge dos transatlanticos e queda com a ascensao do transporte aereo.</p>
+    </a>
+    <a class="source-card" href="https://www.britannica.com/technology/cruise-ship" target="_blank" rel="noopener">
+      <h3>Britannica — Cruise ship</h3>
+      <p>Origem dos cruzeiros de lazer, P&amp;O em 1844, primeiro navio dedicado ao cruzeiro e a virada moderna para o resort flutuante.</p>
+    </a>
+    <a class="source-card" href="https://www.britannica.com/technology/ship/Passenger-liners-in-the-20th-century" target="_blank" rel="noopener">
+      <h3>Britannica — Passenger liners in the 20th century</h3>
+      <p>Pano de fundo tecnico e competitivo dos grandes liners antes da transformacao do setor em turismo.</p>
+    </a>
+    <a class="source-card" href="https://www.pocruises.com/en-au/about-us" target="_blank" rel="noopener">
+      <h3>P&amp;O Cruises — Historia oficial</h3>
+      <p>Referencia direta para o marco de 1844, frequentemente citado como o primeiro cruzeiro de lazer comercializado.</p>
+    </a>
+    <a class="source-card" href="https://cruising.org/about-cruise-industry/history-cruise-industry" target="_blank" rel="noopener">
+      <h3>CLIA — History of the Cruise Industry</h3>
+      <p>Resumo institucional da passagem de transporte maritimo para ferias e lazer, util como apoio de linha do tempo.</p>
+    </a>
+  </div>
+  <p class="sources-note">Baseei a narrativa principalmente em Britannica e no historico oficial da P&amp;O. Onde uso interpretacao historica, ela esta explicitamente apresentada como sintese editorial, nao como citacao literal.</p>
+</div>
+
+<footer>© 2025 Poseidon Cruzeiros — Conteudo historico para fins de referencia. A cronologia aqui resume uma evolucao longa e multifacetada da navegacao de passageiros.</footer>
+<script>
+const tabs = document.querySelectorAll('.section-tab');
+const sections = ['sec-comeco','sec-luxo','sec-ferias','sec-destino','sec-entusiastas','sec-fontes'];
+window.addEventListener('scroll', () => {
+  let current = sections[0];
+  sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 100) current = id;
+  });
+  tabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>

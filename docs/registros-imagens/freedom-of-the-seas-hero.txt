@@ -1,4 +1,4 @@
-arquivo_local: assets/images/navios/freedom-of-the-seas/royal-caribbean-freedom-of-the-seas.jpg
+arquivo_local: assets/images/navios/royal-caribbean/freedom-of-the-seas/royal-caribbean-freedom-of-the-seas.jpg
 pagina_do_site: /companhias/royal-caribbean/freedom-of-the-seas/
 navio_ou_tema: Freedom of the Seas
 fonte: Wikimedia Commons

@@ -154,6 +154,10 @@ Motivo:
 
 ## Registro Obrigatorio de Cada Imagem
 
+Padrao recomendado para caminhos locais de imagens de navios:
+- `assets/images/navios/<companhia>/<navio>/<arquivo>`
+- exemplo: `assets/images/navios/royal-caribbean/freedom-of-the-seas/royal-caribbean-freedom-of-the-seas.jpg`
+
 Toda imagem nova usada no site deve ter um registro com estes campos:
 
 - `arquivo_local`
@@ -172,7 +176,7 @@ Toda imagem nova usada no site deve ter um registro com estes campos:
 ## Modelo de Registro
 
 ```txt
-arquivo_local: assets/images/navios/msc-world-america/hero.webp
+arquivo_local: assets/images/navios/msc-cruzeiros/msc-world-america/msc-world-america.webp
 pagina_do_site: /companhias/msc-cruzeiros/msc-world-america/
 navio_ou_tema: MSC World America
 fonte: Wikimedia Commons

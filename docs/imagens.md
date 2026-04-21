@@ -12,6 +12,18 @@ O objetivo e:
 
 So usar imagens com licenca clara e reaproveitamento permitido para uso no site.
 
+Quando o assunto da pagina for uma entidade real que normalmente deve ser representada por fotografia
+como navios, portos, companhias, destinos, terminais e pessoas:
+- preferir foto real
+- nao substituir foto real por ilustracao, renderizacao ou arte generativa so para "preencher" a pagina
+- se nao houver foto com licenca compativel, nao publicar uma falsa foto
+- nesses casos, ou deixar a pagina sem imagem, ou usar um placeholder claramente identificado como temporario, sem publicar como solucao final
+
+Ilustracoes so devem ser usadas quando:
+- a proposta editorial for claramente ilustrativa
+- o conteudo nao depender de fidelidade fotografica
+- ou a ilustracao estiver sinalizada como provisoria durante validacao interna
+
 Fontes preferenciais:
 - `CC0`
 - `Public Domain Mark`
@@ -260,4 +272,3 @@ Se houver duvida sobre a licenca, nao publicar a imagem ate confirmar.
 Quando houver incerteza:
 - preferir outra imagem
 - ou usar uma ilustracao propria temporaria
-

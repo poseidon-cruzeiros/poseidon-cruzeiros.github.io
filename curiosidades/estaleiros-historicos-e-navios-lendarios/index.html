@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estaleiros Históricos e Navios Lendários — Poseidon Cruzeiros</title>
+<meta name="description" content="Conheça estaleiros históricos que marcaram a navegação de passageiros e os navios lendários associados a cada um deles, do Titanic ao Queen Mary 2." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/curiosidades/estaleiros-historicos-e-navios-lendarios/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Estaleiros Históricos e Navios Lendários" />
+<meta property="og:description" content="Uma viagem pelos estaleiros que moldaram a história dos transatlânticos e dos navios de cruzeiro." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/curiosidades/estaleiros-historicos-e-navios-lendarios/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Estaleiros Históricos e Navios Lendários" />
+<meta name="twitter:description" content="Harland & Wolff, Chantiers de l’Atlantique, Fincantieri, Meyer Werft e os navios que fizeram sua fama." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c;
+    --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be;
+    --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px;
+    --radius-sm:8px; --nav-height:60px; --steel:#d8e7ff; --heritage:#d8a4b8;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+  body::before {
+    content:''; position:fixed; inset:0; z-index:0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.28) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 36% at 82% 100%, rgba(216,231,255,0.14) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events:none;
+  }
+  .waves-bg { position: fixed; bottom: 0; left: 0; right: 0; z-index: 0; height: 200px; overflow: hidden; pointer-events: none; }
+  .waves-bg svg { width: 100%; height: 100%; }
+  .page { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; padding: 0 1.25rem 5rem; }
+  .breadcrumb { display:flex; align-items:center; gap:6px; font-size:0.78rem; color:var(--text-muted); padding:1.2rem 0 0; flex-wrap:wrap; }
+  .breadcrumb a { color:var(--text-muted); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--steel); }
+  .hero { padding:2rem 0 1.5rem; border-bottom:1px solid rgba(255,255,255,0.07); }
+  .hero-top { display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; }
+  .hero-label { font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--steel); margin-bottom:0.45rem; }
+  .hero-name { font-family:'Playfair Display',serif; font-size:clamp(2rem,6vw,3.35rem); font-weight:700; letter-spacing:-1px; line-height:1.08; margin-bottom:0.75rem; background:linear-gradient(135deg,#fff 25%,var(--steel) 65%,#f3d9e5 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .hero-subtitle { font-size:0.94rem; color:var(--text-muted); line-height:1.78; max-width:670px; }
+  .hero-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .action-btn { display:inline-flex; align-items:center; gap:6px; padding:0.5rem 1rem; border-radius:999px; font-size:0.82rem; font-weight:500; text-decoration:none; transition:all 0.2s; }
+  .action-btn-primary { background:var(--steel); color:#081624; }
+  .action-btn-outline { background:transparent; color:rgba(255,255,255,0.78); border:1px solid rgba(255,255,255,0.2); }
+  .stats-bar { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius); overflow:hidden; margin:1.5rem 0; }
+  .stat-item { background:rgba(255,255,255,0.03); padding:1rem 1.05rem; display:flex; flex-direction:column; gap:4px; }
+  .stat-val { font-size:1.08rem; font-weight:600; color:var(--white); }
+  .stat-lbl { font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; }
+  .section-tabs { display:flex; gap:4px; margin:0.55rem 0 2rem; border-bottom:1px solid rgba(255,255,255,0.08); overflow-x:auto; }
+  .section-tab { display:inline-flex; align-items:center; gap:5px; padding:0.55rem 1rem; font-size:0.82rem; font-weight:500; color:var(--text-muted); text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap; margin-bottom:-1px; }
+  .section-tab.active { color:var(--steel); border-bottom-color:var(--steel); }
+  .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--steel); margin:2.6rem 0 1.2rem; scroll-margin-top:calc(var(--nav-height) + 16px); }
+  .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right, rgba(216,231,255,0.42), transparent); }
+  .story-text { font-size:0.93rem; line-height:1.88; color:rgba(255,255,255,0.82); display:flex; flex-direction:column; gap:1rem; max-width:860px; }
+  .story-highlight { background:rgba(216,231,255,0.08); border-left:3px solid var(--steel); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:0.95rem 1.1rem; font-size:0.9rem; color:rgba(255,255,255,0.86); font-style:italic; }
+  .yard-grid, .sources-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; }
+  .yard-card, .source-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1rem 1.05rem; display:flex; flex-direction:column; gap:0.55rem; }
+  .source-card { text-decoration:none; color:inherit; transition:background 0.2s,border-color 0.2s,transform 0.15s; }
+  .source-card:hover, .yard-card:hover { background:rgba(255,255,255,0.08); border-color:rgba(216,231,255,0.28); transform:translateY(-2px); }
+  .yard-card h3, .source-card h3 { font-size:0.96rem; color:var(--white); }
+  .yard-card p, .source-card p { font-size:0.81rem; line-height:1.68; color:var(--text-muted); }
+  .yard-meta { display:flex; flex-wrap:wrap; gap:0.45rem; }
+  .yard-chip { font-size:0.68rem; color:var(--steel); border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.05); border-radius:999px; padding:0.22rem 0.55rem; }
+  footer { text-align:center; padding:3rem 1rem 1rem; font-size:0.78rem; color:rgba(255,255,255,0.25); }
+  @media (max-width:700px) {
+    .hero-top { flex-direction:column; }
+    .stats-bar { grid-template-columns:repeat(2,1fr); }
+    .yard-grid, .sources-grid { grid-template-columns:1fr; }
+    .section-tab { padding:0.5rem 0.7rem; font-size:0.78rem; }
+  }
+</style>
+</head>
+<body>
+<div class="waves-bg"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d8e7ff" stop-opacity="0.08"/><stop offset="100%" stop-color="#d8e7ff" stop-opacity="0"/></linearGradient></defs><path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"><animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/></path></svg></div>
+<div id="site-header"></div>
+<div class="page">
+  <nav class="breadcrumb"><a href="/">Poseidon Cruzeiros</a><span>›</span><a href="/curiosidades/">Curiosidades</a><span>›</span><span>Estaleiros históricos e navios lendários</span></nav>
+  <div class="hero">
+    <div class="hero-top">
+      <div>
+        <div class="hero-label">Especial histórico • Construção naval</div>
+        <h1 class="hero-name">Estaleiros Históricos e Navios Lendários</h1>
+        <p class="hero-subtitle">Por trás dos navios mais lembrados da história quase sempre existe um estaleiro cuja assinatura técnica, estética ou industrial ajudou a moldar eras inteiras da navegação de passageiros.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="action-btn action-btn-primary" href="/curiosidades/">⚓ Ver hub</a>
+        <a class="action-btn action-btn-outline" href="/estaleiros/">🏗️ Ver seção de estaleiros</a>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item"><span class="stat-val">4</span><span class="stat-lbl">Estaleiros em foco</span></div>
+      <div class="stat-item"><span class="stat-val">1840+</span><span class="stat-lbl">Raízes industriais</span></div>
+      <div class="stat-item"><span class="stat-val">Liners + Cruise</span><span class="stat-lbl">Duas eras</span></div>
+      <div class="stat-item"><span class="stat-val">Titanic a Oasis</span><span class="stat-lbl">Amplitude histórica</span></div>
+    </div>
+  </div>
+
+  <div class="section-tabs">
+    <a class="section-tab active" href="#sec-visao">📖 Visão geral</a>
+    <a class="section-tab" href="#sec-werften">🏗️ Estaleiros</a>
+    <a class="section-tab" href="#sec-legado">🚢 Navios lendários</a>
+    <a class="section-tab" href="#sec-fontes">🔗 Fontes</a>
+  </div>
+
+  <div class="section-label" id="sec-visao">📖 Por que os estaleiros importam tanto</div>
+  <div class="story-text">
+    <p>Quando a gente fala de navios lendários, é comum lembrar primeiro do nome do navio ou da companhia. Mas, para o entusiasta, o estaleiro também é parte central da história. É nele que decisões de casco, propulsão, layout, segurança e acabamento se transformam em identidade.</p>
+    <p>Alguns estaleiros viraram praticamente escolas de construção naval de passageiros. Certos nomes ficaram ligados ao luxo, outros à escala, outros à velocidade, e outros à era moderna dos grandes resorts flutuantes.</p>
+    <div class="story-highlight">Em muitos casos, o estaleiro não apenas “executa” um projeto: ele concentra conhecimento acumulado por décadas, define padrões técnicos e se torna coprodutor do legado do navio.</div>
+  </div>
+
+  <div class="section-label" id="sec-werften">🏗️ Quatro estaleiros que ajudaram a definir eras</div>
+  <div class="yard-grid">
+    <div class="yard-card">
+      <h3>Harland &amp; Wolff — Belfast</h3>
+      <p>Ligado para sempre à White Star Line, o estaleiro ficou eternizado pelo trio Olympic, Titanic e Britannic. A sua fama vem do peso histórico, da escala industrial e da associação direta com a era clássica dos grandes liners britânicos.</p>
+      <div class="yard-meta">
+        <span class="yard-chip">Titanic</span>
+        <span class="yard-chip">Olympic</span>
+        <span class="yard-chip">Britannic</span>
+      </div>
+    </div>
+    <div class="yard-card">
+      <h3>Chantiers de l’Atlantique — Saint-Nazaire</h3>
+      <p>Um dos grandes nomes da história francesa e moderna da construção naval. Saiu de suas instalações o lendário Normandie, depois navios como France e Queen Mary 2, e mais tarde parte importante da geração Oasis e Edge.</p>
+      <div class="yard-meta">
+        <span class="yard-chip">Normandie</span>
+        <span class="yard-chip">France</span>
+        <span class="yard-chip">Queen Mary 2</span>
+      </div>
+    </div>
+    <div class="yard-card">
+      <h3>Fincantieri — Itália</h3>
+      <p>Nasceu da tradição dos transatlânticos italianos e se transformou em líder da era moderna do cruzeiro. O grupo conecta o passado do Rex e dos liners italianos ao presente de Princess, Costa, Holland America, Cunard e muitas outras marcas.</p>
+      <div class="yard-meta">
+        <span class="yard-chip">Rex</span>
+        <span class="yard-chip">Crown Princess</span>
+        <span class="yard-chip">Queen Anne</span>
+      </div>
+    </div>
+    <div class="yard-card">
+      <h3>MEYER WERFT — Papenburg</h3>
+      <p>Um caso fascinante de adaptação industrial. A empresa saiu de uma tradição muito mais antiga e, a partir de 1986, entrou de vez no universo dos grandes navios de cruzeiro. Depois se tornou referência em inovação e em projetos de nova geração.</p>
+      <div class="yard-meta">
+        <span class="yard-chip">Homeric</span>
+        <span class="yard-chip">Radiance Class</span>
+        <span class="yard-chip">AIDAnova</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" id="sec-legado">🚢 Navios lendários e o tipo de fama que cada estaleiro construiu</div>
+  <div class="story-text">
+    <p><strong>Harland &amp; Wolff</strong> ficou associado a uma fase em que conforto, prestígio e escala eram usados para afirmar o poder da navegação britânica. O Titanic não resume o estaleiro, mas é inevitavelmente o navio que cristalizou sua aura histórica.</p>
+    <p><strong>Chantiers de l’Atlantique</strong> representa bem a transição do liner elegante para o cruzeiro contemporâneo de grande porte. O Normandie ajudou a transformar a estética dos liners; décadas depois, o estaleiro seguiu relevante na era dos grandes navios de cruzeiro.</p>
+    <p><strong>Fincantieri</strong> simboliza a ponte entre tradição transatlântica e domínio contemporâneo da construção de navios de lazer. Quando se fala em consistência industrial no cruzeiro moderno, é impossível não citar o grupo italiano.</p>
+    <p><strong>MEYER WERFT</strong>, por sua vez, ficou fortemente ligada ao refinamento técnico e à especialização em navios modernos. Ela aparece em classes muito importantes do fim do século XX e início do XXI e também em marcos ambientais, como o AIDAnova, primeiro navio de cruzeiro movido a LNG.</p>
+    <div class="story-highlight">Se os navios são as estrelas, os estaleiros são as linhagens. Eles ajudam a explicar por que certos períodos, estilos e soluções técnicas surgem em ondas e deixam marcas duradouras na indústria.</div>
+  </div>
+
+  <div class="section-label" id="sec-fontes">🔗 Fontes e leituras</div>
+  <div class="sources-grid">
+    <a class="source-card" href="https://www.britannica.com/topic/Harland-and-Wolff" target="_blank" rel="noopener">
+      <h3>Britannica — Harland and Wolff</h3>
+      <p>Contexto histórico do estaleiro de Belfast e sua ligação com a White Star Line.</p>
+    </a>
+    <a class="source-card" href="https://chantiers-atlantique.com/en/the-company/our-history/" target="_blank" rel="noopener">
+      <h3>Chantiers de l’Atlantique — Our History</h3>
+      <p>História institucional do estaleiro francês e sua longa tradição industrial em Saint-Nazaire.</p>
+    </a>
+    <a class="source-card" href="https://chantiers-atlantique.com/en/our-activities/passenger-ships/" target="_blank" rel="noopener">
+      <h3>Chantiers de l’Atlantique — Passenger Ships</h3>
+      <p>Visão do estaleiro sobre sua posição no mercado de navios de passageiros e seus marcos técnicos.</p>
+    </a>
+    <a class="source-card" href="https://www.fincantieri.com/en/products-and-services/cruise-ships" target="_blank" rel="noopener">
+      <h3>Fincantieri — Cruise Ships</h3>
+      <p>Resumo oficial da tradição da Fincantieri em transatlânticos e cruzeiros, do Rex ao presente.</p>
+    </a>
+    <a class="source-card" href="https://www.meyerwerft.de/en/company/company_history/index-2.jsp" target="_blank" rel="noopener">
+      <h3>MEYER WERFT — Company History</h3>
+      <p>História oficial da empresa e a transição para a construção de grandes navios de cruzeiro.</p>
+    </a>
+    <a class="source-card" href="https://www.britannica.com/technology/ocean-liner" target="_blank" rel="noopener">
+      <h3>Britannica — Ocean liner</h3>
+      <p>Pano de fundo histórico sobre a era dos liners e os navios de passageiros mais famosos.</p>
+    </a>
+  </div>
+</div>
+<footer>© 2025 Poseidon Cruzeiros — Conteúdo histórico para fins de referência.</footer>
+<script>
+const tabs=document.querySelectorAll('.section-tab');const sections=['sec-visao','sec-werften','sec-legado','sec-fontes'];window.addEventListener('scroll',()=>{let current=sections[0];sections.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=100)current=id;});tabs.forEach(tab=>{tab.classList.toggle('active',tab.getAttribute('href')==='#'+current);});});
+</script>
+</body>
+</html>

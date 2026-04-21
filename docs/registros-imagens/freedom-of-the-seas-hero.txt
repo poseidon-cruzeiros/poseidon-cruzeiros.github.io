@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/freedom-of-the-seas/hero.jpg
+pagina_do_site: /companhias/royal-caribbean/freedom-of-the-seas/
+navio_ou_tema: Freedom of the Seas
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Freedom_of_the_Seas_(cropped).JPG
+autor: JMcgo1979
+licenca: Dominio publico (PD-self)
+url_licenca: https://commons.wikimedia.org/wiki/File:Freedom_of_the_Seas_(cropped).JPG
+data_de_consulta: 2026-04-21
+houve_edicao: nao
+tipo_de_edicao: nao se aplica
+credito_publico: Imagem em dominio publico. Fonte: Wikimedia Commons.

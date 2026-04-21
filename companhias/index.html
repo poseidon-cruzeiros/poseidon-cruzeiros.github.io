@@ -105,6 +105,14 @@
     backdrop-filter: blur(6px);
   }
   .company-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(26,188,156,0.45); transform: translateY(-3px); }
+  .company-card.soon {
+    cursor: default;
+  }
+  .company-card.soon:hover {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    transform: none;
+  }
   .company-card__logo { width: 2rem; height: 2rem; flex-shrink: 0; display: grid; place-items: center; background: rgba(255,255,255,0.92); border-radius: 8px; padding: 5px; }
   .company-card__logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
   .company-card__info { display: flex; flex-direction: column; gap: 4px; }
@@ -113,6 +121,7 @@
   .company-card__meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 2px; }
   .company-card__category { display: inline-flex; align-items: center; min-height: 1.35rem; padding: 0.08rem 0.55rem; border-radius: 999px; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); color: #f4fbff; }
   .company-card__tag { display: inline-flex; align-items: center; align-self: flex-start; font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: rgba(26,188,156,0.12); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
+  .company-card__tag--soon { background: rgba(240,192,64,0.12); color: #ffe7a1; border-color: rgba(240,192,64,0.28); }
 
   footer { position: relative; z-index: 1; text-align: center; padding: 3rem 1.5rem 2rem; color: rgba(255,255,255,0.45); font-size: 0.8rem; }
   @media (max-width: 700px) {
@@ -142,10 +151,13 @@
 
   <div class="section-label">Categorias</div>
   <div class="category-summary" aria-label="Resumo das categorias">
-    <span class="category-pill"><strong>Massa / Contemporâneo</strong> 6 marcas</span>
-    <span class="category-pill"><strong>Premium</strong> 7 marcas</span>
-    <span class="category-pill"><strong>Luxo</strong> 2 marcas</span>
-    <span class="category-pill"><strong>Ultra-luxo</strong> 2 marcas</span>
+    <span class="category-pill"><strong>Massa / Contemporâneo</strong> 9 marcas</span>
+    <span class="category-pill"><strong>Premium</strong> 12 marcas</span>
+    <span class="category-pill"><strong>Luxo</strong> 7 marcas</span>
+    <span class="category-pill"><strong>Ultra-luxo</strong> 6 marcas</span>
+    <span class="category-pill"><strong>Expedição</strong> 13 marcas</span>
+    <span class="category-pill"><strong>Yacht / Boutique</strong> 6 marcas</span>
+    <span class="category-pill"><strong>Costeiro / Regional</strong> 3 marcas</span>
   </div>
 
   <div class="section-label">Companhias por perfil</div>
@@ -153,7 +165,7 @@
   <section class="company-group" aria-labelledby="grupo-contemporaneo">
     <div class="company-group__header">
       <h2 class="company-group__title" id="grupo-contemporaneo">Massa / Contemporâneo</h2>
-      <span class="company-group__count">6 companhias</span>
+      <span class="company-group__count">9 companhias</span>
     </div>
     <div class="company-grid">
       <a class="company-card" href="/companhias/costa-cruzeiros/"><span class="company-card__logo"><img src="../shared/company-logos/costa-cruzeiros.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Costa Cruzeiros</span><span class="company-card__ships">12 navios · Mediterrâneo, Caribe e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
@@ -162,13 +174,16 @@
       <a class="company-card" href="/companhias/norwegian-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/norwegian-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Norwegian Cruise Line</span><span class="company-card__ships">21 navios · Luna, Aqua, Viva e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
       <a class="company-card" href="/companhias/carnival-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/carnival-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Carnival Cruise Line</span><span class="company-card__ships">29 navios · Mardi Gras, Jubilee e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
       <a class="company-card" href="/companhias/aida-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/aida-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">AIDA Cruises</span><span class="company-card__ships">11 navios · Cosma, Nova e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Ambassador Cruise Line</span><span class="company-card__ships">Companhia britânica clássica · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Marella Cruises</span><span class="company-card__ships">Cruzeiros de pacote no mercado britânico · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Margaritaville at Sea</span><span class="company-card__ships">Cruzeiros curtos e descontraídos saindo dos EUA · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
     </div>
   </section>
 
   <section class="company-group" aria-labelledby="grupo-premium">
     <div class="company-group__header">
       <h2 class="company-group__title" id="grupo-premium">Premium</h2>
-      <span class="company-group__count">7 companhias</span>
+      <span class="company-group__count">12 companhias</span>
     </div>
     <div class="company-grid">
       <a class="company-card" href="/companhias/celebrity-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/celebrity-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Celebrity Cruises</span><span class="company-card__ships">15 navios · Xcel, Ascent e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
@@ -178,28 +193,91 @@
       <a class="company-card" href="/companhias/virgin-voyages/"><span class="company-card__logo"><img src="../shared/company-logos/virgin-voyages.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Virgin Voyages</span><span class="company-card__ships">4 navios · Brilliant, Resilient e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
       <a class="company-card" href="/companhias/p-and-o-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/p-and-o-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">P&amp;O Cruises</span><span class="company-card__ships">7 navios · Arvia, Iona e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
       <a class="company-card" href="/companhias/tui-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/tui-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">TUI Cruises</span><span class="company-card__ships">9 navios · Relax, Mein Schiff 7 e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Azamara</span><span class="company-card__ships">Foco em estadias longas e portos centrais · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Celestyal Cruises</span><span class="company-card__ships">Mediterrâneo oriental e ilhas gregas · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Fred. Olsen Cruise Lines</span><span class="company-card__ships">Tradição britânica em navios menores · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Saga Cruises</span><span class="company-card__ships">Produto premium para mercado 50+ no Reino Unido · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Viking Ocean Cruises</span><span class="company-card__ships">Viagens focadas em destino e cultura · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
     </div>
   </section>
 
   <section class="company-group" aria-labelledby="grupo-luxo">
     <div class="company-group__header">
       <h2 class="company-group__title" id="grupo-luxo">Luxo</h2>
-      <span class="company-group__count">2 companhias</span>
+      <span class="company-group__count">7 companhias</span>
     </div>
     <div class="company-grid">
       <a class="company-card" href="/companhias/oceania-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/oceania-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Oceania Cruises</span><span class="company-card__ships">8 navios · Allura, Vista e mais</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
       <a class="company-card" href="/companhias/cunard/"><span class="company-card__logo"><img src="../shared/company-logos/cunard.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Cunard</span><span class="company-card__ships">4 navios · Queen Mary 2, Queen Anne e mais</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">APT Luxury Travel</span><span class="company-card__ships">Viagens premium e small ship em operação global · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Crystal Cruises</span><span class="company-card__ships">Serviço sofisticado e navios refinados · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Explora Journeys</span><span class="company-card__ships">Luxo contemporâneo com navios de nova geração · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Paul Gauguin Cruises</span><span class="company-card__ships">Polinésia Francesa em produto intimista · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">SeaDream Yacht Club</span><span class="company-card__ships">Lifestyle de iate com serviço de luxo · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
     </div>
   </section>
 
   <section class="company-group" aria-labelledby="grupo-ultraluxo">
     <div class="company-group__header">
       <h2 class="company-group__title" id="grupo-ultraluxo">Ultra-luxo</h2>
-      <span class="company-group__count">2 companhias</span>
+      <span class="company-group__count">6 companhias</span>
     </div>
     <div class="company-grid">
       <a class="company-card" href="/companhias/regent-seven-seas-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/regent-seven-seas-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Regent Seven Seas Cruises</span><span class="company-card__ships">7 navios · Grandeur, Splendor e mais</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
       <a class="company-card" href="/companhias/seabourn/"><span class="company-card__logo"><img src="../shared/company-logos/seabourn.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Seabourn</span><span class="company-card__ships">6 navios · Pursuit, Venture e mais</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Orient Express Sailing Yachts</span><span class="company-card__ships">Vela de ultra-luxo com proposta altamente exclusiva · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Ritz-Carlton Yacht Collection</span><span class="company-card__ships">Yachts de ultra-luxo e serviço de hotelaria premium · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Silversea Cruises</span><span class="company-card__ships">Ultra-luxo com forte presença em expedição · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Four Seasons Yachts</span><span class="company-card__ships">Novo projeto de ultra-luxo em formato yacht · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+    </div>
+  </section>
+
+  <section class="company-group" aria-labelledby="grupo-expedicao">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-expedicao">Expedição</h2>
+      <span class="company-group__count">13 companhias</span>
+    </div>
+    <div class="company-grid">
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">66 Degrees Expeditions</span><span class="company-card__ships">Cruzeiros polares e destinos remotos · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Aurora Expeditions</span><span class="company-card__ships">Expedições polares e natureza com foco científico · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Coral Expeditions</span><span class="company-card__ships">Expedições costeiras e remotas na Oceania · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Hapag-Lloyd Cruises</span><span class="company-card__ships">Expedição e luxo no mercado alemão · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Heritage Expeditions</span><span class="company-card__ships">Operação de nicho em destinos extremos · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">HX Expeditions</span><span class="company-card__ships">Marca dedicada a expedições globais · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Lindblad Expeditions</span><span class="company-card__ships">Viagens de expedição com National Geographic-Lindblad · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Mystic Cruises / Atlas Ocean Voyages</span><span class="company-card__ships">Expedição boutique com pegada de luxo · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Polar Latitudes Expeditions</span><span class="company-card__ships">Antártica e regiões polares em small ships · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Ponant Explorations</span><span class="company-card__ships">Expedição de luxo em navios pequenos · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Quark Expeditions</span><span class="company-card__ships">Especialista em cruzeiros polares · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Scenic Luxury Cruises &amp; Tours</span><span class="company-card__ships">Expedição de luxo com operação global · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Swan Hellenic</span><span class="company-card__ships">Expedições culturais em navios pequenos · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Expedição</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+    </div>
+  </section>
+
+  <section class="company-group" aria-labelledby="grupo-yacht">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-yacht">Yacht / Boutique</h2>
+      <span class="company-group__count">6 companhias</span>
+    </div>
+    <div class="company-grid">
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Corazul Cruceros</span><span class="company-card__ships">Operação boutique em small ship no mercado latino · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Yacht / Boutique</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Emerald Cruises</span><span class="company-card__ships">Yachts e small ships com foco premium · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Yacht / Boutique</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Sea Cloud Cruises</span><span class="company-card__ships">Veleiros clássicos e experiência boutique · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Yacht / Boutique</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Star Clippers</span><span class="company-card__ships">Vela clássica e roteiros intimistas · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Yacht / Boutique</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Variety Cruises</span><span class="company-card__ships">Cruzeiros boutique em pequenos iates · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Yacht / Boutique</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Windstar Cruises</span><span class="company-card__ships">Small ships e yachts com perfil intimista · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Yacht / Boutique</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+    </div>
+  </section>
+
+  <section class="company-group" aria-labelledby="grupo-regional">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-regional">Costeiro / Regional</h2>
+      <span class="company-group__count">3 companhias</span>
+    </div>
+    <div class="company-grid">
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">American Cruise Lines</span><span class="company-card__ships">Operação costeira e regional nos Estados Unidos · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Costeiro / Regional</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Pearl Seas Cruises</span><span class="company-card__ships">Cruzeiros regionais em pequenos navios · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Costeiro / Regional</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
+      <div class="company-card soon"><span class="company-card__logo">🚧</span><span class="company-card__info"><span class="company-card__name">Hurtigruten</span><span class="company-card__ships">Costa norueguesa e itinerários regionais icônicos · página da companhia em construção</span><span class="company-card__meta"><span class="company-card__category">Costeiro / Regional</span><span class="company-card__tag company-card__tag--soon">Em construção</span></span></span></div>
     </div>
   </section>
 </main>

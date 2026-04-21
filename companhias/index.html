@@ -82,7 +82,14 @@
     margin: 2rem 0 1rem;
   }
   .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(26,188,156,0.4), transparent); }
-
+  .category-summary { display: flex; flex-wrap: wrap; gap: 10px; margin: 0.5rem 0 1.5rem; }
+  .category-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 2rem; padding: 0.3rem 0.75rem; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: var(--white); font-size: 0.74rem; }
+  .category-pill strong { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-light); }
+  .company-group { margin-top: 1.75rem; }
+  .company-group:first-of-type { margin-top: 0; }
+  .company-group__header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .company-group__title { font-size: 0.86rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--teal-light); }
+  .company-group__count { font-size: 0.74rem; color: var(--text-muted); }
   .company-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
   .company-card {
     background: var(--card-bg);
@@ -103,7 +110,9 @@
   .company-card__info { display: flex; flex-direction: column; gap: 4px; }
   .company-card__name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.2; }
   .company-card__ships { font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; }
-  .company-card__tag { display: inline-block; align-self: flex-start; font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-top: 2px; background: rgba(26,188,156,0.12); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
+  .company-card__meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 2px; }
+  .company-card__category { display: inline-flex; align-items: center; min-height: 1.35rem; padding: 0.08rem 0.55rem; border-radius: 999px; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); color: #f4fbff; }
+  .company-card__tag { display: inline-flex; align-items: center; align-self: flex-start; font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: rgba(26,188,156,0.12); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
 
   footer { position: relative; z-index: 1; text-align: center; padding: 3rem 1.5rem 2rem; color: rgba(255,255,255,0.45); font-size: 0.8rem; }
   @media (max-width: 700px) {
@@ -127,30 +136,72 @@
     <span class="hero-icon">🚢</span>
     <div class="hero-text">
       <h1>Companhias de Cruzeiros</h1>
-      <p>Explore as principais companhias de cruzeiros do mundo e acesse páginas com frotas, navios e informações de cada marca.</p>
+      <p>Explore as principais companhias de cruzeiros do mundo por perfil de viagem, com uma organização pensada para separar marcas de massa, companhias premium e linhas focadas em luxo.</p>
     </div>
   </header>
 
-  <div class="section-label">Todas as companhias</div>
-  <div class="company-grid">
-    <a class="company-card" href="/companhias/costa-cruzeiros/"><span class="company-card__logo"><img src="../shared/company-logos/costa-cruzeiros.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Costa Cruzeiros</span><span class="company-card__ships">12 navios · Mediterrâneo, Caribe e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/msc-cruzeiros/"><span class="company-card__logo"><img src="../shared/company-logos/msc-cruzeiros.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">MSC Cruzeiros</span><span class="company-card__ships">23 navios · World America, Euribia e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/royal-caribbean/"><span class="company-card__logo"><img src="../shared/company-logos/royal-caribbean.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Royal Caribbean</span><span class="company-card__ships">29 navios · Star, Icon, Utopia e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/norwegian-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/norwegian-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Norwegian Cruise Line</span><span class="company-card__ships">21 navios · Luna, Aqua, Viva e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/carnival-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/carnival-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Carnival Cruise Line</span><span class="company-card__ships">29 navios · Mardi Gras, Jubilee e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/celebrity-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/celebrity-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Celebrity Cruises</span><span class="company-card__ships">15 navios · Xcel, Ascent e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/princess-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/princess-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Princess Cruises</span><span class="company-card__ships">17 navios · Sun Princess, Royal Princess e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/holland-america-line/"><span class="company-card__logo"><img src="../shared/company-logos/holland-america-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Holland America Line</span><span class="company-card__ships">11 navios · Rotterdam, Koningsdam e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/disney-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/disney-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Disney Cruise Line</span><span class="company-card__ships">8 navios · Wish, Treasure, Dream e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/cunard/"><span class="company-card__logo"><img src="../shared/company-logos/cunard.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Cunard</span><span class="company-card__ships">4 navios · Queen Mary 2, Queen Anne e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/virgin-voyages/"><span class="company-card__logo"><img src="../shared/company-logos/virgin-voyages.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Virgin Voyages</span><span class="company-card__ships">4 navios · Brilliant, Resilient e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/oceania-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/oceania-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Oceania Cruises</span><span class="company-card__ships">8 navios · Allura, Vista e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/aida-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/aida-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">AIDA Cruises</span><span class="company-card__ships">11 navios · Cosma, Nova e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/p-and-o-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/p-and-o-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">P&amp;O Cruises</span><span class="company-card__ships">7 navios · Arvia, Iona e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/tui-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/tui-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">TUI Cruises</span><span class="company-card__ships">9 navios · Relax, Mein Schiff 7 e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/regent-seven-seas-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/regent-seven-seas-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Regent Seven Seas Cruises</span><span class="company-card__ships">7 navios · Grandeur, Splendor e mais</span><span class="company-card__tag">Ver frota</span></span></a>
-    <a class="company-card" href="/companhias/seabourn/"><span class="company-card__logo"><img src="../shared/company-logos/seabourn.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Seabourn</span><span class="company-card__ships">6 navios · Pursuit, Venture e mais</span><span class="company-card__tag">Ver frota</span></span></a>
+  <div class="section-label">Categorias</div>
+  <div class="category-summary" aria-label="Resumo das categorias">
+    <span class="category-pill"><strong>Massa / Contemporâneo</strong> 6 marcas</span>
+    <span class="category-pill"><strong>Premium</strong> 7 marcas</span>
+    <span class="category-pill"><strong>Luxo</strong> 2 marcas</span>
+    <span class="category-pill"><strong>Ultra-luxo</strong> 2 marcas</span>
   </div>
+
+  <div class="section-label">Companhias por perfil</div>
+
+  <section class="company-group" aria-labelledby="grupo-contemporaneo">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-contemporaneo">Massa / Contemporâneo</h2>
+      <span class="company-group__count">6 companhias</span>
+    </div>
+    <div class="company-grid">
+      <a class="company-card" href="/companhias/costa-cruzeiros/"><span class="company-card__logo"><img src="../shared/company-logos/costa-cruzeiros.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Costa Cruzeiros</span><span class="company-card__ships">12 navios · Mediterrâneo, Caribe e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/msc-cruzeiros/"><span class="company-card__logo"><img src="../shared/company-logos/msc-cruzeiros.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">MSC Cruzeiros</span><span class="company-card__ships">23 navios · World America, Euribia e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/royal-caribbean/"><span class="company-card__logo"><img src="../shared/company-logos/royal-caribbean.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Royal Caribbean</span><span class="company-card__ships">29 navios · Star, Icon, Utopia e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/norwegian-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/norwegian-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Norwegian Cruise Line</span><span class="company-card__ships">21 navios · Luna, Aqua, Viva e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/carnival-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/carnival-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Carnival Cruise Line</span><span class="company-card__ships">29 navios · Mardi Gras, Jubilee e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/aida-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/aida-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">AIDA Cruises</span><span class="company-card__ships">11 navios · Cosma, Nova e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+    </div>
+  </section>
+
+  <section class="company-group" aria-labelledby="grupo-premium">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-premium">Premium</h2>
+      <span class="company-group__count">7 companhias</span>
+    </div>
+    <div class="company-grid">
+      <a class="company-card" href="/companhias/celebrity-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/celebrity-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Celebrity Cruises</span><span class="company-card__ships">15 navios · Xcel, Ascent e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/princess-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/princess-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Princess Cruises</span><span class="company-card__ships">17 navios · Sun Princess, Royal Princess e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/holland-america-line/"><span class="company-card__logo"><img src="../shared/company-logos/holland-america-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Holland America Line</span><span class="company-card__ships">11 navios · Rotterdam, Koningsdam e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/disney-cruise-line/"><span class="company-card__logo"><img src="../shared/company-logos/disney-cruise-line.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Disney Cruise Line</span><span class="company-card__ships">8 navios · Wish, Treasure, Dream e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/virgin-voyages/"><span class="company-card__logo"><img src="../shared/company-logos/virgin-voyages.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Virgin Voyages</span><span class="company-card__ships">4 navios · Brilliant, Resilient e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/p-and-o-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/p-and-o-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">P&amp;O Cruises</span><span class="company-card__ships">7 navios · Arvia, Iona e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/tui-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/tui-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">TUI Cruises</span><span class="company-card__ships">9 navios · Relax, Mein Schiff 7 e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></span></a>
+    </div>
+  </section>
+
+  <section class="company-group" aria-labelledby="grupo-luxo">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-luxo">Luxo</h2>
+      <span class="company-group__count">2 companhias</span>
+    </div>
+    <div class="company-grid">
+      <a class="company-card" href="/companhias/oceania-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/oceania-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Oceania Cruises</span><span class="company-card__ships">8 navios · Allura, Vista e mais</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/cunard/"><span class="company-card__logo"><img src="../shared/company-logos/cunard.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Cunard</span><span class="company-card__ships">4 navios · Queen Mary 2, Queen Anne e mais</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+    </div>
+  </section>
+
+  <section class="company-group" aria-labelledby="grupo-ultraluxo">
+    <div class="company-group__header">
+      <h2 class="company-group__title" id="grupo-ultraluxo">Ultra-luxo</h2>
+      <span class="company-group__count">2 companhias</span>
+    </div>
+    <div class="company-grid">
+      <a class="company-card" href="/companhias/regent-seven-seas-cruises/"><span class="company-card__logo"><img src="../shared/company-logos/regent-seven-seas-cruises.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Regent Seven Seas Cruises</span><span class="company-card__ships">7 navios · Grandeur, Splendor e mais</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+      <a class="company-card" href="/companhias/seabourn/"><span class="company-card__logo"><img src="../shared/company-logos/seabourn.png" alt="" loading="lazy"></span><span class="company-card__info"><span class="company-card__name">Seabourn</span><span class="company-card__ships">6 navios · Pursuit, Venture e mais</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag">Ver frota</span></span></span></a>
+    </div>
+  </section>
 </main>
 
 <footer>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos em português</footer>

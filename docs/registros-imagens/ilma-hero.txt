@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/ritz-carlton-yacht-collection/ilma/ritz-carlton-yacht-collection-ilma.jpg
+pagina_do_site: /companhias/ritz-carlton-yacht-collection/ilma/
+navio_ou_tema: Ilma
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Yacht_Ilma_%C3%A0_Saint-Nazaire.jpg
+autor: DarkVador79-UA
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+data_de_consulta: 2026-04-21
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: DarkVador79-UA, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.

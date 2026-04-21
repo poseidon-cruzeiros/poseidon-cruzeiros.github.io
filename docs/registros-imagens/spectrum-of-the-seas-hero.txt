@@ -2,11 +2,11 @@
 pagina_do_site: /companhias/royal-caribbean/spectrum-of-the-seas/
 navio_ou_tema: Spectrum of the Seas
 fonte: Wikimedia Commons
-url_original: https://commons.wikimedia.org/wiki/File:Spectrum_of_the_Seas_01.jpg
-autor: Dickelbers
-licenca: CC BY-SA 4.0
-url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+url_original: https://commons.wikimedia.org/wiki/File:RCL_Spectrum_Of_The_Seas_(52438493171).jpg
+autor: Thank You (23 Millions+) views
+licenca: CC BY 2.0
+url_licenca: https://creativecommons.org/licenses/by/2.0/
 data_de_consulta: 2026-04-21
 houve_edicao: sim
 tipo_de_edicao: redimensionamento e compressao para web
-credito_publico: Foto: Dickelbers, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.
+credito_publico: Foto: Thank You (23 Millions+) views, via Wikimedia Commons, CC BY 2.0. Ajustada pelo Poseidon.

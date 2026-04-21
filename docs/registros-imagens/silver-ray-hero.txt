@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/silversea-cruises/silver-ray/silversea-cruises-silver-ray.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-ray/
+navio_ou_tema: Silver Ray
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:SILVER_RAY_(54516976411).jpg
+autor: Alexandre Prevot
+licenca: CC BY-SA 2.0
+url_licenca: https://creativecommons.org/licenses/by-sa/2.0/
+data_de_consulta: 2026-04-21
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Alexandre Prevot, via Wikimedia Commons, CC BY-SA 2.0. Ajustada pelo Poseidon.

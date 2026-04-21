@@ -2,11 +2,11 @@
 pagina_do_site: /companhias/royal-caribbean/symphony-of-the-seas/
 navio_ou_tema: Symphony of the Seas
 fonte: Wikimedia Commons
-url_original: https://commons.wikimedia.org/wiki/File:Symphony_of_the_Seas.jpg
-autor: Kajoux
-licenca: CC BY-SA 4.0
-url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+url_original: https://commons.wikimedia.org/wiki/File:RCCL_Symphony_Of_The_Seas_(46801899181).jpg
+autor: Thank You (21 Millions+) views
+licenca: CC BY 2.0
+url_licenca: https://creativecommons.org/licenses/by/2.0/
 data_de_consulta: 2026-04-21
 houve_edicao: sim
 tipo_de_edicao: redimensionamento e compressao para web
-credito_publico: Foto: Kajoux, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.
+credito_publico: Foto: Thank You (21 Millions+) views, via Wikimedia Commons, CC BY 2.0. Ajustada pelo Poseidon.

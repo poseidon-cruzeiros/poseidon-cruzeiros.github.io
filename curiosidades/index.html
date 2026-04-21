@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curiosidades Maritimas — Poseidon Cruzeiros</title>
+  <meta name="description" content="Artigos especiais do Poseidon Cruzeiros sobre historia maritima, navios iconicos, curiosidades e contexto do universo dos transatlanticos e cruzeiros." />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+  <link rel="canonical" href="https://poseidoncruzeiros.com.br/curiosidades/" />
+  <meta property="og:title" content="Curiosidades Maritimas — Poseidon Cruzeiros" />
+  <meta property="og:description" content="Historia maritima, navios iconicos e curiosidades do mundo dos cruzeiros em um novo hub editorial do Poseidon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poseidoncruzeiros.com.br/curiosidades/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Curiosidades Maritimas — Poseidon Cruzeiros" />
+  <meta name="twitter:description" content="Explore artigos especiais sobre o Titanic, a historia dos cruzeiros e outros temas maritimos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/header.css" />
+  <script src="../shared/header.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c;
+      --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be;
+      --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px;
+      --radius-sm:8px; --nav-height:60px; --rose:#d8a4b8; --mist:#d8e7ff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white);
+      min-height:100vh; overflow-x:hidden;
+    }
+    body::before {
+      content:''; position:fixed; inset:0; z-index:0;
+      background:
+        radial-gradient(ellipse 75% 55% at 50% -10%, rgba(33,150,196,0.28) 0%, transparent 72%),
+        radial-gradient(ellipse 45% 35% at 15% 85%, rgba(216,164,184,0.12) 0%, transparent 62%),
+        radial-gradient(ellipse 50% 35% at 85% 92%, rgba(240,192,64,0.12) 0%, transparent 58%),
+        linear-gradient(180deg, #0a2342 0%, #061527 100%);
+      pointer-events:none;
+    }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    .page { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 1.25rem 4rem; }
+    .hub-hero { position:relative; z-index:1; text-align:center; padding:3.5rem 1.25rem 2.6rem; }
+    .hub-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1.2rem; }
+    .hub-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .hub-breadcrumb a:hover { text-decoration:underline; }
+    .hub-hero-emoji {
+      font-size:3.4rem; display:block; margin-bottom:0.8rem;
+      filter:drop-shadow(0 0 20px rgba(216,164,184,0.3)); animation:float 4s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+    .hub-hero h1 {
+      font-family:'Playfair Display',serif; font-size:clamp(2.1rem,5vw,3.2rem); font-weight:700;
+      letter-spacing:-1px; margin-bottom:0.85rem;
+      background:linear-gradient(135deg,#fff 25%,var(--mist) 65%,#f3d9e5 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .hub-hero p {
+      color:var(--text-muted); font-size:1.02rem; font-weight:300;
+      max-width:680px; margin:0 auto; line-height:1.7;
+    }
+    .intro-text {
+      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+      border-radius:var(--radius); padding:1.4rem 1.6rem; max-width:860px; margin:0 auto 2rem;
+    }
+    .intro-text p { color:rgba(255,255,255,0.78); line-height:1.8; font-size:0.95rem; }
+    .section-label {
+      display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em;
+      text-transform:uppercase; color:#f2cad9; margin:2.4rem 0 1.2rem;
+    }
+    .section-label::after {
+      content:''; flex:1; height:1px;
+      background:linear-gradient(to right, rgba(216,164,184,0.45), transparent);
+    }
+    .stories-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+    .story-card {
+      background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius);
+      padding:1.5rem; text-decoration:none; color:var(--white); display:flex; flex-direction:column; gap:0.8rem;
+      transition:background 0.2s,border-color 0.2s,transform 0.2s;
+    }
+    .story-card:hover { background:rgba(255,255,255,0.09); border-color:rgba(216,164,184,0.32); transform:translateY(-2px); }
+    .story-card--featured {
+      grid-column:1 / -1;
+      background:linear-gradient(135deg, rgba(216,164,184,0.12) 0%, rgba(33,150,196,0.08) 100%);
+      border-color:rgba(216,164,184,0.28);
+      display:grid; grid-template-columns:auto 1fr; gap:1.4rem; align-items:center;
+    }
+    .story-card--soon { cursor:default; opacity:0.82; }
+    .story-card--soon:hover { transform:none; background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1); }
+    .story-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:0.8rem; }
+    .story-card-emoji { font-size:2rem; line-height:1; }
+    .story-card--featured .story-card-emoji { font-size:3rem; }
+    .story-card-tag {
+      font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+      padding:3px 8px; border-radius:999px; border:1px solid; white-space:nowrap;
+    }
+    .tag-historia { color:#ffd3e0; border-color:rgba(216,164,184,0.42); background:rgba(216,164,184,0.12); }
+    .tag-analise { color:#b9dbff; border-color:rgba(121,176,255,0.32); background:rgba(121,176,255,0.1); }
+    .tag-soon { color:#fce08a; border-color:rgba(240,192,64,0.35); background:rgba(240,192,64,0.1); }
+    .story-card h2 {
+      font-family:'Playfair Display',serif; font-size:1.18rem; line-height:1.2;
+    }
+    .story-card--featured h2 { font-size:1.45rem; }
+    .story-card p { font-size:0.88rem; color:rgba(255,255,255,0.74); line-height:1.7; flex:1; }
+    .story-card-meta { display:flex; flex-wrap:wrap; gap:0.45rem; }
+    .story-chip {
+      font-size:0.68rem; color:var(--mist); border:1px solid rgba(255,255,255,0.14);
+      background:rgba(255,255,255,0.05); border-radius:999px; padding:0.22rem 0.55rem;
+    }
+    .story-card-cta { font-size:0.82rem; color:#ffd3e0; font-weight:600; margin-top:auto; }
+    .story-card--soon .story-card-cta { color:var(--text-muted); }
+    @media (max-width: 640px) {
+      .stories-grid { grid-template-columns:1fr; }
+      .story-card--featured { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#d8a4b8" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#d8a4b8" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+
+<div class="hub-hero">
+  <div class="hub-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › Curiosidades</div>
+  <span class="hub-hero-emoji">⚓</span>
+  <h1>Curiosidades Maritimas</h1>
+  <p>Um novo espaco editorial para historias, contextos e detalhes que vao alem da ficha tecnica tradicional dos navios.</p>
+</div>
+
+<main class="page">
+  <div class="intro-text">
+    <p>Aqui entram artigos especiais do Poseidon Cruzeiros sobre transatlanticos iconicos, evolucao da navegacao de passageiros, conceitos de projeto, companhias historicas e temas que ajudam a entender como o cruzeiro moderno chegou ate aqui. Comecamos com o Titanic em formato de ficha historica expandida.</p>
+  </div>
+
+  <div class="section-label">Artigos publicados</div>
+  <div class="stories-grid">
+    <a href="/curiosidades/titanic/" class="story-card story-card--featured">
+      <div class="story-card-emoji">🚢</div>
+      <div>
+        <div class="story-card-top" style="margin-bottom:0.5rem;">
+          <h2>Titanic: historia, rota, ficha tecnica e legado</h2>
+          <span class="story-card-tag tag-historia">Especial</span>
+        </div>
+        <p>Um panorama completo sobre o RMS Titanic: construcao pela Harland &amp; Wolff, rota planejada para Nova York, navios-irmaos da classe Olympic, interiores, conceitos de engenharia, mapa resumido de decks, espacos a bordo e a influencia do desastre nos navios que vieram depois.</p>
+        <div class="story-card-meta">
+          <span class="story-chip">Historia maritima</span>
+          <span class="story-chip">Olympic class</span>
+          <span class="story-chip">Ficha expandida</span>
+        </div>
+        <div class="story-card-cta">Ler artigo completo →</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="section-label">Proximos temas</div>
+  <div class="stories-grid">
+    <div class="story-card story-card--soon">
+      <div class="story-card-top">
+        <span class="story-card-emoji">🧭</span>
+        <span class="story-card-tag tag-soon">Em breve</span>
+      </div>
+      <h2>Historia dos cruzeiros</h2>
+      <p>Da era dos transatlanticos ao surgimento dos megaresorts flutuantes: como o mercado saiu da travessia regular para o lazer em alto-mar.</p>
+      <div class="story-card-cta">Espaco reservado para o proximo artigo</div>
+    </div>
+
+    <div class="story-card story-card--soon">
+      <div class="story-card-top">
+        <span class="story-card-emoji">🏗️</span>
+        <span class="story-card-tag tag-analise">Serie futura</span>
+      </div>
+      <h2>Estaleiros historicos e navios lendarios</h2>
+      <p>Uma frente pensada para conectar os estaleiros do site com os grandes projetos que marcaram a historia da construcao naval de passageiros.</p>
+      <div class="story-card-cta">Hub preparado para crescer com novos especiais</div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

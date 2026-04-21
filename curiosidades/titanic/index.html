@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Titanic — Historia, ficha tecnica e legado — Poseidon Cruzeiros</title>
+<meta name="description" content="Especial do Poseidon sobre o Titanic: construcao, rota planejada, companhia, navios-irmaos, interiores, decks, restaurantes, conceitos de projeto e legado para os navios posteriores." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/curiosidades/titanic/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Titanic — Historia, ficha tecnica e legado" />
+<meta property="og:description" content="Um especial sobre o RMS Titanic com ficha historica expandida, rota, interiores, decks e a influencia do navio na seguranca maritima." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/curiosidades/titanic/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Titanic — Historia, ficha tecnica e legado" />
+<meta name="twitter:description" content="Construcao, rota, companhia, navios-irmaos, interiores e o legado do Titanic para a navegacao de passageiros." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ocean-deep: #0a2342; --ocean-mid: #1a4a7a; --ocean-bright: #2196c4;
+    --teal: #1abc9c; --teal-light: #a8f0de; --gold: #f0c040; --white: #ffffff;
+    --text-muted: #8ba4be; --card-bg: rgba(255,255,255,0.06);
+    --card-border: rgba(255,255,255,0.12); --radius: 14px; --radius-sm: 8px;
+    --nav-height: 60px; --heritage: #d8a4b8; --heritage-light: #f3d9e5;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif; background: var(--ocean-deep); color: var(--white);
+    min-height: 100vh; overflow-x: hidden;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 36% at 82% 100%, rgba(216,164,184,0.16) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events: none;
+  }
+  .waves-bg { position: fixed; bottom: 0; left: 0; right: 0; z-index: 0; height: 200px; overflow: hidden; pointer-events: none; }
+  .waves-bg svg { width: 100%; height: 100%; }
+  .page { position: relative; z-index: 1; max-width: 1020px; margin: 0 auto; padding: 0 1.25rem 5rem; }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0; flex-wrap: wrap;
+  }
+  .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  .breadcrumb a:hover { color: var(--heritage-light); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.75); }
+  .ship-hero { padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 0; }
+  .ship-hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+  .ship-company-label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--heritage-light); margin-bottom: 0.45rem;
+  }
+  .ship-name {
+    font-family: 'Playfair Display', serif; font-size: clamp(2rem, 6vw, 3.35rem);
+    font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 0.65rem;
+    background: linear-gradient(135deg, #fff 26%, #dbeaff 60%, #f3d9e5 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .ship-subtitle { font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; max-width: 620px; }
+  .ship-quick-actions { display: flex; gap: 8px; flex-shrink: 0; flex-wrap: wrap; align-items: flex-start; margin-top: 4px; }
+  .action-btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 0.5rem 1rem; border-radius: 999px;
+    font-size: 0.82rem; font-weight: 500; font-family: 'DM Sans', sans-serif; text-decoration: none;
+    transition: all 0.2s; border: none; white-space: nowrap;
+  }
+  .action-btn-primary { background: var(--heritage); color: #081624; }
+  .action-btn-primary:hover { background: var(--heritage-light); }
+  .action-btn-outline { background: transparent; color: rgba(255,255,255,0.78); border: 1px solid rgba(255,255,255,0.2); }
+  .action-btn-outline:hover { background: rgba(255,255,255,0.08); color: var(--white); border-color: rgba(255,255,255,0.4); }
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 1px;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius); overflow: hidden; margin: 1.5rem 0;
+  }
+  .stat-item { background: rgba(255,255,255,0.03); padding: 1rem 1.05rem; display: flex; flex-direction: column; gap: 4px; }
+  .stat-item:hover { background: rgba(255,255,255,0.06); }
+  .stat-val { font-size: 1.1rem; font-weight: 600; color: var(--white); line-height: 1; }
+  .stat-lbl { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-tabs {
+    display: flex; gap: 4px; margin: 0.55rem 0 2rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    overflow-x: auto; padding-bottom: 0;
+  }
+  .section-tab {
+    display: inline-flex; align-items: center; gap: 5px; padding: 0.55rem 1rem; font-size: 0.82rem;
+    font-weight: 500; color: var(--text-muted); text-decoration: none; border-bottom: 2px solid transparent;
+    white-space: nowrap; transition: color 0.15s, border-color 0.15s; margin-bottom: -1px;
+  }
+  .section-tab:hover { color: var(--white); }
+  .section-tab.active { color: var(--heritage-light); border-bottom-color: var(--heritage); }
+  .section-label {
+    display: flex; align-items: center; gap: 10px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--heritage-light); margin: 2.6rem 0 1.2rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(216,164,184,0.45), transparent); }
+  .historia-text { font-size: 0.93rem; line-height: 1.85; color: rgba(255,255,255,0.82); display: flex; flex-direction: column; gap: 1rem; max-width: 780px; }
+  .historia-highlight {
+    background: rgba(216,164,184,0.08); border-left: 3px solid var(--heritage);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 0.95rem 1.1rem;
+    font-size: 0.9rem; color: rgba(255,255,255,0.86); font-style: italic;
+  }
+  .specs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; }
+  .specs-group { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius); overflow: hidden; }
+  .specs-group-title {
+    padding: 0.75rem 1rem; font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--heritage-light); background: rgba(216,164,184,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .spec-row { display: flex; justify-content: space-between; align-items: center; padding: 0.58rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.83rem; gap: 1rem; }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-key { color: var(--text-muted); }
+  .spec-val { color: var(--white); font-weight: 500; text-align: right; }
+  .route-grid, .tracking-grid, .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .route-card, .tracking-card, .link-card {
+    background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius);
+    padding: 1rem; color: inherit; display: flex; flex-direction: column; gap: 7px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .link-card { text-decoration: none; }
+  .route-card:hover, .tracking-card:hover, .link-card:hover {
+    background: rgba(255,255,255,0.1); border-color: rgba(216,164,184,0.4); transform: translateY(-2px);
+  }
+  .route-step { font-size: 0.72rem; color: var(--heritage-light); text-transform: uppercase; letter-spacing: 0.08em; }
+  .route-title, .tracking-title, .link-title { font-size: 0.92rem; font-weight: 600; color: var(--white); }
+  .route-desc, .tracking-desc, .link-desc { font-size: 0.79rem; color: var(--text-muted); line-height: 1.6; }
+  .route-badge, .tracking-tag {
+    display: inline-block; font-size: 0.67rem; font-weight: 500; padding: 2px 8px; border-radius: 999px; margin-top: 2px;
+  }
+  .tag-westbound { background: rgba(33,150,196,0.15); color: #9bdcf8; border: 1px solid rgba(33,150,196,0.28); }
+  .tag-class { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.28); }
+  .tag-legacy { background: rgba(240,192,64,0.13); color: #fce08a; border: 1px solid rgba(240,192,64,0.26); }
+  .decks-wrapper { display: flex; flex-direction: column; gap: 6px; }
+  .deck-row {
+    display: flex; align-items: stretch; background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm); overflow: hidden; transition: background 0.15s, border-color 0.15s;
+  }
+  .deck-row:hover { background: rgba(255,255,255,0.09); border-color: rgba(216,164,184,0.35); }
+  .deck-num {
+    width: 66px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    font-size: 0.76rem; font-weight: 700; background: rgba(216,164,184,0.11);
+    border-right: 1px solid rgba(255,255,255,0.07); color: var(--heritage-light); text-transform: uppercase;
+  }
+  .deck-info { flex: 1; padding: 0.7rem 1rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .deck-name { font-size: 0.9rem; font-weight: 600; color: var(--white); min-width: 160px; }
+  .deck-desc { font-size: 0.79rem; color: var(--text-muted); flex: 1; }
+  .deck-icons { font-size: 1rem; flex-shrink: 0; letter-spacing: 2px; }
+  .deck-highlight { border-color: rgba(216,164,184,0.2); }
+  .deck-highlight .deck-num { background: rgba(216,164,184,0.17); }
+  .insight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .insight-card {
+    background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius);
+    padding: 1rem 1.05rem; display: flex; flex-direction: column; gap: 0.55rem;
+  }
+  .insight-card h3 { font-size: 0.92rem; color: var(--white); }
+  .insight-card p { font-size: 0.8rem; line-height: 1.65; color: var(--text-muted); }
+  .sources-note {
+    margin-top: 0.8rem; font-size: 0.74rem; line-height: 1.65; color: rgba(255,255,255,0.45);
+  }
+  .sources-note a { color: var(--heritage-light); }
+  footer { text-align: center; padding: 3rem 1rem 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+  @media (max-width: 700px) {
+    .ship-hero-top { flex-direction: column; }
+    .stats-bar { grid-template-columns: repeat(3, 1fr); }
+    .specs-grid, .route-grid, .insight-grid { grid-template-columns: 1fr; }
+    .deck-info { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .section-tab { padding: 0.5rem 0.7rem; font-size: 0.78rem; }
+  }
+  @media (max-width: 400px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="waves-bg"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d8a4b8" stop-opacity="0.08"/><stop offset="100%" stop-color="#d8a4b8" stop-opacity="0"/></linearGradient></defs><path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"><animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/></path></svg></div>
+<div id="site-header"></div>
+<div class="page">
+  <nav class="breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a><span class="breadcrumb-sep">›</span>
+    <a href="/curiosidades/">Curiosidades</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Titanic</span>
+  </nav>
+
+  <div class="ship-hero">
+    <div class="ship-hero-top">
+      <div class="ship-title-block">
+        <div class="ship-company-label">Especial historico • White Star Line</div>
+        <h1 class="ship-name">RMS Titanic</h1>
+        <p class="ship-subtitle">Mais do que um navio famoso pelo desastre, o Titanic foi um projeto-chave da classe Olympic: construido para conforto, escala e prestigio no Atlantico Norte, com interiores luxuosos, tecnologia de ponta para a epoca e um legado que mudou as regras da navegacao de passageiros.</p>
+      </div>
+      <div class="ship-quick-actions">
+        <a class="action-btn action-btn-primary" href="https://www.encyclopedia-titanica.org/titanic-deckplans/" target="_blank" rel="noopener">🗂️ Deck plans</a>
+        <a class="action-btn action-btn-outline" href="/curiosidades/">⚓ Ver hub</a>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item"><span class="stat-val">1912</span><span class="stat-lbl">Maiden voyage</span></div>
+      <div class="stat-item"><span class="stat-val">46.328</span><span class="stat-lbl">GRT</span></div>
+      <div class="stat-item"><span class="stat-val">269 m</span><span class="stat-lbl">Comprimento</span></div>
+      <div class="stat-item"><span class="stat-val">28,2 m</span><span class="stat-lbl">Boca</span></div>
+      <div class="stat-item"><span class="stat-val">2.435</span><span class="stat-lbl">Passageiros cap.</span></div>
+      <div class="stat-item"><span class="stat-val">885</span><span class="stat-lbl">Tripulacao cap.</span></div>
+      <div class="stat-item"><span class="stat-val">21 nos</span><span class="stat-lbl">Velocidade serv.</span></div>
+      <div class="stat-item"><span class="stat-val">16</span><span class="stat-lbl">Compartimentos</span></div>
+    </div>
+  </div>
+
+  <div class="section-tabs">
+    <a class="section-tab active" href="#sec-historia">📖 Historia</a>
+    <a class="section-tab" href="#sec-ficha">📋 Ficha tecnica</a>
+    <a class="section-tab" href="#sec-rota">🧭 Rota e companhia</a>
+    <a class="section-tab" href="#sec-interiores">✨ Interiores</a>
+    <a class="section-tab" href="#sec-decks">🗺️ Decks</a>
+    <a class="section-tab" href="#sec-legado">🛟 Legado</a>
+    <a class="section-tab" href="#sec-links">🔗 Fontes</a>
+  </div>
+
+  <div class="section-label" id="sec-historia">📖 Historia e contexto</div>
+  <div class="historia-text">
+    <p>O Titanic nasceu na fase mais competitiva da travessia transatlantica, quando White Star Line e Cunard disputavam passageiros entre Europa e America do Norte. Em vez de priorizar apenas velocidade, a White Star apostou em escala, conforto e prestigio. O resultado foi a classe Olympic, pensada como vitrine de luxo e regularidade no Atlantico Norte.</p>
+    <p>O navio foi construido pela Harland &amp; Wolff, em Belfast, com quilha batida em 31 de marco de 1909, lancamento ao mar em 31 de maio de 1911 e acabamento final concluido no inicio de 1912. Seu design esteve ligado a Thomas Andrews e a equipe do estaleiro, aproveitando a experiencia acumulada na construcao do Olympic, o primeiro navio da classe.</p>
+    <div class="historia-highlight">O conceito central do Titanic era ser um grande transatlantico de luxo, com foco em conforto, estabilidade, grande capacidade e interiores comparaveis aos melhores hoteis da epoca, nao um campeao absoluto de velocidade.</div>
+    <p>Em 10 de abril de 1912, o Titanic partiu de Southampton em sua viagem inaugural rumo a Nova York, com escalas em Cherbourg, na Franca, e Queenstown, na Irlanda, hoje Cobh. Na noite de 14 de abril, apos colidir com um iceberg, o navio afundou nas primeiras horas de 15 de abril de 1912. A tragedia transformou o Titanic em simbolo mundial de ambicao tecnologica, falha operacional e reforma de seguranca maritima.</p>
+  </div>
+
+  <div class="section-label" id="sec-ficha">📋 Ficha tecnica expandida</div>
+  <div class="specs-grid">
+    <div class="specs-group">
+      <div class="specs-group-title">🔎 Identificacao</div>
+      <div class="spec-row"><span class="spec-key">Nome completo</span><span class="spec-val">RMS Titanic</span></div>
+      <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Royal Mail Ship / ocean liner</span></div>
+      <div class="spec-row"><span class="spec-key">Companhia operadora</span><span class="spec-val">White Star Line</span></div>
+      <div class="spec-row"><span class="spec-key">Classe</span><span class="spec-val">Olympic class</span></div>
+      <div class="spec-row"><span class="spec-key">Porto de registro</span><span class="spec-val">Liverpool</span></div>
+    </div>
+
+    <div class="specs-group">
+      <div class="specs-group-title">🏗️ Construcao</div>
+      <div class="spec-row"><span class="spec-key">Estaleiro</span><span class="spec-val">Harland &amp; Wolff</span></div>
+      <div class="spec-row"><span class="spec-key">Cidade</span><span class="spec-val">Belfast, Reino Unido</span></div>
+      <div class="spec-row"><span class="spec-key">Quilha</span><span class="spec-val">31 de marco de 1909</span></div>
+      <div class="spec-row"><span class="spec-key">Lancamento</span><span class="spec-val">31 de maio de 1911</span></div>
+      <div class="spec-row"><span class="spec-key">Sea trials</span><span class="spec-val">2 de abril de 1912</span></div>
+    </div>
+
+    <div class="specs-group">
+      <div class="specs-group-title">📏 Dimensoes</div>
+      <div class="spec-row"><span class="spec-key">Comprimento total</span><span class="spec-val">882,5 pes / 269 m</span></div>
+      <div class="spec-row"><span class="spec-key">Boca maxima</span><span class="spec-val">92,5 pes / 28,2 m</span></div>
+      <div class="spec-row"><span class="spec-key">Tonelagem bruta</span><span class="spec-val">46.328 GRT</span></div>
+      <div class="spec-row"><span class="spec-key">Deslocamento aprox.</span><span class="spec-val">52.000 t carregado</span></div>
+      <div class="spec-row"><span class="spec-key">Altura estrutural</span><span class="spec-val">Escala recorde para 1912</span></div>
+    </div>
+
+    <div class="specs-group">
+      <div class="specs-group-title">⚙️ Propulsao e projeto</div>
+      <div class="spec-row"><span class="spec-key">Propulsao</span><span class="spec-val">2 maquinas reciprocas + 1 turbina</span></div>
+      <div class="spec-row"><span class="spec-key">Helices</span><span class="spec-val">3</span></div>
+      <div class="spec-row"><span class="spec-key">Velocidade de servico</span><span class="spec-val">21 nos</span></div>
+      <div class="spec-row"><span class="spec-key">Velocidade maxima estimada</span><span class="spec-val">23 a 24 nos</span></div>
+      <div class="spec-row"><span class="spec-key">Conceitos de seguranca</span><span class="spec-val">Double bottom + 16 compartimentos</span></div>
+    </div>
+
+    <div class="specs-group">
+      <div class="specs-group-title">👥 Capacidade</div>
+      <div class="spec-row"><span class="spec-key">Primeira classe</span><span class="spec-val">735</span></div>
+      <div class="spec-row"><span class="spec-key">Segunda classe</span><span class="spec-val">674</span></div>
+      <div class="spec-row"><span class="spec-key">Terceira classe</span><span class="spec-val">1.026</span></div>
+      <div class="spec-row"><span class="spec-key">Tripulacao</span><span class="spec-val">885</span></div>
+      <div class="spec-row"><span class="spec-key">A bordo na viagem inaugural</span><span class="spec-val">2.228 pessoas aprox.</span></div>
+    </div>
+
+    <div class="specs-group">
+      <div class="specs-group-title">✨ Destaques internos</div>
+      <div class="spec-row"><span class="spec-key">Elevadores</span><span class="spec-val">4</span></div>
+      <div class="spec-row"><span class="spec-key">Piscina</span><span class="spec-val">Sim, aquecida com agua do mar</span></div>
+      <div class="spec-row"><span class="spec-key">Banhos turcos</span><span class="spec-val">Sim</span></div>
+      <div class="spec-row"><span class="spec-key">Quadra de squash</span><span class="spec-val">Sim</span></div>
+      <div class="spec-row"><span class="spec-key">Refeicao e lazer</span><span class="spec-val">Dining saloons, a la carte, cafes e lounges</span></div>
+    </div>
+  </div>
+
+  <div class="section-label" id="sec-rota">🧭 Rota planejada, navios-irmaos e companhia</div>
+  <div class="route-grid">
+    <div class="route-card">
+      <div class="route-step">Rota inaugural</div>
+      <div class="route-title">Southampton → Cherbourg → Queenstown → New York</div>
+      <div class="route-desc">Esse era o servico westbound da White Star Line para o Atlantico Norte. O Titanic partiu de Southampton em 10 de abril de 1912 e deveria concluir a travessia em Nova York.</div>
+      <span class="route-badge tag-westbound">Atlantico Norte</span>
+    </div>
+
+    <div class="route-card">
+      <div class="route-step">Navios-irmaos</div>
+      <div class="route-title">Olympic e Britannic</div>
+      <div class="route-desc">O Olympic entrou em servico em 1911 e o Britannic seria o terceiro navio da classe. Juntos, formariam a principal linha de luxo da White Star para a rota transatlantica.</div>
+      <span class="route-badge tag-class">Olympic class</span>
+    </div>
+
+    <div class="route-card">
+      <div class="route-step">Companhia</div>
+      <div class="route-title">White Star Line</div>
+      <div class="route-desc">A White Star nao existe mais como operadora independente. Ela se fundiu com a Cunard em 1934; a Cunard ainda existe e preserva a heranca do nome em seu conceito de atendimento chamado White Star Service.</div>
+      <span class="route-badge tag-legacy">Heranca viva</span>
+    </div>
+  </div>
+
+  <div class="section-label" id="sec-interiores">✨ Conceitos do navio e vida a bordo</div>
+  <div class="historia-text" style="max-width:900px;">
+    <p>O Titanic misturava inovacao tecnica com segregacao clara por classe, um padrao forte nos transatlanticos do inicio do seculo XX. A primeira classe reunia os espacos mais celebrados, com Grand Staircase, lounge, reading and writing room, smoking room, suites amplas, promenade e servicos pagos extras que lembravam um hotel de luxo.</p>
+    <p>Entre os conceitos mais marcantes estavam o uso de 16 compartimentos estanques com portas acionadas da ponte, double bottom ao longo de grande parte do casco, sistema eletrico abrangente, telegrafia sem fio Marconi, quatro elevadores e uma distribuicao interna pensada para conforto, circulacao e prestacao de servico.</p>
+  </div>
+
+  <div class="insight-grid" style="margin-top:1rem;">
+    <div class="insight-card">
+      <h3>Restaurantes e refeicoes</h3>
+      <p>O navio tinha tres dining saloons principais, um para cada classe. Na primeira classe havia ainda o À la Carte Restaurant, gerido separadamente, alem do Cafe Parisien ao lado. O Verandah Cafe / Palm Court servia refeicoes leves e convivio com vista para o mar.</p>
+    </div>
+    <div class="insight-card">
+      <h3>Lazer e bem-estar</h3>
+      <p>Piscina, banhos turcos, ginasio e quadra de squash eram grandes argumentos de venda. Em 1912, esse conjunto colocava o Titanic entre os navios mais sofisticados do planeta em termos de lazer a bordo.</p>
+    </div>
+    <div class="insight-card">
+      <h3>Cabines e nivel de conforto</h3>
+      <p>A segunda classe era frequentemente comparada a primeira classe de outros navios contemporaneos. Ja a terceira classe, embora mais simples, era vista como relativamente confortavel para os padroes da emigracao oceanica da epoca.</p>
+    </div>
+  </div>
+
+  <div class="section-label" id="sec-decks">🗺️ Mapa resumido dos decks</div>
+  <div class="decks-wrapper">
+    <div class="deck-row deck-highlight"><div class="deck-num">Boat</div><div class="deck-info"><div class="deck-name">Bridge, lifeboats e gymnasium</div><div class="deck-desc">Ponte de comando, area dos botes, alojamentos de oficiais e ginasio de primeira classe.</div><div class="deck-icons">🛟🏋️</div></div></div>
+    <div class="deck-row deck-highlight"><div class="deck-num">A</div><div class="deck-info"><div class="deck-name">Promenade e lounges</div><div class="deck-desc">Promenade de primeira classe, lounge, reading room e Verandah Cafe / Palm Court.</div><div class="deck-icons">🚶☕</div></div></div>
+    <div class="deck-row deck-highlight"><div class="deck-num">B</div><div class="deck-info"><div class="deck-name">Suites e restaurantes extras</div><div class="deck-desc">Parlour suites, À la Carte Restaurant e Cafe Parisien.</div><div class="deck-icons">🍽️🪑</div></div></div>
+    <div class="deck-row"><div class="deck-num">C</div><div class="deck-info"><div class="deck-name">Cabines e servicos</div><div class="deck-desc">Mais acomodacoes, escritorio do purser e biblioteca da segunda classe.</div><div class="deck-icons">🛏️📚</div></div></div>
+    <div class="deck-row deck-highlight"><div class="deck-num">D</div><div class="deck-info"><div class="deck-name">Reception e dining saloons</div><div class="deck-desc">Recepcao da primeira classe e os grandes saloes de refeicao da primeira e segunda classes.</div><div class="deck-icons">🏛️🍴</div></div></div>
+    <div class="deck-row"><div class="deck-num">E</div><div class="deck-info"><div class="deck-name">Cabines multiplas classes</div><div class="deck-desc">Acomodacoes de passageiros de varias classes e parte dos alojamentos da tripulacao.</div><div class="deck-icons">🛏️⚓</div></div></div>
+    <div class="deck-row deck-highlight"><div class="deck-num">F</div><div class="deck-info"><div class="deck-name">Piscina, banhos e squash</div><div class="deck-desc">Swimming bath, Turkish baths, squash court e cabines de terceira classe.</div><div class="deck-icons">🏊🛁</div></div></div>
+    <div class="deck-row"><div class="deck-num">G</div><div class="deck-info"><div class="deck-name">Deck inferior de passageiros</div><div class="deck-desc">Cabines baixas, acessos de servico e areas proximas ao correio e carga.</div><div class="deck-icons">📦🚪</div></div></div>
+    <div class="deck-row"><div class="deck-num">Orlop</div><div class="deck-info"><div class="deck-name">Operacao e maquinaria</div><div class="deck-desc">Areas restritas com compartimentos tecnicos, correio, cargas e ligacao com as salas de maquinas e caldeiras.</div><div class="deck-icons">⚙️🔥</div></div></div>
+  </div>
+  <p class="sources-note">* Planta resumida por funcao. Para visualizar deck plans historicos mais detalhados, veja <a href="https://www.encyclopedia-titanica.org/titanic-deckplans/" target="_blank" rel="noopener">Encyclopedia Titanica</a>.</p>
+
+  <div class="section-label" id="sec-legado">🛟 O Titanic influenciou os navios posteriores?</div>
+  <div class="historia-text">
+    <p>Sim. O impacto mais claro veio na seguranca maritima. Depois do desastre, o setor passou a exigir lugares em botes salva-vidas para todos a bordo, vigilancia de radio 24 horas e monitoramento permanente de gelo no Atlantico Norte, por meio da International Ice Patrol.</p>
+    <p>Em termos de projeto, o caso do Titanic reforcou a necessidade de subdivisao mais robusta, revisao da altura dos bulkheads, treinamento de emergencia mais serio e cultura operacional menos confiante no mito da invulnerabilidade. O Olympic, seu navio-irmao, recebeu modificacoes e reforcos apos o desastre.</p>
+    <div class="historia-highlight">Interpretacao historica: o maior legado do Titanic nao foi um unico “estilo” copiado por navios futuros, mas sim a combinacao de luxo em larga escala com uma profunda revisao global das regras de seguranca que moldaram os liners e, mais tarde, os navios de cruzeiro modernos.</div>
+    <p>Tambem ficou forte a ideia de que grandes navios de passageiros precisavam equilibrar glamour e redundancia tecnica. Em outras palavras: o Titanic ajudou a consolidar a nocao de que experiencia premium e engenharia de seguranca nao podiam caminhar separadas.</p>
+  </div>
+
+  <div class="section-label" id="sec-links">🔗 Fontes e links uteis</div>
+  <div class="links-grid">
+    <a class="link-card" href="https://www.britannica.com/topic/Titanic" target="_blank" rel="noopener">
+      <div class="link-title">Britannica — Titanic</div>
+      <div class="link-desc">Origem do projeto, construcao, dimensoes, compartimentos, interiores e contexto competitivo com a Cunard.</div>
+    </a>
+    <a class="link-card" href="https://www.rmg.co.uk/stories/topics/rms-titanic-facts?open=" target="_blank" rel="noopener">
+      <div class="link-title">Royal Museums Greenwich — Titanic facts</div>
+      <div class="link-desc">Linha do tempo, rota da viagem inaugural, capacidade por classe e principais marcos do desastre.</div>
+    </a>
+    <a class="link-card" href="https://www.britannica.com/topic/White-Star-Line" target="_blank" rel="noopener">
+      <div class="link-title">Britannica — White Star Line</div>
+      <div class="link-desc">Contexto da companhia que operava o Titanic e sua relacao com a classe Olympic.</div>
+    </a>
+    <a class="link-card" href="https://www.cunard.com/en-us/the-cunard-experience/white-star-service" target="_blank" rel="noopener">
+      <div class="link-title">Cunard — White Star Service</div>
+      <div class="link-desc">Exemplo moderno de como a marca White Star ainda sobrevive simbolicamente dentro da Cunard.</div>
+    </a>
+    <a class="link-card" href="https://www.encyclopedia-titanica.org/titanic-deckplans/" target="_blank" rel="noopener">
+      <div class="link-title">Encyclopedia Titanica — Deck plans</div>
+      <div class="link-desc">Mapas historicos detalhados dos decks do Titanic, usados aqui como referencia para o resumo estrutural.</div>
+    </a>
+  </div>
+</div>
+<footer>© 2025 Poseidon Cruzeiros — Conteudo historico para fins de referencia. Para pesquisa aprofundada, consulte acervos e museus especializados.</footer>
+<script>
+const tabs = document.querySelectorAll('.section-tab');
+const sections = ['sec-historia','sec-ficha','sec-rota','sec-interiores','sec-decks','sec-legado','sec-links'];
+window.addEventListener('scroll', () => {
+  let current = sections[0];
+  sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 100) current = id;
+  });
+  tabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>

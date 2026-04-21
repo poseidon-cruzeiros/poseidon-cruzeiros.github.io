@@ -44,9 +44,6 @@
   .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin:2.6rem 0 1.2rem; scroll-margin-top:calc(var(--nav-height) + 16px); }
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right, rgba(240,192,64,0.42), transparent); }
   .story-text { font-size:0.93rem; line-height:1.88; color:rgba(255,255,255,0.82); display:flex; flex-direction:column; gap:1rem; max-width:860px; }
-  .figure-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:1rem; margin:1.2rem 0 1.4rem; }
-  .figure-card svg { width:100%; height:auto; display:block; border-radius:10px; }
-  .figure-card figcaption { margin-top:0.75rem; font-size:0.78rem; line-height:1.6; color:var(--text-muted); }
   .ship-grid,.sources-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
   .ship-card,.source-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1rem 1.05rem; display:flex; flex-direction:column; gap:0.55rem; }
   .source-card { text-decoration:none; color:inherit; transition:background 0.2s,border-color 0.2s,transform 0.15s; }
@@ -86,37 +83,7 @@
   <div class="story-text">
     <p>Nesta lista, “revolucionário” não significa apenas famoso. Significa ter alterado o rumo da navegação de passageiros. Pode ser por engenharia, por design, por velocidade, por modelo de negócio ou por criar um novo padrão que o resto da indústria passa a perseguir.</p>
     <p>Por isso, a seleção mistura liners clássicos e navios de cruzeiro. A história do cruzeiro moderno nasce do mundo dos liners, e várias das ideias que hoje parecem normais em navios de férias começaram muito antes.</p>
-    <p>Esse tipo de recorte é interessante porque evita a armadilha de confundir popularidade com impacto histórico. Há navios muito conhecidos que não mudaram estruturalmente o setor, assim como há embarcações menos populares fora do círculo de entusiastas que abriram caminhos decisivos para tudo o que veio depois.</p>
-    <p>Aqui, o critério principal é simples: cada navio da lista redefiniu algum parâmetro importante. Em um caso, foi o tamanho. Em outro, a função. Em outro, a linguagem visual. Mais adiante, entram o modelo do resort flutuante e até o tema da propulsão mais limpa.</p>
   </div>
-  <figure class="figure-card">
-    <svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linha do tempo estilizada de navios revolucionários">
-      <rect width="960" height="300" fill="#0c2340"/>
-      <line x1="90" y1="190" x2="870" y2="190" stroke="#486f8e" stroke-width="6" stroke-linecap="round"/>
-      <circle cx="130" cy="190" r="14" fill="#d8e7ff"/>
-      <circle cx="260" cy="190" r="14" fill="#d8a4b8"/>
-      <circle cx="380" cy="190" r="14" fill="#f0c040"/>
-      <circle cx="505" cy="190" r="14" fill="#f6d2dd"/>
-      <circle cx="630" cy="190" r="14" fill="#9fd7f5"/>
-      <circle cx="750" cy="190" r="14" fill="#a8f0de"/>
-      <circle cx="840" cy="190" r="14" fill="#ffe9a8"/>
-      <text x="104" y="95" fill="#d8e7ff" font-size="20" font-family="DM Sans, sans-serif">1858</text>
-      <text x="222" y="95" fill="#ffd7e4" font-size="20" font-family="DM Sans, sans-serif">1900</text>
-      <text x="348" y="95" fill="#fce08a" font-size="20" font-family="DM Sans, sans-serif">1906</text>
-      <text x="474" y="95" fill="#f8dce6" font-size="20" font-family="DM Sans, sans-serif">1935</text>
-      <text x="598" y="95" fill="#b7e5fa" font-size="20" font-family="DM Sans, sans-serif">1987</text>
-      <text x="716" y="95" fill="#a8f0de" font-size="20" font-family="DM Sans, sans-serif">2009</text>
-      <text x="807" y="95" fill="#ffefb8" font-size="20" font-family="DM Sans, sans-serif">2018</text>
-      <text x="77" y="235" fill="#d8e7ff" font-size="16" font-family="DM Sans, sans-serif">Great Eastern</text>
-      <text x="177" y="235" fill="#ffdbe6" font-size="16" font-family="DM Sans, sans-serif">Victoria Luise</text>
-      <text x="314" y="235" fill="#fce08a" font-size="16" font-family="DM Sans, sans-serif">Mauretania</text>
-      <text x="455" y="235" fill="#f8dce6" font-size="16" font-family="DM Sans, sans-serif">Normandie</text>
-      <text x="560" y="235" fill="#b7e5fa" font-size="16" font-family="DM Sans, sans-serif">Sovereign</text>
-      <text x="715" y="235" fill="#a8f0de" font-size="16" font-family="DM Sans, sans-serif">Oasis</text>
-      <text x="802" y="235" fill="#ffefb8" font-size="16" font-family="DM Sans, sans-serif">AIDAnova</text>
-    </svg>
-    <figcaption>Ilustração original do Poseidon com uma linha do tempo simplificada dos navios escolhidos, destacando que a revolução no setor veio em ondas e por motivos diferentes.</figcaption>
-  </figure>
 
   <div class="section-label" id="sec-lista">🚢 Sete navios que mudaram o jogo</div>
   <div class="ship-grid">
@@ -156,34 +123,12 @@
       <p>Segundo a Meyer Werft, foi o primeiro navio de cruzeiro movido a LNG. É um marco porque simboliza a entrada do tema ambiental como eixo real de inovação do produto.</p>
     </div>
   </div>
-  <div class="story-text" style="margin-top:1rem;">
-    <p>Vale notar como a lista deixa claro que a evolução do setor não foi linear. Em alguns momentos, a ruptura veio do lado da engenharia pura. Em outros, da maneira de vender a viagem. Mais tarde, a transformação passou a acontecer no desenho das áreas públicas e na forma como o passageiro usa o navio.</p>
-    <p>Essa leitura é especialmente útil para quem gosta de comparar gerações de embarcações. Um navio revolucionário não é apenas “o maior do seu tempo”; ele é o que obriga os concorrentes a reagir, a rever projeto, marketing ou expectativa de mercado.</p>
-  </div>
 
   <div class="section-label" id="sec-legado">🧭 O que esses navios têm em comum</div>
   <div class="story-text">
     <p>Todos eles deslocaram a fronteira do que parecia possível no seu momento: o <strong>Great Eastern</strong> pela escala; o <strong>Prinzessin Victoria Luise</strong> pela mudança de função; a <strong>Mauretania</strong> e o <strong>Lusitania</strong> pela tecnologia e velocidade; o <strong>Normandie</strong> por transformar engenharia e estética em espetáculo; o <strong>Sovereign of the Seas</strong> por fixar o modelo do resort flutuante; o <strong>Oasis of the Seas</strong> por redefinir o layout social do navio; e o <strong>AIDAnova</strong> por empurrar a conversa sobre propulsão e emissões.</p>
     <p>Em outras palavras: a história dos cruzeiros não é feita só de navios maiores. Ela é feita de navios que mudam a lógica do setor.</p>
-    <p>Outra coisa em comum entre eles é a capacidade de transformar expectativa em referência. Depois do Great Eastern, o setor passou a sonhar em grande; depois do Prinzessin Victoria Luise, lazer virou categoria própria; depois do Sovereign, o navio-resort deixou de ser exceção; depois do Oasis, a vida a bordo passou a ser pensada quase como urbanismo interno.</p>
-    <p>No caso do AIDAnova, a conversa muda novamente de eixo. O debate deixa de ser apenas “o que impressiona o passageiro” e inclui também “o que sinaliza o futuro operacional do setor”. Isso mostra como a ideia de revolução naval muda conforme a indústria muda.</p>
   </div>
-  <figure class="figure-card">
-    <svg viewBox="0 0 960 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparação visual de perfis de navios de eras diferentes">
-      <rect width="960" height="340" fill="#102742"/>
-      <rect y="255" width="960" height="85" fill="#12385b"/>
-      <path d="M90 244 C128 230 184 230 220 244 L220 255 L90 255 Z" fill="#d8e7ff"/>
-      <path d="M260 236 C314 215 390 215 450 236 L450 255 L260 255 Z" fill="#d8a4b8"/>
-      <path d="M500 228 C590 190 720 190 835 228 L835 255 L500 255 Z" fill="#f0c040"/>
-      <text x="90" y="80" fill="#d8e7ff" font-size="28" font-family="DM Sans, sans-serif">Escala</text>
-      <text x="305" y="80" fill="#ffdce7" font-size="28" font-family="DM Sans, sans-serif">Luxo e estilo</text>
-      <text x="585" y="80" fill="#fce08a" font-size="28" font-family="DM Sans, sans-serif">Navio-destino</text>
-      <text x="95" y="285" fill="#d8e7ff" font-size="18" font-family="DM Sans, sans-serif">Protótipo do liner moderno</text>
-      <text x="275" y="285" fill="#ffdce7" font-size="18" font-family="DM Sans, sans-serif">Revolução estética e funcional</text>
-      <text x="585" y="285" fill="#fce08a" font-size="18" font-family="DM Sans, sans-serif">Entretenimento, bairros e nova escala social</text>
-    </svg>
-    <figcaption>Ilustração original criada para o artigo, resumindo três ideias centrais da lista: escala, transformação estética e o navio como destino em si.</figcaption>
-  </figure>
 
   <div class="section-label" id="sec-fontes">🔗 Fontes e leituras</div>
   <div class="sources-grid">

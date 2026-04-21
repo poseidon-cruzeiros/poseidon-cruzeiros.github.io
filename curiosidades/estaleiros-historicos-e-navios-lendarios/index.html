@@ -63,9 +63,6 @@
   .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right, rgba(216,231,255,0.42), transparent); }
   .story-text { font-size:0.93rem; line-height:1.88; color:rgba(255,255,255,0.82); display:flex; flex-direction:column; gap:1rem; max-width:860px; }
   .story-highlight { background:rgba(216,231,255,0.08); border-left:3px solid var(--steel); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:0.95rem 1.1rem; font-size:0.9rem; color:rgba(255,255,255,0.86); font-style:italic; }
-  .figure-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:1rem; margin:1.2rem 0 1.4rem; }
-  .figure-card svg { width:100%; height:auto; display:block; border-radius:10px; }
-  .figure-card figcaption { margin-top:0.75rem; font-size:0.78rem; line-height:1.6; color:var(--text-muted); }
   .yard-grid, .sources-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; }
   .yard-card, .source-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1rem 1.05rem; display:flex; flex-direction:column; gap:0.55rem; }
   .source-card { text-decoration:none; color:inherit; transition:background 0.2s,border-color 0.2s,transform 0.15s; }
@@ -120,43 +117,7 @@
     <p>Quando a gente fala de navios lendários, é comum lembrar primeiro do nome do navio ou da companhia. Mas, para o entusiasta, o estaleiro também é parte central da história. É nele que decisões de casco, propulsão, layout, segurança e acabamento se transformam em identidade.</p>
     <p>Alguns estaleiros viraram praticamente escolas de construção naval de passageiros. Certos nomes ficaram ligados ao luxo, outros à escala, outros à velocidade, e outros à era moderna dos grandes resorts flutuantes.</p>
     <div class="story-highlight">Em muitos casos, o estaleiro não apenas “executa” um projeto: ele concentra conhecimento acumulado por décadas, define padrões técnicos e se torna coprodutor do legado do navio.</div>
-    <p>Na prática, olhar para um estaleiro é olhar para uma cultura técnica. Há construtores que ficaram conhecidos pelo domínio de cascos oceânicos robustos; outros, pela habilidade de transformar áreas públicas em espetáculo; outros ainda, pela capacidade de absorver novas exigências ambientais e de hotelaria sem perder eficiência industrial.</p>
-    <p>Isso faz diferença porque os navios de passageiros nunca foram objetos puramente utilitários. Eles sempre carregaram símbolo, imagem de marca e ambição nacional ou corporativa. O estaleiro, nesse contexto, não é só fornecedor: ele é um dos lugares onde a identidade do navio realmente nasce.</p>
   </div>
-  <figure class="figure-card">
-    <svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de um estaleiro com gruas e um navio em construção">
-      <defs>
-        <linearGradient id="yardSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#173a64"/>
-          <stop offset="100%" stop-color="#0a2342"/>
-        </linearGradient>
-        <linearGradient id="yardWater" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#0d355c"/>
-          <stop offset="100%" stop-color="#1b5e8c"/>
-        </linearGradient>
-      </defs>
-      <rect width="960" height="420" fill="url(#yardSky)"/>
-      <rect y="300" width="960" height="120" fill="url(#yardWater)"/>
-      <rect y="250" width="960" height="50" fill="#11253e"/>
-      <rect x="80" y="92" width="18" height="158" fill="#8fa8c3"/>
-      <rect x="160" y="72" width="18" height="178" fill="#8fa8c3"/>
-      <rect x="760" y="60" width="18" height="190" fill="#8fa8c3"/>
-      <path d="M89 110 L210 110 L89 248 Z" fill="#d8e7ff" opacity="0.75"/>
-      <path d="M169 90 L350 90 L169 248 Z" fill="#d8e7ff" opacity="0.65"/>
-      <path d="M769 88 L900 88 L769 248 Z" fill="#d8e7ff" opacity="0.7"/>
-      <path d="M260 245 C355 215 565 215 730 245 L685 300 L205 300 Z" fill="#d8a4b8"/>
-      <path d="M320 224 C405 204 535 204 660 224" stroke="#f8fbff" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <rect x="360" y="195" width="180" height="22" rx="8" fill="#f4f8ff"/>
-      <rect x="390" y="165" width="122" height="28" rx="6" fill="#c9d9ec"/>
-      <rect x="432" y="140" width="38" height="32" rx="5" fill="#c9d9ec"/>
-      <circle cx="220" cy="332" r="18" fill="#d8e7ff" opacity="0.18"/>
-      <circle cx="330" cy="360" r="13" fill="#d8e7ff" opacity="0.18"/>
-      <circle cx="530" cy="340" r="16" fill="#d8e7ff" opacity="0.18"/>
-      <circle cx="670" cy="360" r="12" fill="#d8e7ff" opacity="0.18"/>
-      <circle cx="795" cy="334" r="15" fill="#d8e7ff" opacity="0.18"/>
-    </svg>
-    <figcaption>Ilustração original do Poseidon para representar a lógica industrial dos grandes estaleiros: gruas, casco em montagem e a relação direta entre projeto, produção e mar.</figcaption>
-  </figure>
 
   <div class="section-label" id="sec-werften">🏗️ Quatro estaleiros que ajudaram a definir eras</div>
   <div class="yard-grid">
@@ -197,10 +158,6 @@
       </div>
     </div>
   </div>
-  <div class="story-text" style="margin-top:1rem;">
-    <p>Juntos, esses nomes contam quase uma geografia do setor. Belfast representa o auge da tradição britânica; Saint-Nazaire aparece como elo entre elegância transatlântica e grandes navios contemporâneos; a Fincantieri simboliza a força italiana no cruzeiro moderno; e a MEYER WERFT traduz especialização técnica e adaptação ao novo século.</p>
-    <p>Para quem acompanha frotas e classes de navios, isso também ajuda a entender por que certas companhias voltam repetidamente aos mesmos construtores. Existe um componente industrial, claro, mas existe também continuidade de linguagem: corredores, proporções, soluções de áreas públicas, integração entre decks e até a sensação geral do produto final.</p>
-  </div>
 
   <div class="section-label" id="sec-legado">🚢 Navios lendários e o tipo de fama que cada estaleiro construiu</div>
   <div class="story-text">
@@ -209,32 +166,7 @@
     <p><strong>Fincantieri</strong> simboliza a ponte entre tradição transatlântica e domínio contemporâneo da construção de navios de lazer. Quando se fala em consistência industrial no cruzeiro moderno, é impossível não citar o grupo italiano.</p>
     <p><strong>MEYER WERFT</strong>, por sua vez, ficou fortemente ligada ao refinamento técnico e à especialização em navios modernos. Ela aparece em classes muito importantes do fim do século XX e início do XXI e também em marcos ambientais, como o AIDAnova, primeiro navio de cruzeiro movido a LNG.</p>
     <div class="story-highlight">Se os navios são as estrelas, os estaleiros são as linhagens. Eles ajudam a explicar por que certos períodos, estilos e soluções técnicas surgem em ondas e deixam marcas duradouras na indústria.</div>
-    <p>Há ainda um detalhe que chama a atenção dos entusiastas: um navio pode ficar lendário por razões muito diferentes. Pode ser por beleza, por velocidade, por luxo, por pioneirismo técnico ou por influência duradoura no que veio depois. O estaleiro, por associação, passa a carregar parte dessa fama, como se cada grande navio fosse também um cartão de visitas ampliado do seu construtor.</p>
-    <p>No fim, estudar estaleiros históricos é uma forma de sair da superfície do assunto. Em vez de ver apenas cascos famosos, a gente passa a enxergar tradições industriais, mudanças de prioridade e a evolução silenciosa que permitiu ao setor sair da era dos liners para chegar ao navio-resort contemporâneo.</p>
   </div>
-  <figure class="figure-card">
-    <svg viewBox="0 0 960 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linha visual mostrando a evolução de liners para navios de cruzeiro">
-      <rect width="960" height="360" fill="#0d2745"/>
-      <line x1="110" y1="240" x2="850" y2="240" stroke="#355f87" stroke-width="6" stroke-linecap="round"/>
-      <circle cx="170" cy="240" r="16" fill="#d8e7ff"/>
-      <circle cx="380" cy="240" r="16" fill="#d8a4b8"/>
-      <circle cx="590" cy="240" r="16" fill="#f0c040"/>
-      <circle cx="800" cy="240" r="16" fill="#a8f0de"/>
-      <text x="126" y="120" fill="#d8e7ff" font-size="28" font-family="DM Sans, sans-serif">Liners clássicos</text>
-      <text x="309" y="120" fill="#ffd9e6" font-size="28" font-family="DM Sans, sans-serif">Prestígio nacional</text>
-      <text x="522" y="120" fill="#fce08a" font-size="28" font-family="DM Sans, sans-serif">Cruzeiro de massa</text>
-      <text x="710" y="120" fill="#a8f0de" font-size="28" font-family="DM Sans, sans-serif">Inovação atual</text>
-      <path d="M122 214 C145 194 188 194 220 214 L220 234 L122 234 Z" fill="#d8e7ff"/>
-      <path d="M325 212 C365 188 430 188 470 212 L470 234 L325 234 Z" fill="#d8a4b8"/>
-      <path d="M530 208 C585 176 670 176 725 208 L725 234 L530 234 Z" fill="#f0c040"/>
-      <path d="M735 204 C785 173 860 173 905 204 L905 234 L735 234 Z" fill="#a8f0de"/>
-      <text x="128" y="286" fill="#c7d8ea" font-size="20" font-family="DM Sans, sans-serif">Harland &amp; Wolff</text>
-      <text x="327" y="286" fill="#f0d4de" font-size="20" font-family="DM Sans, sans-serif">Saint-Nazaire</text>
-      <text x="566" y="286" fill="#f7e5ad" font-size="20" font-family="DM Sans, sans-serif">Fincantieri</text>
-      <text x="767" y="286" fill="#c9f4e8" font-size="20" font-family="DM Sans, sans-serif">MEYER</text>
-    </svg>
-    <figcaption>Ilustração original que resume a trajetória do artigo: estaleiros históricos ajudam a costurar a passagem dos grandes transatlânticos para o cruzeiro contemporâneo.</figcaption>
-  </figure>
 
   <div class="section-label" id="sec-fontes">🔗 Fontes e leituras</div>
   <div class="sources-grid">

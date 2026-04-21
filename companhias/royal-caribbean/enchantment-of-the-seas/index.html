@@ -133,6 +133,7 @@
     box-shadow:
       0 18px 40px rgba(0,0,0,0.24),
       inset 0 1px 0 rgba(255,255,255,0.06);
+    aspect-ratio: 16 / 9;
   }
   .ship-hero-media-frame::after {
     content: '';
@@ -146,8 +147,7 @@
   .ship-hero-image {
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 100%;
     object-fit: cover;
   }
   .ship-hero-caption {
@@ -167,8 +167,7 @@
   .ship-hero-credit {
     color: rgba(255,255,255,0.64);
   }
-
-  .stats-bar {
+.stats-bar {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 1px;
@@ -682,5 +681,8 @@
 
 </body>
 </html>
+
+
+
 
 

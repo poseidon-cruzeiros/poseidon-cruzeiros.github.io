@@ -1,0 +1,12 @@
+﻿arquivo_local: assets/images/navios/royal-caribbean/jewel-of-the-seas/royal-caribbean-jewel-of-the-seas.jpg
+pagina_do_site: /companhias/royal-caribbean/jewel-of-the-seas/
+navio_ou_tema: Jewel of the Seas
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Jewel_of_the_Seas-1.JPG
+autor: Captain-tucker
+licenca: CC BY-SA 3.0
+url_licenca: https://creativecommons.org/licenses/by-sa/3.0/
+data_de_consulta: 2026-04-21
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Captain-tucker, via Wikimedia Commons, CC BY-SA 3.0. Ajustada pelo Poseidon.

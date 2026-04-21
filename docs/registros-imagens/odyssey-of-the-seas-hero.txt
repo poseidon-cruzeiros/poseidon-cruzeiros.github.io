@@ -1,0 +1,12 @@
+﻿arquivo_local: assets/images/navios/royal-caribbean/odyssey-of-the-seas/royal-caribbean-odyssey-of-the-seas.jpg
+pagina_do_site: /companhias/royal-caribbean/odyssey-of-the-seas/
+navio_ou_tema: Odyssey of the Seas
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Odyssey_of_the_Seas.jpg
+autor: Oldih
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+data_de_consulta: 2026-04-21
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Oldih, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.

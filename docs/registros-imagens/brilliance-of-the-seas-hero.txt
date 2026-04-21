@@ -1,0 +1,12 @@
+﻿arquivo_local: assets/images/navios/royal-caribbean/brilliance-of-the-seas/royal-caribbean-brilliance-of-the-seas.jpg
+pagina_do_site: /companhias/royal-caribbean/brilliance-of-the-seas/
+navio_ou_tema: Brilliance of the Seas
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Brilliance_of_the_seas.JPG
+autor: Bo Randstedt
+licenca: CC BY-SA 3.0
+url_licenca: https://creativecommons.org/licenses/by-sa/3.0/
+data_de_consulta: 2026-04-21
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Bo Randstedt, via Wikimedia Commons, CC BY-SA 3.0. Ajustada pelo Poseidon.

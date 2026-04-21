@@ -2,11 +2,11 @@
 pagina_do_site: /companhias/royal-caribbean/voyager-of-the-seas/
 navio_ou_tema: Voyager of the Seas
 fonte: Wikimedia Commons
-url_original: https://commons.wikimedia.org/wiki/File:Voyager_of_the_seas.JPG
-autor: Royalsolo
-licenca: Dominio publico
-url_licenca: nao se aplica
+url_original: https://commons.wikimedia.org/wiki/File:Voyager_photo.jpg
+autor: Elisa.rolle
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
 data_de_consulta: 2026-04-21
 houve_edicao: sim
 tipo_de_edicao: redimensionamento e compressao para web
-credito_publico: Imagem em dominio publico. Fonte: Wikimedia Commons.
+credito_publico: Foto: Elisa.rolle, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.

@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/virgin-voyages/resilient-lady/virgin-voyages-resilient-lady.jpg
+pagina_do_site: /companhias/virgin-voyages/resilient-lady/
+navio_ou_tema: Resilient Lady
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Virgin_Voyages_Resilient_Lady_cruise_ship.jpg
+autor: Antoloji
+licenca: CC0 1.0 Universal
+url_licenca: https://creativecommons.org/publicdomain/zero/1.0/
+data_de_consulta: 2026-04-21
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Imagem em dominio publico. Fonte: Wikimedia Commons.

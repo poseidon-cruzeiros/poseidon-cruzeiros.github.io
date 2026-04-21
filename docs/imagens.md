@@ -275,6 +275,15 @@ Metas recomendadas:
 6. A imagem foi otimizada para web?
 7. O arquivo final esta com nome padronizado?
 
+## Nota Operacional para Wikimedia Commons
+
+Quando for coletar varias imagens do `Wikimedia Commons` na mesma sessao:
+
+- preferir downloads em lotes pequenos
+- respeitar intervalos entre requisicoes
+- se o site responder com bloqueio temporario ou `429`, aguardar antes de tentar novamente
+- seguir o procedimento tecnico em `docs/processo-imagens.md`
+
 ## Regra Final
 
 Se houver duvida sobre a licenca, nao publicar a imagem ate confirmar.

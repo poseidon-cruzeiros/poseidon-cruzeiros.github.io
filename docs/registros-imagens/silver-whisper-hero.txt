@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/silversea-cruises/silver-whisper/silversea-cruises-silver-whisper.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-whisper/
+navio_ou_tema: Silver Whisper
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Silver_Whisper_in_Tallinn_10_June_2012.JPG
+autor: Pjotr Mahhonin
+licenca: CC0 1.0 Universal
+url_licenca: https://creativecommons.org/publicdomain/zero/1.0/
+data_de_consulta: 2026-04-22
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Imagem em dominio publico. Fonte: Wikimedia Commons.

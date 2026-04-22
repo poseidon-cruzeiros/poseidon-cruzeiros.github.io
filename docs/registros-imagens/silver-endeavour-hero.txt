@@ -1,0 +1,13 @@
+﻿arquivo_local: assets/images/navios/silversea-cruises/silver-endeavour/silversea-cruises-silver-endeavour.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-endeavour/
+navio_ou_tema: Silver Endeavour
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Silver_Endeavour_-_Gerlache_Strait_-_Antarctica_-_V-P.jpg
+autor: Virtual-Pano
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+data_de_consulta: 2026-04-22
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Virtual-Pano, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.
+

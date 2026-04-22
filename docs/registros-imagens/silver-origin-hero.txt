@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/silversea-cruises/silver-origin/silversea-cruises-silver-origin.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-origin/
+navio_ou_tema: Silver Origin
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Silver_Origin.jpg
+autor: Shipsoftheworld11
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+data_de_consulta: 2026-04-22
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Shipsoftheworld11, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.

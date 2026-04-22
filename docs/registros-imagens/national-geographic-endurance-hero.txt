@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/national-geographic-endurance/national-geographic-endurance.jpg
+pagina_do_site: /companhias/lindblad-expeditions/national-geographic-endurance/
+navio_ou_tema: National Geographic Endurance
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:National_Geographic_Endurance_off_the_Ness,_Burrafirth_-_geograph.org.uk_-_8087220.jpg
+autor: Mike Pennington
+licenca: CC BY-SA 2.0
+url_licenca: https://creativecommons.org/licenses/by-sa/2.0/
+data_de_consulta: 2026-04-22
+houve_edicao: nao
+tipo_de_edicao: nao se aplica
+credito_publico: Foto: Mike Pennington, via Wikimedia Commons, CC BY-SA 2.0.

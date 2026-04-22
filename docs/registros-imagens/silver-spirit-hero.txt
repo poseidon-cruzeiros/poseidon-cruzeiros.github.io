@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/silversea-cruises/silver-spirit/silversea-cruises-silver-spirit.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-spirit/
+navio_ou_tema: Silver Spirit
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Silversea_Silver_Spirit_01.JPG
+autor: Piergiuliano Chesi
+licenca: CC BY 3.0
+url_licenca: https://creativecommons.org/licenses/by/3.0/
+data_de_consulta: 2026-04-22
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e compressao para web
+credito_publico: Foto: Piergiuliano Chesi, via Wikimedia Commons, CC BY 3.0. Ajustada pelo Poseidon.

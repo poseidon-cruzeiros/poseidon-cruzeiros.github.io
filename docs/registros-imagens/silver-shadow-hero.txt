@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/silversea-cruises/silver-shadow/silversea-cruises-silver-shadow.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-shadow/
+navio_ou_tema: Silver Shadow
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Silver_shadow_ovik02.jpg
+autor: Petey21
+licenca: dominio publico
+url_licenca: https://commons.wikimedia.org/wiki/File:Silver_shadow_ovik02.jpg
+data_de_consulta: 2026-04-22
+houve_edicao: nao
+tipo_de_edicao: nenhuma
+credito_publico: Imagem em dominio publico. Fonte: Wikimedia Commons.

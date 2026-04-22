@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/silversea-cruises/silver-wind/silversea-cruises-silver-wind.jpg
+pagina_do_site: /companhias/silversea-cruises/silver-wind/
+navio_ou_tema: Silver Wind
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Silverwind_cruiseship.jpg
+autor: David Stanley
+licenca: CC BY 2.0
+url_licenca: https://creativecommons.org/licenses/by/2.0/
+data_de_consulta: 2026-04-22
+houve_edicao: nao
+tipo_de_edicao: nenhuma
+credito_publico: Foto: David Stanley, via Wikimedia Commons, CC BY 2.0.

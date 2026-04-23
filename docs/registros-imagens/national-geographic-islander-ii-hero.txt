@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/national-geographic-islander-ii/national-geographic-islander-ii-hero.jpg
+pagina_do_site: /companhias/lindblad-expeditions/national-geographic-islander-ii/
+navio_ou_tema: National Geographic Islander II
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Crystal_Esprit.jpg
+autor: Lindemann97
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+data_de_consulta: 2026-04-23
+houve_edicao: sim
+tipo_de_edicao: recorte horizontal, redimensionamento e compressao para web
+credito_publico: Foto: Lindemann97, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.

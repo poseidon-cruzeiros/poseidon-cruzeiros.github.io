@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/national-geographic-explorer/national-geographic-explorer-hero.webp
+pagina_do_site: /companhias/lindblad-expeditions/national-geographic-explorer/
+navio_ou_tema: National Geographic Explorer
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:8019356_National_Geographic_Explorer_1982.jpg
+autor: Cavernia
+licenca: CC BY-SA 4.0
+url_licenca: https://creativecommons.org/licenses/by-sa/4.0/
+data_de_consulta: 2026-04-23
+houve_edicao: sim
+tipo_de_edicao: redimensionamento e conversao para webp
+credito_publico: Foto: Cavernia, via Wikimedia Commons, CC BY-SA 4.0. Ajustada pelo Poseidon.

@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/national-geographic-quest/national-geographic-quest-hero.jpg
+pagina_do_site: /companhias/lindblad-expeditions/national-geographic-quest/
+navio_ou_tema: National Geographic Quest
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:National_Geographic_Quest_anchored_off_of_the_Smithsonian_Tropical_Research_Institute.jpg
+autor: David Brossard
+licenca: CC BY-SA 2.0
+url_licenca: https://creativecommons.org/licenses/by-sa/2.0/
+data_de_consulta: 2026-04-23
+houve_edicao: sim
+tipo_de_edicao: recorte, redimensionamento e compressao para web
+credito_publico: Foto: David Brossard, via Wikimedia Commons, CC BY-SA 2.0. Ajustada pelo Poseidon.

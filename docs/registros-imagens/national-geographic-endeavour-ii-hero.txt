@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/national-geographic-endeavour-ii/national-geographic-endeavour-ii-hero.jpg
+pagina_do_site: /companhias/lindblad-expeditions/national-geographic-endeavour-ii/
+navio_ou_tema: National Geographic Endeavour II
+fonte: Flickr
+url_original: https://www.flickr.com/photos/23435801@N05/4291134001/
+autor: Aztlek
+licenca: CC BY-SA 2.0
+url_licenca: https://creativecommons.org/licenses/by-sa/2.0/
+data_de_consulta: 2026-04-23
+houve_edicao: sim
+tipo_de_edicao: recorte horizontal, redimensionamento e compressao para web
+credito_publico: Foto: Aztlek / Flickr, CC BY-SA 2.0. Ajustada pelo Poseidon.

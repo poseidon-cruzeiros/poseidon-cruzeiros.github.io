@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/national-geographic-gemini/national-geographic-gemini-hero.jpg
+pagina_do_site: /companhias/lindblad-expeditions/national-geographic-gemini/
+navio_ou_tema: National Geographic Gemini
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:NG_Gemini_July_2025_in_Gal%C3%A1pagos.jpg
+autor: E bailey
+licenca: CC0 1.0
+url_licenca: https://creativecommons.org/publicdomain/zero/1.0/
+data_de_consulta: 2026-04-23
+houve_edicao: sim
+tipo_de_edicao: recorte horizontal, redimensionamento e compressao para web
+credito_publico: Foto: E bailey, via Wikimedia Commons, CC0 1.0. Ajustada pelo Poseidon.

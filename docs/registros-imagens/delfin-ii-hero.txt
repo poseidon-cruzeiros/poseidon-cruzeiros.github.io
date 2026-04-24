@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/delfin-ii/delfin-ii-placeholder.svg
+pagina_do_site: /companhias/lindblad-expeditions/delfin-ii/
+navio_ou_tema: Delfin II
+fonte: Interna (Poseidon Cruzeiros)
+url_original: n/a
+autor: Poseidon Cruzeiros
+licenca: Placeholder temporario
+url_licenca: n/a
+data_de_consulta: 2026-04-24
+houve_edicao: sim
+tipo_de_edicao: criacao de svg placeholder
+credito_publico: Imagem temporária. Foto real em atualização.

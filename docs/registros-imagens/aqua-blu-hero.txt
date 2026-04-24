@@ -1,0 +1,12 @@
+arquivo_local: assets/images/navios/lindblad-expeditions/aqua-blu/aqua-blu-hero.jpg
+pagina_do_site: /companhias/lindblad-expeditions/aqua-blu/
+navio_ou_tema: Aqua Blu
+fonte: Wikimedia Commons
+url_original: https://commons.wikimedia.org/wiki/File:Porto_Genova-DSCF1540.JPG
+autor: Twice25 e Rinina25
+licenca: CC BY 2.5
+url_licenca: https://creativecommons.org/licenses/by/2.5/
+data_de_consulta: 2026-04-24
+houve_edicao: sim
+tipo_de_edicao: recorte horizontal, redimensionamento e compressao para web
+credito_publico: Foto: Twice25 e Rinina25, via Wikimedia Commons, CC BY 2.5. Ajustada pelo Poseidon.

@@ -1,0 +1,12 @@
+arquivo_local: nao se aplica
+pagina_do_site: /companhias/lindblad-expeditions/delfin-ii/
+navio_ou_tema: Delfin II
+fonte: sem imagem publicada
+url_original: nao se aplica
+autor: nao se aplica
+licenca: nao se aplica
+url_licenca: nao se aplica
+data_de_consulta: 2026-04-24
+houve_edicao: nao
+tipo_de_edicao: pagina publicada sem foto por ausencia de licenca compativel confirmada
+credito_publico: Sem credito publico; pagina publicada sem foto.

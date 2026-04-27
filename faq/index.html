@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ: Dúvidas Frequentes sobre Cruzeiros — Poseidon Cruzeiros</title>
   <meta name="description" content="Respostas rápidas para as dúvidas mais comuns de cruzeiros. Bebidas, mala, passaporte, enjoos e gorjetas explicadas rapidamente." />
-<meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://poseidoncruzeiros.com.br/faq/" />
   <meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
   <meta property="og:title" content="FAQ: Dúvidas Frequentes sobre Cruzeiros — Poseidon Cruzeiros" />
@@ -17,6 +17,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../shared/header.css" />
   <script src="../shared/header.js" defer></script>
+  
+  <!-- JSON-LD FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso de passaporte para cruzeiro no Brasil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Para cruzeiros apenas pela costa brasileira ou para países do Mercosul (Argentina, Uruguai), basta um RG original em bom estado e emitido há menos de 10 anos. A CNH é aceita em rotas 100% brasileiras, mas não vale no Mercosul."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O pacote de bebidas inclui tudo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do nível do pacote. Pacotes básicos (como o Easy da MSC) limitam o preço da bebida a €7 ou $10. Marcas premium ou garrafas inteiras de vinho normalmente são pagas à parte com um pequeno desconto. Leia a regra específica antes de embarcar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As gorjetas são obrigatórias?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. É uma taxa de serviço cobrada por dia, por passageiro (cerca de $16 a $20). Esse valor é debitado na sua conta final e distribuído para camareiros e garçons."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso levar bebida alcoólica na mala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Na grande maioria das companhias, NÃO. As garrafas são detectadas pelo Raio-X do embarque e retidas até o fim do cruzeiro. A exceção notável é a Royal Caribbean/Celebrity, que permite 1 garrafa de vinho ou champanhe por adulto (até 2 por cabine) no dia do embarque."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tem internet no cruzeiro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, todos os navios modernos têm satélites fornecendo Wi-Fi, mas é um serviço PAGO e caro. Lembre-se de colocar seu celular em Modo Avião assim que o navio sair do porto para não pagar taxas de Roaming Marítimo na sua conta telefônica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pode usar chapinha e secador no navio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A chapinha de cabelo (prancha) normalmente É PERMITIDA, pois tem limite de potência. O secador de cabelo e ferros de passar roupa são PROIBIDOS (as cabines já vêm equipadas com um secador básico na gaveta)."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px; --radius-sm:8px; --nav-height:60px; }
@@ -36,9 +95,20 @@
     .guide-subtitle { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto 1rem; line-height:1.6; }
     .guide-meta { display:flex; gap:1.5rem; justify-content:center; font-size:0.8rem; color:var(--text-muted); flex-wrap:wrap; }
     .guide-section { position:relative; z-index:1; margin-bottom:2.5rem; scroll-margin-top:calc(var(--nav-height) + 16px); }
-    .info-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem; }
-    .info-card h4 { font-size:0.9rem; font-weight:600; color:var(--white); margin-bottom:0.4rem; }
-    .info-card p { font-size:0.9rem; color:var(--white); margin:0; line-height:1.6; }
+    
+    /* FAQ Accordion Styles */
+    .faq-category { margin-top: 2.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: var(--teal); font-weight: 600; font-size: 1.2rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    details { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); margin-bottom: 0.8rem; overflow: hidden; transition: background 0.3s; }
+    details:hover { background: rgba(255,255,255,0.08); }
+    summary { padding: 1.2rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--teal-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+    summary::-webkit-details-marker { display: none; } /* Safari */
+    summary::after { content: '+'; font-size: 1.5rem; font-weight: 300; line-height: 1; transition: transform 0.3s ease; }
+    details[open] summary::after { transform: rotate(45deg); color: var(--white); }
+    details[open] { border-left: 3px solid var(--teal); background: rgba(255,255,255,0.09); }
+    .faq-answer { padding: 0 1.5rem 1.2rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.85); border-top: 1px solid transparent; }
+    details[open] .faq-answer { border-top-color: rgba(255,255,255,0.05); padding-top: 1.2rem; animation: slideDown 0.3s ease-out; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
     .guide-nav-bottom { display:flex; gap:12px; margin-top:3rem; flex-wrap:wrap; }
     .guide-nav-btn { flex:1; min-width:200px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem 1.25rem; text-decoration:none; color:var(--white); transition:background 0.2s,border-color 0.2s; }
     .guide-nav-btn:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); }
@@ -70,53 +140,43 @@
 
 <main class="page">
   <section class="guide-section" id="faq-list">
-    <!-- FAQ Schema Microdata -->
-    <div itemscope itemtype="https://schema.org/FAQPage">
-
-      <div class="info-card" style="margin-bottom:1rem;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h4 itemprop="name" style="color:var(--teal-light);font-size:1.1rem;margin-bottom:0.5rem;">Preciso de passaporte para cruzeiro no Brasil?</h4>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Não. Para cruzeiros apenas pela costa brasileira ou para países do Mercosul (Argentina, Uruguai), basta um RG original em bom estado e emitido há menos de 10 anos. A CNH é aceita em rotas 100% brasileiras, mas não vale no Mercosul.</p>
-        </div>
-      </div>
-
-      <div class="info-card" style="margin-bottom:1rem;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h4 itemprop="name" style="color:var(--teal-light);font-size:1.1rem;margin-bottom:0.5rem;">O pacote de bebidas inclui tudo?</h4>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Depende do nível do pacote. Pacotes básicos (como o Easy da MSC) limitam o preço da bebida a €7 ou $10. Marcas premium ou garrafas inteiras de vinho normalmente são pagas à parte com um pequeno desconto. Leia a regra específica antes de embarcar.</p>
-        </div>
-      </div>
-
-      <div class="info-card" style="margin-bottom:1rem;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h4 itemprop="name" style="color:var(--teal-light);font-size:1.1rem;margin-bottom:0.5rem;">Posso levar bebida alcoólica na mala?</h4>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Na grande maioria das companhias, NÃO. As garrafas são detectadas pelo Raio-X do embarque e retidas até o fim do cruzeiro. A exceção notável é a Royal Caribbean/Celebrity, que permite 1 garrafa de vinho ou champanhe por adulto (até 2 por cabine) no dia do embarque.</p>
-        </div>
-      </div>
-
-      <div class="info-card" style="margin-bottom:1rem;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h4 itemprop="name" style="color:var(--teal-light);font-size:1.1rem;margin-bottom:0.5rem;">Tem internet no cruzeiro?</h4>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Sim, todos os navios modernos têm satélites fornecendo Wi-Fi, mas é um serviço PAGO e caro. Lembre-se de colocar seu celular em Modo Avião assim que o navio sair do porto para não pagar taxas de Roaming Marítimo na sua conta telefônica.</p>
-        </div>
-      </div>
-
-      <div class="info-card" style="margin-bottom:1rem;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h4 itemprop="name" style="color:var(--teal-light);font-size:1.1rem;margin-bottom:0.5rem;">As gorjetas são obrigatórias?</h4>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Sim. É uma taxa de serviço cobrada por dia, por passageiro (cerca de $16 a $20). Esse valor é debitado na sua conta final e distribuído para camareiros e garçons.</p>
-        </div>
-      </div>
-
-      <div class="info-card" style="margin-bottom:1rem;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h4 itemprop="name" style="color:var(--teal-light);font-size:1.1rem;margin-bottom:0.5rem;">Pode usar chapinha e secador no navio?</h4>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">A chapinha de cabelo (prancha) normalmente É PERMITIDA, pois tem limite de potência. O secador de cabelo e ferros de passar roupa são PROIBIDOS (as cabines já vêm equipadas com um secador básico na gaveta).</p>
-        </div>
-      </div>
-
-    </div>
     
+    <div class="faq-category">Documentação e Preparativos</div>
+    
+    <details>
+      <summary>Preciso de passaporte para cruzeiro no Brasil?</summary>
+      <div class="faq-answer">Não. Para cruzeiros apenas pela costa brasileira ou para países do Mercosul (Argentina, Uruguai), basta um RG original em bom estado e emitido há menos de 10 anos. A CNH é aceita em rotas 100% brasileiras, mas não vale no Mercosul.</div>
+    </details>
+
+    <div class="faq-category">Dinheiro e Pacotes</div>
+
+    <details>
+      <summary>O pacote de bebidas inclui tudo?</summary>
+      <div class="faq-answer">Depende do nível do pacote. Pacotes básicos (como o Easy da MSC) limitam o preço da bebida a €7 ou $10. Marcas premium ou garrafas inteiras de vinho normalmente são pagas à parte com um pequeno desconto. Leia a regra específica antes de embarcar.</div>
+    </details>
+
+    <details>
+      <summary>As gorjetas são obrigatórias?</summary>
+      <div class="faq-answer">Sim. É uma taxa de serviço cobrada por dia, por passageiro (cerca de $16 a $20). Esse valor é debitado na sua conta final e distribuído para camareiros e garçons.</div>
+    </details>
+
+    <div class="faq-category">A Bordo e Regras</div>
+
+    <details>
+      <summary>Posso levar bebida alcoólica na mala?</summary>
+      <div class="faq-answer">Na grande maioria das companhias, NÃO. As garrafas são detectadas pelo Raio-X do embarque e retidas até o fim do cruzeiro. A exceção notável é a Royal Caribbean/Celebrity, que permite 1 garrafa de vinho ou champanhe por adulto (até 2 por cabine) no dia do embarque.</div>
+    </details>
+
+    <details>
+      <summary>Tem internet no cruzeiro?</summary>
+      <div class="faq-answer">Sim, todos os navios modernos têm satélites fornecendo Wi-Fi, mas é um serviço PAGO e caro. Lembre-se de colocar seu celular em Modo Avião assim que o navio sair do porto para não pagar taxas de Roaming Marítimo na sua conta telefônica.</div>
+    </details>
+
+    <details>
+      <summary>Pode usar chapinha e secador no navio?</summary>
+      <div class="faq-answer">A chapinha de cabelo (prancha) normalmente É PERMITIDA, pois tem limite de potência. O secador de cabelo e ferros de passar roupa são PROIBIDOS (as cabines já vêm equipadas com um secador básico na gaveta).</div>
+    </details>
+
     <div class="guide-nav-bottom">
       <a href="/guias/" class="guide-nav-btn">
         <span>Mais guias</span>

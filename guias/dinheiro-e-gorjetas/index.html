@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinheiro, Moeda e Gorjetas no Cruzeiro — Poseidon Cruzeiros</title>
+  <meta name="description" content="Saiba como funcionam os pagamentos a bordo, a cobrança das gorjetas diárias (taxa de serviço) e qual moeda levar na sua viagem de cruzeiro." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://poseidoncruzeiros.com.br/guias/dinheiro-e-gorjetas/" />
+  <meta property="og:title" content="Dinheiro, Moeda e Gorjetas no Cruzeiro — Poseidon Cruzeiros" />
+  <meta property="og:description" content="Como funcionam os pagamentos a bordo, a taxa de serviço obrigatória e o sistema cashless dos navios." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://poseidoncruzeiros.com.br/guias/dinheiro-e-gorjetas/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../shared/header.css" />
+  <script src="../../shared/header.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --card-bg:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.12); --radius:14px; --radius-sm:8px; --nav-height:60px; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    .page { position:relative; z-index:1; max-width:800px; margin:0 auto; padding:0 1.25rem 4rem; }
+    .guide-hero { position:relative; z-index:1; text-align:center; padding:3rem 1.25rem 2rem; }
+    .guide-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; }
+    .guide-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .guide-breadcrumb a:hover { text-decoration:underline; }
+    .guide-emoji { font-size:3rem; display:block; margin-bottom:0.75rem; filter:drop-shadow(0 0 20px rgba(26,188,156,0.5)); animation:float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .guide-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,5vw,2.6rem); font-weight:700; letter-spacing:-1px; background:linear-gradient(135deg,#fff 30%,var(--teal-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.75rem; }
+    .guide-subtitle { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto 1rem; line-height:1.6; }
+    .guide-meta { display:flex; gap:1.5rem; justify-content:center; font-size:0.8rem; color:var(--text-muted); flex-wrap:wrap; }
+    .guide-toc { position:relative; z-index:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-left:3px solid var(--teal); border-radius:var(--radius); padding:1.25rem 1.5rem; margin:0 0 2rem; }
+    .guide-toc-title { font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); margin-bottom:0.75rem; }
+    .guide-toc-list { padding-left:1.2rem; display:flex; flex-direction:column; gap:0.4rem; }
+    .guide-toc-list a { color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.88rem; transition:color 0.15s; }
+    .guide-toc-list a:hover { color:var(--teal-light); }
+    .guide-section { position:relative; z-index:1; margin-bottom:2.5rem; scroll-margin-top:calc(var(--nav-height) + 16px); }
+    .guide-section h2 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--white); margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .guide-section h3 { font-size:1.05rem; font-weight:600; color:var(--teal-light); margin:1.25rem 0 0.5rem; }
+    .guide-section p { color:rgba(255,255,255,0.8); line-height:1.75; margin-bottom:0.9rem; font-size:0.95rem; }
+    .guide-section ul, .guide-section ol { padding-left:1.4rem; color:rgba(255,255,255,0.8); line-height:1.75; font-size:0.95rem; margin-bottom:0.9rem; display:flex; flex-direction:column; gap:0.35rem; }
+    .tip-box { background:rgba(26,188,156,0.1); border:1px solid rgba(26,188,156,0.25); border-left:3px solid var(--teal); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .tip-box strong { color:var(--teal-light); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .tip-box p { margin:0; font-size:0.9rem; }
+    .warn-box { background:rgba(240,192,64,0.1); border:1px solid rgba(240,192,64,0.25); border-left:3px solid var(--gold); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0; }
+    .warn-box strong { color:#fce08a; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:0.4rem; }
+    .warn-box p { margin:0; font-size:0.9rem; }
+    .guide-nav-bottom { display:flex; gap:12px; margin-top:3rem; flex-wrap:wrap; }
+    .guide-nav-btn { flex:1; min-width:200px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:1rem 1.25rem; text-decoration:none; color:var(--white); transition:background 0.2s,border-color 0.2s; }
+    .guide-nav-btn:hover { background:rgba(255,255,255,0.1); border-color:rgba(26,188,156,0.4); }
+    .guide-nav-btn span { display:block; font-size:0.72rem; color:var(--text-muted); margin-bottom:3px; }
+    .guide-nav-btn strong { font-size:0.9rem; }
+  </style>
+</head>
+<body>
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+<header class="guide-hero">
+  <div class="guide-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › <a href="/guias/">Guias</a> › Pagamentos</div>
+  <span class="guide-emoji">💵</span>
+  <h1>Dinheiro, Moeda e Gorjetas no Cruzeiro</h1>
+  <p class="guide-subtitle">Entenda o sistema de pagamentos a bordo e a polêmica taxa de serviço</p>
+  <div class="guide-meta">
+    <span>📅 Atualizado em abril de 2026</span>
+    <span>⏱️ Leitura: 9 min</span>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="guide-toc">
+    <div class="guide-toc-title">📋 Neste guia</div>
+    <ol class="guide-toc-list">
+      <li><a href="#sec-cashless">O Navio Sem Dinheiro (Cashless)</a></li>
+      <li><a href="#sec-cartao">Cartão de Crédito ou Dinheiro?</a></li>
+      <li><a href="#sec-moeda">Qual moeda é usada a bordo?</a></li>
+      <li><a href="#sec-gorjetas">A polêmica das Gorjetas Obrigatórias</a></li>
+    </ol>
+  </nav>
+
+  <section class="guide-section" id="sec-cashless">
+    <h2>O Navio Sem Dinheiro (Sistema Cashless)</h2>
+    <p>A primeira coisa que você precisa saber é: <strong>não se usa dinheiro de papel dentro do navio</strong> (com exceção do Cassino e para dar gorjetas extras à tripulação, se desejar). Os cruzeiros funcionam em um sistema "cashless".</p>
+    <p>No dia do embarque, você receberá o seu "Cruise Card" (ou SeaPass). Esse cartão magnético ou pulseira tem três funções: é a chave da sua cabine, a sua identidade para subir e descer do navio nos portos, e o seu cartão de crédito a bordo.</p>
+    <p>Para comprar um drink, reservar uma excursão ou comprar um souvenir, você apenas entrega o seu cartão da cabine. A despesa vai para a sua fatura final.</p>
+  </section>
+
+  <section class="guide-section" id="sec-cartao">
+    <h2>Cartão de Crédito ou Depósito em Dinheiro?</h2>
+    <p>Para que o seu cartão da cabine funcione para compras, você precisa vincular uma forma de pagamento à sua conta nos totens do navio ou no aplicativo logo no primeiro dia.</p>
+    
+    <h3>Cartão de Crédito Internacional</h3>
+    <p>É a forma mais prática. Você cadastra o cartão e todos os seus gastos vão direto para a fatura do mês seguinte (sujeito ao IOF do seu banco). O navio fará uma "retenção" (bloqueio de segurança) de um valor fixo no primeiro dia (ex: 200 dólares) para garantir que você tem limite. Esse valor só é cobrado efetivamente no último dia, pelo valor real que você gastou.</p>
+
+    <h3>Depósito em Dinheiro Espécie</h3>
+    <p>Se você não quer usar cartão, pode ir à recepção no primeiro dia e depositar dinheiro vivo na sua conta (Dólar ou Euro, dependendo do navio). O que você depositar será o seu limite. No último dia, se sobrou dinheiro, você pega o troco na recepção. Se faltar, você recebe um aviso para recarregar.</p>
+  </section>
+
+  <section class="guide-section" id="sec-moeda">
+    <h2>Qual moeda é usada a bordo?</h2>
+    <p>Isso depende de onde o navio está navegando e da companhia:</p>
+    <ul>
+      <li><strong>Cruzeiros no Caribe e Américas:</strong> Dólar Americano (USD).</li>
+      <li><strong>Cruzeiros na Europa:</strong> Euro (EUR).</li>
+      <li><strong>Cruzeiros no Brasil (Temporada Brasileira):</strong> A maioria cobra em Dólar (MSC e Costa), convertido para Reais no seu cartão. Verifique antes, pois algumas companhias podem cobrar diretamente em Reais a bordo durante a temporada local.</li>
+    </ul>
+  </section>
+
+  <section class="guide-section" id="sec-gorjetas">
+    <h2>A polêmica das Gorjetas (Taxa de Serviço)</h2>
+    <p>Esse é o ponto que mais confunde os passageiros de primeira viagem. A "gorjeta" num cruzeiro não é aquela moedinha que você deixa no bar. É uma <strong>Taxa de Serviço Obrigatória (Hotel Service Charge)</strong>.</p>
+    <p>As companhias cobram um valor diário por passageiro (algo entre 12 e 18 dólares ou euros por dia). Esse valor é dividido entre o camareiro que limpa sua cabine duas vezes ao dia, o garçom do restaurante principal, as equipes de limpeza de áreas públicas e de cozinha.</p>
+    
+    <div class="warn-box">
+      <strong>Posso pedir para tirar a gorjeta?</strong>
+      <p>Oficialmente, a gorjeta é considerada "obrigatória". Algumas companhias antigamente permitiam que você fosse à recepção pedir para retirar a taxa caso o serviço tivesse sido péssimo, mas hoje a maioria (como a MSC e Costa) não permite mais a remoção. O ideal é pagar essas gorjetas antecipadamente junto com a compra do cruzeiro para evitar a surpresa no último dia.</p>
+    </div>
+
+    <div class="tip-box">
+      <strong>Gorjeta no bar</strong>
+      <p>Além da taxa diária, toda vez que você compra uma bebida solta no bar ou paga por um tratamento no Spa, uma taxa de serviço extra de 15% a 20% é automaticamente adicionada ao valor do recibo que você assina. Não é necessário deixar dinheiro a mais na mesa.</p>
+    </div>
+
+    <div class="guide-nav-bottom">
+      <a href="/guias/levar-bebidas/" class="guide-nav-btn">
+        <span>Próximo guia</span>
+        <strong>🍷 Pode levar bebida na mala? →</strong>
+      </a>
+      <a href="/guias/quanto-custa/" class="guide-nav-btn">
+        <span>Veja também</span>
+        <strong>💰 Quanto Custa um Cruzeiro →</strong>
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos em português</p>
+</footer>
+</body>
+</html>

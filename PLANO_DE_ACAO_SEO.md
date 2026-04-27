@@ -33,17 +33,21 @@ Estes guias foram criados para ampliar as comparações que geram conversão/ven
 *   **[CONCLUÍDO] `curiosidades/index.html`**
     *   Os links de guias foram removidos desta página para preservar o foco editorial (entretenimento, histórias navais, etc).
 
+## 4. Pilar Técnico/FAQ (Snippets do Google) - [CONCLUÍDO]
+*   **[CONCLUÍDO] `faq/index.html`**
+    *   A página foi reestruturada para um layout de "Acordeão" (`<details>` e `<summary>`).
+    *   O volume subiu de 6 para 35 perguntas de altíssimo volume de buscas (Long-Tail).
+    *   A marcação de dados estruturados (Schema) foi convertida de Microdata HTML para um bloco nativo e eficiente de `JSON-LD`.
+
 ---
 
 > [!IMPORTANT]
-> **Próximos Passos (Lote 3)**
-> Todo o planejamento inicial foi executado com sucesso e o código enviado (commit/push). 
-> O que devemos planejar para a Fase 3? 
-> Sugestões de novos pilares:
-> 1. **Pilar de Destinos (Ex: "Roteiro pelo Nordeste", "Como é o cruzeiro no Caribe").**
-> 2. **Pilar de Companhias (Expandir informações específicas da MSC, Costa, Royal Caribbean).**
-> 3. **Pilar Técnico/FAQ (Criar uma página central de FAQ em formato acordeão focada 100% em snippets do Google).**
-
-## Open Questions
-1. Qual dos 3 caminhos acima você gostaria de atacar agora no nosso SEO?
-2. Deseja que eu analise o sitemap novamente para ver se os novos links estão refletidos corretamente (já que criamos as pastas manualmente)?
+> **Próximos Passos (Lote 4 - Em Execução)**
+> Todo o planejamento da Fase 3 foi concluído com absoluto sucesso. O site agora ataca de frente a intenção de buscas dos usuários.
+> O que faremos na Fase 4? O Pilar de Destinos!
+> 
+> A página central `destinos/index.html` já foi inserida no menu principal. O plano agora é povoar as regiões com Guias de Portos de Escala.
+> 
+> *   `destinos/america-do-sul/porto-de-santos/` (Check-in, Concais e Logística)
+> *   `destinos/america-do-sul/buenos-aires/` (Desembarque e Passeios Independentes)
+> *   `destinos/america-do-sul/buzios-e-ilhabela/` (Como funcionam os Tenders/Desembarque)

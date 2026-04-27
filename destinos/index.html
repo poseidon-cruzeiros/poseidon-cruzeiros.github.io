@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinos de Cruzeiro — Poseidon Cruzeiros</title>
+  <meta name="description" content="Descubra os melhores destinos de cruzeiro do mundo: América do Sul, Mediterrâneo, Caribe, Europa do Norte e destinos exóticos. Guias completos em português." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://poseidoncruzeiros.com.br/destinos/" />
+  <meta property="og:title" content="Destinos de Cruzeiro — Poseidon Cruzeiros" />
+  <meta property="og:description" content="Descubra os melhores destinos de cruzeiro do mundo: América do Sul, Mediterrâneo, Caribe, Europa do Norte e destinos exóticos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poseidoncruzeiros.com.br/destinos/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/header.css" />
+  <script src="../shared/header.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --radius:14px; --nav-height:60px; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    .page { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 1.25rem 4rem; }
+    .hub-hero { position:relative; z-index:1; text-align:center; padding:3.5rem 1.25rem 2.5rem; }
+    .hub-hero-emoji { font-size:3.5rem; display:block; margin-bottom:0.75rem; filter:drop-shadow(0 0 20px rgba(26,188,156,0.5)); animation:float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .hub-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); font-weight:700; letter-spacing:-1px; background:linear-gradient(135deg,#fff 30%,var(--teal-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.75rem; }
+    .hub-hero p { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto; line-height:1.6; }
+    .hub-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1.5rem; }
+    .hub-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .hub-breadcrumb a:hover { text-decoration:underline; }
+    .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:2.5rem 0 1.25rem; }
+    .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
+    .dest-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; margin-bottom:2rem; }
+    .dest-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:1.5rem; text-decoration:none; color:var(--white); display:flex; flex-direction:column; gap:0.75rem; transition:background 0.2s,border-color 0.2s,transform 0.2s; }
+    .dest-card:not(.soon):hover { background:rgba(255,255,255,0.09); border-color:rgba(26,188,156,0.35); transform:translateY(-2px); }
+    .dest-card.soon { opacity:0.5; cursor:default; pointer-events:none; }
+    .dest-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:0.5rem; }
+    .dest-card-emoji { font-size:2rem; line-height:1; }
+    .dest-card-tag { font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:3px 8px; border-radius:999px; border:1px solid; white-space:nowrap; }
+    .tag-live { color:var(--teal-light); border-color:rgba(26,188,156,0.4); background:rgba(26,188,156,0.1); }
+    .tag-soon { color:var(--text-muted); border-color:rgba(139,164,190,0.3); background:rgba(139,164,190,0.07); }
+    .tag-guide { color:var(--gold); border-color:rgba(240,192,64,0.4); background:rgba(240,192,64,0.1); }
+    .dest-card h2 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--white); margin:0; }
+    .dest-card p { font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin:0; flex:1; }
+    .dest-card-cta { font-size:0.8rem; color:var(--teal); font-weight:500; display:flex; align-items:center; gap:4px; margin-top:auto; }
+    .dest-card:not(.soon):hover .dest-card-cta { color:var(--teal-light); }
+    .dest-card.featured { grid-column:1 / -1; background:linear-gradient(135deg,rgba(26,188,156,0.12) 0%,rgba(33,150,196,0.08) 100%); border-color:rgba(26,188,156,0.3); display:grid; grid-template-columns:auto 1fr; gap:1.5rem; align-items:center; }
+    .dest-card.featured .dest-card-emoji { font-size:3rem; }
+    .dest-card.featured h2 { font-size:1.4rem; }
+    .intro-text { position:relative; z-index:1; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:1.5rem 2rem; margin-bottom:2rem; max-width:800px; margin-left:auto; margin-right:auto; }
+    .intro-text p { color:rgba(255,255,255,0.75); line-height:1.75; font-size:0.95rem; margin:0; }
+    footer { position:relative; z-index:1; text-align:center; padding:2rem; color:var(--text-muted); font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.06); }
+    @media (max-width:600px) { .dest-card.featured { grid-template-columns:1fr; } .dest-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/><stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/></linearGradient></defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+
+<div class="hub-hero">
+  <div class="hub-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › Destinos</div>
+  <span class="hub-hero-emoji">🗺️</span>
+  <h1>Destinos de Cruzeiro</h1>
+  <p>Do Brasil ao Mediterrâneo — explore os roteiros mais populares do mundo em português</p>
+</div>
+
+<main class="page">
+
+  <div class="intro-text">
+    <p>Um cruzeiro pode levar você a Buenos Aires em uma semana, ou a Santorini, Barcelona e Roma em outra. Cada região tem sua temporada ideal, regras de documentos e companhias que operam. Aqui você encontra tudo organizado por destino — quando ir, o que esperar em cada porto e se você precisará de visto.</p>
+  </div>
+
+  <div class="section-label">Regiões</div>
+  <div class="dest-grid">
+
+    <a href="/destinos/america-do-sul/" class="dest-card featured">
+      <div class="dest-card-emoji">🌊</div>
+      <div>
+        <div class="dest-card-top" style="margin-bottom:0.5rem;">
+          <h2>América do Sul</h2>
+          <span class="dest-card-tag tag-live">Disponível</span>
+        </div>
+        <p>A região mais acessível para brasileiros: portos de Santos, Rio de Janeiro, Salvador e Itajaí, com escalas em Buenos Aires, Montevidéu e Punta del Este. Temporada de novembro a março, sem necessidade de passaporte para destinos do Mercosul.</p>
+        <div class="dest-card-cta">Explorar destino →</div>
+      </div>
+    </a>
+
+    <a href="/destinos/mediterraneo/" class="dest-card">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">🏛️</span>
+        <span class="dest-card-tag tag-live">Disponível</span>
+      </div>
+      <h2>Mediterrâneo</h2>
+      <p>Itália, Grécia, Espanha e Croácia num único roteiro. O destino de cruzeiro mais visitado do mundo. Temporada de maio a outubro.</p>
+      <div class="dest-card-cta">Explorar destino →</div>
+    </a>
+
+    <div class="dest-card soon">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">🏝️</span>
+        <span class="dest-card-tag tag-soon">Em breve</span>
+      </div>
+      <h2>Caribe</h2>
+      <p>Bahamas, Jamaica, Curaçao e Ilhas Virgens. O destino favorito dos cruzeiros partindo dos EUA, com praias de água turquesa e clima tropical o ano inteiro.</p>
+    </div>
+
+    <div class="dest-card soon">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">🏔️</span>
+        <span class="dest-card-tag tag-soon">Em breve</span>
+      </div>
+      <h2>Europa do Norte</h2>
+      <p>Fiords noruegueses, Islândia, Mar Báltico e capitais escandinavas. Temporada de junho a agosto, com paisagens únicas e dias quase sem noite.</p>
+    </div>
+
+    <div class="dest-card soon">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">🌏</span>
+        <span class="dest-card-tag tag-soon">Em breve</span>
+      </div>
+      <h2>Destinos Exóticos</h2>
+      <p>Alasca, Ásia, Polinésia Francesa e Antártida. Para quem já fez os roteiros tradicionais e busca experiências fora do comum.</p>
+    </div>
+
+  </div>
+
+  <div class="section-label">Planejamento</div>
+  <div class="dest-grid">
+
+    <a href="/guias/melhor-epoca/" class="dest-card">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">📅</span>
+        <span class="dest-card-tag tag-guide">Guia</span>
+      </div>
+      <h2>Melhor Época por Destino</h2>
+      <p>Cada região tem sua janela ideal de viagem. Entenda a temporada de cada destino para viajar no melhor momento — e no melhor preço.</p>
+      <div class="dest-card-cta">Ver guia →</div>
+    </a>
+
+    <a href="/guias/documentos-necessarios/" class="dest-card">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">🛂</span>
+        <span class="dest-card-tag tag-guide">Guia</span>
+      </div>
+      <h2>Documentos e Vistos</h2>
+      <p>O que o brasileiro precisa para cada destino. Mercosul, Europa, EUA — cada região tem suas próprias exigências de entrada.</p>
+      <div class="dest-card-cta">Ver guia →</div>
+    </a>
+
+    <a href="/guias/primeiro-cruzeiro/" class="dest-card">
+      <div class="dest-card-top">
+        <span class="dest-card-emoji">🚀</span>
+        <span class="dest-card-tag tag-guide">Guia</span>
+      </div>
+      <h2>Por Onde Começar?</h2>
+      <p>Se é seu primeiro cruzeiro, a América do Sul é o destino mais indicado: mais barato, mais fácil e sem complicações com documentos.</p>
+      <div class="dest-card-cta">Guia do primeiro cruzeiro →</div>
+    </a>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos em português</p>
+</footer>
+
+</body>
+</html>

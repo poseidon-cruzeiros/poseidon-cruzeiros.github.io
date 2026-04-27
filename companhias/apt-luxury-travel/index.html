@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APT Luxury Travel — Poseidon Cruzeiros</title>
+<meta name="description" content="APT Luxury Travel: marca australiana de viagens de luxo com portfolio maritimo curado, incluindo yachts boutique, navios de expedicao e parceiros premium como Seabourn e Coral Expeditions." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/companhias/apt-luxury-travel/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="APT Luxury Travel — Poseidon Cruzeiros" />
+<meta property="og:description" content="Conheca o portfolio maritimo da APT Luxury Travel, com yachts boutique, small ships e navios de expedicao usados em roteiros de luxo ao redor do mundo." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/companhias/apt-luxury-travel/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="APT Luxury Travel — Poseidon Cruzeiros" />
+<meta name="twitter:description" content="Conheca o portfolio maritimo da APT Luxury Travel, com yachts boutique, small ships e navios de expedicao usados em roteiros de luxo ao redor do mundo." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #0a1c34;
+    --ocean-mid:    #1b3559;
+    --ocean-bright: #3f7ea4;
+    --teal:         #87d1d0;
+    --teal-light:   #d8f5f0;
+    --gold:         #d6b06a;
+    --sand:         #f7f1e3;
+    --white:        #ffffff;
+    --text-muted:   #9cb2c6;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+    --brand:        #9b7a45;
+    --brand-dark:   #4d3921;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(214,176,106,0.20) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 82% 100%, rgba(135,209,208,0.14) 0%, transparent 60%),
+      linear-gradient(180deg, #0a1c34 0%, #05111f 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.7); }
+
+  .company-header {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.5rem;
+  }
+  .company-logo {
+    width: 72px; height: 72px; border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; font-weight: 800; flex-shrink: 0;
+    color: var(--white); letter-spacing: -0.03em;
+    font-family: 'Playfair Display', serif;
+  }
+  .company-info { flex: 1; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem;
+  }
+  .company-desc {
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.65; max-width: 680px; margin-bottom: 1rem;
+  }
+  .company-stats {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .stat-value {
+    font-size: 1.1rem; font-weight: 600; color: var(--white);
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(135,209,208,0.4), transparent);
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 0.5rem;
+  }
+  .note-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 1rem 1rem 1.05rem;
+    backdrop-filter: blur(6px);
+  }
+  .note-title {
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 0.45rem;
+  }
+  .note-card p {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  .ships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .ship-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.1rem;
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+    position: relative;
+  }
+  .ship-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(135,209,208,0.4);
+    transform: translateY(-3px);
+  }
+  .ship-card.soon {
+    cursor: default; pointer-events: none;
+    opacity: 0.82;
+  }
+  .ship-card.soon:hover { transform: none; }
+  .ship-card.flagship {
+    border-color: rgba(214,176,106,0.35);
+    background: rgba(214,176,106,0.05);
+  }
+  .ship-card.flagship:hover {
+    border-color: rgba(214,176,106,0.5);
+    background: rgba(214,176,106,0.08);
+  }
+
+  .ship-icon { font-size: 1.8rem; line-height: 1; }
+  .ship-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    line-height: 1.2;
+  }
+  .ship-year {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .ship-specs {
+    display: flex; flex-direction: column; gap: 3px;
+    margin-top: 2px;
+  }
+  .ship-spec {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.77rem;
+    gap: 0.5rem;
+  }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { color: rgba(255,255,255,0.85); font-weight: 500; text-align: right; }
+
+  .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+  .ship-tag {
+    font-size: 0.65rem; font-weight: 500;
+    padding: 2px 7px; border-radius: 999px;
+  }
+  .tag-flagship   { background: rgba(214,176,106,0.18); color: #f5dfb5; border: 1px solid rgba(214,176,106,0.34); }
+  .tag-yacht      { background: rgba(255,159,67,0.16); color: #ffd3ab; border: 1px solid rgba(255,159,67,0.30); }
+  .tag-expedition { background: rgba(66,153,225,0.16); color: #c9e6ff; border: 1px solid rgba(66,153,225,0.30); }
+  .tag-premium    { background: rgba(214,176,106,0.15); color: #f2dfbd; border: 1px solid rgba(214,176,106,0.28); }
+  .tag-boutique   { background: rgba(155,89,182,0.16); color: #e2c9f0; border: 1px solid rgba(155,89,182,0.30); }
+  .tag-adriatic   { background: rgba(26,188,156,0.16); color: #b8f6eb; border: 1px solid rgba(26,188,156,0.30); }
+  .tag-seabourn   { background: rgba(108,122,137,0.18); color: #dde4ea; border: 1px solid rgba(108,122,137,0.32); }
+  .tag-coral      { background: rgba(52,152,219,0.16); color: #c7e7ff; border: 1px solid rgba(52,152,219,0.30); }
+  .tag-polar      { background: rgba(174,214,241,0.16); color: #e0f5ff; border: 1px solid rgba(174,214,241,0.30); }
+  .tag-kimberley  { background: rgba(230,126,34,0.16); color: #ffd6b5; border: 1px solid rgba(230,126,34,0.30); }
+  .tag-luxury     { background: rgba(215,189,226,0.16); color: #eddcf5; border: 1px solid rgba(215,189,226,0.30); }
+  .tag-remote     { background: rgba(46,204,113,0.15); color: #c8f6d8; border: 1px solid rgba(46,204,113,0.30); }
+  .tag-tasmania   { background: rgba(72,201,176,0.16); color: #c7fbef; border: 1px solid rgba(72,201,176,0.30); }
+  .tag-alaska     { background: rgba(127,179,213,0.16); color: #ddefff; border: 1px solid rgba(127,179,213,0.30); }
+  .ship-card-footer {
+    margin-top: auto; padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.75rem;
+  }
+  .ship-soon-hint { color: var(--text-muted); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.28);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .ships-grid { grid-template-columns: 1fr 1fr; }
+    .company-header { flex-direction: column; gap: 1rem; }
+    .company-stats { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .ships-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/companhias/">Companhias</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">APT Luxury Travel</span>
+  </nav>
+
+  <div class="company-header">
+    <div class="company-logo">APT</div>
+    <div class="company-info">
+      <h1 class="company-name">APT Luxury Travel</h1>
+      <p class="company-desc">
+        Fundada na Australia em 1927, a APT Luxury Travel e uma marca de viagens de luxo do APT Travel Group que combina operacao propria, fretamentos e parceiros selecionados para montar um portfolio maritimo de yacht cruises, small ship cruises e expedicoes. Em vez de funcionar como uma armadora de frota padronizada, a APT comercializa roteiros globais em embarcacoes boutique e premium escolhidas para cada destino, com presenca atual em regioes como Adriatico, Kimberley, Tasmania, Alasca, Galapagos e mares polares.
+      </p>
+      <div class="company-stats">
+        <div class="stat"><span class="stat-value">1927</span><span class="stat-label">Fundacao</span></div>
+        <div class="stat"><span class="stat-value">Melbourne</span><span class="stat-label">Sede</span></div>
+        <div class="stat"><span class="stat-value">7</span><span class="stat-label">Navios em destaque</span></div>
+        <div class="stat"><span class="stat-value">APT Travel Group</span><span class="stat-label">Grupo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Panorama da companhia</div>
+  <div class="notes-grid">
+    <article class="note-card">
+      <div class="note-title">Marca de portfolio</div>
+      <p>A APT Luxury Travel nao se apresenta como companhia maritima de frota propria unica no padrao de grandes armadoras. Nas paginas oficiais analisadas, a marca organiza sua oferta maritima com uma combinacao de yachts boutique, small ships e navios de parceiros premium.</p>
+    </article>
+    <article class="note-card">
+      <div class="note-title">Presenca global</div>
+      <p>O portfolio atual cobre Europa, Australia, Nova Zelandia, Sudeste Asiatico, Galapagos, Alasca e expedicoes polares, sempre com enfase em grupos menores, servico mais personalizado e acesso a destinos onde navios maiores nao operam com a mesma flexibilidade.</p>
+    </article>
+    <article class="note-card">
+      <div class="note-title">Base da selecao</div>
+      <p>Os navios abaixo refletem a selecao maritima nominal mais consistente encontrada nas paginas oficiais da APT para yacht cruise, small ship cruise e ocean cruise. Como a composicao varia por mercado e temporada, a APT tambem pode vender outras embarcacoes parceiras em itinerarios especificos.</p>
+    </article>
+  </div>
+
+  <div class="section-label">🛳️ Frota APT Luxury Travel</div>
+
+  <div class="ships-grid">
+    <div class="ship-card flagship soon">
+      <span class="ship-icon">🛥️</span>
+      <div class="ship-name">Lady Eleganza</div>
+      <div class="ship-year">Em servico desde 2021</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">36</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">49 m</span></div>
+        <div class="ship-spec"><span class="spec-label">Operacao</span><span class="spec-value">Croacia e Montenegro</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Yacht da marca</span>
+        <span class="ship-tag tag-yacht">Yacht cruise</span>
+        <span class="ship-tag tag-adriatic">Adriatico</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Seabourn Encore</div>
+      <div class="ship-year">Em servico desde 2016</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">40.350 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">600</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">210 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-seabourn">Parceiro Seabourn</span>
+        <span class="ship-tag tag-premium">Ocean cruise</span>
+        <span class="ship-tag tag-alaska">Alasca</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Seabourn Ovation</div>
+      <div class="ship-year">Em servico desde 2018</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">40.350 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">600</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">210 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-seabourn">Parceiro Seabourn</span>
+        <span class="ship-tag tag-premium">Ocean cruise</span>
+        <span class="ship-tag tag-luxury">Mediterraneo</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Seabourn Venture</div>
+      <div class="ship-year">Em servico desde 2022</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">23.000 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">264</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">170 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-seabourn">Parceiro Seabourn</span>
+        <span class="ship-tag tag-expedition">Expedicao</span>
+        <span class="ship-tag tag-polar">Polar</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Seabourn Pursuit</div>
+      <div class="ship-year">Em servico desde 2023</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">23.000 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">264</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">170 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-seabourn">Parceiro Seabourn</span>
+        <span class="ship-tag tag-expedition">Expedicao</span>
+        <span class="ship-tag tag-kimberley">Kimberley</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Coral Discoverer</div>
+      <div class="ship-year">Em servico desde 2005</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">1.779 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">72</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">63 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-coral">Parceiro Coral</span>
+        <span class="ship-tag tag-boutique">Small ship</span>
+        <span class="ship-tag tag-tasmania">Tasmania e Queensland</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛳️</span>
+      <div class="ship-name">Coral Adventurer</div>
+      <div class="ship-year">Em servico desde 2019</div>
+      <div class="ship-specs">
+        <div class="ship-spec"><span class="spec-label">Tonelagem</span><span class="spec-value">5.516 GT</span></div>
+        <div class="ship-spec"><span class="spec-label">Passageiros</span><span class="spec-value">120</span></div>
+        <div class="ship-spec"><span class="spec-label">Comprimento</span><span class="spec-value">93,4 m</span></div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-coral">Parceiro Coral</span>
+        <span class="ship-tag tag-expedition">Expedicao costeira</span>
+        <span class="ship-tag tag-remote">Australia e Nova Zelandia</span>
+      </div>
+      <div class="ship-card-footer"><span class="ship-soon-hint">Pagina individual em breve</span></div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 Poseidon Cruzeiros · Conteudo educativo sobre cruzeiros maritimos em portugues</footer>
+
+</body>
+</html>

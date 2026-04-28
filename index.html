@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Poseidon Cruzeiros</title>
-<meta name="description" content="Portal de referência sobre navios de cruzeiro, companhias, destinos e guias para planejar sua viagem. Rastreamento, mapas e frota completa." />
+<title>Poseidon Cruzeiros — Referência Brasileira sobre Navios e Cruzeiros</title>
+<meta name="description" content="A maior referência em português sobre cruzeiros marítimos: 17 companhias, 170+ navios, destinos, guias de planejamento e curiosidades marítimas." />
 <meta name="robots" content="index, follow" />
 <meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
 <link rel="canonical" href="https://poseidoncruzeiros.com.br/" />
@@ -15,13 +15,13 @@
 <link rel="manifest" href="/site.webmanifest" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Poseidon Cruzeiros" />
-<meta property="og:title" content="Poseidon Cruzeiros" />
-<meta property="og:description" content="Portal de referência sobre navios de cruzeiro, companhias, destinos e guias para planejar sua viagem. Rastreamento, mapas e frota completa." />
+<meta property="og:title" content="Poseidon Cruzeiros — Referência Brasileira sobre Navios e Cruzeiros" />
+<meta property="og:description" content="A maior referência em português sobre cruzeiros marítimos: 17 companhias, 170+ navios, destinos, guias e curiosidades." />
 <meta property="og:url" content="https://poseidoncruzeiros.com.br/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Poseidon Cruzeiros" />
-<meta name="twitter:description" content="Portal de referência sobre navios de cruzeiro, companhias, destinos e guias para planejar sua viagem. Rastreamento, mapas e frota completa." />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<meta name="twitter:description" content="A maior referência em português sobre cruzeiros marítimos: 17 companhias, 170+ navios, destinos e guias." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="./shared/header.css" />
 <script src="./shared/header.js" defer></script>
 <style>
@@ -34,7 +34,6 @@
     --teal:         #1abc9c;
     --teal-light:   #a8f0de;
     --gold:         #f0c040;
-    --sand:         #fef8ed;
     --white:        #ffffff;
     --text-muted:   #8ba4be;
     --card-bg:      rgba(255,255,255,0.06);
@@ -64,412 +63,379 @@
     pointer-events: none;
   }
 
+  .waves-bg { position: fixed; bottom: 0; left: 0; right: 0; z-index: 0; height: 200px; overflow: hidden; pointer-events: none; }
+  .waves-bg svg { width: 100%; height: 100%; }
+
   /* ── LAYOUT ── */
-  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  .page { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 0 1.25rem 5rem; }
 
   /* ── HERO ── */
-  header {
+  .hero {
+    position: relative; z-index: 1;
     text-align: center;
-    padding: 3rem 1rem 2.5rem;
+    padding: 3.5rem 1.25rem 0;
   }
-  .logo-icon {
-    font-size: 3rem;
+  .hero-emoji {
+    font-size: 3.2rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     filter: drop-shadow(0 0 24px rgba(26,188,156,0.6));
     animation: float 4s ease-in-out infinite;
   }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-8px); }
-  }
-  header h1 {
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+  .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: -1.5px;
     background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
-  header p {
+  .hero-tagline {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 300;
-    letter-spacing: 0.02em;
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
   }
+  .hero-tagline strong { color: rgba(255,255,255,0.75); font-weight: 500; }
 
-  /* ── SECTION LABEL ── */
-  .section-label {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--teal);
-    margin: 2.5rem 0 1rem;
-    scroll-margin-top: calc(var(--nav-height) + 16px);
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 auto 2.5rem;
+    max-width: 680px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
   }
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, rgba(26,188,156,0.4), transparent);
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.3rem 1.2rem;
+    font-size: 0.82rem;
   }
+  .stat:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--teal-light);
+  }
+  .stat-label { color: var(--text-muted); }
 
-  /* ── COMPANY CARDS (2×2) ── */
-  .company-cards {
+  /* ── JOURNEY CARDS ── */
+  .journey-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 1rem;
   }
-  .company-intro {
-    color: rgba(255,255,255,0.72);
-    font-size: 0.94rem;
-    line-height: 1.7;
-    margin: -0.2rem 0 1.2rem;
-    max-width: 760px;
+  .journey-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.1rem;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    text-align: left;
   }
-  .company-group {
-    margin-top: 1.5rem;
+  .journey-card:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(26,188,156,0.4);
+    transform: translateY(-3px);
   }
-  .company-group:first-of-type {
-    margin-top: 0;
+  .journey-card__emoji { font-size: 1.8rem; line-height: 1; margin-bottom: 0.25rem; }
+  .journey-card__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.3;
   }
-  .company-group__header {
+  .journey-card__desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    flex: 1;
+  }
+  .journey-card__cta {
+    font-size: 0.75rem;
+    color: var(--teal);
+    font-weight: 600;
+    margin-top: 0.25rem;
+  }
+  .journey-card:hover .journey-card__cta { color: var(--teal-light); }
+
+  /* ── SECTION HEADER ── */
+  .section { margin-bottom: 3.5rem; }
+  .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 1.1rem;
   }
-  .company-group__title {
-    font-size: 0.84rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--teal-light);
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
     font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
   }
-  .company-group__count {
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.55);
+  .section-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: rgba(26,188,156,0.4);
+  }
+  .section-cta {
+    font-size: 0.8rem;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid rgba(26,188,156,0.3);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .section-cta:hover { background: rgba(26,188,156,0.1); border-color: rgba(26,188,156,0.55); }
+  .section-intro {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ── COMPANY CARDS ── */
+  .company-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
   .company-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--radius);
-    padding: 1.4rem 1.3rem;
+    padding: 1.2rem 1.1rem;
     text-decoration: none;
     color: inherit;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    backdrop-filter: blur(6px);
   }
   .company-card:hover {
     background: rgba(255,255,255,0.1);
     border-color: rgba(26,188,156,0.45);
-    transform: translateY(-3px);
-  }
-  .company-card.soon {
-    opacity: 0.6;
-    cursor: default;
-    pointer-events: none;
-  }
-  .company-card.soon:hover {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-    transform: none;
+    transform: translateY(-2px);
   }
   .company-card__logo {
-    width: 2.2rem;
-    height: 2.2rem;
-    flex-shrink: 0;
-    display: grid;
-    place-items: center;
+    width: 2.2rem; height: 2.2rem; flex-shrink: 0;
+    display: grid; place-items: center;
     background: rgba(255,255,255,0.92);
-    border-radius: 8px;
-    padding: 5px;
+    border-radius: 8px; padding: 4px;
   }
-  .company-card__logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
+  .company-card__logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+  .company-card__info { display: flex; flex-direction: column; gap: 2px; }
+  .company-card__name { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--white); line-height: 1.2; }
+  .company-card__ships { font-size: 0.72rem; color: var(--text-muted); }
+
+  /* ── DESTINATION CARDS ── */
+  .dest-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
   }
-  .company-card__info {
+  .dest-card-big {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    text-decoration: none;
+    color: var(--white);
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 0.7rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    min-height: 190px;
   }
-  .company-card__name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1.2;
+  .dest-card-big.brasil {
+    background: linear-gradient(135deg, rgba(26,188,156,0.12) 0%, rgba(33,150,196,0.06) 100%);
+    border-color: rgba(26,188,156,0.28);
   }
-  .company-card__ships {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+  .dest-card-big.med {
+    background: linear-gradient(135deg, rgba(240,192,64,0.1) 0%, rgba(33,150,196,0.07) 100%);
+    border-color: rgba(240,192,64,0.25);
   }
-  .company-card__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 2px;
-  }
-  .company-card__category {
-    display: inline-flex;
-    align-items: center;
-    min-height: 1.35rem;
-    padding: 0.08rem 0.55rem;
-    border-radius: 999px;
-    font-size: 0.64rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    border: 1px solid rgba(255,255,255,0.18);
-    background: rgba(255,255,255,0.08);
-    color: #f4fbff;
-  }
-  .company-card__tag {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.65rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-top: 2px;
-    background: rgba(26,188,156,0.15);
-    color: var(--teal-light);
-    border: 1px solid rgba(26,188,156,0.25);
-  }
+  .dest-card-big:hover { transform: translateY(-3px); filter: brightness(1.07); }
+  .dest-card-big__emoji { font-size: 2.2rem; line-height: 1; }
+  .dest-card-big__title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; }
+  .dest-card-big__desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+  .dest-card-big__pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dest-pill { font-size: 0.7rem; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.65); }
+  .dest-card-big__cta { font-size: 0.78rem; color: var(--teal); font-weight: 600; }
+  .dest-card-big:hover .dest-card-big__cta { color: var(--teal-light); }
 
-  /* ── SHIPYARD CARDS ── */
-  .yard-cards {
+  .dest-soon-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
-  .yard-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius);
-    padding: 1.1rem 1.1rem;
-    text-decoration: none;
-    color: inherit;
-    display: flex; flex-direction: column; gap: 8px;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    backdrop-filter: blur(6px);
+  .dest-card-small {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    padding: 1.1rem;
+    opacity: 0.55;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
   }
-  .yard-card:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(26,188,156,0.45);
-    transform: translateY(-3px);
-  }
-  .yard-card.soon { opacity: 0.5; pointer-events: none; }
-  .yard-card__header { display: flex; align-items: center; gap: 8px; }
-  .yard-card__flag { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
-  .yard-card__name { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--white); line-height: 1.2; }
-  .yard-card__loc { font-size: 0.7rem; color: var(--text-muted); }
-  .yard-card__ships { font-size: 0.72rem; color: var(--text-muted); }
-  .yard-card__tag {
-    display: inline-block; align-self: flex-start;
-    font-size: 0.62rem; font-weight: 600;
-    padding: 2px 8px; border-radius: 999px;
-  }
-  .yard-tag-active { background: rgba(26,188,156,0.15); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.25); }
-  .yard-tag-soon   { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
+  .dest-card-small__emoji { font-size: 1.4rem; }
+  .dest-card-small__title { font-size: 0.88rem; font-weight: 600; }
+  .dest-card-small__tag { font-size: 0.65rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
 
   /* ── GUIDE CARDS ── */
-  .guide-cards {
+  .guide-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
   .guide-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--radius);
-    padding: 1.1rem 1rem;
+    padding: 1.2rem 1.1rem;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
     transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    backdrop-filter: blur(6px);
   }
   .guide-card:hover {
     background: rgba(255,255,255,0.1);
     border-color: rgba(240,192,64,0.4);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
-  .guide-card__emoji { font-size: 1.6rem; line-height: 1; }
-  .guide-card__title {
-    font-size: 0.92rem;
-    font-weight: 500;
-    color: var(--white);
-    line-height: 1.3;
-  }
-  .guide-card__desc {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    line-height: 1.55;
-    flex: 1;
-  }
+  .guide-card__emoji { font-size: 1.5rem; line-height: 1; }
+  .guide-card__title { font-size: 0.9rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+  .guide-card__desc { font-size: 0.76rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
   .guide-card__tag {
     display: inline-block;
-    font-size: 0.65rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-top: 2px;
-    background: rgba(240,192,64,0.12);
-    color: #fce08a;
+    font-size: 0.63rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; margin-top: 2px;
+    background: rgba(240,192,64,0.12); color: #fce08a;
     border: 1px solid rgba(240,192,64,0.22);
   }
 
-  /* ── GLOSSARY BANNER ── */
-  .glossary-banner {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    background: linear-gradient(135deg, rgba(33,150,196,0.12) 0%, rgba(26,188,156,0.08) 100%);
-    border: 1px solid rgba(33,150,196,0.25);
-    border-radius: var(--radius);
-    padding: 1.4rem 1.5rem;
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-  }
-  .glossary-banner:hover {
-    background: linear-gradient(135deg, rgba(33,150,196,0.2) 0%, rgba(26,188,156,0.14) 100%);
-    border-color: rgba(33,150,196,0.45);
-    transform: translateY(-2px);
-  }
-  .glossary-banner__icon { font-size: 2.5rem; flex-shrink: 0; }
-  .glossary-banner__text { display: flex; flex-direction: column; gap: 4px; flex: 1; }
-  .glossary-banner__title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-  .glossary-banner__desc {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-  }
-  .glossary-banner__cta {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--teal-light);
-    padding: 0.5rem 1.2rem;
-    border: 1px solid rgba(26,188,156,0.4);
-    border-radius: 999px;
-    flex-shrink: 0;
-    transition: background 0.2s;
-  }
-  .glossary-banner:hover .glossary-banner__cta {
-    background: rgba(26,188,156,0.15);
-  }
-
-  /* ── DIVIDER ── */
-  .section-divider {
-    border: none;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    margin: 3rem 0 0;
-  }
-
-  /* ── EXTERNAL LINKS INTRO ── */
-  .links-intro {
-    display: flex; align-items: center; gap: 14px;
-    background: rgba(240,192,64,0.08);
-    border: 1px solid rgba(240,192,64,0.2);
-    border-radius: var(--radius);
-    padding: 0.9rem 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .links-intro-icon { font-size: 1.5rem; }
-  .links-intro-text { display: flex; flex-direction: column; gap: 2px; }
-  .links-intro-title { font-size: 0.88rem; font-weight: 500; color: var(--gold); }
-  .links-intro-desc  { font-size: 0.78rem; color: var(--text-muted); }
-
-  /* ── EXTERNAL LINK CARDS ── */
-  .cards {
+  /* ── EDITORIAL SECTION ── */
+  .editorial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
   }
-  .card {
+  .ed-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--radius);
-    padding: 1.1rem 1rem;
+    padding: 1.4rem;
     text-decoration: none;
     color: inherit;
-    display: flex; flex-direction: column; gap: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
     transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    backdrop-filter: blur(6px);
   }
-  .card:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(26,188,156,0.4);
-    transform: translateY(-3px);
+  .ed-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(26,188,156,0.4); transform: translateY(-2px); }
+  .ed-card.atlas {
+    background: linear-gradient(135deg, rgba(201,168,112,0.08) 0%, rgba(33,150,196,0.06) 100%);
+    border-color: rgba(201,168,112,0.22);
   }
-  .card-emoji { font-size: 1.6rem; line-height: 1; }
-  .card-title { font-size: 0.92rem; font-weight: 500; color: var(--white); line-height: 1.3; }
-  .card-desc  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
-  .card-tag   {
-    display: inline-block;
-    font-size: 0.68rem; font-weight: 500;
-    padding: 2px 8px; border-radius: 999px;
-    margin-top: 2px;
-  }
-  .tag-live  { background: rgba(26,188,156,0.2); color: var(--teal-light); border: 1px solid rgba(26,188,156,0.3); }
-  .tag-map   { background: rgba(240,192,64,0.15); color: #fce08a; border: 1px solid rgba(240,192,64,0.25); }
-  .tag-info  { background: rgba(33,150,196,0.2); color: #90d4f0; border: 1px solid rgba(33,150,196,0.3); }
-  .tag-video { background: rgba(232,90,144,0.15); color: #f9afd0; border: 1px solid rgba(232,90,144,0.25); }
-  .tag-news  { background: rgba(160,120,240,0.15); color: #d0b8ff; border: 1px solid rgba(160,120,240,0.25); }
-  .tag-brasil{ background: rgba(26,188,100,0.15); color: #8af0c0; border: 1px solid rgba(26,188,100,0.25); }
-  .card.hidden { display: none; }
+  .ed-card__emoji { font-size: 1.8rem; line-height: 1; }
+  .ed-card__title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+  .ed-card__desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+  .ed-card__cta { font-size: 0.76rem; color: var(--teal); font-weight: 600; }
+  .ed-card:hover .ed-card__cta { color: var(--teal-light); }
 
-  /* ── SUGGEST ── */
-  .suggest-wrap { text-align: center; margin-top: 2.5rem; }
-  .suggest-btn {
-    display: inline-block;
-    background: transparent;
-    border: 1px solid rgba(26,188,156,0.5);
-    color: var(--teal-light);
-    padding: 0.65rem 1.8rem;
-    border-radius: 999px;
-    font-size: 0.88rem;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
+  /* ── TOOLS BANNER ── */
+  .tools-banner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
     text-decoration: none;
+    color: inherit;
+    transition: background 0.2s, border-color 0.2s;
   }
-  .suggest-btn:hover { background: rgba(26,188,156,0.15); border-color: var(--teal); }
+  .tools-banner:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.18); }
+  .tools-banner__icon { font-size: 2rem; flex-shrink: 0; }
+  .tools-banner__text { flex: 1; }
+  .tools-banner__title { font-weight: 600; font-size: 0.92rem; margin-bottom: 3px; }
+  .tools-banner__desc { font-size: 0.78rem; color: var(--text-muted); }
+  .tools-banner__links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.6rem; }
+  .tools-link {
+    font-size: 0.72rem; padding: 3px 10px; border-radius: 999px;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.6); text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .tools-link:hover { background: rgba(26,188,156,0.12); color: var(--teal-light); border-color: rgba(26,188,156,0.3); }
 
+  /* ── DIVIDER ── */
+  .section-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0 0 3rem; }
+
+  /* ── FOOTER ── */
   footer {
+    position: relative; z-index: 1;
     text-align: center;
     padding: 2rem 1rem 1rem;
     font-size: 0.78rem;
     color: rgba(255,255,255,0.25);
     letter-spacing: 0.04em;
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 700px) {
-    .company-cards { grid-template-columns: 1fr; }
-    .yard-cards { grid-template-columns: 1fr 1fr; }
-    .cards { grid-template-columns: 1fr 1fr; }
-    .glossary-banner { flex-direction: column; align-items: flex-start; gap: 12px; }
-    .glossary-banner__cta { align-self: flex-start; }
+  @media (max-width: 860px) {
+    .journey-grid { grid-template-columns: repeat(2, 1fr); }
+    .company-grid { grid-template-columns: repeat(2, 1fr); }
+    .guide-grid { grid-template-columns: repeat(2, 1fr); }
+    .editorial-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .journey-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .company-grid { grid-template-columns: 1fr; }
+    .dest-featured { grid-template-columns: 1fr; }
+    .dest-soon-row { grid-template-columns: 1fr 1fr; }
+    .guide-grid { grid-template-columns: 1fr 1fr; }
+    .editorial-grid { grid-template-columns: 1fr; }
+    .stats-bar { border-radius: var(--radius); }
+    .stat:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
   }
 </style>
 </head>
@@ -485,429 +451,260 @@
     </defs>
     <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
       <animate attributeName="d"
-        values="
-          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;
-          M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;
-          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"
+        values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"
         dur="8s" repeatCount="indefinite"/>
     </path>
   </svg>
 </div>
 
-<!-- ══ NAV ══ -->
 <div id="site-header"></div>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <span class="hero-emoji">🔱</span>
+  <h1>Poseidon Cruzeiros</h1>
+  <p class="hero-tagline">A referência brasileira sobre cruzeiros — <strong>companhias, navios, destinos e guias</strong> completos em português</p>
+</div>
 
 <div class="page">
 
-  <header>
-    <span class="logo-icon">🔱</span>
-    <h1>Poseidon Cruzeiros</h1>
-    <p>Seu portal de referência sobre navios, companhias e cruzeiros</p>
-  </header>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-num">17</span><span class="stat-label">companhias</span></div>
+    <div class="stat"><span class="stat-num">170+</span><span class="stat-label">navios</span></div>
+    <div class="stat"><span class="stat-num">20+</span><span class="stat-label">guias</span></div>
+    <div class="stat"><span class="stat-num">2</span><span class="stat-label">destinos</span></div>
+  </div>
+
+  <!-- JOURNEY CARDS -->
+  <div class="journey-grid">
+    <a class="journey-card" href="/guias/primeiro-cruzeiro/">
+      <span class="journey-card__emoji">🌊</span>
+      <div class="journey-card__title">Meu Primeiro Cruzeiro</div>
+      <div class="journey-card__desc">Escolha o destino, entenda os custos e embarque com confiança.</div>
+      <div class="journey-card__cta">Começar aqui →</div>
+    </a>
+    <a class="journey-card" href="/companhias/">
+      <span class="journey-card__emoji">🚢</span>
+      <div class="journey-card__title">Companhias e Navios</div>
+      <div class="journey-card__desc">17 companhias e 170+ navios documentados em português.</div>
+      <div class="journey-card__cta">Explorar frotas →</div>
+    </a>
+    <a class="journey-card" href="/destinos/">
+      <span class="journey-card__emoji">🗺️</span>
+      <div class="journey-card__title">Escolher um Destino</div>
+      <div class="journey-card__desc">América do Sul, Mediterrâneo, Caribe e muito mais.</div>
+      <div class="journey-card__cta">Ver destinos →</div>
+    </a>
+    <a class="journey-card" href="/guias/">
+      <span class="journey-card__emoji">📚</span>
+      <div class="journey-card__title">Guias Práticos</div>
+      <div class="journey-card__desc">Documentos, mala, cabine, bebidas, enjoo e mais.</div>
+      <div class="journey-card__cta">Ver guias →</div>
+    </a>
+  </div>
 
   <!-- ══ COMPANHIAS ══ -->
-  <div class="section-label">🚢 Companhias</div>
-  <p class="company-intro">As companhias agora aparecem por perfil de viagem, ajudando o visitante a distinguir mais rápido as marcas de grandes navios e entretenimento, as opções premium e as linhas focadas em luxo.</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">🚢 Companhias</div>
+      <a class="section-cta" href="/companhias/">Ver todas as 17 →</a>
+    </div>
+    <p class="section-intro">De navios gigantes para famílias até pequenas embarcações de ultra-luxo — conheça as frotas completas.</p>
+    <div class="company-grid">
+      <a class="company-card" href="/companhias/msc-cruzeiros/">
+        <span class="company-card__logo"><img src="./shared/company-logos/msc-cruzeiros.png" alt="" loading="lazy"></span>
+        <div class="company-card__info">
+          <span class="company-card__name">MSC Cruzeiros</span>
+          <span class="company-card__ships">23 navios · líder no Brasil</span>
+        </div>
+      </a>
+      <a class="company-card" href="/companhias/costa-cruzeiros/">
+        <span class="company-card__logo"><img src="./shared/company-logos/costa-cruzeiros.png" alt="" loading="lazy"></span>
+        <div class="company-card__info">
+          <span class="company-card__name">Costa Cruzeiros</span>
+          <span class="company-card__ships">12 navios · forte no Brasil</span>
+        </div>
+      </a>
+      <a class="company-card" href="/companhias/royal-caribbean/">
+        <span class="company-card__logo"><img src="./shared/company-logos/royal-caribbean.png" alt="" loading="lazy"></span>
+        <div class="company-card__info">
+          <span class="company-card__name">Royal Caribbean</span>
+          <span class="company-card__ships">29 navios · maior frota do mundo</span>
+        </div>
+      </a>
+      <a class="company-card" href="/companhias/norwegian-cruise-line/">
+        <span class="company-card__logo"><img src="./shared/company-logos/norwegian-cruise-line.png" alt="" loading="lazy"></span>
+        <div class="company-card__info">
+          <span class="company-card__name">Norwegian Cruise Line</span>
+          <span class="company-card__ships">21 navios · estilo freestyle</span>
+        </div>
+      </a>
+      <a class="company-card" href="/companhias/celebrity-cruises/">
+        <span class="company-card__logo"><img src="./shared/company-logos/celebrity-cruises.png" alt="" loading="lazy"></span>
+        <div class="company-card__info">
+          <span class="company-card__name">Celebrity Cruises</span>
+          <span class="company-card__ships">15 navios · segmento premium</span>
+        </div>
+      </a>
+      <a class="company-card" href="/companhias/disney-cruise-line/">
+        <span class="company-card__logo"><img src="./shared/company-logos/disney-cruise-line.png" alt="" loading="lazy"></span>
+        <div class="company-card__info">
+          <span class="company-card__name">Disney Cruise Line</span>
+          <span class="company-card__ships">8 navios · experiência única</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
-  <section class="company-group" aria-labelledby="companhias-contemporaneas">
-    <div class="company-group__header">
-      <h2 class="company-group__title" id="companhias-contemporaneas">Massa / Contemporâneo</h2>
-      <span class="company-group__count">6 companhias</span>
+  <!-- ══ DESTINOS ══ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">🗺️ Destinos</div>
+      <a class="section-cta" href="/destinos/">Ver todos →</a>
     </div>
-    <div class="company-cards">
-      <a class="company-card" href="./companhias/costa-cruzeiros/"><span class="company-card__logo"><img src="./shared/company-logos/costa-cruzeiros.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Costa Cruzeiros</span><span class="company-card__ships">12 navios · Mediterrâneo, Caribe e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/msc-cruzeiros/"><span class="company-card__logo"><img src="./shared/company-logos/msc-cruzeiros.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">MSC Cruzeiros</span><span class="company-card__ships">23 navios · World America, Euribia e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/royal-caribbean/"><span class="company-card__logo"><img src="./shared/company-logos/royal-caribbean.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Royal Caribbean</span><span class="company-card__ships">29 navios · Star, Icon, Utopia e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/norwegian-cruise-line/"><span class="company-card__logo"><img src="./shared/company-logos/norwegian-cruise-line.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Norwegian Cruise Line</span><span class="company-card__ships">21 navios · Luna, Aqua, Viva e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/carnival-cruise-line/"><span class="company-card__logo"><img src="./shared/company-logos/carnival-cruise-line.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Carnival Cruise Line</span><span class="company-card__ships">29 navios · Mardi Gras, Jubilee e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/aida-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/aida-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">AIDA Cruises</span><span class="company-card__ships">11 navios · Cosma, Nova e mais</span><span class="company-card__meta"><span class="company-card__category">Massa / Contemporâneo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-    </div>
-  </section>
+    <p class="section-intro">Cada destino tem sua temporada, seus documentos e suas companhias. Saiba para onde ir e quando.</p>
 
-  <section class="company-group" aria-labelledby="companhias-premium">
-    <div class="company-group__header">
-      <h2 class="company-group__title" id="companhias-premium">Premium</h2>
-      <span class="company-group__count">7 companhias</span>
+    <div class="dest-featured">
+      <a class="dest-card-big brasil" href="/destinos/america-do-sul/">
+        <span class="dest-card-big__emoji">🌊</span>
+        <div class="dest-card-big__title">América do Sul</div>
+        <div class="dest-card-big__desc">O destino mais acessível para brasileiros — embarque no Brasil, sem passaporte para Mercosul. Temporada de novembro a março.</div>
+        <div class="dest-card-big__pills">
+          <span class="dest-pill">Santos · Rio · Itajaí</span>
+          <span class="dest-pill">Buenos Aires · Montevidéu</span>
+          <span class="dest-pill">Nov–Mar</span>
+        </div>
+        <div class="dest-card-big__cta">Explorar destino →</div>
+      </a>
+      <a class="dest-card-big med" href="/destinos/mediterraneo/">
+        <span class="dest-card-big__emoji">🏛️</span>
+        <div class="dest-card-big__title">Mediterrâneo</div>
+        <div class="dest-card-big__desc">Itália, Grécia, Espanha e Croácia num único roteiro. O destino mais visitado do mundo. Temporada de maio a outubro.</div>
+        <div class="dest-card-big__pills">
+          <span class="dest-pill">Santorini · Roma · Barcelona</span>
+          <span class="dest-pill">Dubrovnik · Veneza</span>
+          <span class="dest-pill">Mai–Out</span>
+        </div>
+        <div class="dest-card-big__cta">Explorar destino →</div>
+      </a>
     </div>
-    <div class="company-cards">
-      <a class="company-card" href="./companhias/celebrity-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/celebrity-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Celebrity Cruises</span><span class="company-card__ships">15 navios · Xcel, Ascent e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/princess-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/princess-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Princess Cruises</span><span class="company-card__ships">Sun Princess, Royal Princess e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/holland-america-line/"><span class="company-card__logo"><img src="./shared/company-logos/holland-america-line.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Holland America Line</span><span class="company-card__ships">Rotterdam, Koningsdam e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/disney-cruise-line/"><span class="company-card__logo"><img src="./shared/company-logos/disney-cruise-line.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Disney Cruise Line</span><span class="company-card__ships">Wish, Treasure, Dream e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/virgin-voyages/"><span class="company-card__logo"><img src="./shared/company-logos/virgin-voyages.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Virgin Voyages</span><span class="company-card__ships">4 navios · Brilliant, Resilient e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/p-and-o-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/p-and-o-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">P&amp;O Cruises</span><span class="company-card__ships">7 navios · Arvia, Iona e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/tui-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/tui-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">TUI Cruises</span><span class="company-card__ships">8 ativos + Flow · Relax, Mein Schiff 7 e mais</span><span class="company-card__meta"><span class="company-card__category">Premium</span><span class="company-card__tag">Ver frota</span></span></div></a>
-    </div>
-  </section>
 
-  <section class="company-group" aria-labelledby="companhias-luxo">
-    <div class="company-group__header">
-      <h2 class="company-group__title" id="companhias-luxo">Luxo</h2>
-      <span class="company-group__count">2 companhias</span>
-    </div>
-    <div class="company-cards">
-      <a class="company-card" href="./companhias/oceania-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/oceania-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Oceania Cruises</span><span class="company-card__ships">8 navios · Allura, Vista e mais</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/cunard/"><span class="company-card__logo"><img src="./shared/company-logos/cunard.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Cunard</span><span class="company-card__ships">Queen Mary 2, Queen Anne e mais</span><span class="company-card__meta"><span class="company-card__category">Luxo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-    </div>
-  </section>
-
-  <section class="company-group" aria-labelledby="companhias-ultraluxo">
-    <div class="company-group__header">
-      <h2 class="company-group__title" id="companhias-ultraluxo">Ultra-luxo</h2>
-      <span class="company-group__count">2 companhias</span>
-    </div>
-    <div class="company-cards">
-      <a class="company-card" href="./companhias/regent-seven-seas-cruises/"><span class="company-card__logo"><img src="./shared/company-logos/regent-seven-seas-cruises.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Regent Seven Seas Cruises</span><span class="company-card__ships">6 ativos + Prestige · Grandeur e mais</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-      <a class="company-card" href="./companhias/seabourn/"><span class="company-card__logo"><img src="./shared/company-logos/seabourn.png" alt="" loading="lazy"></span><div class="company-card__info"><span class="company-card__name">Seabourn</span><span class="company-card__ships">6 navios · Pursuit, Venture e mais</span><span class="company-card__meta"><span class="company-card__category">Ultra-luxo</span><span class="company-card__tag">Ver frota</span></span></div></a>
-    </div>
-  </section>
-
-  <!-- ══ ESTALEIROS ══ -->
-  <div class="section-label">🏗️ Estaleiros</div>
-  <div class="yard-cards">
-    <a class="yard-card" href="./estaleiros/fincantieri/">
-      <div class="yard-card__header">
-        <span class="yard-card__flag">🇮🇹</span>
-        <span class="yard-card__name">Fincantieri</span>
+    <div class="dest-soon-row">
+      <div class="dest-card-small">
+        <span class="dest-card-small__emoji">🏝️</span>
+        <div class="dest-card-small__title">Caribe</div>
+        <div class="dest-card-small__tag">Em breve</div>
       </div>
-      <div class="yard-card__loc">Monfalcone, Itália</div>
-      <div class="yard-card__ships">100+ navios · Costa, Norwegian, MSC e mais</div>
-      <span class="yard-card__tag yard-tag-active">Ver estaleiro</span>
-    </a>
-    <a class="yard-card" href="./estaleiros/meyer-turku/">
-      <div class="yard-card__header">
-        <span class="yard-card__flag">🇫🇮</span>
-        <span class="yard-card__name">Meyer Turku</span>
+      <div class="dest-card-small">
+        <span class="dest-card-small__emoji">🏔️</span>
+        <div class="dest-card-small__title">Europa do Norte</div>
+        <div class="dest-card-small__tag">Em breve</div>
       </div>
-      <div class="yard-card__loc">Turku, Finlândia</div>
-      <div class="yard-card__ships">60+ navios · Royal Caribbean, Carnival e mais</div>
-      <span class="yard-card__tag yard-tag-active">Ver estaleiro</span>
-    </a>
-    <a class="yard-card" href="./estaleiros/chantiers-de-latlantique/">
-      <div class="yard-card__header">
-        <span class="yard-card__flag">🇫🇷</span>
-        <span class="yard-card__name">Chantiers de l'Atlantique</span>
+      <div class="dest-card-small">
+        <span class="dest-card-small__emoji">🌏</span>
+        <div class="dest-card-small__title">Destinos Exóticos</div>
+        <div class="dest-card-small__tag">Em breve</div>
       </div>
-      <div class="yard-card__loc">Saint-Nazaire, França</div>
-      <div class="yard-card__ships">50+ navios · MSC, Royal, Celebrity</div>
-      <span class="yard-card__tag yard-tag-active">Ver estaleiro</span>
-    </a>
-    <a class="yard-card" href="./estaleiros/meyer-werft/">
-      <div class="yard-card__header">
-        <span class="yard-card__flag">🇩🇪</span>
-        <span class="yard-card__name">Meyer Werft</span>
-      </div>
-      <div class="yard-card__loc">Papenburg, Alemanha</div>
-      <div class="yard-card__ships">50+ navios · Norwegian, Disney, AIDA</div>
-      <span class="yard-card__tag yard-tag-active">Ver estaleiro</span>
-    </a>
-    <div class="yard-card soon">
-      <div class="yard-card__header">
-        <span class="yard-card__flag">🇬🇧</span>
-        <span class="yard-card__name">Harland &amp; Wolff</span>
-      </div>
-      <div class="yard-card__loc">Belfast, Reino Unido</div>
-      <div class="yard-card__ships">Histórico · RMS Titanic</div>
-      <span class="yard-card__tag yard-tag-soon">Em breve</span>
-    </div>
-    <div class="yard-card soon">
-      <div class="yard-card__header">
-        <span class="yard-card__flag">🇩🇪</span>
-        <span class="yard-card__name">Blohm + Voss</span>
-      </div>
-      <div class="yard-card__loc">Hamburgo, Alemanha</div>
-      <div class="yard-card__ships">Histórico · HAPAG-Lloyd</div>
-      <span class="yard-card__tag yard-tag-soon">Em breve</span>
     </div>
   </div>
 
   <!-- ══ GUIAS ══ -->
-  <div class="section-label">📚 Guias para planejar seu cruzeiro</div>
-  <a class="glossary-banner" href="./guias/" style="margin-bottom:14px; background: rgba(26,188,156,0.07); border-color: rgba(26,188,156,0.25);">
-    <span class="glossary-banner__icon">📚</span>
-    <div class="glossary-banner__text">
-      <span class="glossary-banner__title">Todos os guias de cruzeiros</span>
-      <span class="glossary-banner__desc">Primeiro cruzeiro, documentos, mala, bebidas, internet, enjoo, Brasil, família, casais, adultos e viajantes solo.</span>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">📚 Guias</div>
+      <a class="section-cta" href="/guias/">Ver todos os guias →</a>
     </div>
-    <span class="glossary-banner__cta">Abrir hub →</span>
-  </a>
-  <div class="guide-cards">
-    <a class="guide-card" href="./guias/primeiro-cruzeiro/">
-      <span class="guide-card__emoji">🚀</span>
-      <div class="guide-card__title">Primeiro Cruzeiro</div>
-      <div class="guide-card__desc">Tudo que você precisa saber antes de embarcar pela primeira vez.</div>
-      <span class="guide-card__tag">Iniciante</span>
-    </a>
-    <a class="guide-card" href="./guias/quanto-custa/">
-      <span class="guide-card__emoji">💰</span>
-      <div class="guide-card__title">Quanto Custa um Cruzeiro</div>
-      <div class="guide-card__desc">Custos reais: passagem, gorjetas, bebidas, excursões e extras.</div>
-      <span class="guide-card__tag">Planejamento</span>
-    </a>
-    <a class="guide-card" href="./guias/documentos-necessarios/">
-      <span class="guide-card__emoji">🛂</span>
-      <div class="guide-card__title">Documentos para Embarque</div>
-      <div class="guide-card__desc">RG, passaporte, Mercosul e cuidados para não ser barrado no porto.</div>
-      <span class="guide-card__tag">Documentos</span>
-    </a>
-    <a class="guide-card" href="./guias/mala-de-cruzeiro/">
-      <span class="guide-card__emoji">🧳</span>
-      <div class="guide-card__title">Mala de Cruzeiro</div>
-      <div class="guide-card__desc">O que levar, roupa ideal para o navio e itens proibidos no embarque.</div>
-      <span class="guide-card__tag">Checklist</span>
-    </a>
-    <a class="guide-card" href="./guias/pacotes-de-bebidas/">
-      <span class="guide-card__emoji">🍹</span>
-      <div class="guide-card__title">Pacotes de Bebidas</div>
-      <div class="guide-card__desc">Entenda quando o pacote compensa e como calcular seu consumo a bordo.</div>
-      <span class="guide-card__tag">Bebidas</span>
-    </a>
-    <a class="guide-card" href="./guias/internet-a-bordo/">
-      <span class="guide-card__emoji">📱</span>
-      <div class="guide-card__title">Internet a Bordo</div>
-      <div class="guide-card__desc">Wi-Fi via satélite, roaming marítimo e formas de economizar no celular.</div>
-      <span class="guide-card__tag">Serviços</span>
-    </a>
-    <a class="guide-card" href="./guias/enjoo-em-cruzeiro/">
-      <span class="guide-card__emoji">🤢</span>
-      <div class="guide-card__title">Enjoo em Cruzeiro</div>
-      <div class="guide-card__desc">Como escolher cabine, prevenir sintomas e lidar com o balanço do navio.</div>
-      <span class="guide-card__tag">Saúde</span>
-    </a>
-    <a class="guide-card" href="./guias/cruzeiros-brasil/">
-      <span class="guide-card__emoji">🇧🇷</span>
-      <div class="guide-card__title">Cruzeiros pelo Brasil</div>
-      <div class="guide-card__desc">Roteiros saindo de Santos, Rio de Janeiro e Itajaí.</div>
-      <span class="guide-card__tag">Brasil</span>
-    </a>
-    <a class="guide-card" href="./guias/embarque/">
-      <span class="guide-card__emoji">🛳️</span>
-      <div class="guide-card__title">Guia de Embarque</div>
-      <div class="guide-card__desc">Documentos, mala, check-in e o que esperar no dia de embarcar.</div>
-      <span class="guide-card__tag">Embarque</span>
-    </a>
-    <a class="guide-card" href="./guias/cruzeiro-so-adultos/">
-      <span class="guide-card__emoji">🍸</span>
-      <div class="guide-card__title">Cruzeiro Só para Adultos</div>
-      <div class="guide-card__desc">Companhias 18+, navios adults-only e diferenças para áreas adultas.</div>
-      <span class="guide-card__tag">Adultos</span>
-    </a>
-    <a class="guide-card" href="./guias/">
-      <span class="guide-card__emoji">📚</span>
-      <div class="guide-card__title">Ver Todos os Guias</div>
-      <div class="guide-card__desc">Acesse a central completa com guias para diferentes perfis e etapas da viagem.</div>
-      <span class="guide-card__tag">Hub</span>
-    </a>
+    <p class="section-intro">Do planejamento ao desembarque — conteúdo prático em português para cada etapa da sua viagem.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="/guias/primeiro-cruzeiro/">
+        <span class="guide-card__emoji">🚀</span>
+        <div class="guide-card__title">Primeiro Cruzeiro</div>
+        <div class="guide-card__desc">O guia mais completo para quem vai embarcar pela primeira vez.</div>
+        <span class="guide-card__tag">Essencial</span>
+      </a>
+      <a class="guide-card" href="/guias/quanto-custa/">
+        <span class="guide-card__emoji">💰</span>
+        <div class="guide-card__title">Quanto Custa um Cruzeiro</div>
+        <div class="guide-card__desc">Passagem, gorjetas, bebidas, excursões — o custo real sem surpresas.</div>
+        <span class="guide-card__tag">Planejamento</span>
+      </a>
+      <a class="guide-card" href="/guias/documentos-necessarios/">
+        <span class="guide-card__emoji">🛂</span>
+        <div class="guide-card__title">Documentos para Embarque</div>
+        <div class="guide-card__desc">RG, passaporte, Mercosul e o que a Polícia Federal exige no porto.</div>
+        <span class="guide-card__tag">Documentos</span>
+      </a>
+      <a class="guide-card" href="/guias/mala-de-cruzeiro/">
+        <span class="guide-card__emoji">🧳</span>
+        <div class="guide-card__title">Mala de Cruzeiro</div>
+        <div class="guide-card__desc">O que levar, roupa certa para cada noite e itens proibidos a bordo.</div>
+        <span class="guide-card__tag">Checklist</span>
+      </a>
+      <a class="guide-card" href="/guias/pacotes-de-bebidas/">
+        <span class="guide-card__emoji">🍹</span>
+        <div class="guide-card__title">Pacotes de Bebidas</div>
+        <div class="guide-card__desc">Entenda quando o pacote all-inclusive compensa para o seu perfil.</div>
+        <span class="guide-card__tag">A bordo</span>
+      </a>
+      <a class="guide-card" href="/guias/como-escolher-cabine/">
+        <span class="guide-card__emoji">🛏️</span>
+        <div class="guide-card__title">Como Escolher a Cabine</div>
+        <div class="guide-card__desc">Interior, oceanview, varanda ou suíte — diferenças reais e onde fica.</div>
+        <span class="guide-card__tag">Cabines</span>
+      </a>
+    </div>
   </div>
 
-  <!-- ══ CURIOSIDADES ══ -->
-  <div class="section-label">⚓ Curiosidades e especiais</div>
-  <a class="glossary-banner" href="./curiosidades/" style="margin-bottom:14px; background: rgba(216,164,184,0.08); border-color: rgba(216,164,184,0.24);">
-    <span class="glossary-banner__icon">⚓</span>
-    <div class="glossary-banner__text">
-      <span class="glossary-banner__title">Curiosidades Marítimas</span>
-      <span class="glossary-banner__desc">Uma nova área editorial com histórias de navios icônicos, companhias históricas, conceitos de projeto e contexto do mundo marítimo.</span>
+  <!-- ══ CURIOSIDADES & ATLAS ══ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">⚓ Curiosidades & Atlas</div>
+      <a class="section-cta" href="/curiosidades/">Ver curiosidades →</a>
     </div>
-    <span class="glossary-banner__cta">Abrir hub →</span>
-  </a>
-  <div class="guide-cards">
-    <a class="guide-card" href="./curiosidades/titanic/">
-      <span class="guide-card__emoji">🚢</span>
-      <div class="guide-card__title">Titanic: ficha histórica expandida</div>
-      <div class="guide-card__desc">Construtora, rota planejada, navios-irmãos, interiores, decks e o legado do navio mais famoso da história.</div>
-      <span class="guide-card__tag">Especial</span>
-    </a>
-    <a class="guide-card" href="./curiosidades/historia-dos-cruzeiros/">
-      <span class="guide-card__emoji">🧭</span>
-      <div class="guide-card__title">História dos Cruzeiros</div>
-      <div class="guide-card__desc">Como os navios deixaram de ser transporte e se tornaram férias, lazer e destino por si só.</div>
-      <span class="guide-card__tag">História</span>
-    </a>
-    <a class="guide-card" href="./curiosidades/">
-      <span class="guide-card__emoji">⚓</span>
-      <div class="guide-card__title">Ver área de Curiosidades</div>
-      <div class="guide-card__desc">Novo hub do Poseidon para artigos históricos, curiosidades marítimas e futuros especiais temáticos.</div>
-      <span class="guide-card__tag">Hub</span>
-    </a>
+    <div class="editorial-grid">
+      <a class="ed-card" href="/curiosidades/titanic/">
+        <span class="ed-card__emoji">🚢</span>
+        <div class="ed-card__title">Titanic</div>
+        <div class="ed-card__desc">História, rota, decks, navios-irmãos e o legado do navio mais famoso da história.</div>
+        <div class="ed-card__cta">Ler especial →</div>
+      </a>
+      <a class="ed-card" href="/curiosidades/historia-dos-cruzeiros/">
+        <span class="ed-card__emoji">🧭</span>
+        <div class="ed-card__title">História dos Cruzeiros</div>
+        <div class="ed-card__desc">Como os navios deixaram de ser transporte e se tornaram o resort mais popular do mundo.</div>
+        <div class="ed-card__cta">Ler artigo →</div>
+      </a>
+      <a class="ed-card atlas" href="/atlas/">
+        <span class="ed-card__emoji">🗺️</span>
+        <div class="ed-card__title">Atlas Marítimo</div>
+        <div class="ed-card__desc">Explore rotas e portos de cruzeiro ao redor do mundo em mapa interativo.</div>
+        <div class="ed-card__cta">Abrir Atlas →</div>
+      </a>
+    </div>
   </div>
 
-  <!-- ══ ATLAS MARÍTIMO ══ -->
-  <div class="section-label">🗺️ Atlas Marítimo</div>
-  <a class="glossary-banner" href="./atlas/" style="background: rgba(201,168,112,0.07); border-color: rgba(201,168,112,0.2);">
-    <span class="glossary-banner__icon">🗺️</span>
-    <div class="glossary-banner__text">
-      <span class="glossary-banner__title">Atlas Marítimo</span>
-      <span class="glossary-banner__desc">Explore rotas, portos e destinos de cruzeiro ao redor do mundo — mapa interativo exclusivo do Poseidon Cruzeiros.</span>
-    </div>
-    <span class="glossary-banner__cta">Abrir Atlas →</span>
-  </a>
-
-  <!-- ══ GLOSSÁRIO ══ -->
-  <div class="section-label">📖 Glossário</div>
-  <a class="glossary-banner" href="./glossario/">
-    <span class="glossary-banner__icon">📖</span>
-    <div class="glossary-banner__text">
-      <span class="glossary-banner__title">Glossário de Cruzeiros</span>
-      <span class="glossary-banner__desc">50 termos essenciais explicados em português — de proa a popa, de cabine interior a suíte, de knots a tonnage.</span>
-    </div>
-    <span class="glossary-banner__cta">Ver glossário →</span>
-  </a>
-
-  <!-- ══ LINKS EXTERNOS ══ -->
+  <!-- ══ FERRAMENTAS ══ -->
   <hr class="section-divider" />
-
-  <div class="links-intro">
-    <span class="links-intro-icon">🔗</span>
-    <div class="links-intro-text">
-      <span class="links-intro-title">Links Externos</span>
-      <span class="links-intro-desc">Recursos e ferramentas de terceiros selecionados para entusiastas de cruzeiros</span>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">🔗 Ferramentas</div>
     </div>
-  </div>
-
-  <div class="section-label" id="sec-rastreamento">🛰️ Rastreamento de Navios</div>
-  <div class="cards">
-    <a class="card" href="https://www.marinetraffic.com" target="_blank" rel="noopener">
-      <span class="card-emoji">📡</span>
-      <div class="card-title">MarineTraffic</div>
-      <div class="card-desc">Rastreamento em tempo real de navios ao redor do mundo inteiro.</div>
-      <span class="card-tag tag-live">Ao vivo</span>
-    </a>
-    <a class="card" href="https://www.vesseltracker.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🗺️</span>
-      <div class="card-title">VesselTracker</div>
-      <div class="card-desc">Posição e rota de cruzeiros e cargueiros em tempo real.</div>
-      <span class="card-tag tag-live">Ao vivo</span>
-    </a>
-    <a class="card" href="https://www.shipfinder.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🔍</span>
-      <div class="card-title">ShipFinder</div>
-      <div class="card-desc">Busca por nome de navio com histórico de rotas e posições.</div>
-      <span class="card-tag tag-map">Mapa</span>
-    </a>
-    <a class="card" href="https://www.cruisingearth.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🌍</span>
-      <div class="card-title">CruisingEarth</div>
-      <div class="card-desc">Visualização 3D da posição dos cruzeiros no globo em tempo real.</div>
-      <span class="card-tag tag-map">3D</span>
-    </a>
-  </div>
-
-  <div class="section-label" id="sec-mapas">🏗️ Mapas e Plantas dos Navios</div>
-  <div class="cards">
-    <a class="card" href="https://www.cruisedeckplans.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🗂️</span>
-      <div class="card-title">CruiseDeckPlans</div>
-      <div class="card-desc">Plantas detalhadas de decks de centenas de navios de cruzeiro.</div>
-      <span class="card-tag tag-info">Planta</span>
-    </a>
-    <a class="card" href="https://www.cruisecritic.com/deck-plans" target="_blank" rel="noopener">
-      <span class="card-emoji">🛳️</span>
-      <div class="card-title">Cruise Critic Decks</div>
-      <div class="card-desc">Deck plans interativos com avaliações de cabines por passageiros.</div>
-      <span class="card-tag tag-info">Interativo</span>
-    </a>
-    <a class="card" href="https://www.royalcaribbean.com/cruise-ships" target="_blank" rel="noopener">
-      <span class="card-emoji">👑</span>
-      <div class="card-title">Royal Caribbean</div>
-      <div class="card-desc">Modelos 3D e mapas oficiais dos navios da frota Royal.</div>
-      <span class="card-tag tag-map">3D</span>
-    </a>
-    <a class="card" href="https://www.msccruises.com/cruise-ships" target="_blank" rel="noopener">
-      <span class="card-emoji">🇮🇹</span>
-      <div class="card-title">MSC Cruzeiros</div>
-      <div class="card-desc">Explore a frota MSC com tours virtuais pelos navios.</div>
-      <span class="card-tag tag-map">Tour virtual</span>
-    </a>
-  </div>
-
-  <div class="section-label" id="sec-cameras">📷 Câmeras ao Vivo — Portos e Navios</div>
-  <div class="cards">
-    <a class="card" href="https://www.earthcam.com/cams/cruiseport/" target="_blank" rel="noopener">
-      <span class="card-emoji">📸</span>
-      <div class="card-title">EarthCam — Portos</div>
-      <div class="card-desc">Câmeras ao vivo nos principais portos de cruzeiro dos EUA.</div>
-      <span class="card-tag tag-live">Ao vivo</span>
-    </a>
-    <a class="card" href="https://www.skylinewebcams.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🎥</span>
-      <div class="card-title">Skyline Webcams</div>
-      <div class="card-desc">Webcams de portos europeus: Veneza, Mediterrâneo e mais.</div>
-      <span class="card-tag tag-video">Vídeo</span>
-    </a>
-    <a class="card" href="https://www.portofmiami.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🌊</span>
-      <div class="card-title">Port of Miami</div>
-      <div class="card-desc">O porto de cruzeiros mais movimentado do mundo — Miami, EUA.</div>
-      <span class="card-tag tag-live">Ao vivo</span>
-    </a>
-    <a class="card" href="https://www.portodesantos.com.br" target="_blank" rel="noopener">
-      <span class="card-emoji">🇧🇷</span>
-      <div class="card-title">Porto de Santos</div>
-      <div class="card-desc">Principal porto de cruzeiros do Brasil, em São Paulo.</div>
-      <span class="card-tag tag-brasil">Brasil</span>
-    </a>
-  </div>
-
-  <div class="section-label" id="sec-noticias">📰 Notícias e Informações</div>
-  <div class="cards">
-    <a class="card" href="https://www.cruiseindustrynews.com" target="_blank" rel="noopener">
-      <span class="card-emoji">📰</span>
-      <div class="card-title">Cruise Industry News</div>
-      <div class="card-desc">Notícias do setor: novos navios, rotas e tendências globais.</div>
-      <span class="card-tag tag-news">Notícias</span>
-    </a>
-    <a class="card" href="https://www.cruisecritic.com" target="_blank" rel="noopener">
-      <span class="card-emoji">⭐</span>
-      <div class="card-title">Cruise Critic</div>
-      <div class="card-desc">Avaliações, fóruns e guias detalhados para passageiros.</div>
-      <span class="card-tag tag-info">Reviews</span>
-    </a>
-    <a class="card" href="https://www.seatrade-cruise.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🏆</span>
-      <div class="card-title">Seatrade Cruise</div>
-      <div class="card-desc">Publicação líder do segmento de cruzeiros global.</div>
-      <span class="card-tag tag-news">Indústria</span>
-    </a>
-    <a class="card" href="https://www.dicruise.com.br" target="_blank" rel="noopener">
-      <span class="card-emoji">🇧🇷</span>
-      <div class="card-title">DiCruise Brasil</div>
-      <div class="card-desc">Portal brasileiro especializado em cruzeiros marítimos nacionais.</div>
-      <span class="card-tag tag-brasil">Brasil</span>
-    </a>
-  </div>
-
-  <div class="section-label" id="sec-ferramentas">🧰 Ferramentas e Extras</div>
-  <div class="cards">
-    <a class="card" href="https://www.cruisemapper.com" target="_blank" rel="noopener">
-      <span class="card-emoji">🧭</span>
-      <div class="card-title">CruiseMapper</div>
-      <div class="card-desc">Cronograma de chegadas e partidas em portos do mundo todo.</div>
-      <span class="card-tag tag-map">Agenda</span>
-    </a>
-    <a class="card" href="https://www.portalis.com.br" target="_blank" rel="noopener">
-      <span class="card-emoji">📋</span>
-      <div class="card-title">Portalis Brasil</div>
-      <div class="card-desc">Chegadas e saídas de navios nos portos brasileiros.</div>
-      <span class="card-tag tag-brasil">Brasil</span>
-    </a>
-    <a class="card" href="https://en.wikipedia.org/wiki/List_of_largest_cruise_ships" target="_blank" rel="noopener">
-      <span class="card-emoji">📊</span>
-      <div class="card-title">Maiores Navios</div>
-      <div class="card-desc">Lista dos maiores cruzeiros do mundo com especificações técnicas.</div>
-      <span class="card-tag tag-info">Wiki</span>
-    </a>
-    <a class="card" href="https://www.youtube.com/@cruisefever" target="_blank" rel="noopener">
-      <span class="card-emoji">▶️</span>
-      <div class="card-title">Cruise Fever YT</div>
-      <div class="card-desc">Canal no YouTube com tours, novidades e dicas do mundo dos cruzeiros.</div>
-      <span class="card-tag tag-video">YouTube</span>
-    </a>
-  </div>
-
-  <div class="suggest-wrap">
-    <a class="suggest-btn" href="mailto:contato@poseidoncruzeiros.com.br?subject=Sugestão de link">
-      ➕ Sugerir novo link
-    </a>
+    <div class="tools-banner">
+      <span class="tools-banner__icon">🛰️</span>
+      <div class="tools-banner__text">
+        <div class="tools-banner__title">Recursos externos para entusiastas de cruzeiros</div>
+        <div class="tools-banner__desc">Rastreamento em tempo real, plantas de navios, câmeras de porto e notícias do setor.</div>
+        <div class="tools-banner__links">
+          <a class="tools-link" href="https://www.marinetraffic.com" target="_blank" rel="noopener">📡 MarineTraffic</a>
+          <a class="tools-link" href="https://www.cruisedeckplans.com" target="_blank" rel="noopener">🗂️ CruiseDeckPlans</a>
+          <a class="tools-link" href="https://www.cruisemapper.com" target="_blank" rel="noopener">🧭 CruiseMapper</a>
+          <a class="tools-link" href="https://www.cruisecritic.com" target="_blank" rel="noopener">⭐ Cruise Critic</a>
+          <a class="tools-link" href="https://www.portalis.com.br" target="_blank" rel="noopener">🇧🇷 Portalis Brasil</a>
+          <a class="tools-link" href="https://www.cruisingearth.com" target="_blank" rel="noopener">🌍 CruisingEarth</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -916,36 +713,5 @@
 
 </div>
 
-<script>
-  function filterCards(q) {
-    document.querySelectorAll('.card').forEach(card => {
-      card.classList.toggle('hidden', q !== '' && !card.innerText.toLowerCase().includes(q));
-    });
-  }
-
-  function bindHeaderSearch() {
-    const desktopSearch = document.getElementById('searchInput');
-    const mobileSearch = document.getElementById('mobileSearch');
-
-    if (!desktopSearch || !mobileSearch || desktopSearch.dataset.bound === 'true') {
-      return;
-    }
-
-    desktopSearch.dataset.bound = 'true';
-    mobileSearch.dataset.bound = 'true';
-
-    desktopSearch.addEventListener('input', function() {
-      filterCards(this.value.toLowerCase().trim());
-      mobileSearch.value = this.value;
-    });
-
-    mobileSearch.addEventListener('input', function() {
-      filterCards(this.value.toLowerCase().trim());
-      desktopSearch.value = this.value;
-    });
-  }
-
-  window.addEventListener('site-header-ready', bindHeaderSearch);
-</script>
 </body>
 </html>

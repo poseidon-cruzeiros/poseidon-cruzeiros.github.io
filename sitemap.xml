@@ -304,6 +304,12 @@
   <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/santos/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/buenos-aires/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/buzios-e-ilhabela/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/rio-de-janeiro/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/itajai/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/salvador/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/montevideu/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/punta-del-este/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/america-do-sul/angra-dos-reis/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/caribe/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/caribe/miami/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/caribe/ocean-cay/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -314,6 +320,9 @@
   <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/civitavecchia-roma/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/genova/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/pireu-atenas/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/santorini/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/dubrovnik/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/veneza/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/estaleiros/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/estaleiros/chantiers-de-latlantique/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/estaleiros/fincantieri/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

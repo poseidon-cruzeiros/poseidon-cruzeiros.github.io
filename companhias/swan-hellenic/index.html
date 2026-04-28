@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Swan Hellenic &mdash; Poseidon Cruzeiros</title>
+<meta name="description" content="Frota atual da Swan Hellenic com 3 navios: SH Diana, SH Vega e SH Minerva. Perfil da companhia, hist&oacute;ria da marca e fichas t&eacute;cnicas resumidas." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/companhias/swan-hellenic/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Swan Hellenic &mdash; Poseidon Cruzeiros" />
+<meta property="og:description" content="Conhe&ccedil;a a Swan Hellenic, linha de expedi&ccedil;&atilde;o cultural relan&ccedil;ada em 2019 e operada pela Swan Hellenic Travel Ltd., com 3 navios boutique ice-class ativos." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/companhias/swan-hellenic/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Swan Hellenic &mdash; Poseidon Cruzeiros" />
+<meta name="twitter:description" content="Conhe&ccedil;a a Swan Hellenic, linha de expedi&ccedil;&atilde;o cultural relan&ccedil;ada em 2019 e operada pela Swan Hellenic Travel Ltd., com 3 navios boutique ice-class ativos." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #07131d;
+    --ocean-mid:    #123249;
+    --ocean-bright: #2f6d92;
+    --teal:         #8acfd7;
+    --teal-light:   #e4fbff;
+    --gold:         #d8b56e;
+    --white:        #ffffff;
+    --text-muted:   #99b3c4;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --nav-height:   60px;
+    --brand-navy:   #0f2538;
+    --brand-cyan:   #8ed9e3;
+    --brand-gold:   #d7b66d;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 58% at 50% -10%, rgba(47,109,146,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 42% at 82% 100%, rgba(138,207,215,0.14) 0%, transparent 60%),
+      linear-gradient(180deg, #07131d 0%, #02080d 100%);
+    pointer-events: none;
+  }
+
+  .waves-bg {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 0;
+    height: 200px; overflow: hidden; pointer-events: none;
+  }
+  .waves-bg svg { width: 100%; height: 100%; }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.72); }
+
+  .company-header {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.5rem;
+  }
+  .company-logo {
+    width: 72px; height: 72px; border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--brand-navy), #1e4a66);
+    border: 1px solid rgba(255,255,255,0.16);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.08rem; font-weight: 800; flex-shrink: 0;
+    color: var(--brand-gold); letter-spacing: 0.08em;
+  }
+  .company-info { flex: 1; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem;
+  }
+  .company-desc {
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.65; max-width: 730px; margin-bottom: 1rem;
+  }
+  .company-stats {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .stat-value {
+    font-size: 1.1rem; font-weight: 600; color: var(--white);
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(138,207,215,0.4), transparent);
+  }
+
+  .ships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .ship-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.1rem;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+    position: relative;
+  }
+  .ship-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(138,207,215,0.42);
+    transform: translateY(-3px);
+  }
+  .ship-card.soon {
+    cursor: default;
+  }
+  .ship-card.soon:hover { transform: none; }
+  .ship-card.flagship {
+    border-color: rgba(216,181,110,0.35);
+    background: rgba(216,181,110,0.06);
+  }
+  .ship-card.flagship:hover {
+    border-color: rgba(216,181,110,0.5);
+    background: rgba(216,181,110,0.1);
+  }
+
+  .ship-icon { font-size: 1.8rem; line-height: 1; }
+  .ship-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    line-height: 1.2;
+  }
+  .ship-year {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .ship-specs {
+    display: flex; flex-direction: column; gap: 3px;
+    margin-top: 2px;
+  }
+  .ship-spec {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.77rem; gap: 0.5rem;
+  }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { color: rgba(255,255,255,0.88); font-weight: 500; text-align: right; }
+
+  .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+  .ship-tag {
+    font-size: 0.65rem; font-weight: 500;
+    padding: 2px 7px; border-radius: 999px;
+  }
+  .tag-flagship   { background: rgba(216,181,110,0.18); color: #f8e2b4; border: 1px solid rgba(216,181,110,0.34); }
+  .tag-inaugural  { background: rgba(142,217,227,0.16); color: #e5fbff; border: 1px solid rgba(142,217,227,0.32); }
+  .tag-pc5        { background: rgba(126,178,255,0.16); color: #dcecff; border: 1px solid rgba(126,178,255,0.3); }
+  .tag-pc6        { background: rgba(92,154,230,0.18); color: #d7e9ff; border: 1px solid rgba(92,154,230,0.32); }
+  .tag-boutique   { background: rgba(138,207,215,0.18); color: #e5ffff; border: 1px solid rgba(138,207,215,0.34); }
+  .tag-cultural   { background: rgba(168,218,220,0.16); color: #e9ffff; border: 1px solid rgba(168,218,220,0.3); }
+  .tag-largest    { background: rgba(214,176,106,0.16); color: #f6e1bb; border: 1px solid rgba(214,176,106,0.3); }
+  .tag-finland    { background: rgba(198,223,255,0.16); color: #edf7ff; border: 1px solid rgba(198,223,255,0.3); }
+
+  .ship-card-footer {
+    margin-top: auto; padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.75rem;
+  }
+  .ship-soon-hint { color: var(--text-muted); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .ships-grid { grid-template-columns: 1fr 1fr; }
+    .company-header { flex-direction: column; gap: 1rem; }
+    .company-stats { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .ships-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8acfd7" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#8acfd7" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d"
+        values="
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;
+          M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"
+        dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="/companhias/">Companhias</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <span class="breadcrumb-current">Swan Hellenic</span>
+  </nav>
+
+  <div class="company-header">
+    <div class="company-logo">SH</div>
+    <div class="company-info">
+      <h1 class="company-name">Swan Hellenic</h1>
+      <p class="company-desc">
+        Fundada em 1954, a Swan Hellenic &eacute; uma marca hist&oacute;rica de expedi&ccedil;&atilde;o cultural que ajudou a consolidar esse estilo de viagem desde os primeiros cruzeiros focados em arqueologia e conhecimento de destino. Ap&oacute;s uma longa trajet&oacute;ria no mercado e um relan&ccedil;amento anunciado em 2019 por um novo cons&oacute;rcio de empres&aacute;rios, a companhia voltou a operar com navios boutique de classe polar, hoje administrados pela Swan Hellenic Travel Ltd. a partir de Nic&oacute;sia. Sua frota ativa re&uacute;ne 3 navios de pequeno porte, voltados a expedi&ccedil;&otilde;es culturais e polares em regi&otilde;es remotas como Ant&aacute;rtica, &Aacute;rtico, &Aacute;frica e &Aacute;sia-Pac&iacute;fico.
+      </p>
+      <div class="company-stats">
+        <div class="stat">
+          <span class="stat-value">1954</span>
+          <span class="stat-label">Funda&ccedil;&atilde;o</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Nic&oacute;sia</span>
+          <span class="stat-label">Sede</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Navios ativos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Swan Hellenic Travel Ltd.</span>
+          <span class="stat-label">Opera&ccedil;&atilde;o</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Frota Swan Hellenic</div>
+
+  <div class="ships-grid">
+
+    <div class="ship-card soon flagship">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">SH Diana</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2023</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">12.255 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">192</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">124,9 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Carro-chefe</span>
+        <span class="ship-tag tag-largest">Maior navio</span>
+        <span class="ship-tag tag-pc6">Classe PC6</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">SH Vega</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2022</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">10.617 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">152</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">113,5 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-pc5">Classe PC5</span>
+        <span class="ship-tag tag-boutique">76 cabines</span>
+        <span class="ship-tag tag-finland">Constru&iacute;do na Finl&acirc;ndia</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">SH Minerva</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2021</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">10.617 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">152</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">113,5 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-inaugural">Navio inaugural</span>
+        <span class="ship-tag tag-pc5">Classe PC5</span>
+        <span class="ship-tag tag-cultural">Expedi&ccedil;&atilde;o cultural</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  Poseidon Cruzeiros &middot; Guias, frotas e refer&ecirc;ncias para quem quer entender melhor o universo dos cruzeiros.
+</footer>
+
+</body>
+</html>

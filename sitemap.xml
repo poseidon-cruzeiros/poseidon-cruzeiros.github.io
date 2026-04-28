@@ -324,7 +324,18 @@
   <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/dubrovnik/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/mediterraneo/veneza/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/copenhagen/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/southampton/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/oslo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/geiranger/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/estocolmo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/europa-do-norte/reykjavik/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/destinos/exoticos/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/exoticos/juneau-alasca/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/exoticos/dubai/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/exoticos/singapura/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/exoticos/antartida/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/destinos/exoticos/polinesia-francesa/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/estaleiros/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/estaleiros/chantiers-de-latlantique/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/estaleiros/fincantieri/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

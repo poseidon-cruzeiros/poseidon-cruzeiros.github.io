@@ -58,7 +58,8 @@
     .region-box li strong { color:rgba(255,255,255,0.85); }
     /* PORTS */
     .ports-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; margin-bottom:0.5rem; }
-    .port-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:1.25rem; }
+    .port-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:1.25rem; text-decoration:none; color:var(--white); display:block; transition:background 0.2s,border-color 0.2s,transform 0.2s; }
+    a.port-card:hover { background:rgba(255,255,255,0.09); border-color:rgba(26,188,156,0.35); transform:translateY(-2px); }
     .port-card h3 { font-size:1rem; font-weight:600; margin-bottom:0.4rem; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
     .port-card p { font-size:0.82rem; color:var(--text-muted); line-height:1.6; }
     .port-tag { font-size:0.65rem; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; padding:2px 7px; border-radius:999px; }
@@ -182,25 +183,30 @@
   <div class="section-label">Portos em Destaque</div>
   <div class="ports-grid">
 
-    <div class="port-card">
+    <a href="barcelona/" class="port-card">
       <h3>🇪🇸 Barcelona <span class="port-tag tag-occ">Ocidental</span></h3>
       <p>O principal homeport do Mediterrâneo Ocidental. Embarque ou desembarque aqui é muito comum. A cidade merece 2 dias antes ou depois do cruzeiro para ver Sagrada Família e Park Güell.</p>
-    </div>
+    </a>
 
-    <div class="port-card">
+    <a href="civitavecchia-roma/" class="port-card">
       <h3>🇮🇹 Roma (Civitavecchia) <span class="port-tag tag-occ">Ocidental</span></h3>
       <p>Roma fica a 80 km do porto. Transfer de trem (~1h) ou ônibus. Uma das escalas mais pedidas — Vaticano, Coliseu e Fórum Romano ficam a distâncias caminhando ou de metrô.</p>
-    </div>
+    </a>
+    
+    <a href="genova/" class="port-card">
+      <h3>🇮🇹 Gênova <span class="port-tag tag-occ">Ocidental</span></h3>
+      <p>O grande "homeport" e coração da frota MSC na Europa. Aeroportos de Milão são a principal via de acesso para quem vem do Brasil.</p>
+    </a>
 
     <div class="port-card">
       <h3>🇬🇷 Santorini <span class="port-tag tag-ori">Oriental</span></h3>
       <p>Os navios ancoram na caldera e os passageiros desembarcam de tender. A subida até Oia é famosa — de teleférico ou a pé pelos 588 degraus. A escala mais fotografada do mundo.</p>
     </div>
 
-    <div class="port-card">
+    <a href="pireu-atenas/" class="port-card">
       <h3>🇬🇷 Atenas (Piraeus) <span class="port-tag tag-ori">Oriental</span></h3>
       <p>O maior porto da Grécia. A Acrópole fica a 40 minutos de metrô. Muitos itinerários do Med Oriental têm Atenas como ponto de embarque ou desembarque — vale chegar 2 dias antes.</p>
-    </div>
+    </a>
 
     <div class="port-card">
       <h3>🇭🇷 Dubrovnik <span class="port-tag tag-ori">Oriental</span></h3>

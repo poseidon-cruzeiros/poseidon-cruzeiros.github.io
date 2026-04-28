@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quark Expeditions &mdash; Poseidon Cruzeiros</title>
+<meta name="description" content="Frota atual da Quark Expeditions com 4 navios: Ultramarine, Ocean Explorer, World Explorer e World Voyager. Perfil da companhia, estrutura societ&aacute;ria e fichas t&eacute;cnicas resumidas." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/companhias/quark-expeditions/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Quark Expeditions &mdash; Poseidon Cruzeiros" />
+<meta property="og:description" content="Conhe&ccedil;a a Quark Expeditions, especialista em expedi&ccedil;&otilde;es polares e marca da Travelopia, com 4 navios ativos na Ant&aacute;rtica e no &Aacute;rtico." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/companhias/quark-expeditions/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Quark Expeditions &mdash; Poseidon Cruzeiros" />
+<meta name="twitter:description" content="Conhe&ccedil;a a Quark Expeditions, especialista em expedi&ccedil;&otilde;es polares e marca da Travelopia, com 4 navios ativos na Ant&aacute;rtica e no &Aacute;rtico." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #07131f;
+    --ocean-mid:    #18324b;
+    --ocean-bright: #2f6ea1;
+    --teal:         #7ed6d0;
+    --teal-light:   #dffef7;
+    --gold:         #f3c43d;
+    --sand:         #fef8ed;
+    --white:        #ffffff;
+    --text-muted:   #93abc0;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+    --quark-ink:    #101820;
+    --quark-yellow: #f6c640;
+    --quark-ice:    #8ed9e8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(47,110,161,0.34) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(126,214,208,0.16) 0%, transparent 60%),
+      linear-gradient(180deg, #07131f 0%, #030b12 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.7); }
+
+  .company-header {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.5rem;
+  }
+  .company-logo {
+    width: 72px; height: 72px; border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--quark-ink), #273c4d);
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.05rem; font-weight: 800; flex-shrink: 0;
+    color: var(--quark-yellow); letter-spacing: 0.08em;
+  }
+  .company-info { flex: 1; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem;
+  }
+  .company-desc {
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.65; max-width: 700px; margin-bottom: 1rem;
+  }
+  .company-stats {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .stat-value {
+    font-size: 1.1rem; font-weight: 600; color: var(--white);
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(126,214,208,0.4), transparent);
+  }
+
+  .ships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .ship-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.1rem;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+    position: relative;
+  }
+  .ship-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(126,214,208,0.42);
+    transform: translateY(-3px);
+  }
+  .ship-card.soon {
+    cursor: default;
+  }
+  .ship-card.soon:hover { transform: none; }
+  .ship-card.flagship {
+    border-color: rgba(243,196,61,0.34);
+    background: rgba(243,196,61,0.06);
+  }
+  .ship-card.flagship:hover {
+    border-color: rgba(243,196,61,0.5);
+    background: rgba(243,196,61,0.1);
+  }
+
+  .ship-icon { font-size: 1.8rem; line-height: 1; }
+  .ship-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    line-height: 1.2;
+  }
+  .ship-year {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .ship-specs {
+    display: flex; flex-direction: column; gap: 3px;
+    margin-top: 2px;
+  }
+  .ship-spec {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.77rem; gap: 0.5rem;
+  }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { color: rgba(255,255,255,0.88); font-weight: 500; text-align: right; }
+
+  .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+  .ship-tag {
+    font-size: 0.65rem; font-weight: 500;
+    padding: 2px 7px; border-radius: 999px;
+  }
+  .tag-flagship  { background: rgba(243,196,61,0.18); color: #ffeaa5; border: 1px solid rgba(243,196,61,0.34); }
+  .tag-heli      { background: rgba(126,214,208,0.18); color: #ddfffb; border: 1px solid rgba(126,214,208,0.34); }
+  .tag-polar     { background: rgba(84,160,255,0.16); color: #d9ebff; border: 1px solid rgba(84,160,255,0.30); }
+  .tag-new       { background: rgba(255,255,255,0.12); color: #f8fbff; border: 1px solid rgba(255,255,255,0.22); }
+  .tag-xbow      { background: rgba(72,187,120,0.16); color: #d5f7e2; border: 1px solid rgba(72,187,120,0.30); }
+  .tag-balcony   { background: rgba(142,201,255,0.16); color: #e6f4ff; border: 1px solid rgba(142,201,255,0.30); }
+  .tag-science   { background: rgba(155,89,182,0.16); color: #ead5f7; border: 1px solid rgba(155,89,182,0.30); }
+  .tag-antarctic { background: rgba(114,188,212,0.16); color: #def7ff; border: 1px solid rgba(114,188,212,0.30); }
+
+  .ship-card-footer {
+    margin-top: auto; padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.75rem;
+  }
+  .ship-soon-hint { color: var(--text-muted); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .ships-grid { grid-template-columns: 1fr 1fr; }
+    .company-header { flex-direction: column; gap: 1rem; }
+    .company-stats { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .ships-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="/companhias/">Companhias</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <span class="breadcrumb-current">Quark Expeditions</span>
+  </nav>
+
+  <div class="company-header">
+    <div class="company-logo">QE</div>
+    <div class="company-info">
+      <h1 class="company-name">Quark Expeditions</h1>
+      <p class="company-desc">
+        Fundada em 1991, a Quark Expeditions atua exclusivamente em expedi&ccedil;&otilde;es polares e construiu sua reputa&ccedil;&atilde;o em viagens para a Ant&aacute;rtica e o &Aacute;rtico com navios pequenos, opera&ccedil;&atilde;o intensiva em desembarques e experi&ecirc;ncias conduzidas por equipes especializadas. Hoje a marca integra o portf&oacute;lio da Travelopia e combina uma frota de quatro navios com roteiros voltados a regi&otilde;es remotas, aventura de expedi&ccedil;&atilde;o, observa&ccedil;&atilde;o de vida selvagem e educa&ccedil;&atilde;o cient&iacute;fica a bordo.
+      </p>
+      <div class="company-stats">
+        <div class="stat">
+          <span class="stat-value">1991</span>
+          <span class="stat-label">Funda&ccedil;&atilde;o</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Seattle</span>
+          <span class="stat-label">Sede</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Navios ativos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Travelopia</span>
+          <span class="stat-label">Grupo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Frota Quark Expeditions</div>
+
+  <div class="ships-grid">
+
+    <div class="ship-card soon flagship">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">Ultramarine</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2021</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">13.500 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">199</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">128 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Carro-chefe</span>
+        <span class="ship-tag tag-heli">2 helic&oacute;pteros</span>
+        <span class="ship-tag tag-polar">Polar</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">Ocean Explorer</div>
+      <div class="ship-year">Em servi&ccedil;o pela Quark desde 2024</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">8.228 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">138</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">104,4 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-new">Mais novo na marca</span>
+        <span class="ship-tag tag-xbow">X-BOW</span>
+        <span class="ship-tag tag-polar">Polar</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">World Explorer</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2019</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">9.300 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">172</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">126 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-balcony">Su&iacute;tes com varanda</span>
+        <span class="ship-tag tag-polar">Ant&aacute;rtica</span>
+        <span class="ship-tag tag-antarctic">Expedi&ccedil;&atilde;o polar</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">World Voyager</div>
+      <div class="ship-year">Em servi&ccedil;o pela Quark desde 2026</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">10.000 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">168</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">126 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-new">Nova adi&ccedil;&atilde;o</span>
+        <span class="ship-tag tag-science">Science Hub</span>
+        <span class="ship-tag tag-polar">Polar</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Poseidon Cruzeiros &nbsp;&middot;&nbsp; Feito com amor para os apaixonados por navios
+  </footer>
+
+</div>
+
+</body>
+</html>

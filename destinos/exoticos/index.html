@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruzeiros Exóticos: Alasca, Ásia e Antártida — Poseidon Cruzeiros</title>
+  <meta name="description" content="Descubra destinos épicos de cruzeiro: geleiras do Alasca, cultura milenar da Ásia, desertos dos Emirados Árabes e a imensidão da Antártida." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://poseidoncruzeiros.com.br/destinos/exoticos/" />
+  
+  <meta property="og:title" content="Cruzeiros Exóticos: Alasca, Ásia e Antártida" />
+  <meta property="og:description" content="Cruzeiros de expedição e longa distância para quem busca o extraordinário." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poseidoncruzeiros.com.br/destinos/exoticos/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../../shared/header.css" />
+  <script src="../../shared/header.js" defer></script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ocean-deep:#0a2342; --ocean-mid:#1a4a7a; --ocean-bright:#2196c4; --teal:#1abc9c; --teal-light:#a8f0de; --gold:#f0c040; --white:#ffffff; --text-muted:#8ba4be; --radius:14px; --nav-height:60px; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); min-height:100vh; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; background: radial-gradient(ellipse 80% 60% at 50% -10%,rgba(33,150,196,0.35) 0%,transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%,rgba(26,188,156,0.2) 0%,transparent 60%), linear-gradient(180deg,#0a2342 0%,#061527 100%); pointer-events:none; }
+    .waves-bg { position:fixed; bottom:0; left:0; right:0; z-index:0; height:200px; overflow:hidden; pointer-events:none; }
+    .waves-bg svg { width:100%; height:100%; }
+    .page { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 1.25rem 4rem; }
+    
+    .hub-hero { position:relative; z-index:1; text-align:center; padding:3.5rem 1.25rem 2.5rem; }
+    .hub-hero-emoji { font-size:3.5rem; display:block; margin-bottom:0.75rem; filter:drop-shadow(0 0 20px rgba(26,188,156,0.5)); animation:float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .hub-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); font-weight:700; letter-spacing:-1px; background:linear-gradient(135deg,#fff 30%,var(--teal-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.75rem; }
+    .hub-hero p { color:var(--text-muted); font-size:1.05rem; font-weight:300; max-width:580px; margin:0 auto; line-height:1.6; }
+    .hub-breadcrumb { font-size:0.78rem; color:var(--text-muted); margin-bottom:1.5rem; }
+    .hub-breadcrumb a { color:var(--teal); text-decoration:none; }
+    .hub-breadcrumb a:hover { text-decoration:underline; }
+    
+    .section-label { display:flex; align-items:center; gap:10px; font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin:3.5rem 0 1.25rem; }
+    .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(26,188,156,0.4),transparent); }
+    
+    .port-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }
+    .port-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:1.5rem; transition:transform 0.2s, background 0.2s, border-color 0.2s; text-decoration:none; display:flex; flex-direction:column; }
+    .port-card:hover { transform:translateY(-2px); background:rgba(255,255,255,0.08); border-color:rgba(26,188,156,0.3); }
+    .port-card.soon { opacity:0.6; pointer-events:none; }
+    .port-card h3 { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--white); margin:0 0 0.5rem 0; display:flex; align-items:center; gap:8px; }
+    .port-card p { font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.6; margin:0; flex-grow:1; }
+    .port-tag { font-size:0.65rem; font-family:'DM Sans',sans-serif; text-transform:uppercase; padding:3px 8px; border-radius:4px; margin-left:auto; letter-spacing:0.05em; font-weight:600; }
+    .tag-embark { background:rgba(26,188,156,0.15); color:var(--teal-light); border:1px solid rgba(26,188,156,0.3); }
+    .tag-call { background:rgba(240,192,64,0.15); color:var(--gold); border:1px solid rgba(240,192,64,0.3); }
+    
+    .intro-text { line-height:1.8; color:rgba(255,255,255,0.85); font-size:1.05rem; margin-bottom:2rem; background:rgba(255,255,255,0.03); padding:2rem; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.05); }
+    .intro-text p { margin-bottom:1rem; }
+    .intro-text p:last-child { margin-bottom:0; }
+    
+    footer { position:relative; z-index:1; text-align:center; padding:2rem; color:var(--text-muted); font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1abc9c" stop-opacity="0.08"/><stop offset="100%" stop-color="#1abc9c" stop-opacity="0"/></linearGradient></defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d" values="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+
+<div class="hub-hero">
+  <div class="hub-breadcrumb"><a href="/">Poseidon Cruzeiros</a> › <a href="../">Destinos</a> › Destinos Exóticos</div>
+  <span class="hub-hero-emoji">🌏</span>
+  <h1>Cruzeiros Exóticos</h1>
+  <p>Alasca, Ásia, Emirados Árabes, Polinésia e Antártida. Roteiros que transformam a viagem de navio em uma verdadeira expedição.</p>
+</div>
+
+<main class="page">
+
+  <div class="intro-text">
+    <p>Para cruzeiristas experientes, chega um momento em que as praias do Caribe e as ruelas do Mediterrâneo já são velhas conhecidas. É aqui que entram os "Destinos Exóticos". Esta categoria engloba tudo aquilo que foge da curva tradicional do turismo de massa marítimo.</p>
+    <p>Estes roteiros costumam durar mais (de 10 a 21 dias), exigem planejamento aéreo mais complexo e oferecem experiências viscerais: desde ver geleiras colapsando no Alasca até navegar pelo deserto até os mega arranha-céus de Dubai.</p>
+  </div>
+
+  <div class="section-label">Principais Regiões e Portos</div>
+  <div class="port-grid">
+
+    <div class="port-card soon">
+      <h3>🇺🇸 Juneau, Alasca <span class="port-tag tag-call">Escala</span></h3>
+      <p>A joia dos cruzeiros de natureza. O Alasca atrai navios de maio a setembro. Ver ursos, baleias orca e o Mendenhall Glacier são atividades de rotina.</p>
+    </div>
+
+    <div class="port-card soon">
+      <h3>🇦🇪 Dubai <span class="port-tag tag-embark">Embarque</span></h3>
+      <p>O coração dos roteiros do Oriente Médio. Navegações tranquilas no Golfo Pérsico durante o inverno do hemisfério norte, passando por Abu Dhabi e Doha (Catar).</p>
+    </div>
+
+    <div class="port-card soon">
+      <h3>🇸🇬 Singapura <span class="port-tag tag-embark">Embarque</span></h3>
+      <p>O hub mais moderno do Sudeste Asiático. Ponto de partida ideal para explorar a Tailândia, Vietnã, Malásia e até o Japão em cruzeiros mais longos.</p>
+    </div>
+
+    <div class="port-card soon">
+      <h3>🇦🇶 Antártida <span class="port-tag tag-call">Expedição</span></h3>
+      <p>A última fronteira. Navios de expedição (menores e reforçados para o gelo) partem do Ushuaia (Argentina) para cruzar a Passagem de Drake rumo ao continente branco.</p>
+    </div>
+    
+    <div class="port-card soon">
+      <h3>🇵🇫 Polinésia Francesa <span class="port-tag tag-call">Escala</span></h3>
+      <p>Bora Bora, Tahiti e Moorea. Águas azuis impossíveis de descrever. Geralmente operados por navios menores de luxo (como Paul Gauguin ou Oceania Cruises).</p>
+    </div>
+
+  </div>
+</main>
+
+<footer><p>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos</p></footer>
+</body>
+</html>

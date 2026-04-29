@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Variety Cruises — Poseidon Cruzeiros</title>
+<meta name="description" content="Conheça a Variety Cruises, companhia boutique sediada em Atenas com 8 navios ativos de pequeno porte. Veja perfil da marca e a frota atual com Variety Voyager, Harmony V, Panorama e mais." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/companhias/variety-cruises/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Variety Cruises — Poseidon Cruzeiros" />
+<meta property="og:description" content="Perfil da Variety Cruises com 8 navios ativos, operação boutique em pequenos iates e veleiros e dados principais da frota atual." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/companhias/variety-cruises/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Variety Cruises — Poseidon Cruzeiros" />
+<meta name="twitter:description" content="Perfil da Variety Cruises com 8 navios ativos, operação boutique em pequenos iates e veleiros e dados principais da frota atual." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #081521;
+    --ocean-mid:    #16354d;
+    --ocean-bright: #4f96bb;
+    --teal:         #89d6d2;
+    --teal-light:   #eefcfb;
+    --gold:         #d8ba7d;
+    --white:        #ffffff;
+    --text-muted:   #a8c2d0;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --radius-sm:    8px;
+    --nav-height:   60px;
+    --brand-navy:   #10283e;
+    --brand-aqua:   #4da7b8;
+    --brand-sand:   #e5c98f;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 82% 60% at 50% -10%, rgba(77,167,184,0.28) 0%, transparent 70%),
+      radial-gradient(ellipse 62% 42% at 82% 100%, rgba(216,186,125,0.14) 0%, transparent 60%),
+      linear-gradient(180deg, #081521 0%, #030b12 100%);
+    pointer-events: none;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.72); }
+
+  .company-header {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.5rem;
+  }
+  .company-logo {
+    width: 72px; height: 72px; border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-aqua));
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.08rem; font-weight: 800; flex-shrink: 0;
+    color: var(--brand-sand); letter-spacing: -0.04em;
+    font-family: 'Playfair Display', serif;
+  }
+  .company-info { flex: 1; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem;
+  }
+  .company-desc {
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.65; max-width: 720px; margin-bottom: 1rem;
+  }
+  .company-stats {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .stat-value {
+    font-size: 1.1rem; font-weight: 600; color: var(--white);
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(137,214,210,0.42), transparent);
+  }
+
+  .ships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .ship-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.1rem;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+    position: relative;
+  }
+  .ship-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(137,214,210,0.42);
+    transform: translateY(-3px);
+  }
+  .ship-card.soon {
+    cursor: default;
+  }
+  .ship-card.soon:hover {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    transform: none;
+  }
+  .ship-card.flagship {
+    border-color: rgba(216,186,125,0.34);
+    background: rgba(216,186,125,0.06);
+  }
+  .ship-card.flagship:hover {
+    border-color: rgba(216,186,125,0.34);
+    background: rgba(216,186,125,0.06);
+  }
+
+  .ship-icon { font-size: 1.8rem; line-height: 1; }
+  .ship-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    line-height: 1.2;
+  }
+  .ship-year {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .ship-specs {
+    display: flex; flex-direction: column; gap: 3px;
+    margin-top: 2px;
+  }
+  .ship-spec {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.77rem;
+    gap: 0.5rem;
+  }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { color: rgba(255,255,255,0.88); font-weight: 500; text-align: right; }
+
+  .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+  .ship-tag {
+    font-size: 0.65rem; font-weight: 500;
+    padding: 2px 7px; border-radius: 999px;
+  }
+  .tag-flagship  { background: rgba(216,186,125,0.18); color: #f8ebcf; border: 1px solid rgba(216,186,125,0.34); }
+  .tag-yacht     { background: rgba(77,167,184,0.18); color: #defbff; border: 1px solid rgba(77,167,184,0.34); }
+  .tag-sail      { background: rgba(126,171,196,0.18); color: #e1f0f8; border: 1px solid rgba(126,171,196,0.34); }
+  .tag-greece    { background: rgba(52,152,219,0.16); color: #cce9ff; border: 1px solid rgba(52,152,219,0.30); }
+  .tag-tahiti    { background: rgba(164,214,214,0.17); color: #e1ffff; border: 1px solid rgba(164,214,214,0.30); }
+  .tag-sey       { background: rgba(155,89,182,0.16); color: #e8d5f1; border: 1px solid rgba(155,89,182,0.30); }
+  .tag-italy     { background: rgba(231,76,60,0.16); color: #ffd1c7; border: 1px solid rgba(231,76,60,0.28); }
+  .tag-africa    { background: rgba(243,156,18,0.16); color: #ffe0ad; border: 1px solid rgba(243,156,18,0.30); }
+  .tag-family    { background: rgba(162,217,206,0.16); color: #dcfff7; border: 1px solid rgba(162,217,206,0.30); }
+
+  .ship-card-footer {
+    margin-top: auto; padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.75rem;
+  }
+  .ship-soon-hint { color: var(--text-muted); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .ships-grid { grid-template-columns: 1fr 1fr; }
+    .company-header { flex-direction: column; gap: 1rem; }
+    .company-stats { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .ships-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/companhias/">Companhias</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Variety Cruises</span>
+  </nav>
+
+  <div class="company-header">
+    <div class="company-logo">VC</div>
+    <div class="company-info">
+      <h1 class="company-name">Variety Cruises</h1>
+      <p class="company-desc">
+        A Variety Cruises é uma companhia boutique sediada em Atenas e especializada em cruzeiros de pequeno porte a bordo de iates e veleiros com capacidade reduzida. Nas fontes oficiais atuais, a marca apresenta operação familiar de terceira geração, raízes em 1949 e a estrutura Variety Cruises fundada em 2005 a partir da união de Zeus Tours &amp; Yacht Cruises com Hellas Yachts. Sua frota atual reúne oito navios ativos para roteiros por Grécia, Itália e Malta, Adriático, Seychelles, Polinésia Francesa, África Ocidental e Cabo Verde.
+      </p>
+      <div class="company-stats">
+        <div class="stat">
+          <span class="stat-value">2005</span>
+          <span class="stat-label">Fundação</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Atenas</span>
+          <span class="stat-label">Sede</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">8</span>
+          <span class="stat-label">Navios ativos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Família Venetopoulos</span>
+          <span class="stat-label">Controle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Frota Variety Cruises</div>
+
+  <div class="ships-grid">
+    <div class="ship-card soon flagship">
+      <span class="ship-icon">🛥️</span>
+      <div class="ship-name">Variety Voyager</div>
+      <div class="ship-year">Mega yacht boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">72</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">29</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">68 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Maior navio da frota</span>
+        <span class="ship-tag tag-yacht">Mega yacht</span>
+        <span class="ship-tag tag-italy">Itália e Malta</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛥️</span>
+      <div class="ship-name">Harmony V</div>
+      <div class="ship-year">Mega yacht boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">49</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">16-18</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">55 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-yacht">Mega yacht</span>
+        <span class="ship-tag tag-greece">Grécia</span>
+        <span class="ship-tag tag-africa">Cabo Verde e África Ocidental</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛥️</span>
+      <div class="ship-name">Harmony G</div>
+      <div class="ship-year">Mega yacht boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">44</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">17</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">54 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-yacht">Mega yacht</span>
+        <span class="ship-tag tag-greece">Grécia</span>
+        <span class="ship-tag tag-family">Pequena capacidade</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">⛵</span>
+      <div class="ship-name">Galileo</div>
+      <div class="ship-year">Mega veleiro boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">49</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">16-18</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">48 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-sail">Veleiro</span>
+        <span class="ship-tag tag-greece">Grécia</span>
+        <span class="ship-tag tag-family">49 hóspedes</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">⛵</span>
+      <div class="ship-name">Panorama</div>
+      <div class="ship-year">Motor sailer boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">49</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">16-18</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">54 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-sail">Motor sailer</span>
+        <span class="ship-tag tag-greece">Grécia e Turquia</span>
+        <span class="ship-tag tag-family">24 cabines externas</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">⛵</span>
+      <div class="ship-name">Panorama II</div>
+      <div class="ship-year">Motor sailer boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">49</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">16-18</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">50 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-sail">Motor sailer</span>
+        <span class="ship-tag tag-tahiti">Polinésia Francesa</span>
+        <span class="ship-tag tag-family">25 cabines externas</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛥️</span>
+      <div class="ship-name">Pegasos</div>
+      <div class="ship-year">Mega yacht de casco duplo</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">44</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">16-18</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">45 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-yacht">Mega yacht</span>
+        <span class="ship-tag tag-sey">Seychelles</span>
+        <span class="ship-tag tag-family">21 cabines externas</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">🛥️</span>
+      <div class="ship-name">Callisto</div>
+      <div class="ship-year">Iate boutique</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Hóspedes</span>
+          <span class="spec-value">34</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Tripulação</span>
+          <span class="spec-value">16</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">50 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-yacht">Iate boutique</span>
+        <span class="ship-tag tag-italy">Itália e Adriático</span>
+        <span class="ship-tag tag-family">17 cabines externas</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">Página individual em breve</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 Poseidon Cruzeiros · Conteúdo educativo sobre cruzeiros marítimos em português</footer>
+
+</body>
+</html>

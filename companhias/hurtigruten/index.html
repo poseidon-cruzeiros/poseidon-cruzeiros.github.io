@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hurtigruten | Poseidon Cruzeiros</title>
+<meta name="description" content="Conhe&ccedil;a a Hurtigruten, companhia norueguesa com 10 navios ativos na costa da Noruega. Veja perfil da marca, dados da frota e fichas resumidas de Trollfjord, Finnmarken, Midnatsol e mais." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/companhias/hurtigruten/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Hurtigruten | Poseidon Cruzeiros" />
+<meta property="og:description" content="Perfil da Hurtigruten com 10 navios ativos, opera&ccedil;&atilde;o costeira na Noruega e frota atual com Trollfjord, Finnmarken, Midnatsol, Kong Harald, Nordkapp e mais." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/companhias/hurtigruten/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Hurtigruten | Poseidon Cruzeiros" />
+<meta name="twitter:description" content="Perfil da Hurtigruten com 10 navios ativos, opera&ccedil;&atilde;o na costa norueguesa e fichas resumidas da frota atual." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #081a31;
+    --ocean-mid:    #133961;
+    --ocean-bright: #4f8fc7;
+    --teal:         #80d4d5;
+    --teal-light:   #e1fbff;
+    --gold:         #d8c17c;
+    --white:        #ffffff;
+    --text-muted:   #abc1d7;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --nav-height:   60px;
+    --brand-navy:   #0d2542;
+    --brand-sky:    #68a8d8;
+    --brand-ice:    #dff5ff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(104,168,216,0.28) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 82% 100%, rgba(128,212,213,0.13) 0%, transparent 60%),
+      linear-gradient(180deg, #081a31 0%, #04101d 100%);
+    pointer-events: none;
+  }
+
+  .waves-bg {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 0;
+    height: 200px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .waves-bg svg { width: 100%; height: 100%; }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.7); }
+
+  .company-header {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.5rem;
+  }
+  .company-logo {
+    width: 72px; height: 72px; border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-sky));
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; font-weight: 800; flex-shrink: 0;
+    color: var(--brand-ice); letter-spacing: -0.04em;
+    font-family: 'Playfair Display', serif;
+  }
+  .company-info { flex: 1; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem;
+  }
+  .company-desc {
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.65; max-width: 720px; margin-bottom: 1rem;
+  }
+  .company-stats {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .stat-value {
+    font-size: 1.1rem; font-weight: 600; color: var(--white);
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(128,212,213,0.42), transparent);
+  }
+
+  .ships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .ship-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.1rem;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+    position: relative;
+  }
+  .ship-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(128,212,213,0.42);
+    transform: translateY(-3px);
+  }
+  .ship-card.soon {
+    cursor: default;
+  }
+  .ship-card.soon:hover {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    transform: none;
+  }
+  .ship-card.flagship {
+    border-color: rgba(216,193,124,0.35);
+    background: rgba(216,193,124,0.05);
+  }
+  .ship-card.flagship:hover {
+    border-color: rgba(216,193,124,0.35);
+    background: rgba(216,193,124,0.05);
+  }
+
+  .ship-icon { font-size: 1.8rem; line-height: 1; }
+  .ship-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    line-height: 1.2;
+  }
+  .ship-year {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .ship-specs {
+    display: flex; flex-direction: column; gap: 3px;
+    margin-top: 2px;
+  }
+  .ship-spec {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.77rem;
+    gap: 0.5rem;
+  }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { color: rgba(255,255,255,0.88); font-weight: 500; text-align: right; }
+
+  .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+  .ship-tag {
+    font-size: 0.65rem; font-weight: 500;
+    padding: 2px 7px; border-radius: 999px;
+  }
+  .tag-flagship  { background: rgba(216,193,124,0.18); color: #f7e8bb; border: 1px solid rgba(216,193,124,0.34); }
+  .tag-signature { background: rgba(104,168,216,0.18); color: #dff3ff; border: 1px solid rgba(104,168,216,0.34); }
+  .tag-original  { background: rgba(79,143,199,0.17); color: #d3ebff; border: 1px solid rgba(79,143,199,0.34); }
+  .tag-hybrid    { background: rgba(128,212,213,0.16); color: #e3ffff; border: 1px solid rgba(128,212,213,0.30); }
+  .tag-coast     { background: rgba(135,172,214,0.17); color: #e0ebff; border: 1px solid rgba(135,172,214,0.32); }
+  .tag-arctic    { background: rgba(171,204,255,0.15); color: #edf5ff; border: 1px solid rgba(171,204,255,0.30); }
+  .tag-classic   { background: rgba(166,190,205,0.16); color: #edf6fb; border: 1px solid rgba(166,190,205,0.30); }
+  .tag-upgrade   { background: rgba(182,224,214,0.16); color: #eefef7; border: 1px solid rgba(182,224,214,0.30); }
+
+  .ship-card-footer {
+    margin-top: auto; padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.75rem;
+  }
+  .ship-soon-hint { color: var(--text-muted); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .ships-grid { grid-template-columns: 1fr 1fr; }
+    .company-header { flex-direction: column; gap: 1rem; }
+    .company-stats { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .ships-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#80d4d5" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#80d4d5" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d"
+        values="
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;
+          M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"
+        dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+
+<div class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">&gt;</span>
+    <a href="/companhias/">Companhias</a>
+    <span class="breadcrumb-sep">&gt;</span>
+    <span class="breadcrumb-current">Hurtigruten</span>
+  </nav>
+
+  <div class="company-header">
+    <div class="company-logo">HR</div>
+    <div class="company-info">
+      <h1 class="company-name">Hurtigruten</h1>
+      <p class="company-desc">
+        Fundada em 1893, a Hurtigruten &eacute; a marca hist&oacute;rica do expresso costeiro noruegu&ecirc;s e segue focada na costa da Noruega com navios de pequeno e m&eacute;dio porte, opera&ccedil;&atilde;o port-to-port e viagens mais imersivas nas linhas Original e Signature. Em 29 de abril de 2026, as fontes oficiais da companhia indicavam 10 navios ativos sob bandeira norueguesa. Ap&oacute;s a separa&ccedil;&atilde;o da HX conclu&iacute;da em 12 de fevereiro de 2025, a Hurtigruten passou a operar como empresa independente, sediada em Oslo e controlada por um cons&oacute;rcio de investidores liderado por Arini Capital Management, AlbaCore Capital e Barings.
+      </p>
+      <div class="company-stats">
+        <div class="stat">
+          <span class="stat-value">1893</span>
+          <span class="stat-label">Funda&ccedil;&atilde;o</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Oslo</span>
+          <span class="stat-label">Sede</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">10</span>
+          <span class="stat-label">Navios ativos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Cons&oacute;rcio</span>
+          <span class="stat-label">Controle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Frota Hurtigruten</div>
+
+  <div class="ships-grid">
+    <div class="ship-card soon flagship">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Trollfjord</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2002</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">16.140 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">500</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135,75 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Carro-chefe</span>
+        <span class="ship-tag tag-signature">Signature</span>
+        <span class="ship-tag tag-coast">Costa da Noruega</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Finnmarken</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2002</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">15.690 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">526</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">138,5 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-signature">Signature</span>
+        <span class="ship-tag tag-hybrid">H&iacute;brido</span>
+        <span class="ship-tag tag-arctic">Cabo Norte</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Midnatsol</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2003</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">16.151 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">570</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135,6 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-upgrade">Renova&ccedil;&atilde;o 2026</span>
+        <span class="ship-tag tag-coast">Costa da Noruega</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Kong Harald</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1993</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">11.204 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">577</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">121,9 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-hybrid">H&iacute;brido</span>
+        <span class="ship-tag tag-coast">Costa da Noruega</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Nordkapp</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1996</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">11.386 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">590</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">123,3 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-arctic">Cabo Norte</span>
+        <span class="ship-tag tag-coast">Costa da Noruega</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Nordlys</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1994</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">11.204 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">505</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">121,8 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-hybrid">H&iacute;brido</span>
+        <span class="ship-tag tag-arctic">Aurora</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Nordnorge</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1997</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">11.384 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">452</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">123,3 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-arctic">Norte da Noruega</span>
+        <span class="ship-tag tag-coast">Costa da Noruega</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Polarlys</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1996</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">11.341 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">580</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">123,0 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-arctic">Luz polar</span>
+        <span class="ship-tag tag-coast">Costa da Noruega</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Richard With</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1993</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">11.205 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">590</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">121,8 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-hybrid">H&iacute;brido</span>
+        <span class="ship-tag tag-classic">Fundador</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128674;</span>
+      <div class="ship-name">MS Vester&aring;len</div>
+      <div class="ship-year">Em servi&ccedil;o desde 1983</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">6.261 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">274</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">108,55 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-original">Original</span>
+        <span class="ship-tag tag-classic">Navio cl&aacute;ssico</span>
+        <span class="ship-tag tag-upgrade">Refit 2025</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual do navio em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Poseidon Cruzeiros &middot; Conte&uacute;do de refer&ecirc;ncia sobre companhias e navios de cruzeiro
+  </footer>
+
+</div>
+
+</body>
+</html>

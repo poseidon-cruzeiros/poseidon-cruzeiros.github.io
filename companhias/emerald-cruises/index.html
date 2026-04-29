@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Emerald Cruises | Poseidon Cruzeiros</title>
+<meta name="description" content="Conhe&ccedil;a a Emerald Cruises, marca do Scenic Group com 12 navios ativos: 9 embarca&ccedil;&otilde;es fluviais e 3 iates de luxo. Veja perfil da companhia e a frota atual." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/companhias/emerald-cruises/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Emerald Cruises | Poseidon Cruzeiros" />
+<meta property="og:description" content="Perfil da Emerald Cruises com 12 navios ativos, opera&ccedil;&atilde;o em rios europeus e no Mekong, al&eacute;m de 3 iates de luxo para mares quentes." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/companhias/emerald-cruises/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Emerald Cruises | Poseidon Cruzeiros" />
+<meta name="twitter:description" content="Conhe&ccedil;a a Emerald Cruises, marca do Scenic Group com 12 navios ativos entre Star-Ships fluviais e iates de luxo." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../shared/header.css" />
+<script src="../../shared/header.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:   #071922;
+    --ocean-mid:    #123443;
+    --ocean-bright: #2d6f7e;
+    --teal:         #4fc3a6;
+    --teal-light:   #dffaf1;
+    --gold:         #c8b26e;
+    --white:        #ffffff;
+    --text-muted:   #9bb6bf;
+    --card-bg:      rgba(255,255,255,0.06);
+    --card-border:  rgba(255,255,255,0.12);
+    --radius:       14px;
+    --nav-height:   60px;
+    --brand-emerald:#1ea67a;
+    --brand-deep:   #0f3d46;
+    --brand-mist:   #d8f7ee;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ocean-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(79,195,166,0.24) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 82% 100%, rgba(200,178,110,0.12) 0%, transparent 60%),
+      linear-gradient(180deg, #071922 0%, #02080d 100%);
+    pointer-events: none;
+  }
+
+  .waves-bg {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 0;
+    height: 200px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .waves-bg svg { width: 100%; height: 100%; }
+
+  .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.78rem; color: var(--text-muted);
+    padding: 1.2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb-sep { opacity: 0.4; }
+  .breadcrumb-current { color: rgba(255,255,255,0.7); }
+
+  .company-header {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 0.5rem;
+  }
+  .company-logo {
+    width: 72px; height: 72px; border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--brand-deep), var(--brand-emerald));
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; font-weight: 800; flex-shrink: 0;
+    color: var(--brand-mist); letter-spacing: 0.02em;
+    font-family: 'Playfair Display', serif;
+  }
+  .company-info { flex: 1; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 30%, var(--teal-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 0.4rem;
+  }
+  .company-desc {
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.65; max-width: 720px; margin-bottom: 1rem;
+  }
+  .company-stats {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .stat-value {
+    font-size: 1.1rem; font-weight: 600; color: var(--white);
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin: 2rem 0 1rem;
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(79,195,166,0.4), transparent);
+  }
+
+  .ships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .ship-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.1rem;
+    color: inherit;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    backdrop-filter: blur(6px);
+    position: relative;
+  }
+  .ship-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(79,195,166,0.42);
+    transform: translateY(-3px);
+  }
+  .ship-card.soon {
+    cursor: default;
+  }
+  .ship-card.soon:hover {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    transform: none;
+  }
+  .ship-card.flagship {
+    border-color: rgba(200,178,110,0.34);
+    background: rgba(200,178,110,0.06);
+  }
+  .ship-card.flagship:hover {
+    border-color: rgba(200,178,110,0.5);
+    background: rgba(200,178,110,0.1);
+  }
+
+  .ship-icon { font-size: 1.8rem; line-height: 1; }
+  .ship-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    line-height: 1.2;
+  }
+  .ship-year {
+    font-size: 0.72rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .ship-specs {
+    display: flex; flex-direction: column; gap: 3px;
+    margin-top: 2px;
+  }
+  .ship-spec {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.77rem;
+    gap: 0.5rem;
+  }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { color: rgba(255,255,255,0.88); font-weight: 500; text-align: right; }
+
+  .ship-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+  .ship-tag {
+    font-size: 0.65rem; font-weight: 500;
+    padding: 2px 7px; border-radius: 999px;
+  }
+  .tag-flagship { background: rgba(200,178,110,0.18); color: #f4e4b7; border: 1px solid rgba(200,178,110,0.34); }
+  .tag-yacht    { background: rgba(79,195,166,0.18); color: #d6fff3; border: 1px solid rgba(79,195,166,0.34); }
+  .tag-river    { background: rgba(45,111,126,0.2); color: #d8eef4; border: 1px solid rgba(45,111,126,0.34); }
+  .tag-europe   { background: rgba(92,156,206,0.16); color: #d7ebff; border: 1px solid rgba(92,156,206,0.3); }
+  .tag-france   { background: rgba(120,180,120,0.16); color: #ddf7dd; border: 1px solid rgba(120,180,120,0.3); }
+  .tag-portugal { background: rgba(182,126,82,0.18); color: #f7e2d3; border: 1px solid rgba(182,126,82,0.32); }
+  .tag-mekong   { background: rgba(151,115,188,0.16); color: #eddfff; border: 1px solid rgba(151,115,188,0.3); }
+  .tag-new      { background: rgba(240,192,64,0.16); color: #ffe7a1; border: 1px solid rgba(240,192,64,0.3); }
+  .tag-warm     { background: rgba(255,159,67,0.16); color: #ffd8b3; border: 1px solid rgba(255,159,67,0.3); }
+  .tag-rhone    { background: rgba(166,205,111,0.16); color: #eef9d6; border: 1px solid rgba(166,205,111,0.3); }
+  .tag-douro    { background: rgba(214,160,109,0.16); color: #f7e2c4; border: 1px solid rgba(214,160,109,0.3); }
+
+  .ship-card-footer {
+    margin-top: auto; padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.75rem;
+  }
+  .ship-soon-hint { color: var(--text-muted); }
+
+  footer {
+    text-align: center; padding: 2rem 1rem 1rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .ships-grid { grid-template-columns: 1fr 1fr; }
+    .company-header { flex-direction: column; gap: 1rem; }
+    .company-stats { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .ships-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="waves-bg">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4fc3a6" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#4fc3a6" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#wg)" d="M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z">
+      <animate attributeName="d"
+        values="
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z;
+          M0,120 C240,60 600,160 900,80 C1140,20 1320,140 1440,120 L1440,200 L0,200 Z;
+          M0,100 C360,160 720,40 1080,120 C1260,160 1380,80 1440,100 L1440,200 L0,200 Z"
+        dur="8s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
+<div id="site-header"></div>
+
+<div class="page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">&gt;</span>
+    <a href="/companhias/">Companhias</a>
+    <span class="breadcrumb-sep">&gt;</span>
+    <span class="breadcrumb-current">Emerald Cruises</span>
+  </nav>
+
+  <div class="company-header">
+    <div class="company-logo">EC</div>
+    <div class="company-info">
+      <h1 class="company-name">Emerald Cruises</h1>
+      <p class="company-desc">
+        Fundada em 2013 e colocada em opera&ccedil;&atilde;o a partir de 2014, a Emerald Cruises &eacute; a marca de cruzeiros fluviais e yacht cruises do Scenic Group. A companhia combina Star-Ships para rios europeus e o Mekong com uma frota de iates de luxo para mares quentes, posicionando-se no segmento boutique com foco em embarca&ccedil;&otilde;es menores, itiner&aacute;rios mais pr&oacute;ximos dos destinos e um produto contempor&acirc;neo de padr&atilde;o deluxe.
+      </p>
+      <div class="company-stats">
+        <div class="stat">
+          <span class="stat-value">2013</span>
+          <span class="stat-label">Funda&ccedil;&atilde;o</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Zug</span>
+          <span class="stat-label">Sede</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">12</span>
+          <span class="stat-label">Navios ativos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Scenic Group</span>
+          <span class="stat-label">Grupo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Frota Emerald Cruises</div>
+
+  <div class="ships-grid">
+    <div class="ship-card soon flagship">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Kaia</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2026</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">5.755 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">128</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">120 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-flagship">Carro-chefe</span>
+        <span class="ship-tag tag-yacht">Superiate</span>
+        <span class="ship-tag tag-new">Nova gera&ccedil;&atilde;o</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Azzurra</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2022</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">5.315 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">100</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">110 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-yacht">Iate de luxo</span>
+        <span class="ship-tag tag-warm">Mares quentes</span>
+        <span class="ship-tag tag-europe">Mediterr&acirc;neo</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Sakara</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2023</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">5.300 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">100</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">110 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-yacht">Iate de luxo</span>
+        <span class="ship-tag tag-warm">Adri&aacute;tico e Caribe</span>
+        <span class="ship-tag tag-new">Segunda unidade</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Harmony</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2019</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">N/D</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">84</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">73 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-mekong">Mekong</span>
+        <span class="ship-tag tag-new">Ho Chi Minh City</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Libert&eacute;</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2017</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">N/D</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">132</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">110 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-france">Fran&ccedil;a</span>
+        <span class="ship-tag tag-rhone">Rhone e Saone</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Radiance</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2017</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">N/D</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">112</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">89 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-portugal">Portugal</span>
+        <span class="ship-tag tag-douro">Douro</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Luna</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2022</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">3.544 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">180</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-europe">Europa Central</span>
+        <span class="ship-tag tag-new">Classe 180 h&oacute;spedes</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Destiny</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2017</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">3.544 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">180</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-europe">Reno e Dan&uacute;bio</span>
+        <span class="ship-tag tag-new">Europa Central</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Dawn</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2015</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">3.544 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">180</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-europe">Mosela e Dan&uacute;bio</span>
+        <span class="ship-tag tag-new">Europa Central</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Sun</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2015</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">3.544 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">180</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-europe">Reno e Main</span>
+        <span class="ship-tag tag-new">Europa Central</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Sky</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2014</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">3.544 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">180</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-europe">Reno, Main e Dan&uacute;bio</span>
+        <span class="ship-tag tag-new">Primeira Star-Ship</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+
+    <div class="ship-card soon">
+      <span class="ship-icon">&#128755;</span>
+      <div class="ship-name">Emerald Star</div>
+      <div class="ship-year">Em servi&ccedil;o desde 2014</div>
+      <div class="ship-specs">
+        <div class="ship-spec">
+          <span class="spec-label">Tonelagem</span>
+          <span class="spec-value">3.544 GT</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Passageiros</span>
+          <span class="spec-value">180</span>
+        </div>
+        <div class="ship-spec">
+          <span class="spec-label">Comprimento</span>
+          <span class="spec-value">135 m</span>
+        </div>
+      </div>
+      <div class="ship-tags">
+        <span class="ship-tag tag-river">Star-Ship</span>
+        <span class="ship-tag tag-europe">Reno e Mosela</span>
+        <span class="ship-tag tag-new">Europa Central</span>
+      </div>
+      <div class="ship-card-footer">
+        <span class="ship-soon-hint">P&aacute;gina individual em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Poseidon Cruzeiros &middot; Feito com amor para os apaixonados por navios
+  </footer>
+</div>
+
+</body>
+</html>

@@ -177,6 +177,9 @@
   <url><loc>https://poseidoncruzeiros.com.br/companhias/heritage-expeditions/heritage-explorer/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/companhias/hurtigruten/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/companhias/hx-expeditions/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/companhias/hx-expeditions/ms-fridtjof-nansen/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/companhias/hx-expeditions/ms-roald-amundsen/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://poseidoncruzeiros.com.br/companhias/hx-expeditions/ms-fram/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/companhias/lindblad-expeditions/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/companhias/atlas-ocean-voyages/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/companhias/atlas-ocean-voyages/world-voyager/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -439,4 +442,3 @@
   <url><loc>https://poseidoncruzeiros.com.br/guias/trabalhar-em-cruzeiro/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://poseidoncruzeiros.com.br/faq/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
-

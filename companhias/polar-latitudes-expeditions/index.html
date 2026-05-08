@@ -146,7 +146,7 @@
     border: 1px solid var(--card-border);
     border-radius: var(--radius);
     padding: 1.2rem 1.1rem;
-    color: inherit;
+    text-decoration: none; color: inherit;
     display: flex; flex-direction: column; gap: 8px;
     transition: background 0.2s, border-color 0.2s, transform 0.15s;
     backdrop-filter: blur(6px);
@@ -209,6 +209,10 @@
     margin-top: auto; padding-top: 8px;
     border-top: 1px solid rgba(255,255,255,0.07);
     font-size: 0.75rem;
+  }
+  .ship-link-hint {
+    color: var(--teal); display: flex; align-items: center; gap: 4px;
+    font-weight: 500;
   }
   .ship-soon-hint { color: var(--text-muted); }
 
@@ -293,7 +297,7 @@
 
   <div class="ships-grid">
 
-    <a class="ship-card soon flagship" href="/companhias/polar-latitudes-expeditions/ocean-albatros/">
+    <a class="ship-card flagship" href="/companhias/polar-latitudes-expeditions/ocean-albatros/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Ocean Albatros</div>
       <div class="ship-year">Em servico desde 2023</div>
@@ -317,11 +321,11 @@
         <span class="ship-tag tag-carbon">Baixa emissao</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Abrir pagina do navio</span>
+        <span class="ship-link-hint">Ver pagina completa -&gt;</span>
       </div>
     </a>
 
-    <a class="ship-card soon" href="/companhias/polar-latitudes-expeditions/ocean-victory/">
+    <a class="ship-card" href="/companhias/polar-latitudes-expeditions/ocean-victory/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">Ocean Victory</div>
       <div class="ship-year">Em servico desde 2021</div>
@@ -344,11 +348,11 @@
         <span class="ship-tag tag-polar">Polar Class 6</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Abrir pagina do navio</span>
+        <span class="ship-link-hint">Ver pagina completa -&gt;</span>
       </div>
     </a>
 
-    <a class="ship-card soon" href="/companhias/polar-latitudes-expeditions/mv-discoverer/">
+    <a class="ship-card" href="/companhias/polar-latitudes-expeditions/mv-discoverer/">
       <span class="ship-icon">🛳️</span>
       <div class="ship-name">MV Discoverer</div>
       <div class="ship-year">Em servico desde 1989</div>
@@ -371,7 +375,7 @@
         <span class="ship-tag tag-legacy">Ex-Seaventure</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Abrir pagina do navio</span>
+        <span class="ship-link-hint">Ver pagina completa -&gt;</span>
       </div>
     </a>
 

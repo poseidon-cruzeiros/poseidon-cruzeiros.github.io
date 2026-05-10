@@ -210,6 +210,13 @@
     font-size: 0.75rem;
   }
   .ship-soon-hint { color: var(--text-muted); }
+  .ship-link-hint {
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+  }
 
   footer {
     text-align: center; padding: 2rem 1rem 1rem;
@@ -271,7 +278,7 @@
   <div class="section-label">Frota Phoenix Reisen</div>
 
   <div class="ships-grid">
-    <div class="ship-card flagship soon">
+    <a class="ship-card flagship" href="/companhias/phoenix-reisen/ms-amadea/">
       <span class="ship-icon">🚢</span>
       <div class="ship-name">MS Amadea</div>
       <div class="ship-year">Em serviço desde 1991</div>
@@ -295,11 +302,11 @@
         <span class="ship-tag tag-classic">Clássico</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Página individual em breve</span>
+        <span class="ship-link-hint">Ver página completa -&gt;</span>
       </div>
-    </div>
+    </a>
 
-    <div class="ship-card soon">
+    <a class="ship-card" href="/companhias/phoenix-reisen/ms-artania/">
       <span class="ship-icon">🚢</span>
       <div class="ship-name">MS Artania</div>
       <div class="ship-year">Em serviço desde 1984</div>
@@ -323,11 +330,11 @@
         <span class="ship-tag tag-germany">Público alemão</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Página individual em breve</span>
+        <span class="ship-link-hint">Ver página completa -&gt;</span>
       </div>
-    </div>
+    </a>
 
-    <div class="ship-card soon">
+    <a class="ship-card" href="/companhias/phoenix-reisen/ms-amera/">
       <span class="ship-icon">🚢</span>
       <div class="ship-name">MS Amera</div>
       <div class="ship-year">Em serviço desde 1988</div>
@@ -351,9 +358,9 @@
         <span class="ship-tag tag-world">Volta ao mundo</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Página individual em breve</span>
+        <span class="ship-link-hint">Ver página completa -&gt;</span>
       </div>
-    </div>
+    </a>
 
     <div class="ship-card soon">
       <span class="ship-icon">🚢</span>

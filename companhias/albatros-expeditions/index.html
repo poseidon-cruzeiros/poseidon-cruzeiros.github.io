@@ -208,6 +208,10 @@
     border-top: 1px solid rgba(255,255,255,0.07);
     font-size: 0.75rem;
   }
+  .ship-link-hint {
+    color: var(--teal); display: flex; align-items: center; gap: 4px;
+    font-weight: 500;
+  }
   .ship-soon-hint { color: var(--text-muted); }
 
   footer {
@@ -270,7 +274,7 @@
   <div class="section-label">Frota Albatros Expeditions</div>
 
   <div class="ships-grid">
-    <div class="ship-card flagship soon">
+    <a class="ship-card flagship" href="/companhias/polar-latitudes-expeditions/ocean-albatros/">
       <span class="ship-icon">🚢</span>
       <div class="ship-name">Ocean Albatros</div>
       <div class="ship-year">Construído em 2022</div>
@@ -295,11 +299,11 @@
         <span class="ship-tag tag-exp">Classe Polar 6</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Página individual em breve</span>
+        <span class="ship-link-hint">Ver página completa -></span>
       </div>
-    </div>
+    </a>
 
-    <div class="ship-card soon">
+    <a class="ship-card" href="/companhias/polar-latitudes-expeditions/ocean-victory/">
       <span class="ship-icon">🚢</span>
       <div class="ship-name">Ocean Victory</div>
       <div class="ship-year">Construído em 2021</div>
@@ -324,9 +328,9 @@
         <span class="ship-tag tag-charter">Charter polar</span>
       </div>
       <div class="ship-card-footer">
-        <span class="ship-soon-hint">Página individual em breve</span>
+        <span class="ship-link-hint">Ver página completa -></span>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 

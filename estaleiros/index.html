@@ -150,6 +150,46 @@
   .tag-soon   { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); }
   .tag-hist   { background: rgba(240,192,64,0.1); color: #fce08a; border: 1px solid rgba(240,192,64,0.2); }
 
+  /* editorial */
+  .editorial-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.15rem 1.25rem;
+    margin: 0 0 2rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.9rem;
+  }
+  .editorial-box strong { color: var(--white); font-weight: 500; }
+  .editorial-box p + p { margin-top: 0.75rem; }
+
+  /* faq */
+  .faq-list {
+    display: grid;
+    gap: 12px;
+  }
+  .faq-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.15rem;
+  }
+  .faq-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 0.45rem;
+    color: var(--white);
+  }
+  .faq-item p {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+  .faq-item a { color: var(--teal-light); text-decoration: none; }
+  .faq-item a:hover { text-decoration: underline; }
+
   /* info box */
   .info-box {
     background: rgba(33,150,196,0.08);
@@ -193,6 +233,13 @@
       <h1>Estaleiros de Cruzeiros</h1>
       <p>Os grandes construtores navais responsáveis pelos navios de cruzeiro oceânicos, de expedição, fluviais e boutique já mapeados no site. Conheça a história, os estaleiros e os navios que saíram de cada doca.</p>
     </div>
+  </div>
+
+
+
+  <div class="editorial-box">
+    <p><strong>Os estaleiros explicam boa parte da identidade de um navio de cruzeiro.</strong> Fincantieri, Meyer Werft, Chantiers de l'Atlantique, Meyer Turku e outros construtores aparecem por trás de navios muito diferentes: desde grandes resorts oceânicos até iates de luxo, navios de expedição polar e embarcações fluviais.</p>
+    <p>Esta página organiza os estaleiros já encontrados nas fichas do site e ajuda a comparar onde cada navio foi construído, quais pátios concentram mais entregas cadastradas e quais nomes representam nichos específicos da construção naval de cruzeiros.</p>
   </div>
 
   <div class="section-label">⚓ Estaleiros Ativos</div>
@@ -798,6 +845,32 @@
       <span class="yard-card__tag tag-hist">Histórico</span>
     </div>
 
+  </div>
+
+
+
+  <div class="section-label">Perguntas Frequentes Sobre Estaleiros</div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Quais são os principais estaleiros que constroem navios de cruzeiro?</h3>
+      <p>Entre os nomes mais importantes estão <a href="/estaleiros/fincantieri/">Fincantieri</a>, <a href="/estaleiros/meyer-werft/">Meyer Werft</a>, <a href="/estaleiros/chantiers-de-latlantique/">Chantiers de l'Atlantique</a> e <a href="/estaleiros/meyer-turku/">Meyer Turku</a>. Eles concentram boa parte dos grandes navios oceânicos modernos, enquanto estaleiros como VARD, T. Mariotti e Ulstein aparecem com força em luxo, expedição e projetos especializados.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Qual estaleiro tem mais navios cadastrados no site?</h3>
+      <p>Na base atual do site, a Fincantieri aparece no topo da lista, seguida por Meyer Werft e Chantiers de l'Atlantique. A ordem dos cards nesta página considera a quantidade de navios já cadastrados em cada estaleiro.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Onde ficam os maiores estaleiros de navios de cruzeiro?</h3>
+      <p>Os principais polos estão na Europa, especialmente Itália, Alemanha, França e Finlândia. Também há estaleiros relevantes na Noruega, Croácia, China, Japão, Vietnã, Estados Unidos e outros países ligados a navios de expedição, rio e cruzeiros de nicho.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Todo estaleiro constrói o mesmo tipo de navio?</h3>
+      <p>Não. Alguns pátios são conhecidos por grandes navios oceânicos, enquanto outros se especializam em iates de luxo, navios de expedição polar, embarcações fluviais ou projetos menores. Por isso a página separa estaleiros ativos, nomes de nicho e construtores históricos.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Por que alguns estaleiros aparecem como históricos ou em construção?</h3>
+      <p>Alguns nomes aparecem nas fichas dos navios, mas ainda não têm página própria completa. Outros representam pátios antigos, aliases corporativos ou estaleiros que foram incorporados por grupos maiores. Esses cards ficam como referência editorial para futuras atualizações.</p>
+    </div>
   </div>
 
   <div class="info-box">

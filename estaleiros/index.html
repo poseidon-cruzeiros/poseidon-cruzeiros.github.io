@@ -164,6 +164,43 @@
   .editorial-box strong { color: var(--white); font-weight: 500; }
   .editorial-box p + p { margin-top: 0.75rem; }
 
+  /* country groups */
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+  .country-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+  }
+  .country-card__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.55rem;
+  }
+  .country-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .country-card__links a {
+    color: var(--teal-light);
+    text-decoration: none;
+    font-size: 0.76rem;
+    line-height: 1.25;
+    border: 1px solid rgba(26,188,156,0.22);
+    background: rgba(26,188,156,0.07);
+    border-radius: 999px;
+    padding: 3px 9px;
+  }
+  .country-card__links a:hover { background: rgba(26,188,156,0.14); }
+
   /* faq */
   .faq-list {
     display: grid;
@@ -208,6 +245,7 @@
 
   @media (max-width: 700px) {
     .yard-grid { grid-template-columns: 1fr 1fr; }
+    .country-grid { grid-template-columns: 1fr; }
     .hero { flex-direction: column; gap: 1rem; }
   }
   @media (max-width: 480px) {
@@ -240,6 +278,20 @@
   <div class="editorial-box">
     <p><strong>Os estaleiros explicam boa parte da identidade de um navio de cruzeiro.</strong> Fincantieri, Meyer Werft, Chantiers de l'Atlantique, Meyer Turku e outros construtores aparecem por trás de navios muito diferentes: desde grandes resorts oceânicos até iates de luxo, navios de expedição polar e embarcações fluviais.</p>
     <p>Esta página organiza os estaleiros já encontrados nas fichas do site e ajuda a comparar onde cada navio foi construído, quais pátios concentram mais entregas cadastradas e quais nomes representam nichos específicos da construção naval de cruzeiros.</p>
+  </div>
+
+  <div class="section-label">🌍 Estaleiros por País</div>
+  <div class="country-grid">
+    <div class="country-card"><div class="country-card__title">🇩🇪 Alemanha</div><div class="country-card__links"><a href="/estaleiros/meyer-werft/">Meyer Werft</a><a href="/estaleiros/lloyd-werft-mv-werften-meyer-wismar/">Lloyd Werft / MV Werften</a><a href="/estaleiros/schichau-seebeckwerft/">Schichau-Seebeckwerft</a><a href="/estaleiros/volkswerft/">Volkswerft</a><a href="/estaleiros/cassens-werft/">Cassens Werft</a><a href="/estaleiros/krupp-germaniawerft/">Krupp Germaniawerft</a><a href="/estaleiros/blohm-voss/">Blohm + Voss</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇮🇹 Itália</div><div class="country-card__links"><a href="/estaleiros/fincantieri/">Fincantieri</a><a href="/estaleiros/t-mariotti/">T. Mariotti</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇫🇷 França</div><div class="country-card__links"><a href="/estaleiros/chantiers-de-latlantique/">Chantiers de l'Atlantique</a><a href="/estaleiros/ateliers-et-chantiers-du-havre/">Ateliers et Chantiers du Havre</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇫🇮 Finlândia</div><div class="country-card__links"><a href="/estaleiros/meyer-turku/">Meyer Turku</a><a href="/estaleiros/helsinki-shipyard/">Helsinki Shipyard</a><a href="/estaleiros/rauma-shipyard-rauma-repola/">Rauma Shipyard / Rauma-Repola</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇳🇴 Noruega</div><div class="country-card__links"><a href="/estaleiros/vard/">VARD</a><a href="/estaleiros/ulstein-verft-crist/">Ulstein Verft / CRIST</a><a href="/estaleiros/kleven-kvaerner-kleven/">Kleven / Kvaerner Kleven</a><a href="/estaleiros/fosen-mek-verk/">Fosen Mek. Verk.</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇺🇸 Estados Unidos</div><div class="country-card__links"><a href="/estaleiros/chesapeake-shipbuilding/">Chesapeake Shipbuilding</a><a href="/estaleiros/nichols-brothers-boat-builders/">Nichols Brothers Boat Builders</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇳🇱 Países Baixos</div><div class="country-card__links"><a href="/estaleiros/shipyard-de-hoop/">Shipyard De Hoop</a><a href="/estaleiros/scheepswerf-den-breejen/">Scheepswerf Den Breejen</a><a href="/estaleiros/merwede-shipyard/">Merwede Shipyard</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇪🇸 Espanha</div><div class="country-card__links"><a href="/estaleiros/hijos-de-j-barreras/">Hijos de J. Barreras</a><a href="/estaleiros/astilleros-gondan/">Astilleros Gondán</a><a href="/estaleiros/metalships-docks/">Metalships &amp; Docks</a></div></div>
+    <div class="country-card"><div class="country-card__title">🇨🇳 China</div><div class="country-card__links"><a href="/estaleiros/china-merchants-heavy-industry/">China Merchants Heavy Industry</a><a href="/estaleiros/shanghai-waigaoqiao-shipbuilding/">Shanghai Waigaoqiao Shipbuilding</a></div></div>
+    <div class="country-card"><div class="country-card__title">Outros países</div><div class="country-card__links"><a href="/estaleiros/mitsubishi-heavy-industries/">🇯🇵 Mitsubishi Heavy Industries</a><a href="/estaleiros/ha-long-shipbuilding/">🇻🇳 Ha Long Shipbuilding</a><a href="/estaleiros/westsea-west-sea-viana/">🇵🇹 WestSEA / West Sea Viana</a><a href="/estaleiros/asenav/">🇨🇱 ASENAV</a><a href="/estaleiros/brodosplit/">🇭🇷 Brodosplit</a><a href="/estaleiros/uljanik/">🇭🇷 Uljanik</a><a href="/estaleiros/scheepswerven-van-langerbrugge/">🇧🇪 Scheepswerven van Langerbrugge</a><a href="/estaleiros/nqea-shipbuilders/">🇦🇺 NQEA Shipbuilders</a><a href="/estaleiros/irving-shipbuilding/">🇨🇦 Irving Shipbuilding</a><a href="/estaleiros/harland-wolff/">🇬🇧 Harland &amp; Wolff</a><a href="/estaleiros/brooke-marine/">🇬🇧 Brooke Marine</a></div></div>
   </div>
 
   <div class="section-label">⚓ Estaleiros Ativos</div>

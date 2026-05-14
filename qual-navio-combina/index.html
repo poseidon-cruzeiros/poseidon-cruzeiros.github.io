@@ -526,6 +526,59 @@
       return true;
     }
 
+
+    function matchesDestinationPreference(ship, answers) {
+      const company = normalize(ship.companhia);
+      const name = normalize(ship.nome);
+      const category = normalize(ship.categoria);
+
+      if (answers.destino === 'brasil') {
+        return hasTag(ship, 'Brasil');
+      }
+
+      if (answers.destino === 'caribe') {
+        return /royal caribbean|carnival|norwegian|disney|celebrity|msc|virgin|margaritaville/.test(company) && !hasTag(ship, 'Expedição');
+      }
+
+      if (answers.destino === 'mediterraneo') {
+        return /msc|costa|celestyal|azamara|viking|explora|seabourn|silversea|ponant|sea cloud|variety|windstar|tui|aida|cunard/.test(company);
+      }
+
+      if (answers.destino === 'exotico') {
+        if (hasTag(ship, 'Expedição') || /expedição|expedition/.test(category)) {
+          return true;
+        }
+
+        if (/holland america|hurtigruten|hx|lindblad|quark|aurora|ponant|polar latitudes|oceanwide|antarctica21|heritage expeditions/.test(company)) {
+          return true;
+        }
+
+        if (/royal caribbean/.test(company) && /quantum|ovation|radiance|serenade|brilliance/.test(name)) {
+          return true;
+        }
+
+        if (/norwegian/.test(company) && /bliss|joy|encore|jewel|sun|spirit/.test(name)) {
+          return true;
+        }
+
+        if (/princess/.test(company) && /discovery|royal|ruby|sapphire|grand|coral|island/.test(name)) {
+          return true;
+        }
+
+        if (/celebrity/.test(company) && /edge|solstice|summit|eclipse/.test(name)) {
+          return true;
+        }
+
+        if (/disney/.test(company) && /wonder/.test(name)) {
+          return true;
+        }
+
+        return false;
+      }
+
+      return true;
+    }
+
     function profileText(answers) {
       const labels = {
         familia: 'família',
@@ -558,6 +611,7 @@
       const profile = profileText(answers);
       const matches = ships
         .filter(function (ship) { return matchesCategoryPreference(ship, answers); })
+        .filter(function (ship) { return matchesDestinationPreference(ship, answers); })
         .map(function (ship) { return { ship: ship, score: scoreShip(ship, answers) }; })
         .filter(function (item) { return item.score > 0; })
         .sort(function (a, b) {

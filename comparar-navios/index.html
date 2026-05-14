@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Comparar Navios de Cruzeiro | Poseidon Cruzeiros</title>
+<meta name="description" content="Compare navios de cruzeiro lado a lado por companhia, ano, classe, tonelagem, capacidade, decks, estaleiro e perfil." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/comparar-navios/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Comparar Navios de Cruzeiro | Poseidon Cruzeiros" />
+<meta property="og:description" content="Escolha até três navios e compare ficha técnica, capacidade, tonelagem, classe e estaleiro." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/comparar-navios/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/header.css" />
+<script src="../shared/header.js" defer></script>
+<script src="../assets/data/ships.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:#0a2342;
+    --teal:#1abc9c;
+    --teal-light:#a8f0de;
+    --gold:#f0c040;
+    --white:#ffffff;
+    --text-muted:#8ba4be;
+    --card-bg:rgba(255,255,255,0.06);
+    --card-border:rgba(255,255,255,0.12);
+    --radius:14px;
+    --radius-sm:8px;
+    --nav-height:60px;
+  }
+
+  body {
+    font-family:'DM Sans', sans-serif;
+    background:var(--ocean-deep);
+    color:var(--white);
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+
+  body::before {
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.32) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 85% 100%, rgba(26,188,156,0.16) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events:none;
+  }
+
+  .page {
+    position:relative;
+    z-index:1;
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 1.25rem 5rem;
+  }
+
+  .breadcrumb {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    font-size:.78rem;
+    color:var(--text-muted);
+    padding:1.2rem 0 0;
+  }
+
+  .breadcrumb a { color:var(--text-muted); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--teal); }
+  .breadcrumb-sep { opacity:.4; }
+
+  .hero {
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) auto;
+    align-items:end;
+    gap:1.5rem;
+    padding:2.5rem 0 1.8rem;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  .hero-kicker {
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:.55rem;
+  }
+
+  h1 {
+    font-family:'Playfair Display', serif;
+    font-size:clamp(2rem, 6vw, 3.6rem);
+    line-height:1.08;
+    background:linear-gradient(135deg,#fff 28%,var(--teal-light) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    margin-bottom:.75rem;
+  }
+
+  .hero p {
+    max-width:680px;
+    color:var(--text-muted);
+    font-size:.98rem;
+    line-height:1.7;
+  }
+
+  .button {
+    display:inline-flex;
+    align-items:center;
+    min-height:2.5rem;
+    padding:.58rem 1rem;
+    border-radius:999px;
+    text-decoration:none;
+    font-size:.84rem;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,.16);
+    color:var(--white);
+    background:rgba(255,255,255,.06);
+    transition:background .2s, border-color .2s, transform .15s;
+  }
+
+  .button:hover {
+    background:rgba(255,255,255,.1);
+    border-color:rgba(26,188,156,.45);
+    transform:translateY(-1px);
+  }
+
+  .chooser {
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:14px;
+    margin:1.5rem 0;
+  }
+
+  .choice {
+    border:1px solid var(--card-border);
+    border-radius:var(--radius);
+    background:var(--card-bg);
+    padding:1rem;
+  }
+
+  .choice label {
+    display:block;
+    color:var(--teal-light);
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:.45rem;
+  }
+
+  select {
+    width:100%;
+    min-height:2.5rem;
+    border-radius:var(--radius-sm);
+    border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.07);
+    color:var(--white);
+    font:inherit;
+    font-size:.86rem;
+    padding:.55rem .7rem;
+    outline:none;
+  }
+
+  option { color:#061527; }
+
+  select:focus {
+    border-color:rgba(26,188,156,.6);
+    box-shadow:0 0 0 3px rgba(26,188,156,.12);
+  }
+
+  .choice-summary {
+    margin-top:.75rem;
+    color:var(--text-muted);
+    font-size:.78rem;
+    line-height:1.5;
+    min-height:2.4rem;
+  }
+
+  .compare-wrap {
+    overflow-x:auto;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:var(--radius);
+    background:rgba(255,255,255,.04);
+  }
+
+  table {
+    width:100%;
+    min-width:760px;
+    border-collapse:collapse;
+  }
+
+  th,
+  td {
+    width:25%;
+    padding:.9rem 1rem;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    border-right:1px solid rgba(255,255,255,.08);
+    text-align:left;
+    vertical-align:top;
+  }
+
+  th:last-child,
+  td:last-child { border-right:none; }
+
+  tr:last-child th,
+  tr:last-child td { border-bottom:none; }
+
+  th {
+    color:var(--teal-light);
+    font-size:.68rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    background:rgba(26,188,156,.07);
+  }
+
+  td {
+    color:rgba(255,255,255,.88);
+    font-size:.88rem;
+    line-height:1.5;
+  }
+
+  .ship-head {
+    display:flex;
+    flex-direction:column;
+    gap:.25rem;
+  }
+
+  .ship-head strong {
+    font-family:'Playfair Display', serif;
+    font-size:1.15rem;
+    line-height:1.2;
+    color:var(--white);
+  }
+
+  .ship-head span {
+    color:var(--teal);
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .ship-link {
+    display:inline-flex;
+    margin-top:.55rem;
+    color:var(--teal-light);
+    font-size:.78rem;
+    text-decoration:none;
+  }
+
+  .ship-link:hover { text-decoration:underline; }
+
+  .tag-list {
+    display:flex;
+    flex-wrap:wrap;
+    gap:.35rem;
+  }
+
+  .tag {
+    display:inline-flex;
+    align-items:center;
+    min-height:1.35rem;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.06);
+    color:rgba(255,255,255,.82);
+    padding:.08rem .55rem;
+    font-size:.65rem;
+    font-weight:700;
+  }
+
+  .empty {
+    padding:2rem;
+    border:1px dashed rgba(255,255,255,.18);
+    border-radius:var(--radius);
+    color:var(--text-muted);
+    text-align:center;
+    line-height:1.6;
+  }
+
+  footer {
+    text-align:center;
+    padding:3rem 1rem 1rem;
+    color:rgba(255,255,255,.35);
+    font-size:.78rem;
+  }
+
+  @media (max-width:900px) {
+    .hero { grid-template-columns:1fr; align-items:start; }
+    .chooser { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Comparar Navios</span>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="hero-kicker">Ferramenta</div>
+      <h1>Comparar Navios</h1>
+      <p>Escolha dois ou três navios para comparar dados principais de ficha técnica, capacidade, construção e perfil.</p>
+    </div>
+    <a class="button" href="/navios/">Ver todos os navios</a>
+  </header>
+
+  <section class="chooser" aria-label="Seleção de navios para comparação">
+    <div class="choice">
+      <label for="shipOne">Navio 1</label>
+      <select id="shipOne"></select>
+      <div class="choice-summary" id="summaryOne"></div>
+    </div>
+    <div class="choice">
+      <label for="shipTwo">Navio 2</label>
+      <select id="shipTwo"></select>
+      <div class="choice-summary" id="summaryTwo"></div>
+    </div>
+    <div class="choice">
+      <label for="shipThree">Navio 3</label>
+      <select id="shipThree"></select>
+      <div class="choice-summary" id="summaryThree"></div>
+    </div>
+  </section>
+
+  <section id="comparison"></section>
+
+  <footer>Poseidon Cruzeiros · Feito com amor para os apaixonados por navios</footer>
+</main>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const ships = Array.isArray(window.POSEIDON_NAVIOS) ? window.POSEIDON_NAVIOS.slice() : [];
+    ships.sort(function (a, b) {
+      return (a.nome || '').localeCompare(b.nome || '', 'pt-BR');
+    });
+
+    const selects = [
+      document.getElementById('shipOne'),
+      document.getElementById('shipTwo'),
+      document.getElementById('shipThree')
+    ];
+    const summaries = [
+      document.getElementById('summaryOne'),
+      document.getElementById('summaryTwo'),
+      document.getElementById('summaryThree')
+    ];
+    const comparison = document.getElementById('comparison');
+
+    function formatNumber(value) {
+      return value ? Number(value).toLocaleString('pt-BR') : '-';
+    }
+
+    function valueOrDash(value) {
+      return value || '-';
+    }
+
+    function optionLabel(ship) {
+      return ship.nome + ' · ' + ship.companhia;
+    }
+
+    function fillSelect(select, index) {
+      const empty = document.createElement('option');
+      empty.value = '';
+      empty.textContent = index === 2 ? 'Opcional' : 'Escolha um navio';
+      select.appendChild(empty);
+
+      ships.forEach(function (ship) {
+        const option = document.createElement('option');
+        option.value = ship.url;
+        option.textContent = optionLabel(ship);
+        select.appendChild(option);
+      });
+    }
+
+    function shipByUrl(url) {
+      return ships.find(function (ship) { return ship.url === url; }) || null;
+    }
+
+    function renderSummary(slot, ship) {
+      summaries[slot].textContent = ship
+        ? [ship.companhia, ship.ano || ship.anoTexto || 'ano não informado', ship.categoria || ship.status].filter(Boolean).join(' · ')
+        : 'Selecione um navio para preencher esta coluna.';
+    }
+
+    function selectedShips() {
+      const seen = new Set();
+      return selects.map(function (select) {
+        const ship = shipByUrl(select.value);
+        if (!ship || seen.has(ship.url)) return null;
+        seen.add(ship.url);
+        return ship;
+      }).filter(Boolean);
+    }
+
+    function cell(ship, getter) {
+      return ship ? getter(ship) : '-';
+    }
+
+    function renderShipHead(ship) {
+      if (!ship) return '-';
+      return [
+        '<div class="ship-head">',
+        '  <span>' + valueOrDash(ship.companhia) + '</span>',
+        '  <strong>' + valueOrDash(ship.nome) + '</strong>',
+        '</div>',
+        '<a class="ship-link" href="' + ship.url + '">Abrir página do navio</a>'
+      ].join('');
+    }
+
+    function renderTags(ship) {
+      if (!ship || !ship.tags || !ship.tags.length) return '-';
+      return '<div class="tag-list">' + ship.tags.map(function (tag) {
+        return '<span class="tag">' + tag + '</span>';
+      }).join('') + '</div>';
+    }
+
+    function renderComparison() {
+      const chosenBySlot = selects.map(function (select) { return shipByUrl(select.value); });
+      chosenBySlot.forEach(function (ship, index) { renderSummary(index, ship); });
+
+      const validCount = selectedShips().length;
+      if (validCount < 2) {
+        comparison.innerHTML = '<div class="empty">Escolha pelo menos dois navios para montar a comparação.</div>';
+        return;
+      }
+
+      const rows = [
+        ['Navio', function (ship) { return renderShipHead(ship); }],
+        ['Perfil', function (ship) { return valueOrDash(ship.categoria); }],
+        ['Ano', function (ship) { return valueOrDash(ship.ano || ship.anoTexto); }],
+        ['Status', function (ship) { return valueOrDash(ship.status); }],
+        ['Classe', function (ship) { return valueOrDash(ship.classe); }],
+        ['Tonelagem', function (ship) { return formatNumber(ship.tonelagem) + (ship.tonelagem ? ' GT' : ''); }],
+        ['Passageiros', function (ship) { return formatNumber(ship.passageiros); }],
+        ['Decks', function (ship) { return formatNumber(ship.decks); }],
+        ['Estaleiro', function (ship) { return valueOrDash(ship.estaleiro); }],
+        ['IMO', function (ship) { return valueOrDash(ship.imo); }],
+        ['Tags', function (ship) { return renderTags(ship); }]
+      ];
+
+      comparison.innerHTML = [
+        '<div class="compare-wrap">',
+        '<table>',
+        '<tbody>',
+        rows.map(function (row) {
+          return [
+            '<tr>',
+            '<th scope="row">' + row[0] + '</th>',
+            '<td>' + cell(chosenBySlot[0], row[1]) + '</td>',
+            '<td>' + cell(chosenBySlot[1], row[1]) + '</td>',
+            '<td>' + cell(chosenBySlot[2], row[1]) + '</td>',
+            '</tr>'
+          ].join('');
+        }).join(''),
+        '</tbody>',
+        '</table>',
+        '</div>'
+      ].join('');
+    }
+
+    function initDefaults() {
+      const byName = Object.fromEntries(ships.map(function (ship) { return [ship.nome, ship.url]; }));
+      selects[0].value = byName['MSC Seaview'] || ships[0]?.url || '';
+      selects[1].value = byName['Costa Diadema'] || ships[1]?.url || '';
+      selects[2].value = byName['Icon of the Seas'] || '';
+    }
+
+    selects.forEach(function (select, index) {
+      fillSelect(select, index);
+      select.addEventListener('change', renderComparison);
+    });
+
+    initDefaults();
+    renderComparison();
+  });
+</script>
+</body>
+</html>

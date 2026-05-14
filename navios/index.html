@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Todos os Navios de Cruzeiro | Poseidon Cruzeiros</title>
+<meta name="description" content="Explore os navios cadastrados no Poseidon Cruzeiros por companhia, classe, perfil, ano, tonelagem, capacidade e estaleiro." />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="81ZMeAawOcR5wcoVmU_VM9Q8rTcczZ-YYoanWnaRDFg" />
+<link rel="canonical" href="https://poseidoncruzeiros.com.br/navios/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Poseidon Cruzeiros" />
+<meta property="og:title" content="Todos os Navios de Cruzeiro | Poseidon Cruzeiros" />
+<meta property="og:description" content="Catálogo pesquisável de navios de cruzeiro com filtros por companhia, classe, ano, capacidade e perfil." />
+<meta property="og:url" content="https://poseidoncruzeiros.com.br/navios/" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/header.css" />
+<script src="../shared/header.js" defer></script>
+<script src="../assets/data/ships.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:#0a2342;
+    --teal:#1abc9c;
+    --teal-light:#a8f0de;
+    --gold:#f0c040;
+    --white:#ffffff;
+    --text-muted:#8ba4be;
+    --card-bg:rgba(255,255,255,0.06);
+    --card-border:rgba(255,255,255,0.12);
+    --radius:14px;
+    --radius-sm:8px;
+    --nav-height:60px;
+  }
+
+  body {
+    font-family:'DM Sans', sans-serif;
+    background:var(--ocean-deep);
+    color:var(--white);
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+
+  body::before {
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(33,150,196,0.32) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 85% 100%, rgba(26,188,156,0.16) 0%, transparent 60%),
+      linear-gradient(180deg, #0a2342 0%, #061527 100%);
+    pointer-events:none;
+  }
+
+  .page {
+    position:relative;
+    z-index:1;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 1.25rem 5rem;
+  }
+
+  .breadcrumb {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    font-size:.78rem;
+    color:var(--text-muted);
+    padding:1.2rem 0 0;
+  }
+
+  .breadcrumb a { color:var(--text-muted); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--teal); }
+  .breadcrumb-sep { opacity:.4; }
+
+  .hero {
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) auto;
+    align-items:end;
+    gap:1.5rem;
+    padding:2.5rem 0 1.8rem;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  .hero-kicker {
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:.55rem;
+  }
+
+  h1 {
+    font-family:'Playfair Display', serif;
+    font-size:clamp(2rem, 6vw, 3.6rem);
+    line-height:1.08;
+    background:linear-gradient(135deg,#fff 28%,var(--teal-light) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    margin-bottom:.75rem;
+  }
+
+  .hero p {
+    max-width:680px;
+    color:var(--text-muted);
+    font-size:.98rem;
+    line-height:1.7;
+  }
+
+  .hero-actions {
+    display:flex;
+    gap:.6rem;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  .button {
+    display:inline-flex;
+    align-items:center;
+    min-height:2.5rem;
+    padding:.58rem 1rem;
+    border-radius:999px;
+    text-decoration:none;
+    font-size:.84rem;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,.16);
+    color:var(--white);
+    background:rgba(255,255,255,.06);
+    transition:background .2s, border-color .2s, transform .15s;
+  }
+
+  .button:hover {
+    background:rgba(255,255,255,.1);
+    border-color:rgba(26,188,156,.45);
+    transform:translateY(-1px);
+  }
+
+  .summary {
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:1px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:var(--radius);
+    background:rgba(255,255,255,.08);
+    margin:1.4rem 0;
+  }
+
+  .summary-item {
+    background:rgba(255,255,255,.035);
+    padding:1rem;
+  }
+
+  .summary-value {
+    display:block;
+    font-size:1.25rem;
+    font-weight:700;
+    line-height:1;
+  }
+
+  .summary-label {
+    display:block;
+    margin-top:.35rem;
+    color:var(--text-muted);
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .filters {
+    display:grid;
+    grid-template-columns:2fr repeat(5, minmax(150px, 1fr));
+    gap:.75rem;
+    margin:1.6rem 0 1rem;
+  }
+
+  .field {
+    display:flex;
+    flex-direction:column;
+    gap:.35rem;
+  }
+
+  label {
+    color:var(--teal-light);
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  input,
+  select {
+    width:100%;
+    min-height:2.45rem;
+    border-radius:var(--radius-sm);
+    border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.07);
+    color:var(--white);
+    font:inherit;
+    font-size:.86rem;
+    padding:.55rem .7rem;
+    outline:none;
+  }
+
+  option { color:#061527; }
+
+  input:focus,
+  select:focus {
+    border-color:rgba(26,188,156,.6);
+    box-shadow:0 0 0 3px rgba(26,188,156,.12);
+  }
+
+  .toolbar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    margin:1rem 0;
+    color:var(--text-muted);
+    font-size:.82rem;
+  }
+
+  .clear-btn {
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05);
+    color:var(--white);
+    border-radius:999px;
+    padding:.45rem .85rem;
+    font:inherit;
+    font-size:.78rem;
+    cursor:pointer;
+  }
+
+  .clear-btn:hover { border-color:rgba(26,188,156,.45); }
+
+  .ship-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(270px, 1fr));
+    gap:14px;
+  }
+
+  .ship-card {
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+    min-height:100%;
+    padding:1rem;
+    border:1px solid var(--card-border);
+    border-radius:var(--radius);
+    background:var(--card-bg);
+    color:inherit;
+    text-decoration:none;
+    transition:background .2s, border-color .2s, transform .15s;
+  }
+
+  .ship-card:hover {
+    background:rgba(255,255,255,.1);
+    border-color:rgba(26,188,156,.45);
+    transform:translateY(-2px);
+  }
+
+  .ship-card__top {
+    display:flex;
+    flex-direction:column;
+    gap:.25rem;
+  }
+
+  .ship-card__company {
+    color:var(--teal);
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .ship-card__name {
+    font-family:'Playfair Display', serif;
+    font-size:1.18rem;
+    font-weight:700;
+    line-height:1.2;
+  }
+
+  .ship-card__meta {
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:.45rem;
+  }
+
+  .meta {
+    min-height:3.2rem;
+    padding:.55rem .6rem;
+    border-radius:var(--radius-sm);
+    background:rgba(255,255,255,.045);
+  }
+
+  .meta strong {
+    display:block;
+    color:var(--white);
+    font-size:.88rem;
+    line-height:1.2;
+  }
+
+  .meta span {
+    display:block;
+    margin-top:.2rem;
+    color:var(--text-muted);
+    font-size:.67rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+
+  .tag-list {
+    display:flex;
+    flex-wrap:wrap;
+    gap:.35rem;
+    margin-top:auto;
+  }
+
+  .tag {
+    display:inline-flex;
+    align-items:center;
+    min-height:1.35rem;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.06);
+    color:rgba(255,255,255,.82);
+    padding:.08rem .55rem;
+    font-size:.65rem;
+    font-weight:700;
+  }
+
+  .empty {
+    display:none;
+    padding:2rem;
+    border:1px dashed rgba(255,255,255,.18);
+    border-radius:var(--radius);
+    color:var(--text-muted);
+    text-align:center;
+    line-height:1.6;
+  }
+
+  footer {
+    text-align:center;
+    padding:3rem 1rem 1rem;
+    color:rgba(255,255,255,.35);
+    font-size:.78rem;
+  }
+
+  @media (max-width:1000px) {
+    .hero { grid-template-columns:1fr; align-items:start; }
+    .hero-actions { justify-content:flex-start; }
+    .filters { grid-template-columns:repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width:640px) {
+    .summary { grid-template-columns:repeat(2, minmax(0, 1fr)); }
+    .filters { grid-template-columns:1fr; }
+    .toolbar { align-items:flex-start; flex-direction:column; }
+    .ship-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Poseidon Cruzeiros</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Navios</span>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="hero-kicker">Catálogo pesquisável</div>
+      <h1>Todos os Navios</h1>
+      <p>Pesquise a frota cadastrada no Poseidon por companhia, perfil, classe, ano, tamanho, capacidade e estaleiro.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/comparar-navios/">Comparar navios</a>
+    </div>
+  </header>
+
+  <section class="summary" aria-label="Resumo do catálogo">
+    <div class="summary-item"><span class="summary-value" id="totalShips">0</span><span class="summary-label">Navios</span></div>
+    <div class="summary-item"><span class="summary-value" id="totalCompanies">0</span><span class="summary-label">Com navios</span></div>
+    <div class="summary-item"><span class="summary-value" id="largestShip">-</span><span class="summary-label">Maior GT</span></div>
+    <div class="summary-item"><span class="summary-value" id="newestShip">-</span><span class="summary-label">Ano mais novo</span></div>
+  </section>
+
+  <section class="filters" aria-label="Filtros de navios">
+    <div class="field">
+      <label for="searchInput">Buscar</label>
+      <input id="searchInput" type="search" placeholder="Nome, companhia, classe, estaleiro..." />
+    </div>
+    <div class="field">
+      <label for="companyFilter">Companhia</label>
+      <select id="companyFilter"><option value="">Todas</option></select>
+    </div>
+    <div class="field">
+      <label for="categoryFilter">Perfil</label>
+      <select id="categoryFilter"><option value="">Todos</option></select>
+    </div>
+    <div class="field">
+      <label for="tagFilter">Tag</label>
+      <select id="tagFilter"><option value="">Todas</option></select>
+    </div>
+    <div class="field">
+      <label for="statusFilter">Status</label>
+      <select id="statusFilter"><option value="">Todos</option></select>
+    </div>
+    <div class="field">
+      <label for="sortSelect">Ordenar</label>
+      <select id="sortSelect">
+        <option value="name">Nome A-Z</option>
+        <option value="company">Companhia</option>
+        <option value="year-desc">Mais novos</option>
+        <option value="tonnage-desc">Maior tonelagem</option>
+        <option value="passengers-desc">Maior capacidade</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="toolbar">
+    <div id="resultCount">Carregando navios...</div>
+    <button class="clear-btn" type="button" id="clearFilters">Limpar filtros</button>
+  </div>
+
+  <div class="empty" id="emptyState">Nenhum navio encontrado com esses filtros.</div>
+  <section class="ship-grid" id="shipGrid" aria-label="Lista de navios"></section>
+
+  <footer>Poseidon Cruzeiros · Feito com amor para os apaixonados por navios</footer>
+</main>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const ships = Array.isArray(window.POSEIDON_NAVIOS) ? window.POSEIDON_NAVIOS : [];
+    const state = {
+      search: '',
+      company: '',
+      category: '',
+      tag: '',
+      status: '',
+      sort: 'name'
+    };
+
+    const els = {
+      search: document.getElementById('searchInput'),
+      company: document.getElementById('companyFilter'),
+      category: document.getElementById('categoryFilter'),
+      tag: document.getElementById('tagFilter'),
+      status: document.getElementById('statusFilter'),
+      sort: document.getElementById('sortSelect'),
+      grid: document.getElementById('shipGrid'),
+      resultCount: document.getElementById('resultCount'),
+      empty: document.getElementById('emptyState'),
+      clear: document.getElementById('clearFilters'),
+      totalShips: document.getElementById('totalShips'),
+      totalCompanies: document.getElementById('totalCompanies'),
+      largestShip: document.getElementById('largestShip'),
+      newestShip: document.getElementById('newestShip')
+    };
+
+    function unique(values) {
+      return Array.from(new Set(values.filter(Boolean))).sort(function (a, b) {
+        return a.localeCompare(b, 'pt-BR');
+      });
+    }
+
+    function fillSelect(select, values) {
+      values.forEach(function (value) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        select.appendChild(option);
+      });
+    }
+
+    function formatNumber(value) {
+      return value ? Number(value).toLocaleString('pt-BR') : '-';
+    }
+
+    function compactText(value) {
+      return value || '-';
+    }
+
+    function searchBlob(ship) {
+      return [
+        ship.nome,
+        ship.companhia,
+        ship.categoria,
+        ship.classe,
+        ship.estaleiro,
+        ship.imo,
+        (ship.tags || []).join(' ')
+      ].join(' ').toLowerCase();
+    }
+
+    function sortShips(list) {
+      const sorted = list.slice();
+      sorted.sort(function (a, b) {
+        if (state.sort === 'company') {
+          return (a.companhia || '').localeCompare(b.companhia || '', 'pt-BR') || (a.nome || '').localeCompare(b.nome || '', 'pt-BR');
+        }
+        if (state.sort === 'year-desc') {
+          return (b.ano || 0) - (a.ano || 0) || (a.nome || '').localeCompare(b.nome || '', 'pt-BR');
+        }
+        if (state.sort === 'tonnage-desc') {
+          return (b.tonelagem || 0) - (a.tonelagem || 0) || (a.nome || '').localeCompare(b.nome || '', 'pt-BR');
+        }
+        if (state.sort === 'passengers-desc') {
+          return (b.passageiros || 0) - (a.passageiros || 0) || (a.nome || '').localeCompare(b.nome || '', 'pt-BR');
+        }
+        return (a.nome || '').localeCompare(b.nome || '', 'pt-BR');
+      });
+      return sorted;
+    }
+
+    function filteredShips() {
+      const search = state.search.trim().toLowerCase();
+      return sortShips(ships.filter(function (ship) {
+        if (search && searchBlob(ship).indexOf(search) === -1) return false;
+        if (state.company && ship.companhia !== state.company) return false;
+        if (state.category && ship.categoria !== state.category) return false;
+        if (state.tag && !(ship.tags || []).includes(state.tag)) return false;
+        if (state.status && ship.status !== state.status) return false;
+        return true;
+      }));
+    }
+
+    function renderCard(ship) {
+      const tags = (ship.tags || []).slice(0, 4).map(function (tag) {
+        return '<span class="tag">' + tag + '</span>';
+      }).join('');
+
+      return [
+        '<a class="ship-card" href="' + ship.url + '">',
+        '  <div class="ship-card__top">',
+        '    <span class="ship-card__company">' + compactText(ship.companhia) + '</span>',
+        '    <span class="ship-card__name">' + compactText(ship.nome) + '</span>',
+        '  </div>',
+        '  <div class="ship-card__meta">',
+        '    <div class="meta"><strong>' + compactText(ship.ano || ship.anoTexto) + '</strong><span>Ano</span></div>',
+        '    <div class="meta"><strong>' + formatNumber(ship.tonelagem) + '</strong><span>GT</span></div>',
+        '    <div class="meta"><strong>' + formatNumber(ship.passageiros) + '</strong><span>Passageiros</span></div>',
+        '    <div class="meta"><strong>' + compactText(ship.classe) + '</strong><span>Classe</span></div>',
+        '  </div>',
+        '  <div class="tag-list">' + tags + '</div>',
+        '</a>'
+      ].join('');
+    }
+
+    function render() {
+      const list = filteredShips();
+      els.resultCount.textContent = list.length + ' de ' + ships.length + ' navios exibidos';
+      els.empty.style.display = list.length ? 'none' : 'block';
+      els.grid.innerHTML = list.map(renderCard).join('');
+    }
+
+    function updateState() {
+      state.search = els.search.value;
+      state.company = els.company.value;
+      state.category = els.category.value;
+      state.tag = els.tag.value;
+      state.status = els.status.value;
+      state.sort = els.sort.value;
+      render();
+    }
+
+    function init() {
+      fillSelect(els.company, unique(ships.map(function (ship) { return ship.companhia; })));
+      fillSelect(els.category, unique(ships.map(function (ship) { return ship.categoria; })));
+      fillSelect(els.tag, unique(ships.flatMap(function (ship) { return ship.tags || []; })));
+      fillSelect(els.status, unique(ships.map(function (ship) { return ship.status; })));
+
+      els.totalShips.textContent = ships.length.toLocaleString('pt-BR');
+      els.totalCompanies.textContent = unique(ships.map(function (ship) { return ship.companhia; })).length.toLocaleString('pt-BR');
+      els.largestShip.textContent = formatNumber(Math.max.apply(null, ships.map(function (ship) { return ship.tonelagem || 0; })));
+      els.newestShip.textContent = Math.max.apply(null, ships.map(function (ship) { return ship.ano || 0; })) || '-';
+
+      [els.search, els.company, els.category, els.tag, els.status, els.sort].forEach(function (input) {
+        input.addEventListener('input', updateState);
+        input.addEventListener('change', updateState);
+      });
+
+      els.clear.addEventListener('click', function () {
+        els.search.value = '';
+        els.company.value = '';
+        els.category.value = '';
+        els.tag.value = '';
+        els.status.value = '';
+        els.sort.value = 'name';
+        updateState();
+      });
+
+      render();
+    }
+
+    init();
+  });
+</script>
+</body>
+</html>

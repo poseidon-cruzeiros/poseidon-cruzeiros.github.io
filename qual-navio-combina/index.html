@@ -496,7 +496,7 @@
       if (answers.destino === 'brasil' && hasTag(ship, 'Brasil')) score += 9;
       if (answers.destino === 'caribe' && /royal caribbean|carnival|norwegian|disney|celebrity|msc/.test(company)) score += 4;
       if (answers.destino === 'mediterraneo' && /msc|costa|celestyal|azamara|viking|explora|seabourn|silversea/.test(company)) score += 4;
-      if (answers.destino === 'exotico' && (hasTag(ship, 'Expedição') || /lindblad|quark|hurtigruten|hx|aurora|ponant|silversea|viking/.test(company))) score += 8;
+      if (answers.destino === 'exotico' && (hasTag(ship, 'Alaska') || hasTag(ship, 'Expedição') || /lindblad|quark|hurtigruten|hx|aurora|ponant|silversea|viking/.test(company))) score += 8;
 
       if (answers.categoria === 'contemporaneo' && category === 'contemporâneo') score += 7;
       if (answers.categoria === 'premium' && category === 'premium') score += 7;
@@ -549,6 +549,10 @@
           return true;
         }
 
+        if (hasTag(ship, 'Alaska')) {
+          return true;
+        }
+
         if (/holland america|hurtigruten|hx|lindblad|quark|aurora|ponant|polar latitudes|oceanwide|antarctica21|heritage expeditions/.test(company)) {
           return true;
         }
@@ -566,6 +570,10 @@
         }
 
         if (/celebrity/.test(company) && /edge|solstice|summit|eclipse/.test(name)) {
+          return true;
+        }
+
+        if (/carnival/.test(company) && /luminosa|spirit|miracle|legend/.test(name)) {
           return true;
         }
 

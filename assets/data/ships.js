@@ -411,7 +411,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9838333",
     "status": "Em serviço",
     "tags": [
-      "Costeiro / Regional"
+      "Costeiro / Regional",
+      "Alaska"
     ]
   },
   {
@@ -433,7 +434,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9901518",
     "status": "Em serviço",
     "tags": [
-      "Costeiro / Regional"
+      "Costeiro / Regional",
+      "Alaska"
     ]
   },
   {
@@ -1254,7 +1256,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Novo"
+      "Novo",
+      "Alaska"
     ]
   },
   {
@@ -1648,7 +1651,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9224726",
     "status": "Em serviço",
     "tags": [
-      "Contemporâneo"
+      "Contemporâneo",
+      "Alaska"
     ]
   },
   {
@@ -1680,8 +1684,8 @@ window.POSEIDON_NAVIOS = [
     "companhiaSlug": "carnival-cruise-line",
     "categoria": "Contemporâneo",
     "url": "/companhias/carnival-cruise-line/carnival-luminosa/",
-    "ano": null,
-    "anoTexto": "",
+    "ano": 2009,
+    "anoTexto": "2009",
     "tonelagem": 92720,
     "tonelagemTexto": "92.720 GT",
     "passageiros": 2826,
@@ -1690,11 +1694,12 @@ window.POSEIDON_NAVIOS = [
     "decksTexto": "",
     "classe": "Spirit",
     "estaleiro": "Fincantieri",
-    "imo": "",
+    "imo": "9398905",
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -1739,7 +1744,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9237357",
     "status": "Em serviço",
     "tags": [
-      "Contemporâneo"
+      "Contemporâneo",
+      "Alaska"
     ]
   },
   {
@@ -2217,7 +2223,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9189419",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {
@@ -2509,7 +2516,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9229659",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {
@@ -2604,28 +2612,6 @@ window.POSEIDON_NAVIOS = [
     ]
   },
   {
-    "nome": "Costa Firenze",
-    "companhia": "Costa Cruzeiros",
-    "companhiaSlug": "costa-cruzeiros",
-    "categoria": "Contemporâneo",
-    "url": "/companhias/costa-cruzeiros/costa-firenze/",
-    "ano": 2020,
-    "anoTexto": "2020",
-    "tonelagem": 135500,
-    "tonelagemTexto": "135.500",
-    "passageiros": 5224,
-    "passageirosTexto": "5.224",
-    "decks": 18,
-    "decksTexto": "18",
-    "classe": "",
-    "estaleiro": "Fincantieri",
-    "imo": "9801691",
-    "status": "Em serviço",
-    "tags": [
-      "Contemporâneo"
-    ]
-  },
-  {
     "nome": "Costa Fortuna",
     "companhia": "Costa Cruzeiros",
     "companhiaSlug": "costa-cruzeiros",
@@ -2646,29 +2632,6 @@ window.POSEIDON_NAVIOS = [
     "tags": [
       "Contemporâneo",
       "Brasil"
-    ]
-  },
-  {
-    "nome": "Costa Luminosa",
-    "companhia": "Costa Cruzeiros",
-    "companhiaSlug": "costa-cruzeiros",
-    "categoria": "Contemporâneo",
-    "url": "/companhias/costa-cruzeiros/costa-luminosa/",
-    "ano": 2009,
-    "anoTexto": "2009",
-    "tonelagem": 92720,
-    "tonelagemTexto": "92.720",
-    "passageiros": 2826,
-    "passageirosTexto": "2.826",
-    "decks": 12,
-    "decksTexto": "12",
-    "classe": "Luminosa",
-    "estaleiro": "Fincantieri",
-    "imo": "9398905",
-    "status": "Em serviço",
-    "tags": [
-      "Contemporâneo",
-      "Expedição"
     ]
   },
   {
@@ -2765,28 +2728,6 @@ window.POSEIDON_NAVIOS = [
     ]
   },
   {
-    "nome": "Costa Venezia",
-    "companhia": "Costa Cruzeiros",
-    "companhiaSlug": "costa-cruzeiros",
-    "categoria": "Contemporâneo",
-    "url": "/companhias/costa-cruzeiros/costa-venezia/",
-    "ano": 2019,
-    "anoTexto": "2019",
-    "tonelagem": 135500,
-    "tonelagemTexto": "135.500",
-    "passageiros": 5224,
-    "passageirosTexto": "5.224",
-    "decks": 18,
-    "decksTexto": "18",
-    "classe": "",
-    "estaleiro": "Fincantieri",
-    "imo": "9801689",
-    "status": "Em serviço",
-    "tags": [
-      "Contemporâneo"
-    ]
-  },
-  {
     "nome": "Crown Princess",
     "companhia": "Princess Cruises",
     "companhiaSlug": "princess-cruises",
@@ -2806,7 +2747,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -2828,7 +2770,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9243667",
     "status": "Em serviço",
     "tags": [
-      "Luxo"
+      "Luxo",
+      "Alaska"
     ]
   },
   {
@@ -2919,7 +2862,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -3107,7 +3051,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -3501,7 +3446,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9378448",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {
@@ -3754,7 +3700,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -4097,7 +4044,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9230402",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {
@@ -4483,7 +4431,8 @@ window.POSEIDON_NAVIOS = [
     "tags": [
       "Ultra-luxo",
       "Luxo",
-      "LNG"
+      "LNG",
+      "Alaska"
     ]
   },
   {
@@ -4638,7 +4587,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -5463,7 +5413,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9813072",
     "status": "Em serviço",
     "tags": [
-      "Expedição"
+      "Expedição",
+      "Alaska"
     ]
   },
   {
@@ -6300,7 +6251,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Expedição",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -6344,7 +6296,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "8966444",
     "status": "Em serviço",
     "tags": [
-      "Expedição"
+      "Expedição",
+      "Alaska"
     ]
   },
   {
@@ -6366,7 +6319,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "8966456",
     "status": "Em serviço",
     "tags": [
-      "Expedição"
+      "Expedição",
+      "Alaska"
     ]
   },
   {
@@ -6389,7 +6343,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Expedição",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -6478,7 +6433,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9230115",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {
@@ -6524,7 +6480,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -6590,7 +6547,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "",
     "status": "Em serviço",
     "tags": [
-      "Contemporâneo"
+      "Contemporâneo",
+      "Alaska"
     ]
   },
   {
@@ -6722,7 +6680,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "",
     "status": "Em serviço",
     "tags": [
-      "Contemporâneo"
+      "Contemporâneo",
+      "Alaska"
     ]
   },
   {
@@ -7302,7 +7261,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -7438,7 +7398,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -7551,7 +7512,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -7731,7 +7693,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -7754,7 +7717,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -7799,7 +7763,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Premium",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -8264,7 +8229,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -9037,7 +9003,8 @@ window.POSEIDON_NAVIOS = [
       "Premium",
       "LNG",
       "Novo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -9358,7 +9325,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9796250",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {
@@ -9605,7 +9573,8 @@ window.POSEIDON_NAVIOS = [
     "status": "Em serviço",
     "tags": [
       "Contemporâneo",
-      "Família"
+      "Família",
+      "Alaska"
     ]
   },
   {
@@ -9627,7 +9596,8 @@ window.POSEIDON_NAVIOS = [
     "imo": "9226891",
     "status": "Em serviço",
     "tags": [
-      "Premium"
+      "Premium",
+      "Alaska"
     ]
   },
   {

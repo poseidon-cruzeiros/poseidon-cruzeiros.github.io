@@ -508,6 +508,24 @@
       return score;
     }
 
+    function matchesCategoryPreference(ship, answers) {
+      const category = normalize(ship.categoria);
+
+      if (answers.categoria === 'contemporaneo') {
+        return category === 'contemporâneo';
+      }
+
+      if (answers.categoria === 'premium') {
+        return category === 'premium';
+      }
+
+      if (answers.categoria === 'luxo') {
+        return /luxo|ultra-luxo|yacht|boutique/.test(category);
+      }
+
+      return true;
+    }
+
     function profileText(answers) {
       const labels = {
         familia: 'família',
@@ -539,6 +557,7 @@
       };
       const profile = profileText(answers);
       const matches = ships
+        .filter(function (ship) { return matchesCategoryPreference(ship, answers); })
         .map(function (ship) { return { ship: ship, score: scoreShip(ship, answers) }; })
         .filter(function (item) { return item.score > 0; })
         .sort(function (a, b) {
